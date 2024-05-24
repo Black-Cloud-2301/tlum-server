@@ -1,0 +1,150 @@
+version: '3.9'
+services:
+  postgres:
+    container_name: postgres
+    image: postgres
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_DB}
+      TZ: Asia/Ho_Chi_Minh
+    volumes:
+      - postgres:/data/postgres
+    networks:
+      - kltn
+    ports:
+      - "5432:5432"
+    restart: unless-stopped
+
+  mongo:
+    container_name: mongo
+    image: mongo
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: ${MONGO_INITDB_ROOT_USERNAME}
+      MONGO_INITDB_ROOT_PASSWORD: ${MONGO_INITDB_ROOT_PASSWORD}
+      TZ: Asia/Ho_Chi_Minh
+    volumes:
+      - mongo:/data/mongo
+      - ./:/docker-entrypoint-initdb.d
+    networks:
+      - kltn
+    ports:
+      - "27017:27017"
+    restart: unless-stopped
+
+
+  redis:
+    container_name: redis
+    image: redis
+    restart: always
+    ports:
+      - '6379:6379'
+    command: redis-server --save 20 1 --loglevel warning --requirepass ${REDIS_PASSWORD}
+    volumes:
+      - redis:/data
+
+  eureka:
+    container_name: eureka
+    build:
+      context: ../eureka
+    environment:
+      - EUREKA_USERNAME=${EUREKA_USERNAME}
+      - EUREKA_PASSWORD=${EUREKA_PASSWORD}
+    volumes:
+      - kltn:/kltn
+    networks:
+      - kltn
+    ports:
+      - "8761:8761"
+    restart: unless-stopped
+
+  config-service:
+    container_name: config-service
+    build:
+      context: ../config-service
+    environment:
+      - eureka.client.service-url.defaultZone=${EUREKA_URL}
+      - TZ=Asia/Ho_Chi_Minh
+      - CURRENT_PROFILE=${CURRENT_PROFILE}
+      - EUREKA_URL=${EUREKA_URL}
+      - MONGO_URI=${MONGO_URI_CONFIG}
+    volumes:
+      - kltn:/kltn
+    networks:
+      - kltn
+    ports:
+      - "8888:8888"
+    restart: unless-stopped
+    depends_on:
+      - postgres
+      - mongo
+      - eureka
+
+  gateway:
+    container_name: gateway
+    build:
+      context: ../gateway
+    environment:
+      - eureka.client.service-url.defaultZone=${EUREKA_URL}
+      - TZ=Asia/Ho_Chi_Minh
+    volumes:
+      - kltn:/kltn
+    networks:
+      - kltn
+    ports:
+      - "8080:8080"
+    restart: unless-stopped
+    depends_on:
+      - config-service
+
+#  minio-service:
+#    container_name: minio-service
+#    build:
+#      context: ../minio-service
+#    environment:
+#        - eureka.client.service-url.defaultZone=${EUREKA_URL}
+#        - TZ=Asia/Ho_Chi_Minh
+#        - CURRENT_PROFILE=${CURRENT_PROFILE}
+#        - CONFIG_PROFILE=${CURRENT_PROFILE}
+#        - MINIO_ACCESS_KEY=${MINIO_ACCESS_KEY}
+#        - MINIO_SECRET_KEY=${MINIO_SECRET_KEY}
+#        - MINIO_URL=${MINIO_URL}
+#    restart: unless-stopped
+#    volumes:
+#      - minio_data:/data
+#    networks:
+#      - kltn
+
+  auth-service:
+    container_name: auth-service
+    build:
+      context: ../auth-service
+    environment:
+      - eureka.client.service-url.defaultZone=${EUREKA_URL}
+      - TZ=Asia/Ho_Chi_Minh
+      - CURRENT_PROFILE=${CURRENT_PROFILE}
+      - CONFIG_PROFILE=${CURRENT_PROFILE}
+      - MONGO_URI=${MONGO_URI_AUTH}
+      - POSTGRES_URL=${POSTGRES_URL}
+      - POSTGRES_USER=${POSTGRES_USER}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+    volumes:
+      - kltn:/kltn
+    networks:
+      - kltn
+    ports:
+      - "8081:8081"
+    restart: unless-stopped
+    depends_on:
+      - gateway
+
+
+volumes:
+  postgres:
+  mongo:
+  minio_data:
+  kltn:
+  redis:
+
+networks:
+  kltn:
