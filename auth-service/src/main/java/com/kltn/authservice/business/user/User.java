@@ -35,7 +35,7 @@ public class User extends BaseEntity {
     @Column(length = 2000)
     private String address;
     @Column(length = 5000, nullable = false)
-//    @JsonIgnore
+    @JsonIgnore
     private String password;
     private String avatar;
     @ManyToMany(fetch = FetchType.LAZY)
