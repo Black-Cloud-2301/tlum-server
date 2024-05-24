@@ -23,7 +23,7 @@ public class DefaultGatewayConfig {
         gatewayNode.set("default-filters", defaultFilters());
         gatewayNode.set("global-cors", globalCors());
 
-        String listApiSecured = "/login, /refreshToken";
+        String listApiSecured = "/login, /refreshToken, /users/create";
 
         return newObjectNode()
                 .put("list-api-secured", listApiSecured)

@@ -1,7 +1,3 @@
 rootProject.name = "server"
 
-include("eureka")
-include("config-service")
-include("gateway")
-include("auth-service")
-//include("minio-service")
+include 'eureka', 'config-service', 'gateway', 'auth-service'

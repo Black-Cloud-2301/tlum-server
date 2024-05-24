@@ -35,14 +35,14 @@ public class User extends BaseEntity {
     @Column(length = 2000)
     private String address;
     @Column(length = 5000, nullable = false)
-    @JsonIgnore
+//    @JsonIgnore
     private String password;
     private String avatar;
     @ManyToMany(fetch = FetchType.LAZY)
     @JoinTable(
-            name = "UserRoles",
-            joinColumns = {@JoinColumn(name = "userId")},
-            inverseJoinColumns = {@JoinColumn(name = "roleId")}
+            name = "user_roles",
+            joinColumns = {@JoinColumn(name = "user_id")},
+            inverseJoinColumns = {@JoinColumn(name = "role_id")}
     )
     private Set<Role> roles;
 }

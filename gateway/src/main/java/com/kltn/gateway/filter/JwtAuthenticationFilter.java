@@ -38,7 +38,7 @@ public class JwtAuthenticationFilter implements GatewayFilter {
             var authorizations = request.getHeaders().get("Authorization");
             assert authorizations != null;
             assert !authorizations.isEmpty();
-            String token = authorizations.get(0).replaceFirst("Bearer ", "");
+            String token = authorizations.getFirst().replaceFirst("Bearer ", "");
             try {
                 jwtUtil.validateToken(token);
             } catch (Exception e) {
