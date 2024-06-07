@@ -3,10 +3,10 @@ package com.kltn.authservice.utils.jwt;
 import com.kltn.authservice.business.role.Role;
 import com.kltn.authservice.business.token.RefreshToken;
 import com.kltn.authservice.business.token.RefreshTokenRepository;
-import com.kltn.authservice.business.token.TokenRefreshException;
 import com.kltn.authservice.business.user.User;
 import com.kltn.authservice.payload.RefreshTokenDto;
 import com.kltn.authservice.utils.WebUtil;
+import com.kltn.authservice.utils.exception.CustomException;
 import io.jsonwebtoken.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -66,7 +66,7 @@ public class JwtUtil {
                 .map(this::verifyExpiration)
                 .map(RefreshToken::getUser)
                 .map(this::generateToken)
-                .orElseThrow(() -> new TokenRefreshException("REFRESH_TOKEN_NOT_EXISTS"));
+                .orElseThrow(() -> new CustomException("REFRESH_TOKEN_NOT_EXISTS"));
     }
 
     private boolean isValidToken(String authToken) {
@@ -90,7 +90,7 @@ public class JwtUtil {
     private RefreshToken verifyExpiration(RefreshToken token) {
         if (token.getExpiryDate().compareTo(Instant.now()) < 0) {
             refreshTokenRepository.delete(token);
-            throw new TokenRefreshException("REFRESH_TOKEN_EXPIRED");
+            throw new CustomException("REFRESH_TOKEN_EXPIRED");
         }
         return token;
     }

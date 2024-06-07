@@ -3,6 +3,7 @@ package com.kltn.authservice.business.user;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.kltn.authservice.business.role.Role;
 import com.kltn.authservice.utils.entity.BaseEntity;
+import com.kltn.authservice.utils.exception.CustomException;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -30,9 +31,9 @@ public class User extends BaseEntity {
     private Gender gender;
     @Column(length = 12, nullable = false)
     private LocalDate dateOfBirth;
-    @Column(length = 1000, nullable = false)
+    @Column(length = 1023, nullable = false)
     private String email;
-    @Column(length = 2000)
+    @Column(length = 2047)
     private String address;
     @Column(length = 5000, nullable = false)
     @JsonIgnore
@@ -48,5 +49,15 @@ public class User extends BaseEntity {
 }
 
 enum Gender {
-    MALE, FEMALE
+    MALE, FEMALE;
+
+    public static Gender fromString(String value) {
+        if ("Nam".equalsIgnoreCase(value)) {
+            return MALE;
+        } else if ("Nữ".equalsIgnoreCase(value)) {
+            return FEMALE;
+        } else {
+            throw new CustomException("Invalid gender value: " + value);
+        }
+    }
 }
