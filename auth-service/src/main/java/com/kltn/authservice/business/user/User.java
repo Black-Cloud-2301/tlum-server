@@ -3,14 +3,11 @@ package com.kltn.authservice.business.user;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.kltn.authservice.business.role.Role;
 import com.kltn.authservice.utils.entity.BaseEntity;
-import com.kltn.authservice.utils.exception.CustomException;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
 import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
-import java.util.Locale;
 import java.util.Set;
 
 @Setter
@@ -52,14 +49,4 @@ public class User extends BaseEntity {
 
 enum Gender {
     MALE, FEMALE;
-
-    public static Gender fromString(String value) {
-        if ("Nam".equalsIgnoreCase(value)) {
-            return MALE;
-        } else if ("Nữ".equalsIgnoreCase(value)) {
-            return FEMALE;
-        } else {
-            throw new CustomException("Invalid gender value: " + value);
-        }
-    }
 }

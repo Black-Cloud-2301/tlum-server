@@ -35,7 +35,9 @@ public class DefaultGatewayConfig {
     private ArrayNode defaultRoutes() {
         return newArrayNode()
                 .add(generateRoute("config-service", "config"))
-                .add(generateRoute("auth-service", "auth"));
+                .add(generateRoute("auth-service", "auth"))
+                .add(generateRoute("file-service", "file"))
+                .add(generateRoute("individual-service", "individual"));
     }
 
     private ObjectNode discovery() {

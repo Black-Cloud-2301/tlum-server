@@ -1,9 +1,9 @@
 package com.kltn.authservice.business.user;
 
-import org.springframework.web.bind.annotation.*;
-import org.springframework.web.multipart.MultipartFile;
-
-import java.util.List;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/users")
@@ -17,10 +17,5 @@ public class UserController {
     @PostMapping("/create")
     public User createUser(@RequestBody User user) {
         return userService.createUser(user);
-    }
-
-    @PostMapping("/import-user")
-    public List<User> importUser(@RequestParam("file") MultipartFile file, @RequestParam("type") UserType type) {
-        return this.userService.importUsers(file, type);
     }
 }
