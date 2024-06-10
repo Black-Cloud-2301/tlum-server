@@ -9,6 +9,8 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.util.Locale;
 import java.util.Set;
 
 @Setter
@@ -19,7 +21,7 @@ public class User extends BaseEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @Column(length = 6, nullable = false,unique = true)
+    @Column(length = 6, nullable = false, unique = true)
     private String code;
     @Column(nullable = false)
     private String firstname;

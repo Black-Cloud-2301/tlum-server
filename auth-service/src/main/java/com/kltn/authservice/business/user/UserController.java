@@ -20,7 +20,7 @@ public class UserController {
     }
 
     @PostMapping("/import-user")
-    public List<User> importUser(@RequestParam("file") MultipartFile file) {
-        return this.userService.importUsers(file);
+    public List<User> importUser(@RequestParam("file") MultipartFile file, @RequestParam("type") UserType type) {
+        return this.userService.importUsers(file, type);
     }
 }

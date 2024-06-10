@@ -1,37 +1,50 @@
 package com.kltn.authservice.business.user;
 
 import com.kltn.authservice.business.file.ExcelToJsonService;
+import com.kltn.authservice.business.role.Role;
+import com.kltn.authservice.business.role.RoleService;
 import com.kltn.authservice.business.user.exceptions.UserAlreadyExistsException;
 import com.kltn.authservice.business.user.exceptions.UserNotFoundException;
 import com.kltn.authservice.config.I18n;
+import com.kltn.authservice.utils.converter.DateConverter;
 import com.kltn.authservice.utils.exception.CustomException;
-import jakarta.validation.ConstraintViolation;
-import jakarta.validation.Validation;
-import jakarta.validation.Validator;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
-import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
 @Service
 public class UserServiceImpl implements UserService {
+    @Value("${authToken.defaultPassword}")
+    private String defaultPassword;
 
+    private final Logger LOGGER = LoggerFactory.getLogger(UserController.class);
     private final UserRepository userRepository;
     private final PasswordEncoder passwordEncoder;
     private final ExcelToJsonService excelToJsonService;
-    private final Logger LOGGER = LoggerFactory.getLogger(UserController.class);
+    private final RoleService roleService;
+    private final DateConverter dateConverter;
 
-    public UserServiceImpl(UserRepository userRepository, PasswordEncoder passwordEncoder, ExcelToJsonService excelToJsonService) {
+    public UserServiceImpl(
+            UserRepository userRepository,
+            PasswordEncoder passwordEncoder,
+            ExcelToJsonService excelToJsonService,
+            RoleService roleService,
+            DateConverter dateConverter
+    ) {
         this.userRepository = userRepository;
         this.passwordEncoder = passwordEncoder;
         this.excelToJsonService = excelToJsonService;
+        this.roleService = roleService;
+        this.dateConverter = dateConverter;
     }
 
     @Override
@@ -53,10 +66,13 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public List<User> importUsers(MultipartFile file) {
+    public List<User> importUsers(MultipartFile file, UserType type) {
         try {
             List<List<Object>> excelData = excelToJsonService.convertExcelToJson(file);
             List<User> users = new ArrayList<>();
+            Role defaultRole = roleService.getRoleByName(type.name());
+            Set<Role> roles = new HashSet<>();
+            roles.add(defaultRole);
 
             for (List<Object> rowData : excelData) {
                 this.validateUserImport(rowData);
@@ -67,8 +83,10 @@ public class UserServiceImpl implements UserService {
                 user.setPhoneNumber((String) rowData.get(3));
                 user.setEmail((String) rowData.get(4));
                 user.setGender(Gender.fromString((String) rowData.get(5)));
-                user.setDateOfBirth((LocalDate) rowData.get(6));
+                user.setDateOfBirth(DateConverter.convertImport((String) rowData.get(6)));
                 user.setAddress((String) rowData.get(7));
+                user.setPassword(passwordEncoder.encode(defaultPassword));
+                user.setRoles(roles);
                 users.add(user);
             }
             return userRepository.saveAll(users);
@@ -83,7 +101,7 @@ public class UserServiceImpl implements UserService {
             throw new CustomException(I18n.getMessage("msg.validate.required", I18n.getMessage("msg.field.user.code")));
         }
 
-        if(rowData.get(0).toString().length() != 6) {
+        if (rowData.get(0).toString().length() != 6) {
             throw new IllegalArgumentException("Code should not exceed 6 characters");
         }
 
@@ -91,7 +109,7 @@ public class UserServiceImpl implements UserService {
             throw new IllegalArgumentException("First name is required");
         }
 
-        if(rowData.get(1).toString().length() > 255) {
+        if (rowData.get(1).toString().length() > 255) {
             throw new IllegalArgumentException("First name should not exceed 255 characters");
         }
 
@@ -99,7 +117,7 @@ public class UserServiceImpl implements UserService {
             throw new IllegalArgumentException("Last name is required");
         }
 
-        if(rowData.get(2).toString().length() > 255) {
+        if (rowData.get(2).toString().length() > 255) {
             throw new IllegalArgumentException("First name should not exceed 255 characters");
         }
 
@@ -107,7 +125,7 @@ public class UserServiceImpl implements UserService {
             throw new IllegalArgumentException("Phone number is required");
         }
 
-        if(rowData.get(3).toString().length() > 12) {
+        if (rowData.get(3).toString().length() > 12) {
             throw new IllegalArgumentException("Phone number should not exceed 12 characters");
         }
 
@@ -115,7 +133,7 @@ public class UserServiceImpl implements UserService {
             throw new IllegalArgumentException("Email is required");
         }
 
-        if(rowData.get(4).toString().length() > 1023) {
+        if (rowData.get(4).toString().length() > 1023) {
             throw new IllegalArgumentException("Email should not exceed 1023 characters");
         }
 

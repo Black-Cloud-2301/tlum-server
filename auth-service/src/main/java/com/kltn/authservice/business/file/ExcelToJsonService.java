@@ -27,7 +27,7 @@ public class ExcelToJsonService {
 
                 for (int j = 0; j < row.getLastCellNum(); j++) {
                     Cell cell = row.getCell(j);
-                    rowData.add(cell);
+                    rowData.add(cell == null ? null : cell.toString());
                 }
                 excelData.add(rowData);
             }

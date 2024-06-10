@@ -1,7 +1,9 @@
 package com.kltn.authservice.utils.exception;
 
 import com.kltn.authservice.utils.enums.ErrorApp;
+import lombok.Getter;
 
+@Getter
 public class CustomException extends RuntimeException {
 
     private ErrorApp errorApp;
@@ -26,11 +28,4 @@ public class CustomException extends RuntimeException {
         return super.getMessage();
     }
 
-    public ErrorApp getErrorApp() {
-        return errorApp;
-    }
-
-    public Integer getCodeError() {
-        return codeError;
-    }
 }

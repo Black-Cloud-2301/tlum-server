@@ -9,11 +9,14 @@ import com.kltn.authservice.payload.LoginResponse;
 import com.kltn.authservice.utils.WebUtil;
 import com.kltn.authservice.utils.enums.EntityStatus;
 import com.kltn.authservice.utils.jwt.JwtUtil;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 @Service
 public class AuthServiceImpl implements AuthService {
+    private static final Logger log = LoggerFactory.getLogger(AuthServiceImpl.class);
     private final UserService userService;
     private final WebUtil webUtil;
     private final JwtUtil jwtUtil;
