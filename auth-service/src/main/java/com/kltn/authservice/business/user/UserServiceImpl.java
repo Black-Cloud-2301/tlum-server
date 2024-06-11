@@ -1,7 +1,7 @@
 package com.kltn.authservice.business.user;
 
-import com.kltn.authservice.business.user.exceptions.UserAlreadyExistsException;
-import com.kltn.authservice.business.user.exceptions.UserNotFoundException;
+import com.kltn.authservice.exceptions.user.UserAlreadyExistsException;
+import com.kltn.authservice.exceptions.user.UserNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 

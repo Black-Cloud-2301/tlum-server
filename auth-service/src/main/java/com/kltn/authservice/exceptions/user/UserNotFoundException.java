@@ -1,4 +1,4 @@
-package com.kltn.authservice.business.user.exceptions;
+package com.kltn.authservice.exceptions.user;
 
 import com.kltn.authservice.config.I18n;
 import com.kltn.authservice.utils.exception.CustomException;

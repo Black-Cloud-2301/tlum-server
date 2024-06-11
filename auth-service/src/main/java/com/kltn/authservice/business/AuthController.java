@@ -1,6 +1,6 @@
 package com.kltn.authservice.business;
 
-import com.kltn.authservice.business.user.exceptions.UserNotFoundException;
+import com.kltn.authservice.exceptions.user.UserNotFoundException;
 import com.kltn.authservice.payload.LoginRequest;
 import com.kltn.authservice.payload.LoginResponse;
 import com.kltn.authservice.payload.RefreshTokenDto;
