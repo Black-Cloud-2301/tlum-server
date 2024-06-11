@@ -42,6 +42,8 @@ services:
     command: redis-server --save 20 1 --loglevel warning --requirepass ${REDIS_PASSWORD}
     volumes:
       - redis:/data
+    networks:
+      - kltn
 
   eureka:
     container_name: eureka
@@ -68,6 +70,7 @@ services:
       - CURRENT_PROFILE=${CURRENT_PROFILE}
       - EUREKA_URL=${EUREKA_URL}
       - MONGO_URI=${MONGO_URI_CONFIG}
+      - SECRET=${SECRET}
     volumes:
       - kltn:/kltn
     networks:
@@ -87,6 +90,7 @@ services:
     environment:
       - eureka.client.service-url.defaultZone=${EUREKA_URL}
       - TZ=Asia/Ho_Chi_Minh
+      - CONFIG_PROFILE=${CURRENT_PROFILE}
     volumes:
       - kltn:/kltn
     networks:
@@ -112,6 +116,7 @@ services:
       - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
       - REDIS_HOST=${REDIS_HOST}
       - REDIS_PORT=${REDIS_PORT}
+      - REDIS_PASSWORD=${REDIS_PASSWORD}
     volumes:
       - kltn:/kltn
     networks:
@@ -148,11 +153,13 @@ services:
       - eureka.client.service-url.defaultZone=${EUREKA_URL}
       - TZ=Asia/Ho_Chi_Minh
       - CURRENT_PROFILE=${CURRENT_PROFILE}
+      - CONFIG_PROFILE=${CURRENT_PROFILE}
       - POSTGRES_URL=${POSTGRES_URL}
       - POSTGRES_USER=${POSTGRES_USER}
       - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
       - REDIS_HOST=${REDIS_HOST}
       - REDIS_PORT=${REDIS_PORT}
+      - REDIS_PASSWORD=${REDIS_PASSWORD}
     volumes:
       - kltn:/kltn
     networks:

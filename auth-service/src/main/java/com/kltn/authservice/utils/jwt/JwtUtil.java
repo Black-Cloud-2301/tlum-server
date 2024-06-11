@@ -1,6 +1,6 @@
 package com.kltn.authservice.utils.jwt;
 
-import com.kltn.authservice.business.role.Role;
+import com.kltn.authservice.business.role.RoleService;
 import com.kltn.authservice.business.token.RefreshToken;
 import com.kltn.authservice.business.token.RefreshTokenRepository;
 import com.kltn.authservice.business.user.User;
@@ -8,6 +8,7 @@ import com.kltn.authservice.payload.RefreshTokenDto;
 import com.kltn.authservice.utils.WebUtil;
 import com.kltn.authservice.utils.exception.CustomException;
 import io.jsonwebtoken.*;
+import lombok.RequiredArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
@@ -19,9 +20,9 @@ import java.util.Date;
 import java.util.Map;
 import java.util.Optional;
 import java.util.UUID;
-import java.util.stream.Collectors;
 
 @Component
+@RequiredArgsConstructor
 public class JwtUtil {
     @Value("${authToken.jwtSecret}")
     private String jwtSecret;
@@ -36,17 +37,13 @@ public class JwtUtil {
 
     private final RefreshTokenRepository refreshTokenRepository;
     private final WebUtil webUtil;
-
-    public JwtUtil(RefreshTokenRepository refreshTokenRepository, WebUtil webUtil) {
-        this.refreshTokenRepository = refreshTokenRepository;
-        this.webUtil = webUtil;
-    }
+    private final RoleService roleService;
 
     public String generateToken(User user) {
         Date now = new Date();
         return Jwts.builder()
                 .setSubject(user.getId().toString())
-                .addClaims(Map.of("roles", user.getRoles().stream().map(Role::getId).collect(Collectors.toList())))
+                .addClaims(Map.of("roles", roleService.flattenRoles(user.getRoles())))
                 .setIssuedAt(now)
                 .setExpiration(new Date(now.getTime() + jwtExpiration))
                 .signWith(SignatureAlgorithm.HS512, jwtSecret)
