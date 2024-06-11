@@ -1,6 +1,5 @@
 package com.kltn.fileservice.service.impl;
 
-import com.kltn.fileservice.constants.UserType;
 import com.kltn.fileservice.service.ConvertFileService;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
@@ -21,7 +20,7 @@ public class ConvertFileServiceImpl implements ConvertFileService {
     private static final Logger LOGGER = LoggerFactory.getLogger(ConvertFileServiceImpl.class);
 
     @Override
-    public List<List<Object>> convertFileToJson(MultipartFile file, UserType type) {
+    public List<List<Object>> convertFileToJson(MultipartFile file) {
         List<List<Object>> excelData = new ArrayList<>();
 
         try (Workbook workbook = new XSSFWorkbook(file.getInputStream())) {
