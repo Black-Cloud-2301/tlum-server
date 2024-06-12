@@ -9,6 +9,7 @@ import com.kltn.individualservice.entity.Role;
 import com.kltn.individualservice.entity.User;
 import com.kltn.individualservice.exception.RequireException;
 import com.kltn.individualservice.feign.FileServiceClient;
+import com.kltn.individualservice.repository.StudentRepository;
 import com.kltn.individualservice.repository.UserRepository;
 import com.kltn.individualservice.service.RoleService;
 import com.kltn.individualservice.service.UserService;
@@ -41,6 +42,7 @@ public class UserServiceImpl implements UserService {
     private final RoleService roleService;
     private final FileServiceClient fileServiceClient;
     private final HttpServletRequest request;
+    private final StudentRepository studentRepository;
 
     @Override
     @ActionPermission("CREATE")

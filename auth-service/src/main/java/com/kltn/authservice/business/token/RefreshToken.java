@@ -24,7 +24,6 @@ public class RefreshToken {
     String token;
     @Indexed(expireAfterSeconds = 0)
     Instant expiryDate;
-    @DBRef
     User user;
     String ip;
 }

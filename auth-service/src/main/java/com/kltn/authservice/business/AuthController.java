@@ -24,7 +24,7 @@ public class AuthController {
         return authService.login(loginRequest.getUsername(), loginRequest.getPassword());
     }
 
-    @PostMapping("/refreshToken")
+    @PostMapping("/refresh")
     public RefreshTokenDto refreshToken(@RequestBody RefreshTokenDto refreshToken) {
         return new RefreshTokenDto(jwtUtil.refreshToken(refreshToken), refreshToken.getRefreshToken());
     }

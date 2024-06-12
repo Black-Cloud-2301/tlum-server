@@ -4,6 +4,7 @@ import com.kltn.authservice.business.role.RoleService;
 import com.kltn.authservice.business.token.RefreshToken;
 import com.kltn.authservice.business.token.RefreshTokenRepository;
 import com.kltn.authservice.business.user.User;
+import com.kltn.authservice.config.I18n;
 import com.kltn.authservice.payload.RefreshTokenDto;
 import com.kltn.authservice.utils.WebUtil;
 import com.kltn.authservice.utils.exception.CustomException;
@@ -63,7 +64,7 @@ public class JwtUtil {
                 .map(this::verifyExpiration)
                 .map(RefreshToken::getUser)
                 .map(this::generateToken)
-                .orElseThrow(() -> new CustomException("REFRESH_TOKEN_NOT_EXISTS"));
+                .orElseThrow(() -> new CustomException(I18n.getMessage("msg.refresh_token.invalid")));
     }
 
     private boolean isValidToken(String authToken) {
@@ -87,7 +88,7 @@ public class JwtUtil {
     private RefreshToken verifyExpiration(RefreshToken token) {
         if (token.getExpiryDate().compareTo(Instant.now()) < 0) {
             refreshTokenRepository.delete(token);
-            throw new CustomException("REFRESH_TOKEN_EXPIRED");
+            throw new CustomException(I18n.getMessage("msg.refresh_token.invalid"));
         }
         return token;
     }
