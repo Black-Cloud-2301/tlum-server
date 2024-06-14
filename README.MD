@@ -1,0 +1,1 @@
+docker exec -it e9ac987bcce7 kafka-topics.sh --create --topic updateCacheTopic --bootstrap-server localhost:9092 --partitions 1 --replication-factor 1

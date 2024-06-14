@@ -3,7 +3,6 @@ package com.kltn.individualservice.entity;
 import com.kltn.individualservice.constant.EntityStatus;
 import jakarta.persistence.*;
 import jakarta.servlet.http.HttpServletRequest;
-import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 import org.hibernate.annotations.ColumnTransformer;
@@ -12,7 +11,6 @@ import org.springframework.web.context.request.ServletRequestAttributes;
 
 import java.time.LocalDateTime;
 
-@Data
 @Setter
 @Getter
 @MappedSuperclass

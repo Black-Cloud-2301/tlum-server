@@ -5,13 +5,15 @@ import com.kltn.individualservice.annotation.FunctionPermission;
 import com.kltn.individualservice.config.I18n;
 import com.kltn.individualservice.constant.Gender;
 import com.kltn.individualservice.constant.UserType;
+import com.kltn.individualservice.dto.request.UserRequestCRU;
 import com.kltn.individualservice.entity.Role;
 import com.kltn.individualservice.entity.User;
+import com.kltn.individualservice.exception.NotFoundException;
 import com.kltn.individualservice.exception.RequireException;
 import com.kltn.individualservice.feign.FileServiceClient;
-import com.kltn.individualservice.repository.StudentRepository;
 import com.kltn.individualservice.repository.UserRepository;
 import com.kltn.individualservice.service.RoleService;
+import com.kltn.individualservice.service.StudentService;
 import com.kltn.individualservice.service.UserService;
 import com.kltn.individualservice.util.exception.converter.DateConverter;
 import jakarta.servlet.http.HttpServletRequest;
@@ -42,7 +44,7 @@ public class UserServiceImpl implements UserService {
     private final RoleService roleService;
     private final FileServiceClient fileServiceClient;
     private final HttpServletRequest request;
-    private final StudentRepository studentRepository;
+    private final StudentService studentService;
 
     @Override
     @ActionPermission("CREATE")
@@ -69,7 +71,31 @@ public class UserServiceImpl implements UserService {
             user.setRoles(roles);
             users.add(user);
         }
-        return userRepository.saveAll(users);
+
+        List<User> savedUsers = userRepository.saveAll(users);
+        if (type == UserType.STUDENT) {
+            studentService.saveStudentByUser(savedUsers);
+        }
+        return savedUsers;
+    }
+
+    @Override
+    @ActionPermission("UPDATE")
+    public User updateUser(UserRequestCRU userDto) {
+        User user = userRepository.findById(userDto.getId())
+                .orElseThrow(() -> new NotFoundException(I18n.getMessage("msg.user.id")));
+
+        user.setCode(userDto.getCode().toUpperCase());
+        user.setFirstname(userDto.getFirstname());
+        user.setLastname(userDto.getLastname());
+        user.setPhoneNumber(userDto.getPhoneNumber());
+        user.setEmail(userDto.getEmail());
+        user.setAddress(userDto.getAddress());
+        user.setAvatar(userDto.getAvatar());
+        user.setGender(userDto.getGender());
+        user.setDateOfBirth(userDto.getDateOfBirth());
+
+        return userRepository.save(user);
     }
 
     private void validateUserImport(List<Object> rowData) {

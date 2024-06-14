@@ -32,6 +32,40 @@ services:
       - "27017:27017"
     restart: unless-stopped
 
+  zookeeper:
+    image: confluentinc/cp-zookeeper:latest
+    container_name: zookeeper
+    ports:
+      - "2181:2181"
+    environment:
+      ZOOKEEPER_CLIENT_PORT: 2181
+      ZOOKEEPER_TICK_TIME: 2000
+    networks:
+      - kltn
+    volumes:
+      - zookeeper:/var/lib/zookeeper
+
+  kafka:
+    image: confluentinc/cp-kafka:latest
+    container_name: kafka
+    ports:
+      - "${KAFKA_PORT}:${KAFKA_PORT}"
+    environment:
+      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+      KAFKA_BROKER_ID: 1
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka:9092,PLAINTEXT_HOST://localhost:29092
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT,PLAINTEXT_HOST:PLAINTEXT
+      KAFKA_INTER_BROKER_LISTENER_NAME: PLAINTEXT
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+      KAFKA_CREATE_TOPICS: "updateCacheTopic:1:1"
+    networks:
+      - kltn
+    volumes:
+      - kafka:/var/lib/kafka
+    depends_on:
+      - zookeeper
+
+
 
   redis:
     container_name: redis
@@ -160,6 +194,7 @@ services:
       - REDIS_HOST=${REDIS_HOST}
       - REDIS_PORT=${REDIS_PORT}
       - REDIS_PASSWORD=${REDIS_PASSWORD}
+      - KAFKA_URL=${KAFKA_URL}
     volumes:
       - kltn:/kltn
     networks:
@@ -174,9 +209,10 @@ services:
 volumes:
   postgres:
   mongo:
-  minio_data:
-  kltn:
   redis:
+  kafka:
+  zookeeper:
+  kltn:
 
 networks:
   kltn:
