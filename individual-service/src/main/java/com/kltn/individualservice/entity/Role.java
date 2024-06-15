@@ -17,7 +17,8 @@ public class Role extends BaseEntity {
     @JoinTable(
             name = "role_permissions",
             joinColumns = @JoinColumn(name = "role_id"),
-            inverseJoinColumns = @JoinColumn(name = "permission_id")
+            inverseJoinColumns = @JoinColumn(name = "permission_id"),
+            uniqueConstraints = @UniqueConstraint(columnNames = {"role_id", "permission_id"})
     )
     private List<Permission> permissions;
 }

@@ -9,6 +9,7 @@ import com.kltn.individualservice.repository.RoleRepository;
 import com.kltn.individualservice.service.RoleService;
 import org.springframework.stereotype.Service;
 
+import java.util.Arrays;
 import java.util.List;
 
 @Service
@@ -36,10 +37,11 @@ public class RoleServiceImpl implements RoleService {
 
     @Override
     public void checkActionPermission(List<String> roles, String action, String function) {
+        String[] actions = action.split("&");
         roles.stream()
-                .filter(role -> role.equals(function + "/" + action))
+                .map(role -> role.split("/"))
+                .filter(parts -> parts.length == 3 && (parts[0] + '/' + parts[1]).equals(function) && Arrays.asList(actions).contains(parts[2]))
                 .findFirst()
                 .orElseThrow(NoPermissionException::new);
-        ;
     }
 }

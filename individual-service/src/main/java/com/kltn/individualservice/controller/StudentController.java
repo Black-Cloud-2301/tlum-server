@@ -1,15 +1,15 @@
 package com.kltn.individualservice.controller;
 
 import com.kltn.individualservice.dto.request.GetStudentsRequest;
+import com.kltn.individualservice.dto.request.StudentRequestCRU;
 import com.kltn.individualservice.service.StudentService;
 import com.kltn.individualservice.util.CommonUtil;
 import com.kltn.individualservice.util.dto.ResponseUtils;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
 
 @RestController
@@ -18,9 +18,8 @@ import org.springframework.web.bind.annotation.RestController;
 public class StudentController {
 
     private final StudentService studentService;
-    private final CommonUtil commonUtil;
 
-    @GetMapping()
+    @GetMapping
     public ResponseEntity<Object> getStudents(GetStudentsRequest request) {
         if (request.getPageNumber() != null && request.getPageSize() != null) {
             Pageable pageable = CommonUtil.createPageable(request);
@@ -28,5 +27,15 @@ public class StudentController {
         } else {
             return ResponseUtils.getResponseEntity(studentService.getStudents(request));
         }
+    }
+
+    @PostMapping
+    public ResponseEntity<Object> createStudent(@ModelAttribute StudentRequestCRU request) {
+        return ResponseUtils.getResponseEntity(studentService.createStudent(request));
+    }
+
+    @PostMapping("/import")
+    public ResponseEntity<Object> importStudent(@RequestPart("file") MultipartFile file) {
+        return ResponseUtils.getResponseEntity(studentService.importStudents(file));
     }
 }

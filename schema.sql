@@ -12,11 +12,12 @@ VALUES (1, Date(now()), 1, 1, Date(now()), 1, 'SYS_ADMIN'),
 
 INSERT INTO permissions(id, created_at, created_by, is_active, last_updated_at, last_updated_by,
                         module, function, action)
-VALUES (1, Date(now()), 1, 1, Date(now()), 1, 'AUTH', 'USER', 'VIEW'),
-       (2, Date(now()), 1, 1, Date(now()), 1, 'AUTH', 'USER', 'CREATE'),
-       (3, Date(now()), 1, 1, Date(now()), 1, 'AUTH', 'USER', 'UPDATE'),
-       (4, Date(now()), 1, 1, Date(now()), 1, 'AUTH', 'USER', 'DELETE'),
-       (5, Date(now()), 1, 1, Date(now()), 1, 'AUTH', 'USER', 'LOCK');
+VALUES (1, Date(now()), 1, 1, Date(now()), 1, 'INDIVIDUAL', 'STUDENT', 'VIEW'),
+       (2, Date(now()), 1, 1, Date(now()), 1, 'INDIVIDUAL', 'STUDENT', 'CREATE'),
+       (3, Date(now()), 1, 1, Date(now()), 1, 'INDIVIDUAL', 'STUDENT', 'UPDATE'),
+       (4, Date(now()), 1, 1, Date(now()), 1, 'INDIVIDUAL', 'STUDENT', 'DELETE'),
+       (5, Date(now()), 1, 1, Date(now()), 1, 'INDIVIDUAL', 'STUDENT', 'LOCK'),
+       (6, Date(now()), 1, 1, Date(now()), 1, 'INDIVIDUAL', 'STUDENT', 'IMPORT');
 
 INSERT INTO role_permissions(role_id, permission_id)
 VALUES (1, 1),
@@ -24,6 +25,7 @@ VALUES (1, 1),
        (1, 3),
        (1, 4),
        (1, 5),
+       (1, 6),
        (2, 1);
 
 INSERT INTO user_roles(user_id, role_id)

@@ -2,8 +2,10 @@ package com.kltn.individualservice.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.kltn.individualservice.constant.Gender;
+import com.kltn.individualservice.dto.request.UserRequestCRU;
 import jakarta.persistence.*;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.time.LocalDate;
@@ -12,6 +14,7 @@ import java.util.Set;
 @Setter
 @Getter
 @Entity
+@NoArgsConstructor
 @Table(name = "users")
 public class User extends BaseEntity {
     @Id
@@ -44,5 +47,17 @@ public class User extends BaseEntity {
             inverseJoinColumns = {@JoinColumn(name = "role_id")}
     )
     private Set<Role> roles;
+
+    public User(UserRequestCRU request) {
+        this.id = request.getId();
+        this.code = request.getCode();
+        this.firstname = request.getFirstname();
+        this.lastname = request.getLastname();
+        this.phoneNumber = request.getPhoneNumber();
+        this.email = request.getEmail();
+        this.dateOfBirth = request.getDateOfBirth();
+        this.gender = request.getGender();
+        this.avatar = request.getAvatarUrl();
+    }
 }
 
