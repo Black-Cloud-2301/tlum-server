@@ -108,6 +108,22 @@ services:
     networks:
       - kltn
 
+  minio:
+    image: minio/minio
+    container_name: minio
+    restart: unless-stopped
+    ports:
+      - "9000:9000"
+      - "9001:9001"
+    environment:
+      MINIO_ACCESS_KEY: ${MINIO_ROOT_USER}
+      MINIO_SECRET_KEY: ${MINIO_ROOT_PASSWORD}
+    command: server --console-address ":9001" /data
+    networks:
+      - kltn
+    volumes:
+      - ./storage:/data
+
   eureka:
     container_name: eureka
     build:
@@ -228,7 +244,7 @@ services:
     networks:
       - kltn
     ports:
-      - "9001:9001"
+      - "9003:9003"
     restart: unless-stopped
     depends_on:
       - gateway

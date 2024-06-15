@@ -40,7 +40,7 @@ scrape_configs:
     metrics_path: '/actuator/prometheus'
     scrape_interval: 15s
     static_configs:
-      - targets: ['file-service:9001']
+      - targets: ['file-service:9003']
 
   - job_name: 'individual-service'
     metrics_path: '/actuator/prometheus'
