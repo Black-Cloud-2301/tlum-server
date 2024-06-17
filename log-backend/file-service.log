@@ -1,41 +1,655 @@
-2024-06-16T00:17:58.402+07:00  INFO 14252 --- [file-service] [restartedMain] c.k.fileservice.FileServiceApplication   : Starting FileServiceApplication using Java 21.0.3 with PID 14252 (C:\Users\tuank\code\tlum\server\file-service\build\classes\java\main started by tuank in C:\Users\tuank\code\tlum\server)
-2024-06-16T00:17:58.414+07:00  INFO 14252 --- [file-service] [restartedMain] c.k.fileservice.FileServiceApplication   : The following 1 profile is active: "dev"
-2024-06-16T00:17:58.486+07:00  INFO 14252 --- [file-service] [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://tuank.mshome.net:8888/
-2024-06-16T00:17:58.487+07:00  INFO 14252 --- [file-service] [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=file-service, profiles=[dev], label=null, version=null, state=null
-2024-06-16T00:17:58.490+07:00  INFO 14252 --- [file-service] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2024-06-16T00:17:58.490+07:00  INFO 14252 --- [file-service] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2024-06-16T00:17:59.876+07:00  INFO 14252 --- [file-service] [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=015f790b-0bda-3921-a796-d39fcbc4bd95
-2024-06-16T00:17:59.976+07:00  WARN 14252 --- [file-service] [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
-2024-06-16T00:17:59.978+07:00  WARN 14252 --- [file-service] [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
-2024-06-16T00:18:00.444+07:00  INFO 14252 --- [file-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9003 (http)
-2024-06-16T00:18:00.458+07:00  INFO 14252 --- [file-service] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-06-16T00:18:00.459+07:00  INFO 14252 --- [file-service] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.24]
-2024-06-16T00:18:00.533+07:00  INFO 14252 --- [file-service] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-06-16T00:18:00.533+07:00  INFO 14252 --- [file-service] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2042 ms
-2024-06-16T00:18:01.839+07:00  WARN 14252 --- [file-service] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
-2024-06-16T00:18:01.857+07:00  INFO 14252 --- [file-service] [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
-2024-06-16T00:18:01.896+07:00  WARN 14252 --- [file-service] [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-2024-06-16T00:18:01.904+07:00  INFO 14252 --- [file-service] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 19 endpoints beneath base path '/actuator'
-2024-06-16T00:18:01.991+07:00  INFO 14252 --- [file-service] [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
-2024-06-16T00:18:02.023+07:00  INFO 14252 --- [file-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
-2024-06-16T00:18:02.027+07:00  INFO 14252 --- [file-service] [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2024-06-16T00:18:02.051+07:00  INFO 14252 --- [file-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
-2024-06-16T00:18:02.051+07:00  INFO 14252 --- [file-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
-2024-06-16T00:18:02.052+07:00  INFO 14252 --- [file-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
-2024-06-16T00:18:02.052+07:00  INFO 14252 --- [file-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
-2024-06-16T00:18:02.052+07:00  INFO 14252 --- [file-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
-2024-06-16T00:18:02.052+07:00  INFO 14252 --- [file-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
-2024-06-16T00:18:02.052+07:00  INFO 14252 --- [file-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
-2024-06-16T00:18:02.122+07:00  INFO 14252 --- [file-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
-2024-06-16T00:18:02.124+07:00  INFO 14252 --- [file-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
-2024-06-16T00:18:02.131+07:00  INFO 14252 --- [file-service] [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
-2024-06-16T00:18:02.137+07:00  INFO 14252 --- [file-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1718471882137 with initial instances count: 4
-2024-06-16T00:18:02.142+07:00  INFO 14252 --- [file-service] [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application FILE-SERVICE with eureka with status UP
-2024-06-16T00:18:02.143+07:00  INFO 14252 --- [file-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1718471882143, current=UP, previous=STARTING]
-2024-06-16T00:18:02.144+07:00  INFO 14252 --- [file-service] [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_FILE-SERVICE/tuank.mshome.net:file-service:9003: registering service...
-2024-06-16T00:18:02.161+07:00  INFO 14252 --- [file-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9003 (http) with context path '/'
-2024-06-16T00:18:02.162+07:00  INFO 14252 --- [file-service] [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 9003
-2024-06-16T00:18:02.180+07:00  INFO 14252 --- [file-service] [restartedMain] c.k.fileservice.FileServiceApplication   : Started FileServiceApplication in 5.324 seconds (process running for 6.346)
-2024-06-16T00:18:02.199+07:00  INFO 14252 --- [file-service] [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_FILE-SERVICE/tuank.mshome.net:file-service:9003 - registration status: 204
-2024-06-16T00:18:02.841+07:00  INFO 14252 --- [file-service] [RMI TCP Connection(3)-192.168.0.108] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-06-16T00:23:02.065+07:00  INFO 14252 --- [file-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-06-17T08:59:49.585+07:00  INFO 22312 --- [file-service] [restartedMain] c.k.fileservice.FileServiceApplication   : Starting FileServiceApplication using Java 21.0.3 with PID 22312 (C:\Users\tuank\code\tlum\server\file-service\build\classes\java\main started by tuank in C:\Users\tuank\code\tlum\server)
+2024-06-17T08:59:49.595+07:00  INFO 22312 --- [file-service] [restartedMain] c.k.fileservice.FileServiceApplication   : The following 1 profile is active: "dev"
+2024-06-17T08:59:49.661+07:00  INFO 22312 --- [file-service] [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://tuank.mshome.net:8888/
+2024-06-17T08:59:49.661+07:00  INFO 22312 --- [file-service] [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=file-service, profiles=[dev], label=null, version=null, state=null
+2024-06-17T08:59:49.670+07:00  INFO 22312 --- [file-service] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-06-17T08:59:49.670+07:00  INFO 22312 --- [file-service] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-06-17T08:59:51.092+07:00  INFO 22312 --- [file-service] [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=73f60668-46ad-30db-8ba6-887ed3867b50
+2024-06-17T08:59:51.177+07:00  WARN 22312 --- [file-service] [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-06-17T08:59:51.178+07:00  WARN 22312 --- [file-service] [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-06-17T08:59:51.672+07:00  INFO 22312 --- [file-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9003 (http)
+2024-06-17T08:59:51.686+07:00  INFO 22312 --- [file-service] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-06-17T08:59:51.687+07:00  INFO 22312 --- [file-service] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.24]
+2024-06-17T08:59:51.767+07:00  INFO 22312 --- [file-service] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-06-17T08:59:51.767+07:00  INFO 22312 --- [file-service] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2097 ms
+2024-06-17T08:59:52.854+07:00  INFO 22312 --- [file-service] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-06-17T08:59:52.870+07:00  INFO 22312 --- [file-service] [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2024-06-17T08:59:52.909+07:00  WARN 22312 --- [file-service] [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2024-06-17T08:59:52.917+07:00  INFO 22312 --- [file-service] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 19 endpoints beneath base path '/actuator'
+2024-06-17T08:59:53.007+07:00  INFO 22312 --- [file-service] [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2024-06-17T08:59:53.041+07:00  INFO 22312 --- [file-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2024-06-17T08:59:53.046+07:00  INFO 22312 --- [file-service] [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-06-17T08:59:53.071+07:00  INFO 22312 --- [file-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2024-06-17T08:59:53.071+07:00  INFO 22312 --- [file-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2024-06-17T08:59:53.071+07:00  INFO 22312 --- [file-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2024-06-17T08:59:53.071+07:00  INFO 22312 --- [file-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2024-06-17T08:59:53.071+07:00  INFO 22312 --- [file-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2024-06-17T08:59:53.071+07:00  INFO 22312 --- [file-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2024-06-17T08:59:53.071+07:00  INFO 22312 --- [file-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2024-06-17T08:59:53.128+07:00  INFO 22312 --- [file-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2024-06-17T08:59:53.130+07:00  INFO 22312 --- [file-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2024-06-17T08:59:53.133+07:00  INFO 22312 --- [file-service] [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2024-06-17T08:59:53.137+07:00  INFO 22312 --- [file-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1718589593137 with initial instances count: 3
+2024-06-17T08:59:53.140+07:00  INFO 22312 --- [file-service] [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application FILE-SERVICE with eureka with status UP
+2024-06-17T08:59:53.141+07:00  INFO 22312 --- [file-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1718589593141, current=UP, previous=STARTING]
+2024-06-17T08:59:53.143+07:00  INFO 22312 --- [file-service] [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_FILE-SERVICE/tuank.mshome.net:file-service:9003: registering service...
+2024-06-17T08:59:53.161+07:00  INFO 22312 --- [file-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9003 (http) with context path '/'
+2024-06-17T08:59:53.161+07:00  INFO 22312 --- [file-service] [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 9003
+2024-06-17T08:59:53.181+07:00  INFO 22312 --- [file-service] [restartedMain] c.k.fileservice.FileServiceApplication   : Started FileServiceApplication in 5.174 seconds (process running for 6.847)
+2024-06-17T08:59:53.201+07:00  INFO 22312 --- [file-service] [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_FILE-SERVICE/tuank.mshome.net:file-service:9003 - registration status: 204
+2024-06-17T08:59:53.661+07:00  INFO 22312 --- [file-service] [RMI TCP Connection(2)-172.16.100.5] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-06-17T09:04:53.081+07:00  INFO 22312 --- [file-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-06-17T09:09:53.088+07:00  INFO 22312 --- [file-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-06-17T09:14:53.092+07:00  INFO 22312 --- [file-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-06-17T09:19:53.096+07:00  INFO 22312 --- [file-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-06-17T09:24:53.105+07:00  INFO 22312 --- [file-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-06-17T09:29:53.115+07:00  INFO 22312 --- [file-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-06-17T09:34:53.127+07:00  INFO 22312 --- [file-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-06-17T09:39:53.136+07:00  INFO 22312 --- [file-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-06-17T09:44:53.141+07:00  INFO 22312 --- [file-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-06-17T09:48:48.099+07:00 ERROR 22312 --- [file-service] [http-nio-9003-exec-1] c.k.f.service.impl.MinioServiceImpl      : Error uploadFile: 
+
+java.net.UnknownHostException: No such host is known (minio)
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method) ~[na:na]
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Inet6AddressImpl.java:52) ~[na:na]
+	at java.base/java.net.InetAddress$PlatformResolver.lookupByName(InetAddress.java:1211) ~[na:na]
+	at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1828) ~[na:na]
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:1139) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1818) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1688) ~[na:na]
+	at okhttp3.Dns$Companion$DnsSystem.lookup(Dns.kt:49) ~[okhttp-4.12.0.jar:na]
+	at okhttp3.internal.connection.RouteSelector.resetNextInetSocketAddress(RouteSelector.kt:169) ~[okhttp-4.12.0.jar:na]
+	at okhttp3.internal.connection.RouteSelector.nextProxy(RouteSelector.kt:131) ~[okhttp-4.12.0.jar:na]
+	at okhttp3.internal.connection.RouteSelector.next(RouteSelector.kt:73) ~[okhttp-4.12.0.jar:na]
+	at okhttp3.internal.connection.ExchangeFinder.findConnection(ExchangeFinder.kt:205) ~[okhttp-4.12.0.jar:na]
+	at okhttp3.internal.connection.ExchangeFinder.findHealthyConnection(ExchangeFinder.kt:106) ~[okhttp-4.12.0.jar:na]
+	at okhttp3.internal.connection.ExchangeFinder.find(ExchangeFinder.kt:74) ~[okhttp-4.12.0.jar:na]
+	at okhttp3.internal.connection.RealCall.initExchange$okhttp(RealCall.kt:255) ~[okhttp-4.12.0.jar:na]
+	at okhttp3.internal.connection.ConnectInterceptor.intercept(ConnectInterceptor.kt:32) ~[okhttp-4.12.0.jar:na]
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109) ~[okhttp-4.12.0.jar:na]
+	at okhttp3.internal.cache.CacheInterceptor.intercept(CacheInterceptor.kt:95) ~[okhttp-4.12.0.jar:na]
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109) ~[okhttp-4.12.0.jar:na]
+	at okhttp3.internal.http.BridgeInterceptor.intercept(BridgeInterceptor.kt:83) ~[okhttp-4.12.0.jar:na]
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109) ~[okhttp-4.12.0.jar:na]
+	at okhttp3.internal.http.RetryAndFollowUpInterceptor.intercept(RetryAndFollowUpInterceptor.kt:76) ~[okhttp-4.12.0.jar:na]
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109) ~[okhttp-4.12.0.jar:na]
+	at okhttp3.internal.connection.RealCall.getResponseWithInterceptorChain$okhttp(RealCall.kt:201) ~[okhttp-4.12.0.jar:na]
+	at okhttp3.internal.connection.RealCall$AsyncCall.run(RealCall.kt:517) ~[okhttp-4.12.0.jar:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+
+2024-06-17T09:49:53.145+07:00  INFO 22312 --- [file-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-06-17T09:52:48.648+07:00  INFO 22312 --- [file-service] [SpringApplicationShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application FILE-SERVICE with eureka with status DOWN
+2024-06-17T09:52:48.650+07:00  INFO 22312 --- [file-service] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1718592768650, current=DOWN, previous=UP]
+2024-06-17T09:52:48.651+07:00  INFO 22312 --- [file-service] [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_FILE-SERVICE/tuank.mshome.net:file-service:9003: registering service...
+2024-06-17T09:52:48.675+07:00  INFO 22312 --- [file-service] [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_FILE-SERVICE/tuank.mshome.net:file-service:9003 - registration status: 204
+2024-06-17T09:52:48.684+07:00  INFO 22312 --- [file-service] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2024-06-17T09:52:51.690+07:00  INFO 22312 --- [file-service] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2024-06-17T09:52:51.714+07:00  INFO 22312 --- [file-service] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_FILE-SERVICE/tuank.mshome.net:file-service:9003 - deregister  status: 200
+2024-06-17T09:52:51.722+07:00  INFO 22312 --- [file-service] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2024-06-17T09:54:20.945+07:00  INFO 29988 --- [file-service] [restartedMain] c.k.fileservice.FileServiceApplication   : Starting FileServiceApplication using Java 21.0.3 with PID 29988 (C:\Users\tuank\code\tlum\server\file-service\build\classes\java\main started by tuank in C:\Users\tuank\code\tlum\server)
+2024-06-17T09:54:20.947+07:00  INFO 29988 --- [file-service] [restartedMain] c.k.fileservice.FileServiceApplication   : The following 1 profile is active: "dev"
+2024-06-17T09:54:21.031+07:00  INFO 29988 --- [file-service] [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://88aecde30326:8888/
+2024-06-17T09:54:21.031+07:00  INFO 29988 --- [file-service] [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://88aecde30326:8888/:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://88aecde30326:8888/file-service/dev": 88aecde30326. Will be trying the next url if available
+2024-06-17T09:54:21.031+07:00  WARN 29988 --- [file-service] [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@734cb958 uris = array<String>['http://88aecde30326:8888/'], optional = true, profiles = 'dev']): I/O error on GET request for "http://88aecde30326:8888/file-service/dev": 88aecde30326
+2024-06-17T09:54:21.031+07:00  INFO 29988 --- [file-service] [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://88aecde30326:8888/
+2024-06-17T09:54:21.031+07:00  INFO 29988 --- [file-service] [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://88aecde30326:8888/:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://88aecde30326:8888/file-service/dev": 88aecde30326. Will be trying the next url if available
+2024-06-17T09:54:21.031+07:00  WARN 29988 --- [file-service] [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@7d011c24 uris = array<String>['http://88aecde30326:8888/'], optional = true, profiles = 'dev']): I/O error on GET request for "http://88aecde30326:8888/file-service/dev": 88aecde30326
+2024-06-17T09:54:21.032+07:00  INFO 29988 --- [file-service] [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://88aecde30326:8888/
+2024-06-17T09:54:21.032+07:00  INFO 29988 --- [file-service] [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://88aecde30326:8888/:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://88aecde30326:8888/file-service/dev": 88aecde30326. Will be trying the next url if available
+2024-06-17T09:54:21.032+07:00  WARN 29988 --- [file-service] [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@4b72efe8 uris = array<String>['http://88aecde30326:8888/'], optional = true, profiles = 'dev']): I/O error on GET request for "http://88aecde30326:8888/file-service/dev": 88aecde30326
+2024-06-17T09:54:21.040+07:00  INFO 29988 --- [file-service] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-06-17T09:54:21.040+07:00  INFO 29988 --- [file-service] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-06-17T09:54:22.674+07:00  INFO 29988 --- [file-service] [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=73f60668-46ad-30db-8ba6-887ed3867b50
+2024-06-17T09:54:22.762+07:00  WARN 29988 --- [file-service] [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-06-17T09:54:22.766+07:00  WARN 29988 --- [file-service] [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-06-17T09:54:23.208+07:00  INFO 29988 --- [file-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9003 (http)
+2024-06-17T09:54:23.220+07:00  INFO 29988 --- [file-service] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-06-17T09:54:23.221+07:00  INFO 29988 --- [file-service] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.24]
+2024-06-17T09:54:23.295+07:00  INFO 29988 --- [file-service] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-06-17T09:54:23.296+07:00  INFO 29988 --- [file-service] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2255 ms
+2024-06-17T09:54:23.626+07:00  WARN 29988 --- [file-service] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'convertFileController' defined in file [C:\Users\tuank\code\tlum\server\file-service\build\classes\java\main\com\kltn\fileservice\controller\ConvertFileController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'fileServiceImpl' defined in file [C:\Users\tuank\code\tlum\server\file-service\build\classes\java\main\com\kltn\fileservice\service\impl\FileServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'minioServiceImpl' defined in file [C:\Users\tuank\code\tlum\server\file-service\build\classes\java\main\com\kltn\fileservice\service\impl\MinioServiceImpl.class]: Failed to instantiate [com.kltn.fileservice.service.impl.MinioServiceImpl]: Constructor threw exception
+2024-06-17T09:54:23.629+07:00  INFO 29988 --- [file-service] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2024-06-17T09:54:23.647+07:00  INFO 29988 --- [file-service] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-06-17T09:54:23.675+07:00 ERROR 29988 --- [file-service] [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'convertFileController' defined in file [C:\Users\tuank\code\tlum\server\file-service\build\classes\java\main\com\kltn\fileservice\controller\ConvertFileController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'fileServiceImpl' defined in file [C:\Users\tuank\code\tlum\server\file-service\build\classes\java\main\com\kltn\fileservice\service\impl\FileServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'minioServiceImpl' defined in file [C:\Users\tuank\code\tlum\server\file-service\build\classes\java\main\com\kltn\fileservice\service\impl\MinioServiceImpl.class]: Failed to instantiate [com.kltn.fileservice.service.impl.MinioServiceImpl]: Constructor threw exception
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:795) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:237) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1357) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1194) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:975) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:962) ~[spring-context-6.1.8.jar:6.1.8]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624) ~[spring-context-6.1.8.jar:6.1.8]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352) ~[spring-boot-3.3.0.jar:3.3.0]
+	at com.kltn.fileservice.FileServiceApplication.main(FileServiceApplication.java:12) ~[main/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.3.0.jar:3.3.0]
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'fileServiceImpl' defined in file [C:\Users\tuank\code\tlum\server\file-service\build\classes\java\main\com\kltn\fileservice\service\impl\FileServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'minioServiceImpl' defined in file [C:\Users\tuank\code\tlum\server\file-service\build\classes\java\main\com\kltn\fileservice\service\impl\MinioServiceImpl.class]: Failed to instantiate [com.kltn.fileservice.service.impl.MinioServiceImpl]: Constructor threw exception
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:795) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:237) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1357) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1194) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1443) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1353) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:904) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:782) ~[spring-beans-6.1.8.jar:6.1.8]
+	... 22 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'minioServiceImpl' defined in file [C:\Users\tuank\code\tlum\server\file-service\build\classes\java\main\com\kltn\fileservice\service\impl\MinioServiceImpl.class]: Failed to instantiate [com.kltn.fileservice.service.impl.MinioServiceImpl]: Constructor threw exception
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:318) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:306) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1357) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1194) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1443) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1353) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:904) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:782) ~[spring-beans-6.1.8.jar:6.1.8]
+	... 36 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.kltn.fileservice.service.impl.MinioServiceImpl]: Constructor threw exception
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:221) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:111) ~[spring-beans-6.1.8.jar:6.1.8]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:315) ~[spring-beans-6.1.8.jar:6.1.8]
+	... 50 common frames omitted
+Caused by: java.lang.IllegalArgumentException: endpoint must not be null.
+	at io.minio.http.HttpUtils.validateNotNull(HttpUtils.java:53) ~[minio-8.5.2.jar:8.5.2]
+	at io.minio.http.HttpUtils.validateNotEmptyString(HttpUtils.java:58) ~[minio-8.5.2.jar:8.5.2]
+	at io.minio.http.HttpUtils.getBaseUrl(HttpUtils.java:102) ~[minio-8.5.2.jar:8.5.2]
+	at io.minio.MinioAsyncClient$Builder.endpoint(MinioAsyncClient.java:3300) ~[minio-8.5.2.jar:8.5.2]
+	at io.minio.MinioClient$Builder.endpoint(MinioClient.java:2451) ~[minio-8.5.2.jar:8.5.2]
+	at com.kltn.fileservice.service.impl.MinioServiceImpl.<init>(MinioServiceImpl.java:23) ~[main/:na]
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486) ~[na:na]
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:208) ~[spring-beans-6.1.8.jar:6.1.8]
+	... 52 common frames omitted
+
+2024-06-17T09:54:45.741+07:00  INFO 47160 --- [file-service] [restartedMain] c.k.fileservice.FileServiceApplication   : Starting FileServiceApplication using Java 21.0.3 with PID 47160 (C:\Users\tuank\code\tlum\server\file-service\build\classes\java\main started by tuank in C:\Users\tuank\code\tlum\server)
+2024-06-17T09:54:45.743+07:00  INFO 47160 --- [file-service] [restartedMain] c.k.fileservice.FileServiceApplication   : The following 1 profile is active: "dev"
+2024-06-17T09:54:45.793+07:00  WARN 47160 --- [file-service] [restartedMain] c.ConfigServerConfigDataLocationResolver : Could not locate configserver via discovery
+
+java.lang.IllegalStateException: No instances found of configserver (config-service)
+	at org.springframework.cloud.config.client.ConfigServerInstanceProvider.getConfigServerInstances(ConfigServerInstanceProvider.java:77) ~[spring-cloud-config-client-4.1.2.jar:4.1.2]
+	at org.springframework.cloud.config.client.ConfigServerInstanceMonitor.refresh(ConfigServerInstanceMonitor.java:90) ~[spring-cloud-config-client-4.1.2.jar:4.1.2]
+	at org.springframework.cloud.config.client.ConfigServerConfigDataLocationResolver.lambda$resolveProfileSpecific$9(ConfigServerConfigDataLocationResolver.java:297) ~[spring-cloud-config-client-4.1.2.jar:4.1.2]
+	at org.springframework.boot.DefaultBootstrapContext.getInstance(DefaultBootstrapContext.java:119) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.DefaultBootstrapContext.getOrElseThrow(DefaultBootstrapContext.java:111) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.DefaultBootstrapContext.get(DefaultBootstrapContext.java:88) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.cloud.config.client.ConfigServerConfigDataLoader.load(ConfigServerConfigDataLoader.java:85) ~[spring-cloud-config-client-4.1.2.jar:4.1.2]
+	at org.springframework.cloud.config.client.ConfigServerConfigDataLoader.load(ConfigServerConfigDataLoader.java:61) ~[spring-cloud-config-client-4.1.2.jar:4.1.2]
+	at org.springframework.boot.context.config.ConfigDataLoaders.load(ConfigDataLoaders.java:96) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.context.config.ConfigDataImporter.load(ConfigDataImporter.java:132) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.context.config.ConfigDataImporter.resolveAndLoad(ConfigDataImporter.java:87) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.context.config.ConfigDataEnvironmentContributors.withProcessedImports(ConfigDataEnvironmentContributors.java:121) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.context.config.ConfigDataEnvironment.processInitial(ConfigDataEnvironment.java:245) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.context.config.ConfigDataEnvironment.processAndApply(ConfigDataEnvironment.java:232) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.context.config.ConfigDataEnvironmentPostProcessor.postProcessEnvironment(ConfigDataEnvironmentPostProcessor.java:96) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.context.config.ConfigDataEnvironmentPostProcessor.postProcessEnvironment(ConfigDataEnvironmentPostProcessor.java:89) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.env.EnvironmentPostProcessorApplicationListener.onApplicationEnvironmentPreparedEvent(EnvironmentPostProcessorApplicationListener.java:109) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.env.EnvironmentPostProcessorApplicationListener.onApplicationEvent(EnvironmentPostProcessorApplicationListener.java:94) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:185) ~[spring-context-6.1.8.jar:6.1.8]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:178) ~[spring-context-6.1.8.jar:6.1.8]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:156) ~[spring-context-6.1.8.jar:6.1.8]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:138) ~[spring-context-6.1.8.jar:6.1.8]
+	at org.springframework.boot.context.event.EventPublishingRunListener.multicastInitialEvent(EventPublishingRunListener.java:136) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.context.event.EventPublishingRunListener.environmentPrepared(EventPublishingRunListener.java:81) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.SpringApplicationRunListeners.lambda$environmentPrepared$2(SpringApplicationRunListeners.java:64) ~[spring-boot-3.3.0.jar:3.3.0]
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75) ~[na:na]
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:118) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:112) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.SpringApplicationRunListeners.environmentPrepared(SpringApplicationRunListeners.java:63) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.SpringApplication.prepareEnvironment(SpringApplication.java:370) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:330) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352) ~[spring-boot-3.3.0.jar:3.3.0]
+	at com.kltn.fileservice.FileServiceApplication.main(FileServiceApplication.java:12) ~[main/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.3.0.jar:3.3.0]
+
+2024-06-17T09:54:45.798+07:00  INFO 47160 --- [file-service] [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2024-06-17T09:54:45.798+07:00  INFO 47160 --- [file-service] [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=file-service, profiles=[dev], label=null, version=null, state=null
+2024-06-17T09:54:45.801+07:00  INFO 47160 --- [file-service] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-06-17T09:54:45.801+07:00  INFO 47160 --- [file-service] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-06-17T09:54:47.574+07:00  INFO 47160 --- [file-service] [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=73f60668-46ad-30db-8ba6-887ed3867b50
+2024-06-17T09:54:47.680+07:00  WARN 47160 --- [file-service] [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-06-17T09:54:47.682+07:00  WARN 47160 --- [file-service] [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-06-17T09:54:48.141+07:00  INFO 47160 --- [file-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9003 (http)
+2024-06-17T09:54:48.153+07:00  INFO 47160 --- [file-service] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-06-17T09:54:48.154+07:00  INFO 47160 --- [file-service] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.24]
+2024-06-17T09:54:48.238+07:00  INFO 47160 --- [file-service] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-06-17T09:54:48.238+07:00  INFO 47160 --- [file-service] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2437 ms
+2024-06-17T09:54:49.771+07:00  INFO 47160 --- [file-service] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-06-17T09:54:49.788+07:00  INFO 47160 --- [file-service] [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2024-06-17T09:54:49.821+07:00  WARN 47160 --- [file-service] [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2024-06-17T09:54:49.828+07:00  INFO 47160 --- [file-service] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 19 endpoints beneath base path '/actuator'
+2024-06-17T09:54:49.927+07:00  INFO 47160 --- [file-service] [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2024-06-17T09:54:49.960+07:00  INFO 47160 --- [file-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2024-06-17T09:54:49.965+07:00  INFO 47160 --- [file-service] [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-06-17T09:54:49.985+07:00  INFO 47160 --- [file-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2024-06-17T09:54:49.985+07:00  INFO 47160 --- [file-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2024-06-17T09:54:49.985+07:00  INFO 47160 --- [file-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2024-06-17T09:54:49.985+07:00  INFO 47160 --- [file-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2024-06-17T09:54:49.986+07:00  INFO 47160 --- [file-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2024-06-17T09:54:49.986+07:00  INFO 47160 --- [file-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2024-06-17T09:54:49.986+07:00  INFO 47160 --- [file-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2024-06-17T09:54:50.047+07:00  INFO 47160 --- [file-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2024-06-17T09:54:50.049+07:00  INFO 47160 --- [file-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2024-06-17T09:54:50.051+07:00  INFO 47160 --- [file-service] [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2024-06-17T09:54:50.056+07:00  INFO 47160 --- [file-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1718592890056 with initial instances count: 4
+2024-06-17T09:54:50.058+07:00  INFO 47160 --- [file-service] [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application FILE-SERVICE with eureka with status UP
+2024-06-17T09:54:50.059+07:00  INFO 47160 --- [file-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1718592890059, current=UP, previous=STARTING]
+2024-06-17T09:54:50.061+07:00  INFO 47160 --- [file-service] [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_FILE-SERVICE/tuank.mshome.net:file-service:9003: registering service...
+2024-06-17T09:54:50.077+07:00  INFO 47160 --- [file-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9003 (http) with context path '/'
+2024-06-17T09:54:50.078+07:00  INFO 47160 --- [file-service] [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 9003
+2024-06-17T09:54:50.096+07:00  INFO 47160 --- [file-service] [restartedMain] c.k.fileservice.FileServiceApplication   : Started FileServiceApplication in 5.979 seconds (process running for 7.055)
+2024-06-17T09:54:50.126+07:00  INFO 47160 --- [file-service] [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_FILE-SERVICE/tuank.mshome.net:file-service:9003 - registration status: 204
+2024-06-17T09:54:50.550+07:00  INFO 47160 --- [file-service] [RMI TCP Connection(2)-172.16.100.5] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-06-17T09:54:58.880+07:00  INFO 47160 --- [file-service] [SpringApplicationShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application FILE-SERVICE with eureka with status DOWN
+2024-06-17T09:54:58.880+07:00  INFO 47160 --- [file-service] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1718592898880, current=DOWN, previous=UP]
+2024-06-17T09:54:58.880+07:00  INFO 47160 --- [file-service] [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_FILE-SERVICE/tuank.mshome.net:file-service:9003: registering service...
+2024-06-17T09:54:58.894+07:00  INFO 47160 --- [file-service] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2024-06-17T09:54:58.906+07:00  INFO 47160 --- [file-service] [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_FILE-SERVICE/tuank.mshome.net:file-service:9003 - registration status: 204
+2024-06-17T09:54:58.908+07:00  INFO 47160 --- [file-service] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2024-06-17T09:54:58.918+07:00  INFO 47160 --- [file-service] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_FILE-SERVICE/tuank.mshome.net:file-service:9003 - deregister  status: 200
+2024-06-17T09:54:58.926+07:00  INFO 47160 --- [file-service] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2024-06-17T09:55:06.766+07:00  INFO 19548 --- [file-service] [restartedMain] c.k.fileservice.FileServiceApplication   : Starting FileServiceApplication using Java 21.0.3 with PID 19548 (C:\Users\tuank\code\tlum\server\file-service\build\classes\java\main started by tuank in C:\Users\tuank\code\tlum\server)
+2024-06-17T09:55:06.771+07:00  INFO 19548 --- [file-service] [restartedMain] c.k.fileservice.FileServiceApplication   : The following 1 profile is active: "dev"
+2024-06-17T09:55:06.859+07:00  INFO 19548 --- [file-service] [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://tuank.mshome.net:8888/
+2024-06-17T09:55:06.860+07:00  INFO 19548 --- [file-service] [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=file-service, profiles=[dev], label=null, version=null, state=null
+2024-06-17T09:55:06.865+07:00  INFO 19548 --- [file-service] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-06-17T09:55:06.866+07:00  INFO 19548 --- [file-service] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-06-17T09:55:08.149+07:00  INFO 19548 --- [file-service] [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=73f60668-46ad-30db-8ba6-887ed3867b50
+2024-06-17T09:55:08.239+07:00  WARN 19548 --- [file-service] [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-06-17T09:55:08.240+07:00  WARN 19548 --- [file-service] [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-06-17T09:55:08.718+07:00  INFO 19548 --- [file-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9003 (http)
+2024-06-17T09:55:08.731+07:00  INFO 19548 --- [file-service] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-06-17T09:55:08.731+07:00  INFO 19548 --- [file-service] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.24]
+2024-06-17T09:55:08.830+07:00  INFO 19548 --- [file-service] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-06-17T09:55:08.831+07:00  INFO 19548 --- [file-service] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1965 ms
+2024-06-17T09:55:10.225+07:00  INFO 19548 --- [file-service] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-06-17T09:55:10.243+07:00  INFO 19548 --- [file-service] [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2024-06-17T09:55:10.279+07:00  WARN 19548 --- [file-service] [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2024-06-17T09:55:10.288+07:00  INFO 19548 --- [file-service] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 19 endpoints beneath base path '/actuator'
+2024-06-17T09:55:10.430+07:00  INFO 19548 --- [file-service] [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2024-06-17T09:55:10.461+07:00  INFO 19548 --- [file-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2024-06-17T09:55:10.466+07:00  INFO 19548 --- [file-service] [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-06-17T09:55:10.487+07:00  INFO 19548 --- [file-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2024-06-17T09:55:10.487+07:00  INFO 19548 --- [file-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2024-06-17T09:55:10.488+07:00  INFO 19548 --- [file-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2024-06-17T09:55:10.488+07:00  INFO 19548 --- [file-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2024-06-17T09:55:10.488+07:00  INFO 19548 --- [file-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2024-06-17T09:55:10.488+07:00  INFO 19548 --- [file-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2024-06-17T09:55:10.488+07:00  INFO 19548 --- [file-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2024-06-17T09:55:10.551+07:00  INFO 19548 --- [file-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2024-06-17T09:55:10.553+07:00  INFO 19548 --- [file-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2024-06-17T09:55:10.555+07:00  INFO 19548 --- [file-service] [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2024-06-17T09:55:10.560+07:00  INFO 19548 --- [file-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1718592910560 with initial instances count: 4
+2024-06-17T09:55:10.561+07:00  INFO 19548 --- [file-service] [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application FILE-SERVICE with eureka with status UP
+2024-06-17T09:55:10.562+07:00  INFO 19548 --- [file-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1718592910562, current=UP, previous=STARTING]
+2024-06-17T09:55:10.564+07:00  INFO 19548 --- [file-service] [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_FILE-SERVICE/tuank.mshome.net:file-service:9003: registering service...
+2024-06-17T09:55:10.579+07:00  INFO 19548 --- [file-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9003 (http) with context path '/'
+2024-06-17T09:55:10.580+07:00  INFO 19548 --- [file-service] [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 9003
+2024-06-17T09:55:10.600+07:00  INFO 19548 --- [file-service] [restartedMain] c.k.fileservice.FileServiceApplication   : Started FileServiceApplication in 5.663 seconds (process running for 6.871)
+2024-06-17T09:55:10.623+07:00  INFO 19548 --- [file-service] [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_FILE-SERVICE/tuank.mshome.net:file-service:9003 - registration status: 204
+2024-06-17T09:55:11.252+07:00  INFO 19548 --- [file-service] [RMI TCP Connection(3)-172.16.100.5] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-06-17T09:57:41.362+07:00 ERROR 19548 --- [file-service] [http-nio-9003-exec-1] c.k.f.service.impl.MinioServiceImpl      : Error uploadFile: 
+
+java.net.UnknownHostException: No such host is known (minio)
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method) ~[na:na]
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Inet6AddressImpl.java:52) ~[na:na]
+	at java.base/java.net.InetAddress$PlatformResolver.lookupByName(InetAddress.java:1211) ~[na:na]
+	at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1828) ~[na:na]
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:1139) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1818) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1688) ~[na:na]
+	at okhttp3.Dns$Companion$DnsSystem.lookup(Dns.kt:49) ~[okhttp-4.12.0.jar:na]
+	at okhttp3.internal.connection.RouteSelector.resetNextInetSocketAddress(RouteSelector.kt:169) ~[okhttp-4.12.0.jar:na]
+	at okhttp3.internal.connection.RouteSelector.nextProxy(RouteSelector.kt:131) ~[okhttp-4.12.0.jar:na]
+	at okhttp3.internal.connection.RouteSelector.next(RouteSelector.kt:73) ~[okhttp-4.12.0.jar:na]
+	at okhttp3.internal.connection.ExchangeFinder.findConnection(ExchangeFinder.kt:205) ~[okhttp-4.12.0.jar:na]
+	at okhttp3.internal.connection.ExchangeFinder.findHealthyConnection(ExchangeFinder.kt:106) ~[okhttp-4.12.0.jar:na]
+	at okhttp3.internal.connection.ExchangeFinder.find(ExchangeFinder.kt:74) ~[okhttp-4.12.0.jar:na]
+	at okhttp3.internal.connection.RealCall.initExchange$okhttp(RealCall.kt:255) ~[okhttp-4.12.0.jar:na]
+	at okhttp3.internal.connection.ConnectInterceptor.intercept(ConnectInterceptor.kt:32) ~[okhttp-4.12.0.jar:na]
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109) ~[okhttp-4.12.0.jar:na]
+	at okhttp3.internal.cache.CacheInterceptor.intercept(CacheInterceptor.kt:95) ~[okhttp-4.12.0.jar:na]
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109) ~[okhttp-4.12.0.jar:na]
+	at okhttp3.internal.http.BridgeInterceptor.intercept(BridgeInterceptor.kt:83) ~[okhttp-4.12.0.jar:na]
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109) ~[okhttp-4.12.0.jar:na]
+	at okhttp3.internal.http.RetryAndFollowUpInterceptor.intercept(RetryAndFollowUpInterceptor.kt:76) ~[okhttp-4.12.0.jar:na]
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109) ~[okhttp-4.12.0.jar:na]
+	at okhttp3.internal.connection.RealCall.getResponseWithInterceptorChain$okhttp(RealCall.kt:201) ~[okhttp-4.12.0.jar:na]
+	at okhttp3.internal.connection.RealCall$AsyncCall.run(RealCall.kt:517) ~[okhttp-4.12.0.jar:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+
+2024-06-17T09:59:22.040+07:00 ERROR 19548 --- [file-service] [http-nio-9003-exec-10] c.k.f.service.impl.MinioServiceImpl      : Error uploadFile: 
+
+java.net.UnknownHostException: No such host is known (minio)
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method) ~[na:na]
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Inet6AddressImpl.java:52) ~[na:na]
+	at java.base/java.net.InetAddress$PlatformResolver.lookupByName(InetAddress.java:1211) ~[na:na]
+	at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1828) ~[na:na]
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:1139) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1818) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1688) ~[na:na]
+	at okhttp3.Dns$Companion$DnsSystem.lookup(Dns.kt:49) ~[okhttp-4.12.0.jar:na]
+	at okhttp3.internal.connection.RouteSelector.resetNextInetSocketAddress(RouteSelector.kt:169) ~[okhttp-4.12.0.jar:na]
+	at okhttp3.internal.connection.RouteSelector.nextProxy(RouteSelector.kt:131) ~[okhttp-4.12.0.jar:na]
+	at okhttp3.internal.connection.RouteSelector.next(RouteSelector.kt:73) ~[okhttp-4.12.0.jar:na]
+	at okhttp3.internal.connection.ExchangeFinder.findConnection(ExchangeFinder.kt:205) ~[okhttp-4.12.0.jar:na]
+	at okhttp3.internal.connection.ExchangeFinder.findHealthyConnection(ExchangeFinder.kt:106) ~[okhttp-4.12.0.jar:na]
+	at okhttp3.internal.connection.ExchangeFinder.find(ExchangeFinder.kt:74) ~[okhttp-4.12.0.jar:na]
+	at okhttp3.internal.connection.RealCall.initExchange$okhttp(RealCall.kt:255) ~[okhttp-4.12.0.jar:na]
+	at okhttp3.internal.connection.ConnectInterceptor.intercept(ConnectInterceptor.kt:32) ~[okhttp-4.12.0.jar:na]
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109) ~[okhttp-4.12.0.jar:na]
+	at okhttp3.internal.cache.CacheInterceptor.intercept(CacheInterceptor.kt:95) ~[okhttp-4.12.0.jar:na]
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109) ~[okhttp-4.12.0.jar:na]
+	at okhttp3.internal.http.BridgeInterceptor.intercept(BridgeInterceptor.kt:83) ~[okhttp-4.12.0.jar:na]
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109) ~[okhttp-4.12.0.jar:na]
+	at okhttp3.internal.http.RetryAndFollowUpInterceptor.intercept(RetryAndFollowUpInterceptor.kt:76) ~[okhttp-4.12.0.jar:na]
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109) ~[okhttp-4.12.0.jar:na]
+	at okhttp3.internal.connection.RealCall.getResponseWithInterceptorChain$okhttp(RealCall.kt:201) ~[okhttp-4.12.0.jar:na]
+	at okhttp3.internal.connection.RealCall$AsyncCall.run(RealCall.kt:517) ~[okhttp-4.12.0.jar:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+
+2024-06-17T10:00:10.504+07:00  INFO 19548 --- [file-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-06-17T10:05:10.507+07:00  INFO 19548 --- [file-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-06-17T10:10:10.520+07:00  INFO 19548 --- [file-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-06-17T10:12:36.730+07:00 ERROR 19548 --- [file-service] [http-nio-9003-exec-4] c.k.f.service.impl.MinioServiceImpl      : Error uploadFile: 
+
+java.net.UnknownHostException: No such host is known (minio)
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method) ~[na:na]
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Inet6AddressImpl.java:52) ~[na:na]
+	at java.base/java.net.InetAddress$PlatformResolver.lookupByName(InetAddress.java:1211) ~[na:na]
+	at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1828) ~[na:na]
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:1139) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1818) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1688) ~[na:na]
+	at okhttp3.Dns$Companion$DnsSystem.lookup(Dns.kt:49) ~[okhttp-4.12.0.jar:na]
+	at okhttp3.internal.connection.RouteSelector.resetNextInetSocketAddress(RouteSelector.kt:169) ~[okhttp-4.12.0.jar:na]
+	at okhttp3.internal.connection.RouteSelector.nextProxy(RouteSelector.kt:131) ~[okhttp-4.12.0.jar:na]
+	at okhttp3.internal.connection.RouteSelector.next(RouteSelector.kt:73) ~[okhttp-4.12.0.jar:na]
+	at okhttp3.internal.connection.ExchangeFinder.findConnection(ExchangeFinder.kt:205) ~[okhttp-4.12.0.jar:na]
+	at okhttp3.internal.connection.ExchangeFinder.findHealthyConnection(ExchangeFinder.kt:106) ~[okhttp-4.12.0.jar:na]
+	at okhttp3.internal.connection.ExchangeFinder.find(ExchangeFinder.kt:74) ~[okhttp-4.12.0.jar:na]
+	at okhttp3.internal.connection.RealCall.initExchange$okhttp(RealCall.kt:255) ~[okhttp-4.12.0.jar:na]
+	at okhttp3.internal.connection.ConnectInterceptor.intercept(ConnectInterceptor.kt:32) ~[okhttp-4.12.0.jar:na]
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109) ~[okhttp-4.12.0.jar:na]
+	at okhttp3.internal.cache.CacheInterceptor.intercept(CacheInterceptor.kt:95) ~[okhttp-4.12.0.jar:na]
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109) ~[okhttp-4.12.0.jar:na]
+	at okhttp3.internal.http.BridgeInterceptor.intercept(BridgeInterceptor.kt:83) ~[okhttp-4.12.0.jar:na]
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109) ~[okhttp-4.12.0.jar:na]
+	at okhttp3.internal.http.RetryAndFollowUpInterceptor.intercept(RetryAndFollowUpInterceptor.kt:76) ~[okhttp-4.12.0.jar:na]
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109) ~[okhttp-4.12.0.jar:na]
+	at okhttp3.internal.connection.RealCall.getResponseWithInterceptorChain$okhttp(RealCall.kt:201) ~[okhttp-4.12.0.jar:na]
+	at okhttp3.internal.connection.RealCall$AsyncCall.run(RealCall.kt:517) ~[okhttp-4.12.0.jar:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+
+2024-06-17T10:14:48.063+07:00 ERROR 19548 --- [file-service] [http-nio-9003-exec-5] c.k.f.service.impl.MinioServiceImpl      : Error uploadFile: 
+
+java.net.UnknownHostException: No such host is known (minio)
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method) ~[na:na]
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Inet6AddressImpl.java:52) ~[na:na]
+	at java.base/java.net.InetAddress$PlatformResolver.lookupByName(InetAddress.java:1211) ~[na:na]
+	at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1828) ~[na:na]
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:1139) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1818) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1688) ~[na:na]
+	at okhttp3.Dns$Companion$DnsSystem.lookup(Dns.kt:49) ~[okhttp-4.12.0.jar:na]
+	at okhttp3.internal.connection.RouteSelector.resetNextInetSocketAddress(RouteSelector.kt:169) ~[okhttp-4.12.0.jar:na]
+	at okhttp3.internal.connection.RouteSelector.nextProxy(RouteSelector.kt:131) ~[okhttp-4.12.0.jar:na]
+	at okhttp3.internal.connection.RouteSelector.next(RouteSelector.kt:73) ~[okhttp-4.12.0.jar:na]
+	at okhttp3.internal.connection.ExchangeFinder.findConnection(ExchangeFinder.kt:205) ~[okhttp-4.12.0.jar:na]
+	at okhttp3.internal.connection.ExchangeFinder.findHealthyConnection(ExchangeFinder.kt:106) ~[okhttp-4.12.0.jar:na]
+	at okhttp3.internal.connection.ExchangeFinder.find(ExchangeFinder.kt:74) ~[okhttp-4.12.0.jar:na]
+	at okhttp3.internal.connection.RealCall.initExchange$okhttp(RealCall.kt:255) ~[okhttp-4.12.0.jar:na]
+	at okhttp3.internal.connection.ConnectInterceptor.intercept(ConnectInterceptor.kt:32) ~[okhttp-4.12.0.jar:na]
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109) ~[okhttp-4.12.0.jar:na]
+	at okhttp3.internal.cache.CacheInterceptor.intercept(CacheInterceptor.kt:95) ~[okhttp-4.12.0.jar:na]
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109) ~[okhttp-4.12.0.jar:na]
+	at okhttp3.internal.http.BridgeInterceptor.intercept(BridgeInterceptor.kt:83) ~[okhttp-4.12.0.jar:na]
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109) ~[okhttp-4.12.0.jar:na]
+	at okhttp3.internal.http.RetryAndFollowUpInterceptor.intercept(RetryAndFollowUpInterceptor.kt:76) ~[okhttp-4.12.0.jar:na]
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109) ~[okhttp-4.12.0.jar:na]
+	at okhttp3.internal.connection.RealCall.getResponseWithInterceptorChain$okhttp(RealCall.kt:201) ~[okhttp-4.12.0.jar:na]
+	at okhttp3.internal.connection.RealCall$AsyncCall.run(RealCall.kt:517) ~[okhttp-4.12.0.jar:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+
+2024-06-17T10:15:44.763+07:00  INFO 19548 --- [file-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-06-17T10:20:44.771+07:00  INFO 19548 --- [file-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-06-17T10:21:17.662+07:00  INFO 19548 --- [file-service] [SpringApplicationShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application FILE-SERVICE with eureka with status DOWN
+2024-06-17T10:21:17.662+07:00  INFO 19548 --- [file-service] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1718594477662, current=DOWN, previous=UP]
+2024-06-17T10:21:17.662+07:00  INFO 19548 --- [file-service] [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_FILE-SERVICE/tuank.mshome.net:file-service:9003: registering service...
+2024-06-17T10:21:17.671+07:00  INFO 19548 --- [file-service] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2024-06-17T10:21:17.691+07:00  INFO 19548 --- [file-service] [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_FILE-SERVICE/tuank.mshome.net:file-service:9003 - registration status: 204
+2024-06-17T10:21:17.691+07:00  INFO 19548 --- [file-service] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2024-06-17T10:21:17.698+07:00  INFO 19548 --- [file-service] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_FILE-SERVICE/tuank.mshome.net:file-service:9003 - deregister  status: 200
+2024-06-17T10:21:17.702+07:00  INFO 19548 --- [file-service] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2024-06-17T11:03:25.339+07:00  INFO 27732 --- [file-service] [restartedMain] c.k.fileservice.FileServiceApplication   : Starting FileServiceApplication using Java 21.0.3 with PID 27732 (C:\Users\tuank\code\tlum\server\file-service\build\classes\java\main started by tuank in C:\Users\tuank\code\tlum\server)
+2024-06-17T11:03:25.342+07:00  INFO 27732 --- [file-service] [restartedMain] c.k.fileservice.FileServiceApplication   : The following 1 profile is active: "dev"
+2024-06-17T11:03:25.405+07:00  WARN 27732 --- [file-service] [restartedMain] c.ConfigServerConfigDataLocationResolver : Could not locate configserver via discovery
+
+java.lang.IllegalStateException: No instances found of configserver (config-service)
+	at org.springframework.cloud.config.client.ConfigServerInstanceProvider.getConfigServerInstances(ConfigServerInstanceProvider.java:77) ~[spring-cloud-config-client-4.1.2.jar:4.1.2]
+	at org.springframework.cloud.config.client.ConfigServerInstanceMonitor.refresh(ConfigServerInstanceMonitor.java:90) ~[spring-cloud-config-client-4.1.2.jar:4.1.2]
+	at org.springframework.cloud.config.client.ConfigServerConfigDataLocationResolver.lambda$resolveProfileSpecific$9(ConfigServerConfigDataLocationResolver.java:297) ~[spring-cloud-config-client-4.1.2.jar:4.1.2]
+	at org.springframework.boot.DefaultBootstrapContext.getInstance(DefaultBootstrapContext.java:119) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.DefaultBootstrapContext.getOrElseThrow(DefaultBootstrapContext.java:111) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.DefaultBootstrapContext.get(DefaultBootstrapContext.java:88) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.cloud.config.client.ConfigServerConfigDataLoader.load(ConfigServerConfigDataLoader.java:85) ~[spring-cloud-config-client-4.1.2.jar:4.1.2]
+	at org.springframework.cloud.config.client.ConfigServerConfigDataLoader.load(ConfigServerConfigDataLoader.java:61) ~[spring-cloud-config-client-4.1.2.jar:4.1.2]
+	at org.springframework.boot.context.config.ConfigDataLoaders.load(ConfigDataLoaders.java:96) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.context.config.ConfigDataImporter.load(ConfigDataImporter.java:132) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.context.config.ConfigDataImporter.resolveAndLoad(ConfigDataImporter.java:87) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.context.config.ConfigDataEnvironmentContributors.withProcessedImports(ConfigDataEnvironmentContributors.java:121) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.context.config.ConfigDataEnvironment.processInitial(ConfigDataEnvironment.java:245) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.context.config.ConfigDataEnvironment.processAndApply(ConfigDataEnvironment.java:232) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.context.config.ConfigDataEnvironmentPostProcessor.postProcessEnvironment(ConfigDataEnvironmentPostProcessor.java:96) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.context.config.ConfigDataEnvironmentPostProcessor.postProcessEnvironment(ConfigDataEnvironmentPostProcessor.java:89) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.env.EnvironmentPostProcessorApplicationListener.onApplicationEnvironmentPreparedEvent(EnvironmentPostProcessorApplicationListener.java:109) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.env.EnvironmentPostProcessorApplicationListener.onApplicationEvent(EnvironmentPostProcessorApplicationListener.java:94) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:185) ~[spring-context-6.1.8.jar:6.1.8]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:178) ~[spring-context-6.1.8.jar:6.1.8]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:156) ~[spring-context-6.1.8.jar:6.1.8]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:138) ~[spring-context-6.1.8.jar:6.1.8]
+	at org.springframework.boot.context.event.EventPublishingRunListener.multicastInitialEvent(EventPublishingRunListener.java:136) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.context.event.EventPublishingRunListener.environmentPrepared(EventPublishingRunListener.java:81) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.SpringApplicationRunListeners.lambda$environmentPrepared$2(SpringApplicationRunListeners.java:64) ~[spring-boot-3.3.0.jar:3.3.0]
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75) ~[na:na]
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:118) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:112) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.SpringApplicationRunListeners.environmentPrepared(SpringApplicationRunListeners.java:63) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.SpringApplication.prepareEnvironment(SpringApplication.java:370) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:330) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363) ~[spring-boot-3.3.0.jar:3.3.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352) ~[spring-boot-3.3.0.jar:3.3.0]
+	at com.kltn.fileservice.FileServiceApplication.main(FileServiceApplication.java:12) ~[main/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.3.0.jar:3.3.0]
+
+2024-06-17T11:03:25.413+07:00  INFO 27732 --- [file-service] [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2024-06-17T11:03:25.414+07:00  INFO 27732 --- [file-service] [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=file-service, profiles=[dev], label=null, version=null, state=null
+2024-06-17T11:03:25.419+07:00  INFO 27732 --- [file-service] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-06-17T11:03:25.419+07:00  INFO 27732 --- [file-service] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-06-17T11:03:26.845+07:00  INFO 27732 --- [file-service] [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=73f60668-46ad-30db-8ba6-887ed3867b50
+2024-06-17T11:03:26.929+07:00  WARN 27732 --- [file-service] [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-06-17T11:03:26.930+07:00  WARN 27732 --- [file-service] [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-06-17T11:03:27.386+07:00  INFO 27732 --- [file-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9003 (http)
+2024-06-17T11:03:27.398+07:00  INFO 27732 --- [file-service] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-06-17T11:03:27.400+07:00  INFO 27732 --- [file-service] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.24]
+2024-06-17T11:03:27.478+07:00  INFO 27732 --- [file-service] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-06-17T11:03:27.478+07:00  INFO 27732 --- [file-service] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2059 ms
+2024-06-17T11:03:28.691+07:00  INFO 27732 --- [file-service] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-06-17T11:03:28.710+07:00  INFO 27732 --- [file-service] [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2024-06-17T11:03:28.747+07:00  WARN 27732 --- [file-service] [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2024-06-17T11:03:28.755+07:00  INFO 27732 --- [file-service] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 19 endpoints beneath base path '/actuator'
+2024-06-17T11:03:28.841+07:00  INFO 27732 --- [file-service] [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2024-06-17T11:03:28.874+07:00  INFO 27732 --- [file-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2024-06-17T11:03:28.880+07:00  INFO 27732 --- [file-service] [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-06-17T11:03:28.900+07:00  INFO 27732 --- [file-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2024-06-17T11:03:28.901+07:00  INFO 27732 --- [file-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2024-06-17T11:03:28.901+07:00  INFO 27732 --- [file-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2024-06-17T11:03:28.901+07:00  INFO 27732 --- [file-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2024-06-17T11:03:28.901+07:00  INFO 27732 --- [file-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2024-06-17T11:03:28.901+07:00  INFO 27732 --- [file-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2024-06-17T11:03:28.901+07:00  INFO 27732 --- [file-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2024-06-17T11:03:28.959+07:00  INFO 27732 --- [file-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2024-06-17T11:03:28.961+07:00  INFO 27732 --- [file-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2024-06-17T11:03:28.964+07:00  INFO 27732 --- [file-service] [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2024-06-17T11:03:28.969+07:00  INFO 27732 --- [file-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1718597008969 with initial instances count: 4
+2024-06-17T11:03:28.971+07:00  INFO 27732 --- [file-service] [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application FILE-SERVICE with eureka with status UP
+2024-06-17T11:03:28.972+07:00  INFO 27732 --- [file-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1718597008972, current=UP, previous=STARTING]
+2024-06-17T11:03:28.973+07:00  INFO 27732 --- [file-service] [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_FILE-SERVICE/tuank.mshome.net:file-service:9003: registering service...
+2024-06-17T11:03:28.989+07:00  INFO 27732 --- [file-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9003 (http) with context path '/'
+2024-06-17T11:03:28.990+07:00  INFO 27732 --- [file-service] [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 9003
+2024-06-17T11:03:29.007+07:00  INFO 27732 --- [file-service] [restartedMain] c.k.fileservice.FileServiceApplication   : Started FileServiceApplication in 5.356 seconds (process running for 6.573)
+2024-06-17T11:03:29.019+07:00  INFO 27732 --- [file-service] [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_FILE-SERVICE/tuank.mshome.net:file-service:9003 - registration status: 204
+2024-06-17T11:03:29.458+07:00  INFO 27732 --- [file-service] [RMI TCP Connection(4)-172.16.100.5] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-06-17T11:04:59.664+07:00 ERROR 27732 --- [file-service] [http-nio-9003-exec-1] c.k.f.service.impl.MinioServiceImpl      : Error uploadFile: 
+
+java.net.UnknownHostException: No such host is known (minio)
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method) ~[na:na]
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Inet6AddressImpl.java:52) ~[na:na]
+	at java.base/java.net.InetAddress$PlatformResolver.lookupByName(InetAddress.java:1211) ~[na:na]
+	at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1828) ~[na:na]
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:1139) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1818) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1688) ~[na:na]
+	at okhttp3.Dns$Companion$DnsSystem.lookup(Dns.kt:49) ~[okhttp-4.12.0.jar:na]
+	at okhttp3.internal.connection.RouteSelector.resetNextInetSocketAddress(RouteSelector.kt:169) ~[okhttp-4.12.0.jar:na]
+	at okhttp3.internal.connection.RouteSelector.nextProxy(RouteSelector.kt:131) ~[okhttp-4.12.0.jar:na]
+	at okhttp3.internal.connection.RouteSelector.next(RouteSelector.kt:73) ~[okhttp-4.12.0.jar:na]
+	at okhttp3.internal.connection.ExchangeFinder.findConnection(ExchangeFinder.kt:205) ~[okhttp-4.12.0.jar:na]
+	at okhttp3.internal.connection.ExchangeFinder.findHealthyConnection(ExchangeFinder.kt:106) ~[okhttp-4.12.0.jar:na]
+	at okhttp3.internal.connection.ExchangeFinder.find(ExchangeFinder.kt:74) ~[okhttp-4.12.0.jar:na]
+	at okhttp3.internal.connection.RealCall.initExchange$okhttp(RealCall.kt:255) ~[okhttp-4.12.0.jar:na]
+	at okhttp3.internal.connection.ConnectInterceptor.intercept(ConnectInterceptor.kt:32) ~[okhttp-4.12.0.jar:na]
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109) ~[okhttp-4.12.0.jar:na]
+	at okhttp3.internal.cache.CacheInterceptor.intercept(CacheInterceptor.kt:95) ~[okhttp-4.12.0.jar:na]
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109) ~[okhttp-4.12.0.jar:na]
+	at okhttp3.internal.http.BridgeInterceptor.intercept(BridgeInterceptor.kt:83) ~[okhttp-4.12.0.jar:na]
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109) ~[okhttp-4.12.0.jar:na]
+	at okhttp3.internal.http.RetryAndFollowUpInterceptor.intercept(RetryAndFollowUpInterceptor.kt:76) ~[okhttp-4.12.0.jar:na]
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109) ~[okhttp-4.12.0.jar:na]
+	at okhttp3.internal.connection.RealCall.getResponseWithInterceptorChain$okhttp(RealCall.kt:201) ~[okhttp-4.12.0.jar:na]
+	at okhttp3.internal.connection.RealCall$AsyncCall.run(RealCall.kt:517) ~[okhttp-4.12.0.jar:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+
+2024-06-17T11:06:16.220+07:00  INFO 27732 --- [file-service] [SpringApplicationShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application FILE-SERVICE with eureka with status DOWN
+2024-06-17T11:06:16.220+07:00  INFO 27732 --- [file-service] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1718597176220, current=DOWN, previous=UP]
+2024-06-17T11:06:16.220+07:00  INFO 27732 --- [file-service] [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_FILE-SERVICE/tuank.mshome.net:file-service:9003: registering service...
+2024-06-17T11:06:16.232+07:00  INFO 27732 --- [file-service] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2024-06-17T11:06:16.290+07:00  INFO 27732 --- [file-service] [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_FILE-SERVICE/tuank.mshome.net:file-service:9003 - registration status: 204
+2024-06-17T11:06:16.294+07:00  INFO 27732 --- [file-service] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2024-06-17T11:06:16.304+07:00  INFO 27732 --- [file-service] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_FILE-SERVICE/tuank.mshome.net:file-service:9003 - deregister  status: 200
+2024-06-17T11:06:16.310+07:00  INFO 27732 --- [file-service] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2024-06-17T11:06:20.880+07:00  INFO 4628 --- [file-service] [restartedMain] c.k.fileservice.FileServiceApplication   : Starting FileServiceApplication using Java 21.0.3 with PID 4628 (C:\Users\tuank\code\tlum\server\file-service\build\classes\java\main started by tuank in C:\Users\tuank\code\tlum\server)
+2024-06-17T11:06:20.882+07:00  INFO 4628 --- [file-service] [restartedMain] c.k.fileservice.FileServiceApplication   : The following 1 profile is active: "dev"
+2024-06-17T11:06:20.946+07:00  INFO 4628 --- [file-service] [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://tuank.mshome.net:8888/
+2024-06-17T11:06:20.946+07:00  INFO 4628 --- [file-service] [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=file-service, profiles=[dev], label=null, version=null, state=null
+2024-06-17T11:06:20.952+07:00  INFO 4628 --- [file-service] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-06-17T11:06:20.953+07:00  INFO 4628 --- [file-service] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-06-17T11:06:22.439+07:00  INFO 4628 --- [file-service] [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=73f60668-46ad-30db-8ba6-887ed3867b50
+2024-06-17T11:06:22.533+07:00  WARN 4628 --- [file-service] [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-06-17T11:06:22.534+07:00  WARN 4628 --- [file-service] [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-06-17T11:06:23.005+07:00  INFO 4628 --- [file-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9003 (http)
+2024-06-17T11:06:23.018+07:00  INFO 4628 --- [file-service] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-06-17T11:06:23.018+07:00  INFO 4628 --- [file-service] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.24]
+2024-06-17T11:06:23.091+07:00  INFO 4628 --- [file-service] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-06-17T11:06:23.092+07:00  INFO 4628 --- [file-service] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2138 ms
+2024-06-17T11:06:24.314+07:00  INFO 4628 --- [file-service] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-06-17T11:06:24.332+07:00  INFO 4628 --- [file-service] [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2024-06-17T11:06:24.368+07:00  WARN 4628 --- [file-service] [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2024-06-17T11:06:24.374+07:00  INFO 4628 --- [file-service] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 19 endpoints beneath base path '/actuator'
+2024-06-17T11:06:24.490+07:00  INFO 4628 --- [file-service] [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2024-06-17T11:06:24.521+07:00  INFO 4628 --- [file-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2024-06-17T11:06:24.526+07:00  INFO 4628 --- [file-service] [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-06-17T11:06:24.553+07:00  INFO 4628 --- [file-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2024-06-17T11:06:24.553+07:00  INFO 4628 --- [file-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2024-06-17T11:06:24.553+07:00  INFO 4628 --- [file-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2024-06-17T11:06:24.553+07:00  INFO 4628 --- [file-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2024-06-17T11:06:24.553+07:00  INFO 4628 --- [file-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2024-06-17T11:06:24.553+07:00  INFO 4628 --- [file-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2024-06-17T11:06:24.553+07:00  INFO 4628 --- [file-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2024-06-17T11:06:24.614+07:00  INFO 4628 --- [file-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2024-06-17T11:06:24.616+07:00  INFO 4628 --- [file-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2024-06-17T11:06:24.619+07:00  INFO 4628 --- [file-service] [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2024-06-17T11:06:24.623+07:00  INFO 4628 --- [file-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1718597184623 with initial instances count: 5
+2024-06-17T11:06:24.626+07:00  INFO 4628 --- [file-service] [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application FILE-SERVICE with eureka with status UP
+2024-06-17T11:06:24.627+07:00  INFO 4628 --- [file-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1718597184626, current=UP, previous=STARTING]
+2024-06-17T11:06:24.628+07:00  INFO 4628 --- [file-service] [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_FILE-SERVICE/tuank.mshome.net:file-service:9003: registering service...
+2024-06-17T11:06:24.642+07:00  INFO 4628 --- [file-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9003 (http) with context path '/'
+2024-06-17T11:06:24.643+07:00  INFO 4628 --- [file-service] [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 9003
+2024-06-17T11:06:24.662+07:00  INFO 4628 --- [file-service] [restartedMain] c.k.fileservice.FileServiceApplication   : Started FileServiceApplication in 5.25 seconds (process running for 6.509)
+2024-06-17T11:06:24.673+07:00  INFO 4628 --- [file-service] [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_FILE-SERVICE/tuank.mshome.net:file-service:9003 - registration status: 204
+2024-06-17T11:06:25.114+07:00  INFO 4628 --- [file-service] [RMI TCP Connection(2)-172.16.100.5] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-06-17T11:11:24.564+07:00  INFO 4628 --- [file-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-06-17T11:16:24.582+07:00  INFO 4628 --- [file-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-06-17T11:21:24.585+07:00  INFO 4628 --- [file-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-06-17T11:26:24.599+07:00  INFO 4628 --- [file-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-06-17T11:31:24.605+07:00  INFO 4628 --- [file-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-06-17T11:36:24.613+07:00  INFO 4628 --- [file-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-06-17T11:41:24.625+07:00  INFO 4628 --- [file-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-06-17T11:46:24.639+07:00  INFO 4628 --- [file-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-06-17T11:51:24.649+07:00  INFO 4628 --- [file-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-06-17T11:56:24.658+07:00  INFO 4628 --- [file-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-06-17T12:01:24.664+07:00  INFO 4628 --- [file-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-06-17T12:06:24.670+07:00  INFO 4628 --- [file-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-06-17T12:11:24.689+07:00  INFO 4628 --- [file-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-06-17T12:16:24.705+07:00  INFO 4628 --- [file-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-06-17T12:21:24.714+07:00  INFO 4628 --- [file-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-06-17T12:26:24.719+07:00  INFO 4628 --- [file-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-06-17T12:31:24.722+07:00  INFO 4628 --- [file-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-06-17T12:36:24.726+07:00  INFO 4628 --- [file-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-06-17T12:41:24.734+07:00  INFO 4628 --- [file-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-06-17T12:46:24.736+07:00  INFO 4628 --- [file-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-06-17T12:51:24.739+07:00  INFO 4628 --- [file-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-06-17T12:56:24.745+07:00  INFO 4628 --- [file-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-06-17T13:01:24.746+07:00  INFO 4628 --- [file-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-06-17T13:06:24.757+07:00  INFO 4628 --- [file-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-06-17T13:11:24.769+07:00  INFO 4628 --- [file-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-06-17T13:16:24.773+07:00  INFO 4628 --- [file-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-06-17T13:21:24.783+07:00  INFO 4628 --- [file-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-06-17T13:26:24.798+07:00  INFO 4628 --- [file-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-06-17T13:31:24.810+07:00  INFO 4628 --- [file-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-06-17T13:36:24.816+07:00  INFO 4628 --- [file-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration

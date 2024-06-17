@@ -39,7 +39,7 @@ public class User extends BaseEntity {
     @Column(length = 5000, nullable = false)
     @JsonIgnore
     private String password;
-    private String avatar;
+    private Long avatar;
     @ManyToMany(fetch = FetchType.LAZY)
     @JoinTable(
             name = "user_roles",
@@ -57,7 +57,7 @@ public class User extends BaseEntity {
         this.email = request.getEmail();
         this.dateOfBirth = request.getDateOfBirth();
         this.gender = request.getGender();
-        this.avatar = request.getAvatarUrl();
+        this.avatar = request.getAvatarId();
     }
 }
 

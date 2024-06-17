@@ -1,26 +1,26 @@
 package com.kltn.fileservice.controller;
 
+import com.kltn.fileservice.dto.ObjectFileDTO;
+import com.kltn.fileservice.dto.UploadRequest;
 import com.kltn.fileservice.service.FileService;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestPart;
-import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.multipart.MultipartFile;
+import lombok.RequiredArgsConstructor;
+import org.springframework.web.bind.annotation.*;
 
-import java.io.IOException;
 import java.util.List;
 
 @RestController
-@RequestMapping("/convert")
+@RequestMapping("/v1/file")
+@RequiredArgsConstructor
 public class FileController {
-    private final FileService convertFileService;
+    private final FileService fileService;
 
-    public FileController(FileService convertFileService) {
-        this.convertFileService = convertFileService;
+    @PostMapping
+    public List<ObjectFileDTO> uploadFile(@ModelAttribute UploadRequest request) {
+        return fileService.uploadFiles(request.getTenant(), request.getChannel(), request.getFiles());
     }
 
-    @PostMapping(value = "/file-to-json")
-    List<List<Object>> convertFileToJson(@RequestPart MultipartFile file) throws IOException {
-        return convertFileService.convertFileToJson(file);
+    @GetMapping
+    public byte[] getFile(@RequestParam String tenant, @RequestParam String filePath) {
+        return fileService.getFile(tenant, filePath);
     }
 }

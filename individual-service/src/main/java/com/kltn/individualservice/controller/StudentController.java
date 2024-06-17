@@ -29,6 +29,11 @@ public class StudentController {
         }
     }
 
+    @GetMapping("/{id}")
+    public ResponseEntity<Object> getStudents(@PathVariable Long id) {
+            return ResponseUtils.getResponseEntity(studentService.getStudent(id));
+    }
+
     @PostMapping
     public ResponseEntity<Object> createStudent(@ModelAttribute StudentRequestCRU request) {
         return ResponseUtils.getResponseEntity(studentService.createStudent(request));

@@ -2,11 +2,13 @@ package com.kltn.individualservice.service.impl;
 
 import com.kltn.individualservice.annotation.ActionPermission;
 import com.kltn.individualservice.annotation.FunctionPermission;
+import com.kltn.individualservice.config.I18n;
 import com.kltn.individualservice.constant.UserType;
 import com.kltn.individualservice.dto.request.GetStudentsRequest;
 import com.kltn.individualservice.dto.request.StudentRequestCRU;
 import com.kltn.individualservice.entity.Student;
 import com.kltn.individualservice.entity.User;
+import com.kltn.individualservice.exception.NotFoundException;
 import com.kltn.individualservice.repository.StudentRepository;
 import com.kltn.individualservice.service.MajorService;
 import com.kltn.individualservice.service.StudentService;
@@ -36,6 +38,11 @@ public class StudentServiceImpl implements StudentService {
     @ActionPermission("VIEW")
     public Page<Student> getStudents(GetStudentsRequest request, Pageable pageable) {
         return studentRepository.findByIsActiveInAndStatusIn(request.getEntityStatuses(), request.getStudentStatuses(), pageable);
+    }
+
+    @ActionPermission("VIEW")
+    public Student getStudent(Long id) {
+        return studentRepository.findById(id).orElseThrow(()-> new NotFoundException(I18n.getMessage("msg.field.student")));
     }
 
     @ActionPermission("CREATE")

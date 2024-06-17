@@ -19,7 +19,7 @@ public class StudentResponse {
     private final LocalDate dateOfBirth;
     private final String email;
     private final String address;
-    private final String avatar;
+    private final Long avatar;
     private final LocalDateTime createdAt;
     private final String createdBy;
     private final LocalDateTime lastUpdatedAt;

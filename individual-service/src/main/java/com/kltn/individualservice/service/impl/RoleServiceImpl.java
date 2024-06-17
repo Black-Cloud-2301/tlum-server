@@ -21,8 +21,8 @@ public class RoleServiceImpl implements RoleService {
     }
 
     @Override
-    public Role getRoleByName(String name) {
-        return roleRepository.findByNameAndIsActive(name, EntityStatus.ACTIVE).orElseThrow(() -> new NotFoundException(I18n.getMessage("msg.role.title")));
+    public Role getRoleByCode(String code) {
+        return roleRepository.findByCodeAndIsActive(code, EntityStatus.ACTIVE).orElseThrow(() -> new NotFoundException(I18n.getMessage("msg.role.title")));
     }
 
     @Override

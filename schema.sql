@@ -6,7 +6,7 @@ VALUES
     (2, Date(now()), 1, 1, Date(now()), 1, 'Hà Nội', NULL, 'A20687', '1994-01-23', 'tuank2301@gmail.com', 'Nguyễn', 0,
         'Tú Anh', '$2a$10$xbw4hB8t4FtM0n5EqyES9ODzkSqMbNZ.YE62g7Thg9m0.l3/00FTu', '0123456789');
 
-INSERT INTO roles(id, created_at, created_by, is_active, last_updated_at, last_updated_by, name)
+INSERT INTO roles(id, created_at, created_by, is_active, last_updated_at, last_updated_by, code)
 VALUES (1, Date(now()), 1, 1, Date(now()), 1, 'SYS_ADMIN'),
        (2, Date(now()), 1, 1, Date(now()), 1, 'STUDENT');
 

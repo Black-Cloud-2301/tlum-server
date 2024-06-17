@@ -19,10 +19,6 @@ public class UserServiceImpl implements UserService {
         this.passwordEncoder = passwordEncoder;
     }
 
-    @Override
-    public User findById(Long userId) {
-        return userRepository.findById(userId).orElseThrow(UserNotFoundException::new);
-    }
 
     @Override
     public User findByCodeIgnoreCase(String code) {

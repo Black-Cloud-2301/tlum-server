@@ -13,6 +13,7 @@ import java.util.List;
 public interface StudentService {
     List<Student> getStudents(GetStudentsRequest request);
     Page<Student> getStudents(GetStudentsRequest request, Pageable pageable);
+    Student getStudent(Long id);
     Student createStudent(StudentRequestCRU request);
     List<Student> importStudents(MultipartFile file);
 }

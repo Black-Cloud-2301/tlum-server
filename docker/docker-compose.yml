@@ -48,18 +48,18 @@ services:
       - "27017:27017"
     restart: unless-stopped
 
-  mongo-exporter:
-    image: bitnami/mongodb-exporter
-    container_name: mongo-exporter
-    ports:
-      - "9216:9216"
-    environment:
-      - MONGODB_URI=${MONGO_URI_PROMETHEUS}
-    networks:
-      - kltn
-    links:
-      - mongo
-      - prometheus
+#  mongo-exporter:
+#    image: bitnami/mongodb-exporter
+#    container_name: mongo-exporter
+#    ports:
+#      - "9216:9216"
+#    environment:
+#      - MONGODB_URI=${MONGO_URI_PROMETHEUS}
+#    networks:
+#      - kltn
+#    links:
+#      - mongo
+#      - prometheus
 
   zookeeper:
     image: confluentinc/cp-zookeeper:latest
@@ -175,6 +175,8 @@ services:
       - EUREKA_URL=${EUREKA_URL}
       - MONGO_URI=${MONGO_URI_CONFIG}
       - SECRET=${SECRET}
+      - MINIO_ACCESS_KEY=${MINIO_ROOT_USER}
+      - MINIO_SECRET_KEY=${MINIO_ROOT_PASSWORD}
     volumes:
       - kltn:/kltn
     networks:
@@ -245,6 +247,8 @@ services:
       - kltn
     ports:
       - "9003:9003"
+    links:
+      - minio
     restart: unless-stopped
     depends_on:
       - gateway

@@ -19,6 +19,6 @@ public class UserRequestCRU {
     private LocalDate dateOfBirth;
     private String email;
     private String address;
-    private String avatarUrl;
+    private Long avatarId;
     private MultipartFile avatarUpload;
 }

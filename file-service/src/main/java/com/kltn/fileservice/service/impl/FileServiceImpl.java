@@ -35,15 +35,17 @@ public class FileServiceImpl implements FileService {
         for (MultipartFile file : files) {
             try {
                 String filePath = rootPath + File.separator + UUID.randomUUID() + "_" + file.getOriginalFilename();
-                minioService.uploadFile(tenant, filePath, file.getBytes());
-                ObjectFileDTO objectFileDTO = ObjectFileDTO.builder()
-                        .linkUrl(Constants.GET_CONTENT_LINK_URL)
-                        .linkUrlPublic(Constants.GET_CONTENT_LINK_URL_PUBLIC)
-                        .fileName(file.getOriginalFilename())
-                        .filePath(Utils.encrypt(filePath))
-                        .fileSize(file.getSize())
-                        .build();
-                result.add(objectFileDTO);
+                boolean uploadSuccess = minioService.uploadFile(tenant, filePath, file.getBytes());
+                if (uploadSuccess) {
+                    ObjectFileDTO objectFileDTO = ObjectFileDTO.builder()
+                            .linkUrl(Constants.GET_CONTENT_LINK_URL)
+                            .linkUrlPublic(Constants.GET_CONTENT_LINK_URL_PUBLIC)
+                            .fileName(file.getOriginalFilename())
+                            .filePath(Utils.encrypt(filePath))
+                            .fileSize(file.getSize())
+                            .build();
+                    result.add(objectFileDTO);
+                }
             } catch (Exception e) {
                 LOGGER.error("Error uploadFiles: ", e);
             }
