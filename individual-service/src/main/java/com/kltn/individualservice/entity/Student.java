@@ -20,7 +20,7 @@ public class Student extends BaseEntity {
     private User user;
 
     @ManyToOne
-    private Major major;
+    private Major majors;
     @Column(nullable = false)
     private StudentStatus status;
 

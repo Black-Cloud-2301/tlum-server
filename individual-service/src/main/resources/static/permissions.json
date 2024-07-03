@@ -1,0 +1,17 @@
+[
+  {
+    "module": "INDIVIDUAL",
+    "function": "STUDENT",
+    "action": "VIEW,CREATE,UPDATE,DELETE,LOCK,IMPORT"
+  },
+  {
+    "module": "INDIVIDUAL",
+    "function": "TEACHER",
+    "action": "VIEW,CREATE,UPDATE,DELETE,LOCK,IMPORT"
+  },
+  {
+    "module": "INDIVIDUAL",
+    "function": "EMPLOYEE",
+    "action": "VIEW,CREATE,UPDATE,DELETE,LOCK,IMPORT"
+  }
+]

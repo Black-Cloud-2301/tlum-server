@@ -1,0 +1,14 @@
+[
+  {
+    "code": "SYS_ADMIN"
+  },
+  {
+    "code": "STUDENT"
+  },
+  {
+    "code": "TEACHER"
+  },
+  {
+    "code": "EMPLOYEE"
+  }
+]

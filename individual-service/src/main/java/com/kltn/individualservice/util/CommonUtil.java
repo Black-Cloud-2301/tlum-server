@@ -1,5 +1,6 @@
 package com.kltn.individualservice.util;
 
+import com.kltn.individualservice.constant.EntityStatus;
 import com.kltn.individualservice.dto.request.SortCriteria;
 import com.kltn.individualservice.entity.Role;
 import com.kltn.individualservice.util.dto.PageableRequest;

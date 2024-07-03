@@ -13,8 +13,15 @@ public class Major extends BaseEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Column(nullable = false, unique = true)
+    private String code;
+
     @Column(nullable = false)
     private String name;
+
     @ManyToOne
     private User dean;
+
+    @ManyToOne
+    private StudyDepartment studyDepartment;
 }

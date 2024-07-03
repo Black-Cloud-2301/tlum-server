@@ -1,11 +1,13 @@
 package com.kltn.individualservice.entity;
 
 import com.kltn.individualservice.constant.EntityStatus;
-import jakarta.persistence.*;
+import jakarta.persistence.MappedSuperclass;
+import jakarta.persistence.PrePersist;
+import jakarta.persistence.PreUpdate;
 import jakarta.servlet.http.HttpServletRequest;
 import lombok.Getter;
 import lombok.Setter;
-import org.hibernate.annotations.ColumnTransformer;
+import org.springframework.web.context.request.RequestAttributes;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 
@@ -19,9 +21,6 @@ public abstract class BaseEntity {
     private String createdBy;
     private LocalDateTime lastUpdatedAt;
     private String lastUpdatedBy;
-
-    @Enumerated(EnumType.ORDINAL)
-    @ColumnTransformer(read = "is_active + 1", write = "? - 1")
     private EntityStatus isActive;
 
     public BaseEntity() {
@@ -32,9 +31,15 @@ public abstract class BaseEntity {
 
     @PrePersist
     void prePersist() {
-        HttpServletRequest request = ((ServletRequestAttributes) RequestContextHolder.currentRequestAttributes()).getRequest();
-        this.createdBy = request.getHeader("userId");
-        this.lastUpdatedBy = request.getHeader("userId");
+        RequestAttributes requestAttributes = RequestContextHolder.getRequestAttributes();
+        if (requestAttributes instanceof ServletRequestAttributes) {
+            HttpServletRequest request = ((ServletRequestAttributes) requestAttributes).getRequest();
+            this.createdBy = request.getHeader("userId");
+            this.lastUpdatedBy = request.getHeader("userId");
+        } else {
+            this.createdBy = "system";
+            this.lastUpdatedBy = "system";
+        }
     }
 
     @PreUpdate

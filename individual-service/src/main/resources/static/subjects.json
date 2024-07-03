@@ -1,0 +1,41 @@
+[
+  {
+    "code": "ML113",
+    "name": "Triết học Mác - Lênin",
+    "credit": 3,
+    "hours": 45,
+    "coefficient": 1.0
+  },
+  {
+    "code": "ML114",
+    "name": "Kinh tế chính trị Mác - Lênin",
+    "credit": 2,
+    "hours": 30,
+    "coefficient": 1.0,
+    "requireSubjects": ["ML113"]
+  },
+  {
+    "code": "ML115",
+    "name": "Chủ nghĩa xã hội khoa học",
+    "credit": 2,
+    "hours": 30,
+    "coefficient": 1.0,
+    "requireSubjects": ["ML114"]
+  },
+  {
+    "code": "ML202",
+    "name": "Tư tưởng Hồ Chí Minh",
+    "credit": 2,
+    "hours": 30,
+    "coefficient": 1.0,
+    "requireSubjects": ["ML114"]
+  },
+  {
+    "code": "ML204",
+    "name": "Lịch sử Đảng Cộng sản Việt Nam",
+    "credit": 2,
+    "hours": 30,
+    "coefficient": 1.0,
+    "requireSubjects": ["ML114"]
+  }
+]

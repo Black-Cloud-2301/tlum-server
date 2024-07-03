@@ -1,0 +1,22 @@
+[
+  {
+    "code": "CNTT",
+    "name": "Công nghệ thông tin",
+    "studyDepartmentCode": "TT"
+  },
+  {
+    "code": "NNTA",
+    "name": "Tiếng Anh",
+    "studyDepartmentCode": "NN"
+  },
+  {
+    "code": "NNTN",
+    "name": "Tiếng Nhật",
+    "studyDepartmentCode": "NN"
+  },
+  {
+    "code": "NNTT",
+    "name": "Tiếng Trung",
+    "studyDepartmentCode": "NN"
+  }
+]

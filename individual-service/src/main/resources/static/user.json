@@ -1,0 +1,11 @@
+[
+  {
+    "code": "admin",
+    "dateOfBirth": "1990-01-01",
+    "email": "admin@localhost.vn",
+    "firstname": "Super",
+    "lastname": "Admin",
+    "phoneNumber": "0123456789",
+    "gender": "MALE"
+  }
+]
