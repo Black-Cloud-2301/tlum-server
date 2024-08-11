@@ -21,4 +21,6 @@ public interface StudentStudyClassRepository extends JpaRepository<StudentStudyC
           "AND ssc.studyClass.studentGroup = :#{#request.studentGroup} " +
           "AND ssc.isActive = 1")
   List<StudentStudyClass> findAllByStudentIdAndSemester(GetStudentStudyClassesRequest request, Long studentId);
+
+  Optional<StudentStudyClass> findByIdAndIsActive(Long id, EntityStatus isActive);
 }

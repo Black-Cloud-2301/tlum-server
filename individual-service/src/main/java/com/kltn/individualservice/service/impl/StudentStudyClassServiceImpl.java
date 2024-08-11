@@ -1,5 +1,6 @@
 package com.kltn.individualservice.service.impl;
 
+import com.kltn.individualservice.config.I18n;
 import com.kltn.individualservice.constant.EntityStatus;
 import com.kltn.individualservice.dto.request.GetStudentStudyClassesRequest;
 import com.kltn.individualservice.entity.Student;
@@ -28,11 +29,11 @@ public class StudentStudyClassServiceImpl implements StudentStudyClassService {
     @Override
     public StudentStudyClass create(String studyClassId) {
         Long userId = Long.parseLong(webUtil.getUserId());
-        Student student = studentRepository.findByIdAndIsActive(userId, EntityStatus.ACTIVE).orElseThrow(() -> new NotFoundException("Student not found"));
-        StudyClass studyClass = studyClassRepository.findByIdAndIsActive(Long.parseLong(studyClassId), EntityStatus.ACTIVE).orElseThrow(() -> new NotFoundException("Study class not found"));
+        Student student = studentRepository.findByIdAndIsActive(userId, EntityStatus.ACTIVE).orElseThrow(() -> new NotFoundException(I18n.getMessage("msg.field.student")));
+        StudyClass studyClass = studyClassRepository.findByIdAndIsActive(Long.parseLong(studyClassId), EntityStatus.ACTIVE).orElseThrow(() -> new NotFoundException(I18n.getMessage("msg.field.class")));
         Optional<StudentStudyClass> studentStudyClass = studentStudyClassRepository.findByStudentAndStudyClassAndIsActive(student, studyClass, EntityStatus.ACTIVE);
         if (studentStudyClass.isPresent()) {
-            throw new NotFoundException("You have already registered for this class");
+            throw new NotFoundException(I18n.getMessage("msg.error.already_register_class"));
         } else {
             return studentStudyClassRepository.save(new StudentStudyClass(student, studyClass));
         }
@@ -42,5 +43,12 @@ public class StudentStudyClassServiceImpl implements StudentStudyClassService {
     public List<StudentStudyClass> findAllBySemester(GetStudentStudyClassesRequest request) {
         Long userId = Long.parseLong(webUtil.getUserId());
         return studentStudyClassRepository.findAllByStudentIdAndSemester(request, userId);
+    }
+
+    @Override
+    public StudentStudyClass delete(Long id) {
+        StudentStudyClass studentStudyClass = studentStudyClassRepository.findByIdAndIsActive(id, EntityStatus.ACTIVE).orElseThrow(() -> new NotFoundException(I18n.getMessage("msg.field.student_class_register")));
+        studentStudyClass.setIsActive(EntityStatus.INACTIVE);
+        return studentStudyClassRepository.save(studentStudyClass);
     }
 }
