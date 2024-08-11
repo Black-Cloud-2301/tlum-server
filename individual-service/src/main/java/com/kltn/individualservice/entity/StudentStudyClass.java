@@ -2,11 +2,13 @@ package com.kltn.individualservice.entity;
 
 import jakarta.persistence.*;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Setter
 @Getter
 @Entity
+@NoArgsConstructor
 @Table(name = "student_study_class")
 public class StudentStudyClass extends BaseEntity {
     @Id
@@ -14,10 +16,10 @@ public class StudentStudyClass extends BaseEntity {
     private Long id;
 
     @ManyToOne
-    private Student studentId;
+    private Student student;
 
     @ManyToOne
-    private StudyClass studyClassId;
+    private StudyClass studyClass;
 
     @Column
     private Double middleScore;
@@ -25,4 +27,8 @@ public class StudentStudyClass extends BaseEntity {
     @Column
     private Double finalScore;
 
+    public StudentStudyClass(Student student, StudyClass studyClass) {
+        this.student = student;
+        this.studyClass = studyClass;
+    }
 }

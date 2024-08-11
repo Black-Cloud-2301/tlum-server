@@ -1,7 +1,7 @@
 package com.kltn.individualservice.controller;
 
-import com.kltn.individualservice.dto.request.SubjectsRequest;
-import com.kltn.individualservice.service.SubjectService;
+import com.kltn.individualservice.dto.request.StudyDepartmentsRequest;
+import com.kltn.individualservice.service.StudyDepartmentService;
 import com.kltn.individualservice.util.CommonUtil;
 import com.kltn.individualservice.util.dto.ResponseUtils;
 import lombok.RequiredArgsConstructor;
@@ -12,18 +12,18 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/v1/subject")
+@RequestMapping("/v1/study-department")
 @RequiredArgsConstructor
-public class SubjectController {
-    private final SubjectService subjectService;
+public class StudyDepartmentController {
+    private final StudyDepartmentService studyDepartmentService;
 
     @GetMapping
-    ResponseEntity<Object> getSubjects(SubjectsRequest request) {
+    ResponseEntity<Object> getStudyDepartments(StudyDepartmentsRequest request) {
         if (request.getPageNumber() != null && request.getPageSize() != null) {
             Pageable pageable = CommonUtil.createPageable(request);
-            return ResponseUtils.getResponseEntity(subjectService.getSubjects(request, pageable));
+            return ResponseUtils.getResponseEntity(studyDepartmentService.getStudyDepartments(request.getEntityStatuses(), pageable));
         } else {
-            return ResponseUtils.getResponseEntity(subjectService.getSubjects(request));
+            return ResponseUtils.getResponseEntity(studyDepartmentService.getStudyDepartments(request.getEntityStatuses()));
         }
     }
 }

@@ -26,6 +26,11 @@ public class StudyClassController {
         }
     }
 
+    @GetMapping("/{id}")
+    ResponseEntity<Object> findById(@PathVariable Long id) {
+        return ResponseUtils.getResponseEntity(studyClassService.findById(id));
+    }
+
     @PostMapping
     ResponseEntity<Object> create(@RequestBody StudyClassCRU studyClass) {
         return ResponseUtils.getResponseEntity(studyClassService.create(studyClass));

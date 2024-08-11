@@ -1,6 +1,7 @@
 package com.kltn.individualservice.service;
 
 import com.kltn.individualservice.dto.request.GetTeachersRequest;
+import com.kltn.individualservice.dto.request.TeacherRequest;
 import com.kltn.individualservice.entity.Teacher;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -12,4 +13,8 @@ public interface TeacherService {
     List<Teacher> getTeachers(GetTeachersRequest request);
     Page<Teacher> getTeachers(GetTeachersRequest request, Pageable pageable);
     List<Teacher> importTeachers(MultipartFile file);
+    Teacher updateTeacher(TeacherRequest teacher);
+    Teacher deleteTeacher(Long id);
+    Teacher createTeacher(TeacherRequest teacher);
+
 }

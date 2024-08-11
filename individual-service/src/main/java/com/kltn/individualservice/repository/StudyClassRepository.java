@@ -7,8 +7,10 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;
+import java.util.Optional;
 
 public interface StudyClassRepository extends JpaRepository<StudyClass, Long> {
     List<StudyClass> findAllByIsActiveIn(List<EntityStatus> statuses);
     Page<StudyClass> findAllByIsActiveIn(List<EntityStatus> statuses, Pageable pageable);
+    Optional<StudyClass> findByIdAndIsActive(Long id, EntityStatus isActive);
 }

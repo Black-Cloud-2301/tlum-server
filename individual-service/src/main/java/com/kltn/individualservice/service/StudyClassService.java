@@ -11,6 +11,7 @@ import java.util.List;
 public interface StudyClassService {
     StudyClass create(StudyClassCRU studyClass);
     StudyClass update(StudyClassCRU studyClass);
+    StudyClass findById(Long id);
     StudyClass delete(Long id);
     List<StudyClass> findAllByIsActiveIn(List<EntityStatus> statuses);
     Page<StudyClass> findAllByIsActiveIn(List<EntityStatus> statuses, Pageable pageable);

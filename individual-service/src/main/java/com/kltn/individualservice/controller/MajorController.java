@@ -1,7 +1,9 @@
 package com.kltn.individualservice.controller;
 
-import com.kltn.individualservice.dto.request.SubjectsRequest;
-import com.kltn.individualservice.service.SubjectService;
+import com.kltn.individualservice.dto.request.GetMajorsRequest;
+import com.kltn.individualservice.dto.request.StudyDepartmentsRequest;
+import com.kltn.individualservice.service.MajorService;
+import com.kltn.individualservice.service.StudyDepartmentService;
 import com.kltn.individualservice.util.CommonUtil;
 import com.kltn.individualservice.util.dto.ResponseUtils;
 import lombok.RequiredArgsConstructor;
@@ -12,18 +14,18 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/v1/subject")
+@RequestMapping("/v1/major")
 @RequiredArgsConstructor
-public class SubjectController {
-    private final SubjectService subjectService;
+public class MajorController {
+    private final MajorService majorService;
 
     @GetMapping
-    ResponseEntity<Object> getSubjects(SubjectsRequest request) {
+    ResponseEntity<Object> getStudyDepartments(GetMajorsRequest request) {
         if (request.getPageNumber() != null && request.getPageSize() != null) {
             Pageable pageable = CommonUtil.createPageable(request);
-            return ResponseUtils.getResponseEntity(subjectService.getSubjects(request, pageable));
+            return ResponseUtils.getResponseEntity(majorService.getMajors(request, pageable));
         } else {
-            return ResponseUtils.getResponseEntity(subjectService.getSubjects(request));
+            return ResponseUtils.getResponseEntity(majorService.getMajors(request));
         }
     }
 }

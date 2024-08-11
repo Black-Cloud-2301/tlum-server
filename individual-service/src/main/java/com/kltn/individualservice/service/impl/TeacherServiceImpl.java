@@ -5,19 +5,17 @@ import com.kltn.individualservice.constant.EmployeeStatus;
 import com.kltn.individualservice.constant.EntityStatus;
 import com.kltn.individualservice.constant.Gender;
 import com.kltn.individualservice.constant.UserType;
-import com.kltn.individualservice.dto.request.GetStudentsRequest;
 import com.kltn.individualservice.dto.request.GetTeachersRequest;
+import com.kltn.individualservice.dto.request.TeacherRequest;
 import com.kltn.individualservice.entity.Role;
-import com.kltn.individualservice.entity.Student;
+import com.kltn.individualservice.entity.Subject;
 import com.kltn.individualservice.entity.Teacher;
 import com.kltn.individualservice.entity.User;
+import com.kltn.individualservice.exception.NotFoundException;
 import com.kltn.individualservice.exception.RequireException;
 import com.kltn.individualservice.feign.FileServiceClient;
 import com.kltn.individualservice.repository.TeacherRepository;
-import com.kltn.individualservice.service.RoleService;
-import com.kltn.individualservice.service.StudyDepartmentService;
-import com.kltn.individualservice.service.TeacherService;
-import com.kltn.individualservice.service.UserService;
+import com.kltn.individualservice.service.*;
 import com.kltn.individualservice.util.exception.converter.DateConverter;
 import jakarta.servlet.http.HttpServletRequest;
 import lombok.RequiredArgsConstructor;
@@ -45,15 +43,16 @@ public class TeacherServiceImpl implements TeacherService {
     private final FileServiceClient fileServiceClient;
     private final PasswordEncoder passwordEncoder;
     private final StudyDepartmentService studyDepartmentService;
+    private final SubjectService subjectService;
 
     @Override
     public List<Teacher> getTeachers(GetTeachersRequest request) {
-        return teacherRepository.findAllByIsActiveInAndStatusIn(request.getEntityStatuses(),request.getEmployeeStatuses());
+        return teacherRepository.findAllByIsActiveInAndStatusIn(request.getEntityStatuses(), request.getEmployeeStatuses());
     }
 
     @Override
     public Page<Teacher> getTeachers(GetTeachersRequest request, Pageable pageable) {
-        return teacherRepository.findAllByIsActiveInAndStatusIn(request.getEntityStatuses(),request.getEmployeeStatuses(),pageable);
+        return teacherRepository.findAllByIsActiveInAndStatusIn(request.getEntityStatuses(), request.getEmployeeStatuses(), pageable);
     }
 
 
@@ -90,6 +89,56 @@ public class TeacherServiceImpl implements TeacherService {
         }
 
         return teacherRepository.saveAll(teachers);
+    }
+
+    @Override
+    public Teacher updateTeacher(TeacherRequest request) {
+        Teacher teacherEntity = teacherRepository.findById(request.getId()).orElseThrow(() -> new NotFoundException("Teacher"));
+        teacherEntity.setStatus(request.getEmployeeStatus());
+        teacherEntity.setStudyDepartment(studyDepartmentService.findById(request.getStudyDepartmentId()));
+
+        User user = teacherEntity.getUser();
+        user.setFirstname(request.getFirstname());
+        user.setLastname(request.getLastname());
+        user.setPhoneNumber(request.getPhoneNumber());
+        user.setEmail(request.getEmail());
+        user.setDateOfBirth(request.getDateOfBirth());
+        user.setAddress(request.getAddress());
+
+        List<Subject> subjects = subjectService.findAllById(request.getSubjectIds());
+        teacherEntity.setSubjects(subjects);
+        return teacherRepository.save(teacherEntity);
+    }
+
+    @Override
+    public Teacher deleteTeacher(Long id) {
+        Teacher teacher = teacherRepository.findById(id).orElseThrow(() -> new NotFoundException("Teacher"));
+        teacher.setIsActive(EntityStatus.DELETED);
+        teacher.getUser().setIsActive(EntityStatus.DELETED);
+        return teacherRepository.save(teacher);
+    }
+
+    @Override
+    public Teacher createTeacher(TeacherRequest request) {
+        Teacher teacher = new Teacher();
+        User user = new User();
+        teacher.setStatus(request.getEmployeeStatus());
+        teacher.setStudyDepartment(studyDepartmentService.findById(request.getStudyDepartmentId()));
+        AtomicInteger currentMaxCode = new AtomicInteger(userService.findMaxNumberInCode(UserType.TEACHER));
+        String codeSuffix = String.format("%05d", currentMaxCode.incrementAndGet());
+
+        user.setFirstname(request.getFirstname());
+        user.setLastname(request.getLastname());
+        user.setPhoneNumber(request.getPhoneNumber());
+        user.setEmail(request.getEmail());
+        user.setDateOfBirth(request.getDateOfBirth());
+        user.setAddress(request.getAddress());
+        user.setCode("T" + codeSuffix);
+        teacher.setUser(user);
+
+        List<Subject> subjects = subjectService.findAllById(request.getSubjectIds());
+        teacher.setSubjects(subjects);
+        return teacherRepository.save(teacher);
     }
 
     private void validateTeacherImport(List<Object> rowData) {

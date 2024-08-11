@@ -1,6 +1,7 @@
 package com.kltn.individualservice.controller;
 
 import com.kltn.individualservice.dto.request.GetTeachersRequest;
+import com.kltn.individualservice.dto.request.TeacherRequest;
 import com.kltn.individualservice.service.TeacherService;
 import com.kltn.individualservice.util.CommonUtil;
 import com.kltn.individualservice.util.dto.ResponseUtils;
@@ -29,5 +30,20 @@ public class TeacherController {
     @PostMapping("/import")
     ResponseEntity<Object> importTeachers(@RequestParam("file") MultipartFile file) {
         return ResponseUtils.getResponseEntity(teacherService.importTeachers(file));
+    }
+
+    @PostMapping
+    ResponseEntity<Object> createTeacher(@RequestBody TeacherRequest teacher) {
+        return ResponseUtils.getResponseEntity(teacherService.createTeacher(teacher));
+    }
+
+    @PutMapping
+    ResponseEntity<Object> updateTeacher(@RequestBody TeacherRequest teacher) {
+        return ResponseUtils.getResponseEntity(teacherService.updateTeacher(teacher));
+    }
+
+    @DeleteMapping("/{id}")
+    ResponseEntity<Object> deleteTeacher(@PathVariable Long id) {
+        return ResponseUtils.getResponseEntity(teacherService.deleteTeacher(id));
     }
 }

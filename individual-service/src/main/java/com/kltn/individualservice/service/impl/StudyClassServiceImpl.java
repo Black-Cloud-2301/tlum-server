@@ -32,6 +32,11 @@ public class StudyClassServiceImpl implements StudyClassService {
     }
 
     @Override
+    public StudyClass findById(Long id) {
+        return studyClassRepository.findById(id).orElseThrow(() -> new NotFoundException("Study class"));
+    }
+
+    @Override
     public StudyClass delete(Long id) {
         StudyClass studyClass = studyClassRepository.findById(id).orElseThrow(() -> new NotFoundException("Study class"));
         studyClass.setIsActive(EntityStatus.DELETED);
