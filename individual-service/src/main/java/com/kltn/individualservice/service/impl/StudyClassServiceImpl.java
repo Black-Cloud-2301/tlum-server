@@ -2,6 +2,7 @@ package com.kltn.individualservice.service.impl;
 
 import com.kltn.individualservice.constant.EntityStatus;
 import com.kltn.individualservice.dto.request.StudyClassCRU;
+import com.kltn.individualservice.dto.request.StudyClassRequest;
 import com.kltn.individualservice.entity.StudyClass;
 import com.kltn.individualservice.entity.Subject;
 import com.kltn.individualservice.entity.Teacher;
@@ -62,7 +63,7 @@ public class StudyClassServiceImpl implements StudyClassService {
     }
 
     @Override
-    public Page<StudyClass> findAllByIsActiveIn(List<EntityStatus> statuses, Pageable pageable) {
-        return studyClassRepository.findAllByIsActiveIn(statuses, pageable);
+    public Page<StudyClass> findAllByIsActiveIn(StudyClassRequest request, Pageable pageable) {
+        return studyClassRepository.findAllByIsActiveIn(request, pageable);
     }
 }

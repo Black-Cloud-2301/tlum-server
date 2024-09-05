@@ -47,12 +47,12 @@ public class TeacherServiceImpl implements TeacherService {
 
     @Override
     public List<Teacher> getTeachers(GetTeachersRequest request) {
-        return teacherRepository.findAllByIsActiveInAndStatusIn(request.getEntityStatuses(), request.getEmployeeStatuses());
+        return teacherRepository.findAllByIsActiveInAndStatusIn(request);
     }
 
     @Override
     public Page<Teacher> getTeachers(GetTeachersRequest request, Pageable pageable) {
-        return teacherRepository.findAllByIsActiveInAndStatusIn(request.getEntityStatuses(), request.getEmployeeStatuses(), pageable);
+        return teacherRepository.findAllByIsActiveInAndStatusIn(request, pageable);
     }
 
 

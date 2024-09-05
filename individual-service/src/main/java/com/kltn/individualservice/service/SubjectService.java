@@ -10,6 +10,9 @@ import java.util.List;
 public interface SubjectService {
     List<Subject> getSubjects(SubjectsRequest request);
 
+    Subject createSubject(Subject request);
+    Subject updateSubject(Subject request);
+
     Page<Subject> getSubjects(SubjectsRequest request, Pageable pageable);
 
     List<Subject> findAllById(List<Long> subjectIds);

@@ -29,6 +29,7 @@ public class MajorServiceImpl implements MajorService {
         return this.majorRepository.findByIsActiveIn(request.getEntityStatuses(), pageable);
     }
 
+    @Override
     public Major getMajor(Long id) {
         return majorRepository.findById(id).orElse(null);
     }
@@ -36,5 +37,10 @@ public class MajorServiceImpl implements MajorService {
     @Override
     public Major getMajorByCodeAndIsActive(String code, EntityStatus entityStatus) {
         return majorRepository.findByCodeAndIsActive(code, entityStatus).orElseThrow(() -> new NotFoundException("Major"));
+    }
+
+    @Override
+    public List<Major> getMajorByIds(List<Long> ids) {
+        return majorRepository.findAllById(ids);
     }
 }

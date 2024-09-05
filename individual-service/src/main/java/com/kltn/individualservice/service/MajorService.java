@@ -10,6 +10,7 @@ import java.util.List;
 
 public interface MajorService {
     List<Major> getMajors(GetMajorsRequest request);
+    List<Major> getMajorByIds(List<Long> ids);
 
     Page<Major> getMajors(GetMajorsRequest request, Pageable pageable);
 

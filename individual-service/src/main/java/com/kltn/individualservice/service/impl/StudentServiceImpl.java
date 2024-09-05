@@ -51,12 +51,12 @@ public class StudentServiceImpl implements StudentService {
 
     @ActionPermission("VIEW")
     public List<Student> getStudents(GetStudentsRequest request) {
-        return studentRepository.findByIsActiveInAndStatusIn(request.getEntityStatuses(), request.getStudentStatuses());
+        return studentRepository.findByIsActiveInAndStatusIn(request.getEntityStatuses(), request.getStatuses());
     }
 
     @ActionPermission("VIEW")
     public Page<Student> getStudents(GetStudentsRequest request, Pageable pageable) {
-        return studentRepository.findByIsActiveInAndStatusIn(request.getEntityStatuses(), request.getStudentStatuses(), pageable);
+        return studentRepository.findByIsActiveInAndStatusIn(request, pageable);
     }
 
     @ActionPermission("VIEW")

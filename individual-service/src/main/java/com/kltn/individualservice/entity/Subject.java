@@ -30,8 +30,19 @@ public class Subject extends BaseEntity {
     private Integer hours;
     @Column
     private Double coefficient;
-    @OneToMany
+    @ManyToMany
+    @JoinTable(
+            name = "subject_majors",
+            joinColumns = @JoinColumn(name = "subject_id"),
+            inverseJoinColumns = @JoinColumn(name = "majors_id"),
+            uniqueConstraints = @UniqueConstraint(columnNames = {"subject_id", "majors_id"})
+    )
     private List<Major> majors;
+
+    @Transient
+    private List<Long> requireSubjectIds;
+    @Transient
+    private List<Long> majorIds;
 
     public Subject(Long id) {
         this.id = id;

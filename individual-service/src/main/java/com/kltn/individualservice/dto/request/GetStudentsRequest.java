@@ -11,6 +11,9 @@ import java.util.List;
 @Setter
 @Getter
 public class GetStudentsRequest extends PageableRequest {
-    private List<StudentStatus> studentStatuses;
+    private String code;
+    private String name;
+    private List<Long> majorIds;
+    private List<StudentStatus> statuses;
     private List<EntityStatus> entityStatuses;
 }

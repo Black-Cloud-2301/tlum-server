@@ -11,4 +11,7 @@ import java.util.List;
 @Getter
 public class SubjectsRequest extends PageableRequest {
     private List<EntityStatus> entityStatuses;
+    private String code;
+    private String name;
+    private List<Long> majorIds;
 }

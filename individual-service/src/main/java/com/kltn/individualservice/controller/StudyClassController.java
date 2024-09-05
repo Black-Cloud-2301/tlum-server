@@ -1,7 +1,7 @@
 package com.kltn.individualservice.controller;
 
-import com.kltn.individualservice.dto.request.GetStudyClassesRequest;
 import com.kltn.individualservice.dto.request.StudyClassCRU;
+import com.kltn.individualservice.dto.request.StudyClassRequest;
 import com.kltn.individualservice.service.StudyClassService;
 import com.kltn.individualservice.util.CommonUtil;
 import com.kltn.individualservice.util.dto.ResponseUtils;
@@ -17,10 +17,10 @@ public class StudyClassController {
     private final StudyClassService studyClassService;
 
     @GetMapping
-    ResponseEntity<Object> findAllByIsActiveIn(GetStudyClassesRequest request) {
+    ResponseEntity<Object> findAllByIsActiveIn(StudyClassRequest request) {
         if (request.getPageNumber() != null && request.getPageSize() != null) {
             Pageable pageable = CommonUtil.createPageable(request);
-            return ResponseUtils.getResponseEntity(studyClassService.findAllByIsActiveIn(request.getEntityStatuses(), pageable));
+            return ResponseUtils.getResponseEntity(studyClassService.findAllByIsActiveIn(request, pageable));
         } else {
             return ResponseUtils.getResponseEntity(studyClassService.findAllByIsActiveIn(request.getEntityStatuses()));
         }

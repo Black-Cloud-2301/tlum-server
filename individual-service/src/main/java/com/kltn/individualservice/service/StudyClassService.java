@@ -2,6 +2,7 @@ package com.kltn.individualservice.service;
 
 import com.kltn.individualservice.constant.EntityStatus;
 import com.kltn.individualservice.dto.request.StudyClassCRU;
+import com.kltn.individualservice.dto.request.StudyClassRequest;
 import com.kltn.individualservice.entity.StudyClass;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -14,5 +15,5 @@ public interface StudyClassService {
     StudyClass findById(Long id);
     StudyClass delete(Long id);
     List<StudyClass> findAllByIsActiveIn(List<EntityStatus> statuses);
-    Page<StudyClass> findAllByIsActiveIn(List<EntityStatus> statuses, Pageable pageable);
+    Page<StudyClass> findAllByIsActiveIn(StudyClassRequest request, Pageable pageable);
 }
