@@ -16,4 +16,5 @@ public interface SubjectService {
     Page<Subject> getSubjects(SubjectsRequest request, Pageable pageable);
 
     List<Subject> findAllById(List<Long> subjectIds);
+    void deleteSubject(Long id);
 }

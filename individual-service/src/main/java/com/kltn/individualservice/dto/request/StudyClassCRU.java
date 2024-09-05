@@ -8,9 +8,7 @@ import lombok.Setter;
 public class StudyClassCRU {
     private Long id;
     private String name;
-    private Integer semester;
-    private Integer studentGroup;
-    private Integer year;
+    private Long semesterId;
     private String classesOfWeek;
     private Long teacherId;
     private Integer totalStudent;

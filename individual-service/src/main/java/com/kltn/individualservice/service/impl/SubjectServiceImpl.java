@@ -11,6 +11,8 @@ import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;
 import lombok.experimental.FieldDefaults;
 import org.modelmapper.ModelMapper;
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
@@ -26,17 +28,26 @@ public class SubjectServiceImpl implements SubjectService {
     ModelMapper modalMapper;
 
     @Override
+    @Cacheable(value = "subjects", key = "#request")
     public List<Subject> getSubjects(SubjectsRequest request) {
         return subjectRepository.findAllByIsActiveIn(request.getEntityStatuses());
     }
 
     @Override
+    @Cacheable(value = "subjects", key = "#request")
+    public Page<Subject> getSubjects(SubjectsRequest request, Pageable pageable) {
+        return subjectRepository.findAllByIsActiveIn(request, pageable);
+    }
+
+    @Override
+    @CacheEvict(value = "subjects", allEntries = true)
     public Subject createSubject(Subject request) {
         findMajorsAndSubject(request);
         return subjectRepository.save(request);
     }
 
     @Override
+    @CacheEvict(value = "subjects", allEntries = true)
     public Subject updateSubject(Subject request) {
         if(request.getId() == null) {
             throw new IllegalArgumentException("Id is required");
@@ -50,13 +61,15 @@ public class SubjectServiceImpl implements SubjectService {
     }
 
     @Override
-    public Page<Subject> getSubjects(SubjectsRequest request, Pageable pageable) {
-        return subjectRepository.findAllByIsActiveIn(request, pageable);
+    @Cacheable(value = "subjects", key = "#subjectIds")
+    public List<Subject> findAllById(List<Long> subjectIds) {
+        return subjectRepository.findAllById(subjectIds);
     }
 
     @Override
-    public List<Subject> findAllById(List<Long> subjectIds) {
-        return subjectRepository.findAllById(subjectIds);
+    @CacheEvict(value = "subjects", allEntries = true)
+    public void deleteSubject(Long id) {
+        subjectRepository.deleteById(id);
     }
 
     private void findMajorsAndSubject(Subject request) {

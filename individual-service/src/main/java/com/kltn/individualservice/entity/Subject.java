@@ -1,10 +1,13 @@
 package com.kltn.individualservice.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.io.Serial;
+import java.io.Serializable;
 import java.util.List;
 
 @Getter
@@ -12,7 +15,10 @@ import java.util.List;
 @NoArgsConstructor
 @Entity
 @Table(name = "subject")
-public class Subject extends BaseEntity {
+public class Subject extends BaseEntity implements Serializable {
+    @Serial
+    private static final long serialVersionUID = 1L;
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -24,13 +30,13 @@ public class Subject extends BaseEntity {
     private Integer credit;
     @Column
     private Integer requireCredit;
-    @ManyToMany
+    @ManyToMany(fetch = FetchType.EAGER)
     private List<Subject> requireSubjects;
     @Column
     private Integer hours;
     @Column
     private Double coefficient;
-    @ManyToMany
+    @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(
             name = "subject_majors",
             joinColumns = @JoinColumn(name = "subject_id"),

@@ -35,4 +35,10 @@ public class SubjectController {
     ResponseEntity<Object> updateSubject(@RequestBody Subject request) {
         return ResponseUtils.getResponseEntity(subjectService.updateSubject(request));
     }
+
+    @DeleteMapping("/{id}")
+    ResponseEntity<Object> deleteSubject(@PathVariable Long id) {
+        subjectService.deleteSubject(id);
+        return ResponseUtils.getResponseEntity("Delete success");
+    }
 }

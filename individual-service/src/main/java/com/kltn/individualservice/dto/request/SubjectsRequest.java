@@ -6,6 +6,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.util.List;
+import java.util.Objects;
 
 @Setter
 @Getter
@@ -14,4 +15,16 @@ public class SubjectsRequest extends PageableRequest {
     private String code;
     private String name;
     private List<Long> majorIds;
+
+    @Override
+    public String toString() {
+        return "SubjectsRequest{" +
+                "pageNumber=" + getPageNumber() +
+                ", pageSize=" + getPageSize() +
+                ", entityStatuses=" + entityStatuses +
+                ", code='" + code +
+                ", name='" + name +
+                ", majorIds=" + majorIds +
+                '}';
+    }
 }

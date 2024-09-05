@@ -8,8 +8,11 @@ import com.kltn.individualservice.entity.Subject;
 import com.kltn.individualservice.entity.Teacher;
 import com.kltn.individualservice.exception.NotFoundException;
 import com.kltn.individualservice.repository.StudyClassRepository;
+import com.kltn.individualservice.service.SemesterService;
 import com.kltn.individualservice.service.StudyClassService;
+import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;
+import lombok.experimental.FieldDefaults;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
@@ -18,8 +21,10 @@ import java.util.List;
 
 @Service
 @RequiredArgsConstructor
+@FieldDefaults(level = AccessLevel.PRIVATE, makeFinal = true)
 public class StudyClassServiceImpl implements StudyClassService {
-    private final StudyClassRepository studyClassRepository;
+    StudyClassRepository studyClassRepository;
+    SemesterService semesterService;
 
     @Override
     public StudyClass create(StudyClassCRU studyClassCRU) {
@@ -43,12 +48,10 @@ public class StudyClassServiceImpl implements StudyClassService {
         studyClass.setIsActive(EntityStatus.DELETED);
         return studyClassRepository.save(studyClass);
     }
-
     private StudyClass createOrUpdateStudyClass(StudyClass studyClass, StudyClassCRU studyClassCRU) {
+        semesterService.findById(studyClassCRU.getSemesterId());
         studyClass.setName(studyClassCRU.getName());
-        studyClass.setSemester(studyClassCRU.getSemester());
-        studyClass.setStudentGroup(studyClassCRU.getStudentGroup());
-        studyClass.setYear(studyClassCRU.getYear());
+        studyClass.setSemester(semesterService.findById(studyClassCRU.getSemesterId()));
         studyClass.setClassesOfWeek(studyClassCRU.getClassesOfWeek());
         studyClass.setTeacher(new Teacher(studyClassCRU.getTeacherId()));
         studyClass.setTotalStudent(studyClassCRU.getTotalStudent());
@@ -56,6 +59,8 @@ public class StudyClassServiceImpl implements StudyClassService {
 
         return studyClass;
     }
+
+
 
     @Override
     public List<StudyClass> findAllByIsActiveIn(List<EntityStatus> statuses) {

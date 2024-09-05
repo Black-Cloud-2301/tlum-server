@@ -10,9 +10,12 @@ import com.kltn.individualservice.exception.NotFoundException;
 import com.kltn.individualservice.repository.StudentRepository;
 import com.kltn.individualservice.repository.StudentStudyClassRepository;
 import com.kltn.individualservice.repository.StudyClassRepository;
+import com.kltn.individualservice.service.SemesterService;
 import com.kltn.individualservice.service.StudentStudyClassService;
 import com.kltn.individualservice.util.WebUtil;
+import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;
+import lombok.experimental.FieldDefaults;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -20,11 +23,13 @@ import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
+@FieldDefaults(level = AccessLevel.PRIVATE, makeFinal = true)
 public class StudentStudyClassServiceImpl implements StudentStudyClassService {
-    private final StudentStudyClassRepository studentStudyClassRepository;
-    private final StudentRepository studentRepository;
-    private final StudyClassRepository studyClassRepository;
-    private final WebUtil webUtil;
+   StudentStudyClassRepository studentStudyClassRepository;
+   StudentRepository studentRepository;
+   StudyClassRepository studyClassRepository;
+   WebUtil webUtil;
+   SemesterService semesterService;
 
     @Override
     public StudentStudyClass create(String studyClassId) {
@@ -42,7 +47,7 @@ public class StudentStudyClassServiceImpl implements StudentStudyClassService {
     @Override
     public List<StudentStudyClass> findAllBySemester(GetStudentStudyClassesRequest request) {
         Long userId = Long.parseLong(webUtil.getUserId());
-        return studentStudyClassRepository.findAllByStudentIdAndSemester(request, userId);
+        return studentStudyClassRepository.findAllByStudentId(userId);
     }
 
     @Override

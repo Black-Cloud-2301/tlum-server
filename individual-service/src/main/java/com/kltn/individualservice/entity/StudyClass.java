@@ -14,12 +14,6 @@ public class StudyClass extends BaseEntity {
     private Long id;
     @Column(nullable = false)
     private String name;
-    @Column(nullable = false)
-    private Integer semester;
-    @Column(nullable = false)
-    private Integer studentGroup;
-    @Column(nullable = false)
-    private Integer year;
     @Column(length = 1023)
     private String classesOfWeek;
     @ManyToOne
@@ -28,4 +22,6 @@ public class StudyClass extends BaseEntity {
     private Integer totalStudent;
     @ManyToOne
     private Subject subject;
+    @ManyToOne
+    private Semester semester;
 }

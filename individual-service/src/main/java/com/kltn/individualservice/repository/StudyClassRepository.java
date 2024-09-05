@@ -18,9 +18,9 @@ public interface StudyClassRepository extends JpaRepository<StudyClass, Long> {
             "FROM StudyClass s " +
             "WHERE s.isActive IN :#{#request.entityStatuses} " +
             "AND (:#{#request.name} IS NULL OR LOWER(s.name) LIKE LOWER(CONCAT('%', :#{#request.name}, '%'))) " +
-            "AND (:#{#request.year} IS NULL OR s.year = :#{#request.year}) " +
-            "AND (:#{#request.studentGroup} IS NULL OR s.studentGroup = :#{#request.studentGroup}) " +
-            "AND (:#{#request.semester} IS NULL OR s.semester = :#{#request.semester}) " +
+            "AND (:#{#request.year} IS NULL OR s.semester.year = :#{#request.year}) " +
+            "AND (:#{#request.studentGroup} IS NULL OR s.semester.studentGroup = :#{#request.studentGroup}) " +
+            "AND (:#{#request.semester} IS NULL OR s.semester.semester = :#{#request.semester}) " +
             "AND (:#{#request.subjectId} IS NULL OR s.subject.id = :#{#request.subjectId}) " +
             "AND (:#{#request.teacherId} IS NULL OR s.teacher.id = :#{#request.teacherId}) " +
             "GROUP BY s.id")
