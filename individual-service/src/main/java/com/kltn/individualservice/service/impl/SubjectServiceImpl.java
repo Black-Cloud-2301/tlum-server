@@ -25,7 +25,7 @@ import java.util.List;
 public class SubjectServiceImpl implements SubjectService {
     SubjectRepository subjectRepository;
     MajorService majorService;
-    ModelMapper modalMapper;
+    ModelMapper modelMapper;
 
     @Override
     @Cacheable(value = "subjects", key = "#request")
@@ -56,7 +56,7 @@ public class SubjectServiceImpl implements SubjectService {
         subject.getMajors().clear();
         subject.getRequireSubjects().clear();
         findMajorsAndSubject(request);
-        modalMapper.map(request, subject);
+        modelMapper.map(request, subject);
         return subjectRepository.save(subject);
     }
 

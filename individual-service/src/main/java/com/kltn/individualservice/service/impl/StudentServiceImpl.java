@@ -1,14 +1,14 @@
 package com.kltn.individualservice.service.impl;
 
-import com.kltn.individualservice.annotation.ActionPermission;
-import com.kltn.individualservice.annotation.FunctionPermission;
 import com.kltn.individualservice.config.I18n;
 import com.kltn.individualservice.constant.EntityStatus;
 import com.kltn.individualservice.constant.Gender;
 import com.kltn.individualservice.constant.StudentStatus;
 import com.kltn.individualservice.constant.UserType;
+import com.kltn.individualservice.dto.request.GetMajorsRequest;
 import com.kltn.individualservice.dto.request.GetStudentsRequest;
 import com.kltn.individualservice.dto.request.StudentRequestCRU;
+import com.kltn.individualservice.entity.Major;
 import com.kltn.individualservice.entity.Role;
 import com.kltn.individualservice.entity.Student;
 import com.kltn.individualservice.entity.User;
@@ -23,20 +23,25 @@ import com.kltn.individualservice.service.UserService;
 import com.kltn.individualservice.util.exception.converter.DateConverter;
 import jakarta.servlet.http.HttpServletRequest;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpHeaders;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.util.*;
 import java.util.concurrent.atomic.AtomicInteger;
+import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor
-@FunctionPermission("INDIVIDUAL/STUDENT")
+@Slf4j
 public class StudentServiceImpl implements StudentService {
     @Value("${individual.defaultPassword}")
     private String defaultPassword;
@@ -49,22 +54,28 @@ public class StudentServiceImpl implements StudentService {
     private final RoleService roleService;
     private final PasswordEncoder passwordEncoder;
 
-    @ActionPermission("VIEW")
+    @Cacheable(value = "students", key = "#request")
     public List<Student> getStudents(GetStudentsRequest request) {
-        return studentRepository.findByIsActiveInAndStatusIn(request.getEntityStatuses(), request.getStatuses());
+        return studentRepository.findByIsActiveInAndStatusIn(request);
     }
 
-    @ActionPermission("VIEW")
+    @Override
+    public List<Student> getStudentsNotRegister(GetStudentsRequest request) {
+        return studentRepository.findStudentsNotRegister(request);
+    }
+
+    @Cacheable(value = "students", key = "#request")
     public Page<Student> getStudents(GetStudentsRequest request, Pageable pageable) {
         return studentRepository.findByIsActiveInAndStatusIn(request, pageable);
     }
 
-    @ActionPermission("VIEW")
-    public Student getStudent(Long id) {
+    @Cacheable(value = "student", key = "#id")
+    public Student findById(Long id) {
         return studentRepository.findById(id).orElseThrow(() -> new NotFoundException(I18n.getMessage("msg.field.student")));
     }
 
-    @ActionPermission("CREATE")
+    @Cacheable(value = "student", key = "#result.id")
+    @CacheEvict(value = "students", allEntries = true)
     public Student createStudent(StudentRequestCRU request) {
         Student student = new Student();
         student.setMajors(majorService.getMajor(request.getMajorId()));
@@ -73,7 +84,8 @@ public class StudentServiceImpl implements StudentService {
     }
 
     @Override
-    @ActionPermission("IMPORT")
+    @CacheEvict(value = "students", allEntries = true)
+    @Transactional
     public List<Student> importStudents(MultipartFile file) {
         String header = request.getHeader(HttpHeaders.AUTHORIZATION);
         List<List<Object>> excelData = fileServiceClient.convertFileToJson(header, file);
@@ -81,17 +93,24 @@ public class StudentServiceImpl implements StudentService {
         Set<Role> roles = new HashSet<>();
         roles.add(defaultRole);
         AtomicInteger currentMaxCode = new AtomicInteger(userService.findMaxNumberInCode(UserType.STUDENT));
-        List<Student> students = new ArrayList<>();
-        for (List<Object> rowData : excelData) {
+        List<Student> students = Collections.synchronizedList(new ArrayList<>());
+        Map<String,Major> majors = majorService.getMajors(new GetMajorsRequest(List.of(EntityStatus.ACTIVE))).stream()
+                .collect(Collectors.toMap(Major::getCode, major -> major));
+
+        excelData.parallelStream().forEach(rowData -> {
             this.validateStudentImport(rowData);
             Student student = new Student();
             student.setStatus(StudentStatus.REGISTERED);
 
-            student.setMajors(majorService.getMajorByCodeAndIsActive((String) rowData.get(8), EntityStatus.ACTIVE));
+            student.setMajors(majors.get((String) rowData.get(8)));
             String codeSuffix = String.format("%05d", currentMaxCode.incrementAndGet());
 
             User user = new User();
-            user.setCode(Optional.ofNullable((String) rowData.get(0)).orElseGet(() -> "A" + codeSuffix));
+            String code = (String) rowData.getFirst();
+            if (code == null || code.isEmpty()) {
+                code = "A" + codeSuffix;
+            }
+            user.setCode(code);
             user.setFirstname((String) rowData.get(1));
             user.setLastname((String) rowData.get(2));
             user.setPhoneNumber((String) rowData.get(3));
@@ -101,10 +120,16 @@ public class StudentServiceImpl implements StudentService {
             user.setAddress((String) rowData.get(7));
             user.setPassword(passwordEncoder.encode(defaultPassword));
             user.setRoles(roles);
+            String schoolYearStr = rowData.get(9).toString();
+            int schoolYear = (int) Double.parseDouble(schoolYearStr);
+            student.setSchoolYear(schoolYear);
             student.setUser(user);
             students.add(student);
-        }
 
+            log.info("Import student: {}", students.size());
+        });
+
+        log.info("Import student: {}", students.size());
         return studentRepository.saveAll(students);
     }
 

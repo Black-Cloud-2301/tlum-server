@@ -16,6 +16,10 @@ import com.kltn.individualservice.util.WebUtil;
 import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;
 import lombok.experimental.FieldDefaults;
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.CachePut;
+import org.springframework.cache.annotation.Cacheable;
+import org.springframework.cache.annotation.Caching;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -29,9 +33,9 @@ public class StudentStudyClassServiceImpl implements StudentStudyClassService {
    StudentRepository studentRepository;
    StudyClassRepository studyClassRepository;
    WebUtil webUtil;
-   SemesterService semesterService;
 
     @Override
+    @CacheEvict(value = "studentStudyClasses", allEntries = true)
     public StudentStudyClass create(String studyClassId) {
         Long userId = Long.parseLong(webUtil.getUserId());
         Student student = studentRepository.findByIdAndIsActive(userId, EntityStatus.ACTIVE).orElseThrow(() -> new NotFoundException(I18n.getMessage("msg.field.student")));
@@ -45,12 +49,17 @@ public class StudentStudyClassServiceImpl implements StudentStudyClassService {
     }
 
     @Override
+    @Cacheable(value = "studentStudyClasses", key = "#request")
     public List<StudentStudyClass> findAllBySemester(GetStudentStudyClassesRequest request) {
         Long userId = Long.parseLong(webUtil.getUserId());
         return studentStudyClassRepository.findAllByStudentId(userId);
     }
 
     @Override
+    @Caching(evict = {
+            @CacheEvict(value = "studentStudyClasses", allEntries = true),
+            @CacheEvict(value = "studentStudyClass", key = "#id")
+    })
     public StudentStudyClass delete(Long id) {
         StudentStudyClass studentStudyClass = studentStudyClassRepository.findByIdAndIsActive(id, EntityStatus.ACTIVE).orElseThrow(() -> new NotFoundException(I18n.getMessage("msg.field.student_class_register")));
         studentStudyClass.setIsActive(EntityStatus.INACTIVE);

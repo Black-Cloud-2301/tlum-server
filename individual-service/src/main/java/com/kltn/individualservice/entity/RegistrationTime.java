@@ -6,18 +6,22 @@ import lombok.Setter;
 
 import java.io.Serial;
 import java.io.Serializable;
+import java.time.LocalDateTime;
 
-@Entity
 @Setter
 @Getter
-@Table(name = "permissions")
-public class Permission extends BaseEntity implements Serializable {
+@Entity
+@Table(name = "registration_time")
+public class RegistrationTime extends BaseEntity implements Serializable {
     @Serial
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String module;
-    private String function;
-    private String action;
+    @ManyToOne
+    private Semester semester;
+    @ManyToOne
+    private Student student;
+    private LocalDateTime startTime;
+    private LocalDateTime endTime;
 }

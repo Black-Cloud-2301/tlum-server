@@ -1,6 +1,5 @@
 package com.kltn.individualservice.dto.request;
 
-import com.kltn.individualservice.constant.EmployeeStatus;
 import com.kltn.individualservice.constant.EntityStatus;
 import com.kltn.individualservice.util.dto.PageableRequest;
 import lombok.Getter;
@@ -19,4 +18,19 @@ public class StudyClassRequest extends PageableRequest {
     private Long teacherId;
     private List<EntityStatus> entityStatuses;
 
+
+    @Override
+    public String toString() {
+        return "StudyClassRequest{" +
+                "pageNumber=" + getPageNumber() +
+                ", pageSize=" + getPageSize() +
+                ", year=" + year +
+                ", semester=" + semester +
+                ", studentGroup=" + studentGroup +
+                ", name=" + name +
+                ", subjectId=" + subjectId +
+                ", teacherId=" + teacherId +
+                ", entityStatuses=" + entityStatuses +
+                '}';
+    }
 }

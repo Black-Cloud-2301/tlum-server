@@ -1,22 +1,112 @@
 [
   {
+    "code": "TN",
+    "name": "Thanh nhạc",
+    "studyDepartmentCode": "AMU"
+  },
+  {
+    "code": "KTQT",
+    "name": "Kinh tế quốc tế",
+    "studyDepartmentCode": "KTQL"
+  },
+  {
+    "code": "QTKD",
+    "name": "Quản trị kinh doanh",
+    "studyDepartmentCode": "KTQL"
+  },
+  {
+    "code": "MKT",
+    "name": "Marketing",
+    "studyDepartmentCode": "KTQL"
+  },
+  {
+    "code": "TCNH",
+    "name": "Tài chính - Ngân hàng",
+    "studyDepartmentCode": "KTQL"
+  },
+  {
+    "code": "KT",
+    "name": "Kế toán",
+    "studyDepartmentCode": "KTQL"
+  },
+  {
+    "code": "LOGI",
+    "name": "Logistics và Quản lý chuỗi cung ứng",
+    "studyDepartmentCode": "KTQL"
+  },
+  {
+    "code": "TMDT",
+    "name": "Thương mại điện tử",
+    "studyDepartmentCode": "KTQL"
+  },
+  {
+    "code": "KHMT",
+    "name": "Khoa học máy tính",
+    "studyDepartmentCode": "TTH"
+  },
+  {
     "code": "CNTT",
     "name": "Công nghệ thông tin",
-    "studyDepartmentCode": "TT"
+    "studyDepartmentCode": "TTH"
   },
   {
-    "code": "NNTA",
-    "name": "Tiếng Anh",
-    "studyDepartmentCode": "NN"
+    "code": "TTNT",
+    "name": "Trí tuệ nhân tạo",
+    "studyDepartmentCode": "TTH"
   },
   {
-    "code": "NNTN",
-    "name": "Tiếng Nhật",
-    "studyDepartmentCode": "NN"
+    "code": "NNA",
+    "name": "Ngôn ngữ Anh",
+    "studyDepartmentCode": "NNK"
   },
   {
-    "code": "NNTT",
-    "name": "Tiếng Trung",
-    "studyDepartmentCode": "NN"
+    "code": "NNT",
+    "name": "Ngôn ngữ Trung Quốc",
+    "studyDepartmentCode": "NNK"
+  },
+  {
+    "code": "NNN",
+    "name": "Ngôn ngữ Nhật",
+    "studyDepartmentCode": "NNK"
+  },
+  {
+    "code": "NNH",
+    "name": "Ngôn ngữ Hàn Quốc",
+    "studyDepartmentCode": "NNK"
+  },
+  {
+    "code": "DD",
+    "name": "Điều dưỡng",
+    "studyDepartmentCode": "KHSK"
+  },
+  {
+    "code": "VNH",
+    "name": "Việt Nam học",
+    "studyDepartmentCode": "KHXHNV"
+  },
+  {
+    "code": "TTDPT",
+    "name": "Truyền thông đa phương tiện",
+    "studyDepartmentCode": "TTDPT"
+  },
+  {
+    "code": "TKDH",
+    "name": "Thiết kế đồ họa",
+    "studyDepartmentCode": "TTH"
+  },
+  {
+    "code": "LKT",
+    "name": "Luật kinh tế",
+    "studyDepartmentCode": "KTQL"
+  },
+  {
+    "code": "DLLH",
+    "name": "Du lịch - Lữ hành",
+    "studyDepartmentCode": "DL"
+  },
+  {
+    "code": "QTKS",
+    "name": "Quản trị khách sạn",
+    "studyDepartmentCode": "KTQL"
   }
 ]

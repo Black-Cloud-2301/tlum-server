@@ -1,0 +1,3435 @@
+[
+  {
+    "subjectCode": "ML113",
+    "majorCode": "TN"
+  },
+  {
+    "subjectCode": "ML114",
+    "majorCode": "TN"
+  },
+  {
+    "subjectCode": "ML115",
+    "majorCode": "TN"
+  },
+  {
+    "subjectCode": "ML202",
+    "majorCode": "TN"
+  },
+  {
+    "subjectCode": "ML204",
+    "majorCode": "TN"
+  },
+  {
+    "subjectCode": "IM210",
+    "majorCode": "TN"
+  },
+  {
+    "subjectCode": "VL102",
+    "majorCode": "TN"
+  },
+  {
+    "subjectCode": "GE111",
+    "majorCode": "TN"
+  },
+  {
+    "subjectCode": "GE112",
+    "majorCode": "TN"
+  },
+  {
+    "subjectCode": "GE121",
+    "majorCode": "TN"
+  },
+  {
+    "subjectCode": "GE222",
+    "majorCode": "TN"
+  },
+  {
+    "subjectCode": "PG101",
+    "majorCode": "TN"
+  },
+  {
+    "subjectCode": "PG102",
+    "majorCode": "TN"
+  },
+  {
+    "subjectCode": "PG103",
+    "majorCode": "TN"
+  },
+  {
+    "subjectCode": "PG104",
+    "majorCode": "TN"
+  },
+  {
+    "subjectCode": "PG105",
+    "majorCode": "TN"
+  },
+  {
+    "subjectCode": "PG106",
+    "majorCode": "TN"
+  },
+  {
+    "subjectCode": "PG107",
+    "majorCode": "TN"
+  },
+  {
+    "subjectCode": "PG121",
+    "majorCode": "TN"
+  },
+  {
+    "subjectCode": "AN104",
+    "majorCode": "TN"
+  },
+  {
+    "subjectCode": "AN201",
+    "majorCode": "TN"
+  },
+  {
+    "subjectCode": "AN301",
+    "majorCode": "TN"
+  },
+  {
+    "subjectCode": "AN402",
+    "majorCode": "TN"
+  },
+  {
+    "subjectCode": "AN303",
+    "majorCode": "TN"
+  },
+  {
+    "subjectCode": "AN404",
+    "majorCode": "TN"
+  },
+  {
+    "subjectCode": "AN211",
+    "majorCode": "TN"
+  },
+  {
+    "subjectCode": "AN311",
+    "majorCode": "TN"
+  },
+  {
+    "subjectCode": "AN412",
+    "majorCode": "TN"
+  },
+  {
+    "subjectCode": "AN413",
+    "majorCode": "TN"
+  },
+  {
+    "subjectCode": "AN112",
+    "majorCode": "TN"
+  },
+  {
+    "subjectCode": "AN212",
+    "majorCode": "TN"
+  },
+  {
+    "subjectCode": "AN122",
+    "majorCode": "TN"
+  },
+  {
+    "subjectCode": "AN223",
+    "majorCode": "TN"
+  },
+  {
+    "subjectCode": "AN323",
+    "majorCode": "TN"
+  },
+  {
+    "subjectCode": "AN131",
+    "majorCode": "TN"
+  },
+  {
+    "subjectCode": "AN232",
+    "majorCode": "TN"
+  },
+  {
+    "subjectCode": "AN333",
+    "majorCode": "TN"
+  },
+  {
+    "subjectCode": "AN434",
+    "majorCode": "TN"
+  },
+  {
+    "subjectCode": "AN233",
+    "majorCode": "TN"
+  },
+  {
+    "subjectCode": "AN141",
+    "majorCode": "TN"
+  },
+  {
+    "subjectCode": "AN242",
+    "majorCode": "TN"
+  },
+  {
+    "subjectCode": "AN251",
+    "majorCode": "TN"
+  },
+  {
+    "subjectCode": "AN352",
+    "majorCode": "TN"
+  },
+  {
+    "subjectCode": "AN236",
+    "majorCode": "TN"
+  },
+  {
+    "subjectCode": "AN237",
+    "majorCode": "TN"
+  },
+  {
+    "subjectCode": "AN245",
+    "majorCode": "TN"
+  },
+  {
+    "subjectCode": "AN252",
+    "majorCode": "TN"
+  },
+  {
+    "subjectCode": "AN253",
+    "majorCode": "TN"
+  },
+  {
+    "subjectCode": "AN499",
+    "majorCode": "TN"
+  },
+  {
+    "subjectCode": "ML113",
+    "majorCode": "KTQT"
+  },
+  {
+    "subjectCode": "ML114",
+    "majorCode": "KTQT"
+  },
+  {
+    "subjectCode": "ML115",
+    "majorCode": "KTQT"
+  },
+  {
+    "subjectCode": "ML202",
+    "majorCode": "KTQT"
+  },
+  {
+    "subjectCode": "ML204",
+    "majorCode": "KTQT"
+  },
+  {
+    "subjectCode": "CS102",
+    "majorCode": "KTQT"
+  },
+  {
+    "subjectCode": "MA101",
+    "majorCode": "KTQT"
+  },
+  {
+    "subjectCode": "NA151",
+    "majorCode": "KTQT"
+  },
+  {
+    "subjectCode": "EC101",
+    "majorCode": "KTQT"
+  },
+  {
+    "subjectCode": "VL101",
+    "majorCode": "KTQT"
+  },
+  {
+    "subjectCode": "SH131",
+    "majorCode": "KTQT"
+  },
+  {
+    "subjectCode": "GE111",
+    "majorCode": "KTQT"
+  },
+  {
+    "subjectCode": "GE112",
+    "majorCode": "KTQT"
+  },
+  {
+    "subjectCode": "GE121",
+    "majorCode": "KTQT"
+  },
+  {
+    "subjectCode": "GE222",
+    "majorCode": "KTQT"
+  },
+  {
+    "subjectCode": "GE231",
+    "majorCode": "KTQT"
+  },
+  {
+    "subjectCode": "GE232",
+    "majorCode": "KTQT"
+  },
+  {
+    "subjectCode": "GE333",
+    "majorCode": "KTQT"
+  },
+  {
+    "subjectCode": "GF101",
+    "majorCode": "KTQT"
+  },
+  {
+    "subjectCode": "GF102",
+    "majorCode": "KTQT"
+  },
+  {
+    "subjectCode": "GJ101",
+    "majorCode": "KTQT"
+  },
+  {
+    "subjectCode": "GJ102",
+    "majorCode": "KTQT"
+  },
+  {
+    "subjectCode": "GZ101",
+    "majorCode": "KTQT"
+  },
+  {
+    "subjectCode": "GZ102",
+    "majorCode": "KTQT"
+  },
+  {
+    "subjectCode": "GI101",
+    "majorCode": "KTQT"
+  },
+  {
+    "subjectCode": "GI102",
+    "majorCode": "KTQT"
+  },
+  {
+    "subjectCode": "GK101",
+    "majorCode": "KTQT"
+  },
+  {
+    "subjectCode": "GK102",
+    "majorCode": "KTQT"
+  },
+  {
+    "subjectCode": "PG101",
+    "majorCode": "KTQT"
+  },
+  {
+    "subjectCode": "PG102",
+    "majorCode": "KTQT"
+  },
+  {
+    "subjectCode": "PG103",
+    "majorCode": "KTQT"
+  },
+  {
+    "subjectCode": "PG104",
+    "majorCode": "KTQT"
+  },
+  {
+    "subjectCode": "PG105",
+    "majorCode": "KTQT"
+  },
+  {
+    "subjectCode": "PG106",
+    "majorCode": "KTQT"
+  },
+  {
+    "subjectCode": "PG107",
+    "majorCode": "KTQT"
+  },
+  {
+    "subjectCode": "PG121",
+    "majorCode": "KTQT"
+  },
+  {
+    "subjectCode": "SM202",
+    "majorCode": "KTQT"
+  },
+  {
+    "subjectCode": "MA142",
+    "majorCode": "KTQT"
+  },
+  {
+    "subjectCode": "MA231",
+    "majorCode": "KTQT"
+  },
+  {
+    "subjectCode": "IM206",
+    "majorCode": "KTQT"
+  },
+  {
+    "subjectCode": "EC204",
+    "majorCode": "KTQT"
+  },
+  {
+    "subjectCode": "EC205",
+    "majorCode": "KTQT"
+  },
+  {
+    "subjectCode": "EC310",
+    "majorCode": "KTQT"
+  },
+  {
+    "subjectCode": "FN201",
+    "majorCode": "KTQT"
+  },
+  {
+    "subjectCode": "FN211",
+    "majorCode": "KTQT"
+  },
+  {
+    "subjectCode": "AC201",
+    "majorCode": "KTQT"
+  },
+  {
+    "subjectCode": "BA201",
+    "majorCode": "KTQT"
+  },
+  {
+    "subjectCode": "MK202",
+    "majorCode": "KTQT"
+  },
+  {
+    "subjectCode": "IE201",
+    "majorCode": "KTQT"
+  },
+  {
+    "subjectCode": "IE302",
+    "majorCode": "KTQT"
+  },
+  {
+    "subjectCode": "IE303",
+    "majorCode": "KTQT"
+  },
+  {
+    "subjectCode": "IE302",
+    "majorCode": "KTQT"
+  },
+  {
+    "subjectCode": "IE311",
+    "majorCode": "KTQT"
+  },
+  {
+    "subjectCode": "IE312",
+    "majorCode": "KTQT"
+  },
+  {
+    "subjectCode": "IE321",
+    "majorCode": "KTQT"
+  },
+  {
+    "subjectCode": "IE322",
+    "majorCode": "KTQT"
+  },
+  {
+    "subjectCode": "IE331",
+    "majorCode": "KTQT"
+  },
+  {
+    "subjectCode": "IE332",
+    "majorCode": "KTQT"
+  },
+  {
+    "subjectCode": "IE413",
+    "majorCode": "KTQT"
+  },
+  {
+    "subjectCode": "BA331",
+    "majorCode": "KTQT"
+  },
+  {
+    "subjectCode": "BA313",
+    "majorCode": "KTQT"
+  },
+  {
+    "subjectCode": "BA345",
+    "majorCode": "KTQT"
+  },
+  {
+    "subjectCode": "EC207",
+    "majorCode": "KTQT"
+  },
+  {
+    "subjectCode": "FN334",
+    "majorCode": "KTQT"
+  },
+  {
+    "subjectCode": "EC208",
+    "majorCode": "KTQT"
+  },
+  {
+    "subjectCode": "IE405",
+    "majorCode": "KTQT"
+  },
+  {
+    "subjectCode": "IE323",
+    "majorCode": "KTQT"
+  },
+  {
+    "subjectCode": "IE203",
+    "majorCode": "KTQT"
+  },
+  {
+    "subjectCode": "LG201",
+    "majorCode": "KTQT"
+  },
+  {
+    "subjectCode": "LG202",
+    "majorCode": "KTQT"
+  },
+  {
+    "subjectCode": "MK416",
+    "majorCode": "KTQT"
+  },
+  {
+    "subjectCode": "SC201",
+    "majorCode": "KTQT"
+  },
+  {
+    "subjectCode": "IE495",
+    "majorCode": "KTQT"
+  },
+  {
+    "subjectCode": "IE499",
+    "majorCode": "KTQT"
+  },
+  {
+    "subjectCode": "EC490",
+    "majorCode": "KTQT"
+  },
+  {
+    "subjectCode": "IE490",
+    "majorCode": "KTQT"
+  },
+  {
+    "subjectCode": "ML113",
+    "majorCode": "KTQT"
+  },
+  {
+    "subjectCode": "ML114",
+    "majorCode": "KTQT"
+  },
+  {
+    "subjectCode": "ML115",
+    "majorCode": "KTQT"
+  },
+  {
+    "subjectCode": "ML202",
+    "majorCode": "KTQT"
+  },
+  {
+    "subjectCode": "ML204",
+    "majorCode": "KTQT"
+  },
+  {
+    "subjectCode": "CS102",
+    "majorCode": "KTQT"
+  },
+  {
+    "subjectCode": "MA101",
+    "majorCode": "QTKD"
+  },
+  {
+    "subjectCode": "NA151",
+    "majorCode": "QTKD"
+  },
+  {
+    "subjectCode": "EC101",
+    "majorCode": "QTKD"
+  },
+  {
+    "subjectCode": "VL101",
+    "majorCode": "QTKD"
+  },
+  {
+    "subjectCode": "SH131",
+    "majorCode": "QTKD"
+  },
+  {
+    "subjectCode": "GE111",
+    "majorCode": "QTKD"
+  },
+  {
+    "subjectCode": "GE112",
+    "majorCode": "QTKD"
+  },
+  {
+    "subjectCode": "GE121",
+    "majorCode": "QTKD"
+  },
+  {
+    "subjectCode": "GE222",
+    "majorCode": "QTKD"
+  },
+  {
+    "subjectCode": "GE231",
+    "majorCode": "QTKD"
+  },
+  {
+    "subjectCode": "GE232",
+    "majorCode": "QTKD"
+  },
+  {
+    "subjectCode": "GE333",
+    "majorCode": "QTKD"
+  },
+  {
+    "subjectCode": "GF101",
+    "majorCode": "QTKD"
+  },
+  {
+    "subjectCode": "GF102",
+    "majorCode": "QTKD"
+  },
+  {
+    "subjectCode": "GJ101",
+    "majorCode": "QTKD"
+  },
+  {
+    "subjectCode": "GJ102",
+    "majorCode": "QTKD"
+  },
+  {
+    "subjectCode": "GZ101",
+    "majorCode": "QTKD"
+  },
+  {
+    "subjectCode": "GZ102",
+    "majorCode": "QTKD"
+  },
+  {
+    "subjectCode": "GI101",
+    "majorCode": "QTKD"
+  },
+  {
+    "subjectCode": "GI102",
+    "majorCode": "QTKD"
+  },
+  {
+    "subjectCode": "GK101",
+    "majorCode": "QTKD"
+  },
+  {
+    "subjectCode": "GK102",
+    "majorCode": "QTKD"
+  },
+  {
+    "subjectCode": "PG101",
+    "majorCode": "QTKD"
+  },
+  {
+    "subjectCode": "PG102",
+    "majorCode": "QTKD"
+  },
+  {
+    "subjectCode": "PG103",
+    "majorCode": "QTKD"
+  },
+  {
+    "subjectCode": "PG104",
+    "majorCode": "QTKD"
+  },
+  {
+    "subjectCode": "PG105",
+    "majorCode": "QTKD"
+  },
+  {
+    "subjectCode": "PG106",
+    "majorCode": "QTKD"
+  },
+  {
+    "subjectCode": "PG107",
+    "majorCode": "QTKD"
+  },
+  {
+    "subjectCode": "PG121",
+    "majorCode": "QTKD"
+  },
+  {
+    "subjectCode": "SM202",
+    "majorCode": "QTKD"
+  },
+  {
+    "subjectCode": "MA142",
+    "majorCode": "QTKD"
+  },
+  {
+    "subjectCode": "MA231",
+    "majorCode": "QTKD"
+  },
+  {
+    "subjectCode": "IM206",
+    "majorCode": "QTKD"
+  },
+  {
+    "subjectCode": "EC204",
+    "majorCode": "QTKD"
+  },
+  {
+    "subjectCode": "EC205",
+    "majorCode": "QTKD"
+  },
+  {
+    "subjectCode": "EC310",
+    "majorCode": "QTKD"
+  },
+  {
+    "subjectCode": "FN201",
+    "majorCode": "QTKD"
+  },
+  {
+    "subjectCode": "FN211",
+    "majorCode": "QTKD"
+  },
+  {
+    "subjectCode": "AC201",
+    "majorCode": "QTKD"
+  },
+  {
+    "subjectCode": "BA201",
+    "majorCode": "QTKD"
+  },
+  {
+    "subjectCode": "MK202",
+    "majorCode": "QTKD"
+  },
+  {
+    "subjectCode": "BA211",
+    "majorCode": "QTKD"
+  },
+  {
+    "subjectCode": "BA313",
+    "majorCode": "QTKD"
+  },
+  {
+    "subjectCode": "BA314",
+    "majorCode": "QTKD"
+  },
+  {
+    "subjectCode": "BA320",
+    "majorCode": "QTKD"
+  },
+  {
+    "subjectCode": "BA331",
+    "majorCode": "QTKD"
+  },
+  {
+    "subjectCode": "BA329",
+    "majorCode": "QTKD"
+  },
+  {
+    "subjectCode": "BA345",
+    "majorCode": "QTKD"
+  },
+  {
+    "subjectCode": "MK302",
+    "majorCode": "QTKD"
+  },
+  {
+    "subjectCode": "AC345",
+    "majorCode": "QTKD"
+  },
+  {
+    "subjectCode": "BA224",
+    "majorCode": "QTKD"
+  },
+  {
+    "subjectCode": "BA315",
+    "majorCode": "QTKD"
+  },
+  {
+    "subjectCode": "BA327",
+    "majorCode": "QTKD"
+  },
+  {
+    "subjectCode": "BA328",
+    "majorCode": "QTKD"
+  },
+  {
+    "subjectCode": "BA420",
+    "majorCode": "QTKD"
+  },
+  {
+    "subjectCode": "BA351",
+    "majorCode": "QTKD"
+  },
+  {
+    "subjectCode": "BA352",
+    "majorCode": "QTKD"
+  },
+  {
+    "subjectCode": "BA353",
+    "majorCode": "QTKD"
+  },
+  {
+    "subjectCode": "BA354",
+    "majorCode": "QTKD"
+  },
+  {
+    "subjectCode": "BA355",
+    "majorCode": "QTKD"
+  },
+  {
+    "subjectCode": "MK416",
+    "majorCode": "QTKD"
+  },
+  {
+    "subjectCode": "BA414",
+    "majorCode": "QTKD"
+  },
+  {
+    "subjectCode": "MK313",
+    "majorCode": "QTKD"
+  },
+  {
+    "subjectCode": "SB203",
+    "majorCode": "QTKD"
+  },
+  {
+    "subjectCode": "SC201",
+    "majorCode": "QTKD"
+  },
+  {
+    "subjectCode": "LK332",
+    "majorCode": "QTKD"
+  },
+  {
+    "subjectCode": "EC316",
+    "majorCode": "QTKD"
+  },
+  {
+    "subjectCode": "EC221",
+    "majorCode": "QTKD"
+  },
+  {
+    "subjectCode": "FN334",
+    "majorCode": "QTKD"
+  },
+  {
+    "subjectCode": "BA222",
+    "majorCode": "QTKD"
+  },
+  {
+    "subjectCode": "FN261",
+    "majorCode": "QTKD"
+  },
+  {
+    "subjectCode": "AC210",
+    "majorCode": "QTKD"
+  },
+  {
+    "subjectCode": "IS382",
+    "majorCode": "QTKD"
+  },
+  {
+    "subjectCode": "BA495",
+    "majorCode": "QTKD"
+  },
+  {
+    "subjectCode": "BA499",
+    "majorCode": "QTKD"
+  },
+  {
+    "subjectCode": "BA498",
+    "majorCode": "QTKD"
+  },
+  {
+    "subjectCode": "BA481",
+    "majorCode": "QTKD"
+  },
+  {
+    "subjectCode": "BA483",
+    "majorCode": "QTKD"
+  },
+  {
+    "subjectCode": "BA485",
+    "majorCode": "QTKD"
+  },
+  {
+    "subjectCode": "ML114",
+    "majorCode": "MKT"
+  },
+  {
+    "subjectCode": "ML115",
+    "majorCode": "MKT"
+  },
+  {
+    "subjectCode": "ML202",
+    "majorCode": "MKT"
+  },
+  {
+    "subjectCode": "ML204",
+    "majorCode": "MKT"
+  },
+  {
+    "subjectCode": "CS102",
+    "majorCode": "MKT"
+  },
+  {
+    "subjectCode": "MA101",
+    "majorCode": "MKT"
+  },
+  {
+    "subjectCode": "NA151",
+    "majorCode": "MKT"
+  },
+  {
+    "subjectCode": "EC101",
+    "majorCode": "MKT"
+  },
+  {
+    "subjectCode": "VL101",
+    "majorCode": "MKT"
+  },
+  {
+    "subjectCode": "SH131",
+    "majorCode": "MKT"
+  },
+  {
+    "subjectCode": "GE111",
+    "majorCode": "MKT"
+  },
+  {
+    "subjectCode": "GE112",
+    "majorCode": "MKT"
+  },
+  {
+    "subjectCode": "GE121",
+    "majorCode": "MKT"
+  },
+  {
+    "subjectCode": "GE222",
+    "majorCode": "MKT"
+  },
+  {
+    "subjectCode": "GE231",
+    "majorCode": "MKT"
+  },
+  {
+    "subjectCode": "GE232",
+    "majorCode": "MKT"
+  },
+  {
+    "subjectCode": "GE333",
+    "majorCode": "MKT"
+  },
+  {
+    "subjectCode": "GF101",
+    "majorCode": "MKT"
+  },
+  {
+    "subjectCode": "GF102",
+    "majorCode": "MKT"
+  },
+  {
+    "subjectCode": "GJ101",
+    "majorCode": "MKT"
+  },
+  {
+    "subjectCode": "GJ102",
+    "majorCode": "MKT"
+  },
+  {
+    "subjectCode": "GZ101",
+    "majorCode": "MKT"
+  },
+  {
+    "subjectCode": "GZ102",
+    "majorCode": "MKT"
+  },
+  {
+    "subjectCode": "GI101",
+    "majorCode": "MKT"
+  },
+  {
+    "subjectCode": "GI102",
+    "majorCode": "MKT"
+  },
+  {
+    "subjectCode": "GK101",
+    "majorCode": "MKT"
+  },
+  {
+    "subjectCode": "GK102",
+    "majorCode": "MKT"
+  },
+  {
+    "subjectCode": "PG101",
+    "majorCode": "MKT"
+  },
+  {
+    "subjectCode": "PG102",
+    "majorCode": "MKT"
+  },
+  {
+    "subjectCode": "PG103",
+    "majorCode": "MKT"
+  },
+  {
+    "subjectCode": "PG104",
+    "majorCode": "MKT"
+  },
+  {
+    "subjectCode": "PG105",
+    "majorCode": "MKT"
+  },
+  {
+    "subjectCode": "PG106",
+    "majorCode": "MKT"
+  },
+  {
+    "subjectCode": "PG107",
+    "majorCode": "MKT"
+  },
+  {
+    "subjectCode": "PG121",
+    "majorCode": "MKT"
+  },
+  {
+    "subjectCode": "SM202",
+    "majorCode": "MKT"
+  },
+  {
+    "subjectCode": "MA142",
+    "majorCode": "MKT"
+  },
+  {
+    "subjectCode": "MA231",
+    "majorCode": "MKT"
+  },
+  {
+    "subjectCode": "IM206",
+    "majorCode": "MKT"
+  },
+  {
+    "subjectCode": "EC204",
+    "majorCode": "MKT"
+  },
+  {
+    "subjectCode": "EC205",
+    "majorCode": "MKT"
+  },
+  {
+    "subjectCode": "EC310",
+    "majorCode": "MKT"
+  },
+  {
+    "subjectCode": "FN201",
+    "majorCode": "MKT"
+  },
+  {
+    "subjectCode": "FN211",
+    "majorCode": "MKT"
+  },
+  {
+    "subjectCode": "AC201",
+    "majorCode": "MKT"
+  },
+  {
+    "subjectCode": "BA102",
+    "majorCode": "MKT"
+  },
+  {
+    "subjectCode": "MK202",
+    "majorCode": "MKT"
+  },
+  {
+    "subjectCode": "BA313",
+    "majorCode": "MKT"
+  },
+  {
+    "subjectCode": "BA331",
+    "majorCode": "MKT"
+  },
+  {
+    "subjectCode": "MK302",
+    "majorCode": "MKT"
+  },
+  {
+    "subjectCode": "MK305",
+    "majorCode": "MKT"
+  },
+  {
+    "subjectCode": "MK313",
+    "majorCode": "MKT"
+  },
+  {
+    "subjectCode": "MK323",
+    "majorCode": "MKT"
+  },
+  {
+    "subjectCode": "MK324",
+    "majorCode": "MKT"
+  },
+  {
+    "subjectCode": "MK325",
+    "majorCode": "MKT"
+  },
+  {
+    "subjectCode": "MK334",
+    "majorCode": "MKT"
+  },
+  {
+    "subjectCode": "MK416",
+    "majorCode": "MKT"
+  },
+  {
+    "subjectCode": "MK424",
+    "majorCode": "MKT"
+  },
+  {
+    "subjectCode": "MK426",
+    "majorCode": "MKT"
+  },
+  {
+    "subjectCode": "MK430",
+    "majorCode": "MKT"
+  },
+  {
+    "subjectCode": "BA211",
+    "majorCode": "MKT"
+  },
+  {
+    "subjectCode": "BA314",
+    "majorCode": "MKT"
+  },
+  {
+    "subjectCode": "BA324",
+    "majorCode": "MKT"
+  },
+  {
+    "subjectCode": "BA345",
+    "majorCode": "MKT"
+  },
+  {
+    "subjectCode": "MK420",
+    "majorCode": "MKT"
+  },
+  {
+    "subjectCode": "MK425",
+    "majorCode": "MKT"
+  },
+  {
+    "subjectCode": "MD420",
+    "majorCode": "MKT"
+  },
+  {
+    "subjectCode": "MK331",
+    "majorCode": "MKT"
+  },
+  {
+    "subjectCode": "MK336",
+    "majorCode": "MKT"
+  },
+  {
+    "subjectCode": "MK338",
+    "majorCode": "MKT"
+  },
+  {
+    "subjectCode": "MK339",
+    "majorCode": "MKT"
+  },
+  {
+    "subjectCode": "MK340",
+    "majorCode": "MKT"
+  },
+  {
+    "subjectCode": "SB203",
+    "majorCode": "MKT"
+  },
+  {
+    "subjectCode": "SC201",
+    "majorCode": "MKT"
+  },
+  {
+    "subjectCode": "IS382",
+    "majorCode": "MKT"
+  },
+  {
+    "subjectCode": "FN334",
+    "majorCode": "MKT"
+  },
+  {
+    "subjectCode": "EC221",
+    "majorCode": "MKT"
+  },
+  {
+    "subjectCode": "EC316",
+    "majorCode": "MKT"
+  },
+  {
+    "subjectCode": "MK495",
+    "majorCode": "MKT"
+  },
+  {
+    "subjectCode": "MK498",
+    "majorCode": "MKT"
+  },
+  {
+    "subjectCode": "MK481",
+    "majorCode": "MKT"
+  },
+  {
+    "subjectCode": "MK482",
+    "majorCode": "MKT"
+  },
+  {
+    "subjectCode": "ML113",
+    "majorCode": "TCNH"
+  },
+  {
+    "subjectCode": "ML114",
+    "majorCode": "TCNH"
+  },
+  {
+    "subjectCode": "ML115",
+    "majorCode": "TCNH"
+  },
+  {
+    "subjectCode": "ML202",
+    "majorCode": "TCNH"
+  },
+  {
+    "subjectCode": "ML204",
+    "majorCode": "TCNH"
+  },
+  {
+    "subjectCode": "CS102",
+    "majorCode": "TCNH"
+  },
+  {
+    "subjectCode": "MA101",
+    "majorCode": "TCNH"
+  },
+  {
+    "subjectCode": "NA151",
+    "majorCode": "TCNH"
+  },
+  {
+    "subjectCode": "EC101",
+    "majorCode": "TCNH"
+  },
+  {
+    "subjectCode": "VL101",
+    "majorCode": "TCNH"
+  },
+  {
+    "subjectCode": "SH131",
+    "majorCode": "TCNH"
+  },
+  {
+    "subjectCode": "GE111",
+    "majorCode": "TCNH"
+  },
+  {
+    "subjectCode": "GE112",
+    "majorCode": "TCNH"
+  },
+  {
+    "subjectCode": "GE121",
+    "majorCode": "TCNH"
+  },
+  {
+    "subjectCode": "GE222",
+    "majorCode": "TCNH"
+  },
+  {
+    "subjectCode": "GE231",
+    "majorCode": "TCNH"
+  },
+  {
+    "subjectCode": "GE232",
+    "majorCode": "TCNH"
+  },
+  {
+    "subjectCode": "GE333",
+    "majorCode": "TCNH"
+  },
+  {
+    "subjectCode": "GF101",
+    "majorCode": "TCNH"
+  },
+  {
+    "subjectCode": "GF102",
+    "majorCode": "TCNH"
+  },
+  {
+    "subjectCode": "GJ101",
+    "majorCode": "TCNH"
+  },
+  {
+    "subjectCode": "GJ102",
+    "majorCode": "TCNH"
+  },
+  {
+    "subjectCode": "GZ101",
+    "majorCode": "TCNH"
+  },
+  {
+    "subjectCode": "GZ102",
+    "majorCode": "TCNH"
+  },
+  {
+    "subjectCode": "GI101",
+    "majorCode": "TCNH"
+  },
+  {
+    "subjectCode": "GI102",
+    "majorCode": "TCNH"
+  },
+  {
+    "subjectCode": "GK101",
+    "majorCode": "TCNH"
+  },
+  {
+    "subjectCode": "GK102",
+    "majorCode": "TCNH"
+  },
+  {
+    "subjectCode": "PG101",
+    "majorCode": "TCNH"
+  },
+  {
+    "subjectCode": "PG102",
+    "majorCode": "TCNH"
+  },
+  {
+    "subjectCode": "PG103",
+    "majorCode": "TCNH"
+  },
+  {
+    "subjectCode": "PG104",
+    "majorCode": "TCNH"
+  },
+  {
+    "subjectCode": "PG105",
+    "majorCode": "TCNH"
+  },
+  {
+    "subjectCode": "PG106",
+    "majorCode": "TCNH"
+  },
+  {
+    "subjectCode": "PG107",
+    "majorCode": "TCNH"
+  },
+  {
+    "subjectCode": "PG121",
+    "majorCode": "TCNH"
+  },
+  {
+    "subjectCode": "SM202",
+    "majorCode": "TCNH"
+  },
+  {
+    "subjectCode": "MA142",
+    "majorCode": "TCNH"
+  },
+  {
+    "subjectCode": "MA231",
+    "majorCode": "TCNH"
+  },
+  {
+    "subjectCode": "IM206",
+    "majorCode": "TCNH"
+  },
+  {
+    "subjectCode": "EC204",
+    "majorCode": "TCNH"
+  },
+  {
+    "subjectCode": "EC205",
+    "majorCode": "TCNH"
+  },
+  {
+    "subjectCode": "EC310",
+    "majorCode": "TCNH"
+  },
+  {
+    "subjectCode": "FN201",
+    "majorCode": "TCNH"
+  },
+  {
+    "subjectCode": "FN211",
+    "majorCode": "TCNH"
+  },
+  {
+    "subjectCode": "AC201",
+    "majorCode": "TCNH"
+  },
+  {
+    "subjectCode": "BA102",
+    "majorCode": "TCNH"
+  },
+  {
+    "subjectCode": "MK202",
+    "majorCode": "TCNH"
+  },
+  {
+    "subjectCode": "FN212",
+    "majorCode": "TCNH"
+  },
+  {
+    "subjectCode": "FN222",
+    "majorCode": "TCNH"
+  },
+  {
+    "subjectCode": "FN331",
+    "majorCode": "TCNH"
+  },
+  {
+    "subjectCode": "BK201",
+    "majorCode": "TCNH"
+  },
+  {
+    "subjectCode": "BA222",
+    "majorCode": "TCNH"
+  },
+  {
+    "subjectCode": "FN416",
+    "majorCode": "TCNH"
+  },
+  {
+    "subjectCode": "FN318",
+    "majorCode": "TCNH"
+  },
+  {
+    "subjectCode": "BK302",
+    "majorCode": "TCNH"
+  },
+  {
+    "subjectCode": "BK313",
+    "majorCode": "TCNH"
+  },
+  {
+    "subjectCode": "BK312",
+    "majorCode": "TCNH"
+  },
+  {
+    "subjectCode": "BK321",
+    "majorCode": "TCNH"
+  },
+  {
+    "subjectCode": "BK327",
+    "majorCode": "TCNH"
+  },
+  {
+    "subjectCode": "BK405",
+    "majorCode": "TCNH"
+  },
+  {
+    "subjectCode": "AC322",
+    "majorCode": "TCNH"
+  },
+  {
+    "subjectCode": "MK331",
+    "majorCode": "TCNH"
+  },
+  {
+    "subjectCode": "AC210",
+    "majorCode": "TCNH"
+  },
+  {
+    "subjectCode": "FN224",
+    "majorCode": "TCNH"
+  },
+  {
+    "subjectCode": "FN261",
+    "majorCode": "TCNH"
+  },
+  {
+    "subjectCode": "FN313",
+    "majorCode": "TCNH"
+  },
+  {
+    "subjectCode": "FN333",
+    "majorCode": "TCNH"
+  },
+  {
+    "subjectCode": "FN436",
+    "majorCode": "TCNH"
+  },
+  {
+    "subjectCode": "FN438",
+    "majorCode": "TCNH"
+  },
+  {
+    "subjectCode": "BA324",
+    "majorCode": "TCNH"
+  },
+  {
+    "subjectCode": "BA331",
+    "majorCode": "TCNH"
+  },
+  {
+    "subjectCode": "IS382",
+    "majorCode": "TCNH"
+  },
+  {
+    "subjectCode": "EC221",
+    "majorCode": "TCNH"
+  },
+  {
+    "subjectCode": "EC316",
+    "majorCode": "TCNH"
+  },
+  {
+    "subjectCode": "FN334",
+    "majorCode": "TCNH"
+  },
+  {
+    "subjectCode": "FN319",
+    "majorCode": "TCNH"
+  },
+  {
+    "subjectCode": "FN335",
+    "majorCode": "TCNH"
+  },
+  {
+    "subjectCode": "FN495",
+    "majorCode": "TCNH"
+  },
+  {
+    "subjectCode": "BK499",
+    "majorCode": "TCNH"
+  },
+  {
+    "subjectCode": "FN499",
+    "majorCode": "TCNH"
+  },
+  {
+    "subjectCode": "BK490",
+    "majorCode": "TCNH"
+  },
+  {
+    "subjectCode": "FN481",
+    "majorCode": "TCNH"
+  },
+  {
+    "subjectCode": "FN482",
+    "majorCode": "TCNH"
+  },
+  {
+    "subjectCode": "ML113",
+    "majorCode": "KT"
+  },
+  {
+    "subjectCode": "ML114",
+    "majorCode": "KT"
+  },
+  {
+    "subjectCode": "ML115",
+    "majorCode": "KT"
+  },
+  {
+    "subjectCode": "ML202",
+    "majorCode": "KT"
+  },
+  {
+    "subjectCode": "ML204",
+    "majorCode": "KT"
+  },
+  {
+    "subjectCode": "CS102",
+    "majorCode": "KT"
+  },
+  {
+    "subjectCode": "MA101",
+    "majorCode": "KT"
+  },
+  {
+    "subjectCode": "NA151",
+    "majorCode": "KT"
+  },
+  {
+    "subjectCode": "EC101",
+    "majorCode": "KT"
+  },
+  {
+    "subjectCode": "VL101",
+    "majorCode": "KT"
+  },
+  {
+    "subjectCode": "SH131",
+    "majorCode": "KT"
+  },
+  {
+    "subjectCode": "GE111",
+    "majorCode": "KT"
+  },
+  {
+    "subjectCode": "GE112",
+    "majorCode": "KT"
+  },
+  {
+    "subjectCode": "GE121",
+    "majorCode": "KT"
+  },
+  {
+    "subjectCode": "GE222",
+    "majorCode": "KT"
+  },
+  {
+    "subjectCode": "GE231",
+    "majorCode": "KT"
+  },
+  {
+    "subjectCode": "GE232",
+    "majorCode": "KT"
+  },
+  {
+    "subjectCode": "GE333",
+    "majorCode": "KT"
+  },
+  {
+    "subjectCode": "GF101",
+    "majorCode": "KT"
+  },
+  {
+    "subjectCode": "GF102",
+    "majorCode": "KT"
+  },
+  {
+    "subjectCode": "GJ101",
+    "majorCode": "KT"
+  },
+  {
+    "subjectCode": "GJ102",
+    "majorCode": "KT"
+  },
+  {
+    "subjectCode": "GZ101",
+    "majorCode": "KT"
+  },
+  {
+    "subjectCode": "GZ102",
+    "majorCode": "KT"
+  },
+  {
+    "subjectCode": "GI101",
+    "majorCode": "KT"
+  },
+  {
+    "subjectCode": "GI102",
+    "majorCode": "KT"
+  },
+  {
+    "subjectCode": "GK101",
+    "majorCode": "KT"
+  },
+  {
+    "subjectCode": "GK102",
+    "majorCode": "KT"
+  },
+  {
+    "subjectCode": "PG101",
+    "majorCode": "KT"
+  },
+  {
+    "subjectCode": "PG102",
+    "majorCode": "KT"
+  },
+  {
+    "subjectCode": "PG103",
+    "majorCode": "KT"
+  },
+  {
+    "subjectCode": "PG104",
+    "majorCode": "KT"
+  },
+  {
+    "subjectCode": "PG105",
+    "majorCode": "KT"
+  },
+  {
+    "subjectCode": "PG106",
+    "majorCode": "KT"
+  },
+  {
+    "subjectCode": "PG107",
+    "majorCode": "KT"
+  },
+  {
+    "subjectCode": "PG121",
+    "majorCode": "KT"
+  },
+  {
+    "subjectCode": "SM202",
+    "majorCode": "KT"
+  },
+  {
+    "subjectCode": "MA142",
+    "majorCode": "KT"
+  },
+  {
+    "subjectCode": "MA231",
+    "majorCode": "KT"
+  },
+  {
+    "subjectCode": "IM206",
+    "majorCode": "KT"
+  },
+  {
+    "subjectCode": "EC204",
+    "majorCode": "KT"
+  },
+  {
+    "subjectCode": "EC205",
+    "majorCode": "KT"
+  },
+  {
+    "subjectCode": "EC310",
+    "majorCode": "KT"
+  },
+  {
+    "subjectCode": "FN201",
+    "majorCode": "KT"
+  },
+  {
+    "subjectCode": "FN211",
+    "majorCode": "KT"
+  },
+  {
+    "subjectCode": "AC201",
+    "majorCode": "KT"
+  },
+  {
+    "subjectCode": "BA102",
+    "majorCode": "KT"
+  },
+  {
+    "subjectCode": "MK202",
+    "majorCode": "KT"
+  },
+  {
+    "subjectCode": "FN212",
+    "majorCode": "KT"
+  },
+  {
+    "subjectCode": "FN224",
+    "majorCode": "KT"
+  },
+  {
+    "subjectCode": "AC211",
+    "majorCode": "KT"
+  },
+  {
+    "subjectCode": "AC212",
+    "majorCode": "KT"
+  },
+  {
+    "subjectCode": "AC314",
+    "majorCode": "KT"
+  },
+  {
+    "subjectCode": "AC315",
+    "majorCode": "KT"
+  },
+  {
+    "subjectCode": "AC316",
+    "majorCode": "KT"
+  },
+  {
+    "subjectCode": "AC317",
+    "majorCode": "KT"
+  },
+  {
+    "subjectCode": "AC233",
+    "majorCode": "KT"
+  },
+  {
+    "subjectCode": "AC334",
+    "majorCode": "KT"
+  },
+  {
+    "subjectCode": "AC335",
+    "majorCode": "KT"
+  },
+  {
+    "subjectCode": "AC341",
+    "majorCode": "KT"
+  },
+  {
+    "subjectCode": "AC418",
+    "majorCode": "KT"
+  },
+  {
+    "subjectCode": "AC362",
+    "majorCode": "KT"
+  },
+  {
+    "subjectCode": "AC364",
+    "majorCode": "KT"
+  },
+  {
+    "subjectCode": "AC345",
+    "majorCode": "KT"
+  },
+  {
+    "subjectCode": "BK201",
+    "majorCode": "KT"
+  },
+  {
+    "subjectCode": "AC322",
+    "majorCode": "KT"
+  },
+  {
+    "subjectCode": "AC365",
+    "majorCode": "KT"
+  },
+  {
+    "subjectCode": "FN222",
+    "majorCode": "KT"
+  },
+  {
+    "subjectCode": "FN334",
+    "majorCode": "KT"
+  },
+  {
+    "subjectCode": "FN313",
+    "majorCode": "KT"
+  },
+  {
+    "subjectCode": "BA331",
+    "majorCode": "KT"
+  },
+  {
+    "subjectCode": "IS382",
+    "majorCode": "KT"
+  },
+  {
+    "subjectCode": "EC221",
+    "majorCode": "KT"
+  },
+  {
+    "subjectCode": "EC316",
+    "majorCode": "KT"
+  },
+  {
+    "subjectCode": "AC495",
+    "majorCode": "KT"
+  },
+  {
+    "subjectCode": "AC499",
+    "majorCode": "KT"
+  },
+  {
+    "subjectCode": "AC481",
+    "majorCode": "KT"
+  },
+  {
+    "subjectCode": "AC482",
+    "majorCode": "KT"
+  },
+  {
+    "subjectCode": "ML113",
+    "majorCode": "LOGI"
+  },
+  {
+    "subjectCode": "ML114",
+    "majorCode": "LOGI"
+  },
+  {
+    "subjectCode": "ML115",
+    "majorCode": "LOGI"
+  },
+  {
+    "subjectCode": "ML202",
+    "majorCode": "LOGI"
+  },
+  {
+    "subjectCode": "ML204",
+    "majorCode": "LOGI"
+  },
+  {
+    "subjectCode": "CS102",
+    "majorCode": "LOGI"
+  },
+  {
+    "subjectCode": "MA101",
+    "majorCode": "LOGI"
+  },
+  {
+    "subjectCode": "NA151",
+    "majorCode": "LOGI"
+  },
+  {
+    "subjectCode": "EC101",
+    "majorCode": "LOGI"
+  },
+  {
+    "subjectCode": "VL101",
+    "majorCode": "LOGI"
+  },
+  {
+    "subjectCode": "SH131",
+    "majorCode": "LOGI"
+  },
+  {
+    "subjectCode": "GE111",
+    "majorCode": "LOGI"
+  },
+  {
+    "subjectCode": "GE112",
+    "majorCode": "LOGI"
+  },
+  {
+    "subjectCode": "GE121",
+    "majorCode": "LOGI"
+  },
+  {
+    "subjectCode": "GE222",
+    "majorCode": "LOGI"
+  },
+  {
+    "subjectCode": "GE231",
+    "majorCode": "LOGI"
+  },
+  {
+    "subjectCode": "GE232",
+    "majorCode": "LOGI"
+  },
+  {
+    "subjectCode": "GE333",
+    "majorCode": "LOGI"
+  },
+  {
+    "subjectCode": "GF101",
+    "majorCode": "LOGI"
+  },
+  {
+    "subjectCode": "GF102",
+    "majorCode": "LOGI"
+  },
+  {
+    "subjectCode": "GJ101",
+    "majorCode": "LOGI"
+  },
+  {
+    "subjectCode": "GJ102",
+    "majorCode": "LOGI"
+  },
+  {
+    "subjectCode": "GZ101",
+    "majorCode": "LOGI"
+  },
+  {
+    "subjectCode": "GZ102",
+    "majorCode": "LOGI"
+  },
+  {
+    "subjectCode": "GI101",
+    "majorCode": "LOGI"
+  },
+  {
+    "subjectCode": "GI102",
+    "majorCode": "LOGI"
+  },
+  {
+    "subjectCode": "GK101",
+    "majorCode": "LOGI"
+  },
+  {
+    "subjectCode": "GK102",
+    "majorCode": "LOGI"
+  },
+  {
+    "subjectCode": "PG101",
+    "majorCode": "LOGI"
+  },
+  {
+    "subjectCode": "PG102",
+    "majorCode": "LOGI"
+  },
+  {
+    "subjectCode": "PG103",
+    "majorCode": "LOGI"
+  },
+  {
+    "subjectCode": "PG104",
+    "majorCode": "LOGI"
+  },
+  {
+    "subjectCode": "PG105",
+    "majorCode": "LOGI"
+  },
+  {
+    "subjectCode": "PG106",
+    "majorCode": "LOGI"
+  },
+  {
+    "subjectCode": "PG107",
+    "majorCode": "LOGI"
+  },
+  {
+    "subjectCode": "PG121",
+    "majorCode": "LOGI"
+  },
+  {
+    "subjectCode": "SM202",
+    "majorCode": "LOGI"
+  },
+  {
+    "subjectCode": "MA142",
+    "majorCode": "LOGI"
+  },
+  {
+    "subjectCode": "MA231",
+    "majorCode": "LOGI"
+  },
+  {
+    "subjectCode": "IM206",
+    "majorCode": "LOGI"
+  },
+  {
+    "subjectCode": "EC204",
+    "majorCode": "LOGI"
+  },
+  {
+    "subjectCode": "EC205",
+    "majorCode": "LOGI"
+  },
+  {
+    "subjectCode": "EC310",
+    "majorCode": "LOGI"
+  },
+  {
+    "subjectCode": "FN201",
+    "majorCode": "LOGI"
+  },
+  {
+    "subjectCode": "FN211",
+    "majorCode": "LOGI"
+  },
+  {
+    "subjectCode": "AC201",
+    "majorCode": "LOGI"
+  },
+  {
+    "subjectCode": "BA102",
+    "majorCode": "LOGI"
+  },
+  {
+    "subjectCode": "MK202",
+    "majorCode": "LOGI"
+  },
+  {
+    "subjectCode": "LG201",
+    "majorCode": "LOGI"
+  },
+  {
+    "subjectCode": "SC219",
+    "majorCode": "LOGI"
+  },
+  {
+    "subjectCode": "LG219",
+    "majorCode": "LOGI"
+  },
+  {
+    "subjectCode": "SC218",
+    "majorCode": "LOGI"
+  },
+  {
+    "subjectCode": "LG301",
+    "majorCode": "LOGI"
+  },
+  {
+    "subjectCode": "LG302",
+    "majorCode": "LOGI"
+  },
+  {
+    "subjectCode": "SC306",
+    "majorCode": "LOGI"
+  },
+  {
+    "subjectCode": "LG303",
+    "majorCode": "LOGI"
+  },
+  {
+    "subjectCode": "LG330",
+    "majorCode": "LOGI"
+  },
+  {
+    "subjectCode": "SC305",
+    "majorCode": "LOGI"
+  },
+  {
+    "subjectCode": "SC321",
+    "majorCode": "LOGI"
+  },
+  {
+    "subjectCode": "SC304",
+    "majorCode": "LOGI"
+  },
+  {
+    "subjectCode": "SC312",
+    "majorCode": "LOGI"
+  },
+  {
+    "subjectCode": "LG215",
+    "majorCode": "LOGI"
+  },
+  {
+    "subjectCode": "SC340",
+    "majorCode": "LOGI"
+  },
+  {
+    "subjectCode": "ET201",
+    "majorCode": "LOGI"
+  },
+  {
+    "subjectCode": "EC316",
+    "majorCode": "LOGI"
+  },
+  {
+    "subjectCode": "FN334",
+    "majorCode": "LOGI"
+  },
+  {
+    "subjectCode": "FN216",
+    "majorCode": "LOGI"
+  },
+  {
+    "subjectCode": "BA314",
+    "majorCode": "LOGI"
+  },
+  {
+    "subjectCode": "LG495",
+    "majorCode": "LOGI"
+  },
+  {
+    "subjectCode": "LG499",
+    "majorCode": "LOGI"
+  },
+  {
+    "subjectCode": "LG491",
+    "majorCode": "LOGI"
+  },
+  {
+    "subjectCode": "SC492",
+    "majorCode": "LOGI"
+  },
+  {
+    "subjectCode": "ML113",
+    "majorCode": "TMDT"
+  },
+  {
+    "subjectCode": "ML114",
+    "majorCode": "TMDT"
+  },
+  {
+    "subjectCode": "ML115",
+    "majorCode": "TMDT"
+  },
+  {
+    "subjectCode": "ML202",
+    "majorCode": "TMDT"
+  },
+  {
+    "subjectCode": "ML204",
+    "majorCode": "TMDT"
+  },
+  {
+    "subjectCode": "CS102",
+    "majorCode": "TMDT"
+  },
+  {
+    "subjectCode": "MA101",
+    "majorCode": "TMDT"
+  },
+  {
+    "subjectCode": "NA151",
+    "majorCode": "TMDT"
+  },
+  {
+    "subjectCode": "EC101",
+    "majorCode": "TMDT"
+  },
+  {
+    "subjectCode": "VL101",
+    "majorCode": "TMDT"
+  },
+  {
+    "subjectCode": "SH131",
+    "majorCode": "TMDT"
+  },
+  {
+    "subjectCode": "GE111",
+    "majorCode": "TMDT"
+  },
+  {
+    "subjectCode": "GE112",
+    "majorCode": "TMDT"
+  },
+  {
+    "subjectCode": "GE121",
+    "majorCode": "TMDT"
+  },
+  {
+    "subjectCode": "GE222",
+    "majorCode": "TMDT"
+  },
+  {
+    "subjectCode": "GE231",
+    "majorCode": "TMDT"
+  },
+  {
+    "subjectCode": "GE232",
+    "majorCode": "TMDT"
+  },
+  {
+    "subjectCode": "GE333",
+    "majorCode": "TMDT"
+  },
+  {
+    "subjectCode": "GF101",
+    "majorCode": "TMDT"
+  },
+  {
+    "subjectCode": "GF102",
+    "majorCode": "TMDT"
+  },
+  {
+    "subjectCode": "GJ101",
+    "majorCode": "TMDT"
+  },
+  {
+    "subjectCode": "GJ102",
+    "majorCode": "TMDT"
+  },
+  {
+    "subjectCode": "GZ101",
+    "majorCode": "TMDT"
+  },
+  {
+    "subjectCode": "GZ102",
+    "majorCode": "TMDT"
+  },
+  {
+    "subjectCode": "GI101",
+    "majorCode": "TMDT"
+  },
+  {
+    "subjectCode": "GI102",
+    "majorCode": "TMDT"
+  },
+  {
+    "subjectCode": "GK101",
+    "majorCode": "TMDT"
+  },
+  {
+    "subjectCode": "GK102",
+    "majorCode": "TMDT"
+  },
+  {
+    "subjectCode": "PG101",
+    "majorCode": "TMDT"
+  },
+  {
+    "subjectCode": "PG102",
+    "majorCode": "TMDT"
+  },
+  {
+    "subjectCode": "PG103",
+    "majorCode": "TMDT"
+  },
+  {
+    "subjectCode": "PG104",
+    "majorCode": "TMDT"
+  },
+  {
+    "subjectCode": "PG105",
+    "majorCode": "TMDT"
+  },
+  {
+    "subjectCode": "PG106",
+    "majorCode": "TMDT"
+  },
+  {
+    "subjectCode": "PG107",
+    "majorCode": "TMDT"
+  },
+  {
+    "subjectCode": "PG121",
+    "majorCode": "TMDT"
+  },
+  {
+    "subjectCode": "SM202",
+    "majorCode": "TMDT"
+  },
+  {
+    "subjectCode": "MA142",
+    "majorCode": "TMDT"
+  },
+  {
+    "subjectCode": "MA231",
+    "majorCode": "TMDT"
+  },
+  {
+    "subjectCode": "IM206",
+    "majorCode": "TMDT"
+  },
+  {
+    "subjectCode": "EC204",
+    "majorCode": "TMDT"
+  },
+  {
+    "subjectCode": "EC205",
+    "majorCode": "TMDT"
+  },
+  {
+    "subjectCode": "EC310",
+    "majorCode": "TMDT"
+  },
+  {
+    "subjectCode": "FN201",
+    "majorCode": "TMDT"
+  },
+  {
+    "subjectCode": "FN211",
+    "majorCode": "TMDT"
+  },
+  {
+    "subjectCode": "AC201",
+    "majorCode": "TMDT"
+  },
+  {
+    "subjectCode": "BA102",
+    "majorCode": "TMDT"
+  },
+  {
+    "subjectCode": "MK202",
+    "majorCode": "TMDT"
+  },
+  {
+    "subjectCode": "ET201",
+    "majorCode": "TMDT"
+  },
+  {
+    "subjectCode": "LG201",
+    "majorCode": "TMDT"
+  },
+  {
+    "subjectCode": "ET212",
+    "majorCode": "TMDT"
+  },
+  {
+    "subjectCode": "ET223",
+    "majorCode": "TMDT"
+  },
+  {
+    "subjectCode": "ET310",
+    "majorCode": "TMDT"
+  },
+  {
+    "subjectCode": "LK335",
+    "majorCode": "TMDT"
+  },
+  {
+    "subjectCode": "ET311",
+    "majorCode": "TMDT"
+  },
+  {
+    "subjectCode": "ET315",
+    "majorCode": "TMDT"
+  },
+  {
+    "subjectCode": "ET328",
+    "majorCode": "TMDT"
+  },
+  {
+    "subjectCode": "ET330",
+    "majorCode": "TMDT"
+  },
+  {
+    "subjectCode": "ET410",
+    "majorCode": "TMDT"
+  },
+  {
+    "subjectCode": "ET313",
+    "majorCode": "TMDT"
+  },
+  {
+    "subjectCode": "ET314",
+    "majorCode": "TMDT"
+  },
+  {
+    "subjectCode": "ET316",
+    "majorCode": "TMDT"
+  },
+  {
+    "subjectCode": "ET317",
+    "majorCode": "TMDT"
+  },
+  {
+    "subjectCode": "BK327",
+    "majorCode": "TMDT"
+  },
+  {
+    "subjectCode": "FN334",
+    "majorCode": "TMDT"
+  },
+  {
+    "subjectCode": "ET335",
+    "majorCode": "TMDT"
+  },
+  {
+    "subjectCode": "ET495",
+    "majorCode": "TMDT"
+  },
+  {
+    "subjectCode": "ET499",
+    "majorCode": "TMDT"
+  },
+  {
+    "subjectCode": "ET490",
+    "majorCode": "TMDT"
+  },
+  {
+    "subjectCode": "ET492",
+    "majorCode": "TMDT"
+  },
+  {
+    "subjectCode": "ML113",
+    "majorCode": "KHMT"
+  },
+  {
+    "subjectCode": "ML114",
+    "majorCode": "KHMT"
+  },
+  {
+    "subjectCode": "ML115",
+    "majorCode": "KHMT"
+  },
+  {
+    "subjectCode": "ML202",
+    "majorCode": "KHMT"
+  },
+  {
+    "subjectCode": "ML204",
+    "majorCode": "KHMT"
+  },
+  {
+    "subjectCode": "CS102",
+    "majorCode": "KHMT"
+  },
+  {
+    "subjectCode": "MA101",
+    "majorCode": "KHMT"
+  },
+  {
+    "subjectCode": "CS100",
+    "majorCode": "KHMT"
+  },
+  {
+    "subjectCode": "NA151",
+    "majorCode": "KHMT"
+  },
+  {
+    "subjectCode": "EC102",
+    "majorCode": "KHMT"
+  },
+  {
+    "subjectCode": "VL101",
+    "majorCode": "KHMT"
+  },
+  {
+    "subjectCode": "SH131",
+    "majorCode": "KHMT"
+  },
+  {
+    "subjectCode": "GE111",
+    "majorCode": "KHMT"
+  },
+  {
+    "subjectCode": "GE112",
+    "majorCode": "KHMT"
+  },
+  {
+    "subjectCode": "GE121",
+    "majorCode": "KHMT"
+  },
+  {
+    "subjectCode": "GE222",
+    "majorCode": "KHMT"
+  },
+  {
+    "subjectCode": "GE231",
+    "majorCode": "KHMT"
+  },
+  {
+    "subjectCode": "GE232",
+    "majorCode": "KHMT"
+  },
+  {
+    "subjectCode": "GE333",
+    "majorCode": "KHMT"
+  },
+  {
+    "subjectCode": "GF101",
+    "majorCode": "KHMT"
+  },
+  {
+    "subjectCode": "GF102",
+    "majorCode": "KHMT"
+  },
+  {
+    "subjectCode": "GJ101",
+    "majorCode": "KHMT"
+  },
+  {
+    "subjectCode": "GJ102",
+    "majorCode": "KHMT"
+  },
+  {
+    "subjectCode": "GZ101",
+    "majorCode": "KHMT"
+  },
+  {
+    "subjectCode": "GZ102",
+    "majorCode": "KHMT"
+  },
+  {
+    "subjectCode": "GI101",
+    "majorCode": "KHMT"
+  },
+  {
+    "subjectCode": "GI102",
+    "majorCode": "KHMT"
+  },
+  {
+    "subjectCode": "GK101",
+    "majorCode": "KHMT"
+  },
+  {
+    "subjectCode": "GK102",
+    "majorCode": "KHMT"
+  },
+  {
+    "subjectCode": "PG101",
+    "majorCode": "KHMT"
+  },
+  {
+    "subjectCode": "PG102",
+    "majorCode": "KHMT"
+  },
+  {
+    "subjectCode": "PG103",
+    "majorCode": "KHMT"
+  },
+  {
+    "subjectCode": "PG104",
+    "majorCode": "KHMT"
+  },
+  {
+    "subjectCode": "PG105",
+    "majorCode": "KHMT"
+  },
+  {
+    "subjectCode": "PG106",
+    "majorCode": "KHMT"
+  },
+  {
+    "subjectCode": "PG107",
+    "majorCode": "KHMT"
+  },
+  {
+    "subjectCode": "PG121",
+    "majorCode": "KHMT"
+  },
+  {
+    "subjectCode": "MA110",
+    "majorCode": "KHMT"
+  },
+  {
+    "subjectCode": "MA111",
+    "majorCode": "KHMT"
+  },
+  {
+    "subjectCode": "MA120",
+    "majorCode": "KHMT"
+  },
+  {
+    "subjectCode": "MA239",
+    "majorCode": "KHMT"
+  },
+  {
+    "subjectCode": "MI201",
+    "majorCode": "KHMT"
+  },
+  {
+    "subjectCode": "CF213",
+    "majorCode": "KHMT"
+  },
+  {
+    "subjectCode": "CS121",
+    "majorCode": "KHMT"
+  },
+  {
+    "subjectCode": "CS123",
+    "majorCode": "KHMT"
+  },
+  {
+    "subjectCode": "CS122",
+    "majorCode": "KHMT"
+  },
+  {
+    "subjectCode": "CS212",
+    "majorCode": "KHMT"
+  },
+  {
+    "subjectCode": "CS315",
+    "majorCode": "KHMT"
+  },
+  {
+    "subjectCode": "IS222",
+    "majorCode": "KHMT"
+  },
+  {
+    "subjectCode": "NW212",
+    "majorCode": "KHMT"
+  },
+  {
+    "subjectCode": "IS322",
+    "majorCode": "KHMT"
+  },
+  {
+    "subjectCode": "IS332",
+    "majorCode": "KHMT"
+  },
+  {
+    "subjectCode": "IS345",
+    "majorCode": "KHMT"
+  },
+  {
+    "subjectCode": "CF231",
+    "majorCode": "KHMT"
+  },
+  {
+    "subjectCode": "AI130",
+    "majorCode": "KHMT"
+  },
+  {
+    "subjectCode": "CS320",
+    "majorCode": "KHMT"
+  },
+  {
+    "subjectCode": "IS330",
+    "majorCode": "KHMT"
+  },
+  {
+    "subjectCode": "IT333",
+    "majorCode": "KHMT"
+  },
+  {
+    "subjectCode": "IS224",
+    "majorCode": "KHMT"
+  },
+  {
+    "subjectCode": "SE422",
+    "majorCode": "KHMT"
+  },
+  {
+    "subjectCode": "CF214",
+    "majorCode": "KHMT"
+  },
+  {
+    "subjectCode": "CS223",
+    "majorCode": "KHMT"
+  },
+  {
+    "subjectCode": "CS224",
+    "majorCode": "KHMT"
+  },
+  {
+    "subjectCode": "CS318",
+    "majorCode": "KHMT"
+  },
+  {
+    "subjectCode": "IT320",
+    "majorCode": "KHMT"
+  },
+  {
+    "subjectCode": "IT334",
+    "majorCode": "KHMT"
+  },
+  {
+    "subjectCode": "NW312",
+    "majorCode": "KHMT"
+  },
+  {
+    "subjectCode": "NW332",
+    "majorCode": "KHMT"
+  },
+  {
+    "subjectCode": "MI312",
+    "majorCode": "KHMT"
+  },
+  {
+    "subjectCode": "AI322",
+    "majorCode": "KHMT"
+  },
+  {
+    "subjectCode": "AI321",
+    "majorCode": "KHMT"
+  },
+  {
+    "subjectCode": "AI310",
+    "majorCode": "KHMT"
+  },
+  {
+    "subjectCode": "AI320",
+    "majorCode": "KHMT"
+  },
+  {
+    "subjectCode": "CS321",
+    "majorCode": "KHMT"
+  },
+  {
+    "subjectCode": "IS326",
+    "majorCode": "KHMT"
+  },
+  {
+    "subjectCode": "IS325",
+    "majorCode": "KHMT"
+  },
+  {
+    "subjectCode": "IS327",
+    "majorCode": "KHMT"
+  },
+  {
+    "subjectCode": "SE312",
+    "majorCode": "KHMT"
+  },
+  {
+    "subjectCode": "SE302",
+    "majorCode": "KHMT"
+  },
+  {
+    "subjectCode": "CF301",
+    "majorCode": "KHMT"
+  },
+  {
+    "subjectCode": "CS425",
+    "majorCode": "KHMT"
+  },
+  {
+    "subjectCode": "IS347",
+    "majorCode": "KHMT"
+  },
+  {
+    "subjectCode": "IS348",
+    "majorCode": "KHMT"
+  },
+  {
+    "subjectCode": "IS349",
+    "majorCode": "KHMT"
+  },
+  {
+    "subjectCode": "IS346",
+    "majorCode": "KHMT"
+  },
+  {
+    "subjectCode": "IP409",
+    "majorCode": "KHMT"
+  },
+  {
+    "subjectCode": "CS499",
+    "majorCode": "KHMT"
+  },
+  {
+    "subjectCode": "CS487",
+    "majorCode": "KHMT"
+  },
+  {
+    "subjectCode": "ML113",
+    "majorCode": "CNTT"
+  },
+  {
+    "subjectCode": "ML114",
+    "majorCode": "CNTT"
+  },
+  {
+    "subjectCode": "ML115",
+    "majorCode": "CNTT"
+  },
+  {
+    "subjectCode": "ML202",
+    "majorCode": "CNTT"
+  },
+  {
+    "subjectCode": "ML204",
+    "majorCode": "CNTT"
+  },
+  {
+    "subjectCode": "CS102",
+    "majorCode": "CNTT"
+  },
+  {
+    "subjectCode": "MA101",
+    "majorCode": "CNTT"
+  },
+  {
+    "subjectCode": "CS100",
+    "majorCode": "CNTT"
+  },
+  {
+    "subjectCode": "NA151",
+    "majorCode": "CNTT"
+  },
+  {
+    "subjectCode": "EC102",
+    "majorCode": "CNTT"
+  },
+  {
+    "subjectCode": "VL101",
+    "majorCode": "CNTT"
+  },
+  {
+    "subjectCode": "SH131",
+    "majorCode": "CNTT"
+  },
+  {
+    "subjectCode": "GE111",
+    "majorCode": "CNTT"
+  },
+  {
+    "subjectCode": "GE112",
+    "majorCode": "CNTT"
+  },
+  {
+    "subjectCode": "GE121",
+    "majorCode": "CNTT"
+  },
+  {
+    "subjectCode": "GE222",
+    "majorCode": "CNTT"
+  },
+  {
+    "subjectCode": "GE231",
+    "majorCode": "CNTT"
+  },
+  {
+    "subjectCode": "GE232",
+    "majorCode": "CNTT"
+  },
+  {
+    "subjectCode": "GE333",
+    "majorCode": "CNTT"
+  },
+  {
+    "subjectCode": "GF101",
+    "majorCode": "CNTT"
+  },
+  {
+    "subjectCode": "GF102",
+    "majorCode": "CNTT"
+  },
+  {
+    "subjectCode": "GJ101",
+    "majorCode": "CNTT"
+  },
+  {
+    "subjectCode": "GJ102",
+    "majorCode": "CNTT"
+  },
+  {
+    "subjectCode": "GZ101",
+    "majorCode": "CNTT"
+  },
+  {
+    "subjectCode": "GZ102",
+    "majorCode": "CNTT"
+  },
+  {
+    "subjectCode": "GI101",
+    "majorCode": "CNTT"
+  },
+  {
+    "subjectCode": "GI102",
+    "majorCode": "CNTT"
+  },
+  {
+    "subjectCode": "GK101",
+    "majorCode": "CNTT"
+  },
+  {
+    "subjectCode": "GK102",
+    "majorCode": "CNTT"
+  },
+  {
+    "subjectCode": "PG101",
+    "majorCode": "CNTT"
+  },
+  {
+    "subjectCode": "PG102",
+    "majorCode": "CNTT"
+  },
+  {
+    "subjectCode": "PG103",
+    "majorCode": "CNTT"
+  },
+  {
+    "subjectCode": "PG104",
+    "majorCode": "CNTT"
+  },
+  {
+    "subjectCode": "PG105",
+    "majorCode": "CNTT"
+  },
+  {
+    "subjectCode": "PG106",
+    "majorCode": "CNTT"
+  },
+  {
+    "subjectCode": "PG107",
+    "majorCode": "CNTT"
+  },
+  {
+    "subjectCode": "PG121",
+    "majorCode": "CNTT"
+  },
+  {
+    "subjectCode": "MA110",
+    "majorCode": "CNTT"
+  },
+  {
+    "subjectCode": "MA111",
+    "majorCode": "CNTT"
+  },
+  {
+    "subjectCode": "MA120",
+    "majorCode": "CNTT"
+  },
+  {
+    "subjectCode": "MA239",
+    "majorCode": "CNTT"
+  },
+  {
+    "subjectCode": "MI201",
+    "majorCode": "CNTT"
+  },
+  {
+    "subjectCode": "CF213",
+    "majorCode": "CNTT"
+  },
+  {
+    "subjectCode": "CS121",
+    "majorCode": "CNTT"
+  },
+  {
+    "subjectCode": "CS123",
+    "majorCode": "CNTT"
+  },
+  {
+    "subjectCode": "CS122",
+    "majorCode": "CNTT"
+  },
+  {
+    "subjectCode": "CS212",
+    "majorCode": "CNTT"
+  },
+  {
+    "subjectCode": "CS315",
+    "majorCode": "CNTT"
+  },
+  {
+    "subjectCode": "IS222",
+    "majorCode": "CNTT"
+  },
+  {
+    "subjectCode": "NW212",
+    "majorCode": "CNTT"
+  },
+  {
+    "subjectCode": "IS322",
+    "majorCode": "CNTT"
+  },
+  {
+    "subjectCode": "IS332",
+    "majorCode": "CNTT"
+  },
+  {
+    "subjectCode": "SE302",
+    "majorCode": "CNTT"
+  },
+  {
+    "subjectCode": "SE422",
+    "majorCode": "CNTT"
+  },
+  {
+    "subjectCode": "SE312",
+    "majorCode": "CNTT"
+  },
+  {
+    "subjectCode": "AI130",
+    "majorCode": "CNTT"
+  },
+  {
+    "subjectCode": "IS326",
+    "majorCode": "CNTT"
+  },
+  {
+    "subjectCode": "IT333",
+    "majorCode": "CNTT"
+  },
+  {
+    "subjectCode": "IS224",
+    "majorCode": "CNTT"
+  },
+  {
+    "subjectCode": "CS318",
+    "majorCode": "CNTT"
+  },
+  {
+    "subjectCode": "CS223",
+    "majorCode": "CNTT"
+  },
+  {
+    "subjectCode": "CS224",
+    "majorCode": "CNTT"
+  },
+  {
+    "subjectCode": "IT334",
+    "majorCode": "CNTT"
+  },
+  {
+    "subjectCode": "IS345",
+    "majorCode": "CNTT"
+  },
+  {
+    "subjectCode": "CF231",
+    "majorCode": "CNTT"
+  },
+  {
+    "subjectCode": "IS430",
+    "majorCode": "CNTT"
+  },
+  {
+    "subjectCode": "MI312",
+    "majorCode": "CNTT"
+  },
+  {
+    "subjectCode": "IT335",
+    "majorCode": "CNTT"
+  },
+  {
+    "subjectCode": "CS323",
+    "majorCode": "CNTT"
+  },
+  {
+    "subjectCode": "IT320",
+    "majorCode": "CNTT"
+  },
+  {
+    "subjectCode": "CS320",
+    "majorCode": "CNTT"
+  },
+  {
+    "subjectCode": "CS321",
+    "majorCode": "CNTT"
+  },
+  {
+    "subjectCode": "IS324",
+    "majorCode": "CNTT"
+  },
+  {
+    "subjectCode": "IS327",
+    "majorCode": "CNTT"
+  },
+  {
+    "subjectCode": "CS425",
+    "majorCode": "CNTT"
+  },
+  {
+    "subjectCode": "CS325",
+    "majorCode": "CNTT"
+  },
+  {
+    "subjectCode": "CF214",
+    "majorCode": "CNTT"
+  },
+  {
+    "subjectCode": "NW312",
+    "majorCode": "CNTT"
+  },
+  {
+    "subjectCode": "NW332",
+    "majorCode": "CNTT"
+  },
+  {
+    "subjectCode": "IS314",
+    "majorCode": "CNTT"
+  },
+  {
+    "subjectCode": "IS347",
+    "majorCode": "CNTT"
+  },
+  {
+    "subjectCode": "IS348",
+    "majorCode": "CNTT"
+  },
+  {
+    "subjectCode": "IS349",
+    "majorCode": "CNTT"
+  },
+  {
+    "subjectCode": "IP406",
+    "majorCode": "CNTT"
+  },
+  {
+    "subjectCode": "IT499",
+    "majorCode": "CNTT"
+  },
+  {
+    "subjectCode": "IT486",
+    "majorCode": "CNTT"
+  },
+
+
+
+
+
+  {
+    "subjectCode": "ML113",
+    "majorCode": "TTNT"
+  },
+  {
+    "subjectCode": "ML114",
+    "majorCode": "TTNT"
+  },
+  {
+    "subjectCode": "ML115",
+    "majorCode": "TTNT"
+  },
+  {
+    "subjectCode": "ML202",
+    "majorCode": "TTNT"
+  },
+  {
+    "subjectCode": "ML204",
+    "majorCode": "TTNT"
+  },
+  {
+    "subjectCode": "CS102",
+    "majorCode": "TTNT"
+  },
+  {
+    "subjectCode": "MA101",
+    "majorCode": "TTNT"
+  },
+  {
+    "subjectCode": "CS100",
+    "majorCode": "TTNT"
+  },
+  {
+    "subjectCode": "NA151",
+    "majorCode": "TTNT"
+  },
+  {
+    "subjectCode": "EC102",
+    "majorCode": "TTNT"
+  },
+  {
+    "subjectCode": "VL101",
+    "majorCode": "TTNT"
+  },
+  {
+    "subjectCode": "SH131",
+    "majorCode": "TTNT"
+  },
+  {
+    "subjectCode": "GE111",
+    "majorCode": "TTNT"
+  },
+  {
+    "subjectCode": "GE112",
+    "majorCode": "TTNT"
+  },
+  {
+    "subjectCode": "GE121",
+    "majorCode": "TTNT"
+  },
+  {
+    "subjectCode": "GE222",
+    "majorCode": "TTNT"
+  },
+  {
+    "subjectCode": "GE231",
+    "majorCode": "TTNT"
+  },
+  {
+    "subjectCode": "GE232",
+    "majorCode": "TTNT"
+  },
+  {
+    "subjectCode": "GE333",
+    "majorCode": "TTNT"
+  },
+  {
+    "subjectCode": "GF101",
+    "majorCode": "TTNT"
+  },
+  {
+    "subjectCode": "GF102",
+    "majorCode": "TTNT"
+  },
+  {
+    "subjectCode": "GJ101",
+    "majorCode": "TTNT"
+  },
+  {
+    "subjectCode": "GJ102",
+    "majorCode": "TTNT"
+  },
+  {
+    "subjectCode": "GZ101",
+    "majorCode": "TTNT"
+  },
+  {
+    "subjectCode": "GZ102",
+    "majorCode": "TTNT"
+  },
+  {
+    "subjectCode": "GI101",
+    "majorCode": "TTNT"
+  },
+  {
+    "subjectCode": "GI102",
+    "majorCode": "TTNT"
+  },
+  {
+    "subjectCode": "GK101",
+    "majorCode": "TTNT"
+  },
+  {
+    "subjectCode": "GK102",
+    "majorCode": "TTNT"
+  },
+  {
+    "subjectCode": "PG101",
+    "majorCode": "TTNT"
+  },
+  {
+    "subjectCode": "PG102",
+    "majorCode": "TTNT"
+  },
+  {
+    "subjectCode": "PG103",
+    "majorCode": "TTNT"
+  },
+  {
+    "subjectCode": "PG104",
+    "majorCode": "TTNT"
+  },
+  {
+    "subjectCode": "PG105",
+    "majorCode": "TTNT"
+  },
+  {
+    "subjectCode": "PG106",
+    "majorCode": "TTNT"
+  },
+  {
+    "subjectCode": "PG107",
+    "majorCode": "TTNT"
+  },
+  {
+    "subjectCode": "PG121",
+    "majorCode": "TTNT"
+  },
+  {
+    "subjectCode": "MA110",
+    "majorCode": "TTNT"
+  },
+  {
+    "subjectCode": "MA111",
+    "majorCode": "TTNT"
+  },
+  {
+    "subjectCode": "MA120",
+    "majorCode": "TTNT"
+  },
+  {
+    "subjectCode": "MA239",
+    "majorCode": "TTNT"
+  },
+  {
+    "subjectCode": "MI201",
+    "majorCode": "TTNT"
+  },
+  {
+    "subjectCode": "CF213",
+    "majorCode": "TTNT"
+  },
+  {
+    "subjectCode": "CS121",
+    "majorCode": "TTNT"
+  },
+  {
+    "subjectCode": "CS123",
+    "majorCode": "TTNT"
+  },
+  {
+    "subjectCode": "CS122",
+    "majorCode": "TTNT"
+  },
+  {
+    "subjectCode": "CS212",
+    "majorCode": "TTNT"
+  },
+  {
+    "subjectCode": "IS222",
+    "majorCode": "TTNT"
+  },
+  {
+    "subjectCode": "IS224",
+    "majorCode": "TTNT"
+  },
+  {
+    "subjectCode": "CS321",
+    "majorCode": "TTNT"
+  },
+  {
+    "subjectCode": "IS326",
+    "majorCode": "TTNT"
+  },
+  {
+    "subjectCode": "AI130",
+    "majorCode": "TTNT"
+  },
+  {
+    "subjectCode": "AI220",
+    "majorCode": "TTNT"
+  },
+  {
+    "subjectCode": "CS320",
+    "majorCode": "TTNT"
+  },
+  {
+    "subjectCode": "AI321",
+    "majorCode": "TTNT"
+  },
+  {
+    "subjectCode": "AI322",
+    "majorCode": "TTNT"
+  },
+  {
+    "subjectCode": "IS330",
+    "majorCode": "TTNT"
+  },
+  {
+    "subjectCode": "IS324",
+    "majorCode": "TTNT"
+  },
+  {
+    "subjectCode": "IS327",
+    "majorCode": "TTNT"
+  },
+  {
+    "subjectCode": "IS325",
+    "majorCode": "TTNT"
+  },
+  {
+    "subjectCode": "IS430",
+    "majorCode": "TTNT"
+  },
+  {
+    "subjectCode": "IT334",
+    "majorCode": "TTNT"
+  },
+  {
+    "subjectCode": "MI312",
+    "majorCode": "TTNT"
+  },
+  {
+    "subjectCode": "NW212",
+    "majorCode": "TTNT"
+  },
+  {
+    "subjectCode": "IS345",
+    "majorCode": "TTNT"
+  },
+  {
+    "subjectCode": "IS346",
+    "majorCode": "TTNT"
+  },
+  {
+    "subjectCode": "IS348",
+    "majorCode": "TTNT"
+  },
+  {
+    "subjectCode": "IS347",
+    "majorCode": "TTNT"
+  },
+  {
+    "subjectCode": "CF231",
+    "majorCode": "TTNT"
+  },
+  {
+    "subjectCode": "IS349",
+    "majorCode": "TTNT"
+  },
+  {
+    "subjectCode": "SE312",
+    "majorCode": "TTNT"
+  },
+  {
+    "subjectCode": "CF214",
+    "majorCode": "TTNT"
+  },
+  {
+    "subjectCode": "CS223",
+    "majorCode": "TTNT"
+  },
+  {
+    "subjectCode": "CS323",
+    "majorCode": "TTNT"
+  },
+  {
+    "subjectCode": "CS224",
+    "majorCode": "TTNT"
+  },
+  {
+    "subjectCode": "NW323",
+    "majorCode": "TTNT"
+  },
+  {
+    "subjectCode": "IT333",
+    "majorCode": "TTNT"
+  },
+  {
+    "subjectCode": "IT335",
+    "majorCode": "TTNT"
+  },
+  {
+    "subjectCode": "CS318",
+    "majorCode": "TTNT"
+  },
+  {
+    "subjectCode": "IT320",
+    "majorCode": "TTNT"
+  },
+  {
+    "subjectCode": "IS332",
+    "majorCode": "TTNT"
+  },
+  {
+    "subjectCode": "SE302",
+    "majorCode": "TTNT"
+  },
+  {
+    "subjectCode": "IS322",
+    "majorCode": "TTNT"
+  },
+  {
+    "subjectCode": "SE422",
+    "majorCode": "TTNT"
+  },
+  {
+    "subjectCode": "MA238",
+    "majorCode": "TTNT"
+  },
+  {
+    "subjectCode": "CS425",
+    "majorCode": "TTNT"
+  }
+]

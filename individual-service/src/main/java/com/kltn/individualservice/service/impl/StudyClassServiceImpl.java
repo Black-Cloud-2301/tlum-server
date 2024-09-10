@@ -3,6 +3,7 @@ package com.kltn.individualservice.service.impl;
 import com.kltn.individualservice.constant.EntityStatus;
 import com.kltn.individualservice.dto.request.StudyClassCRU;
 import com.kltn.individualservice.dto.request.StudyClassRequest;
+import com.kltn.individualservice.entity.Semester;
 import com.kltn.individualservice.entity.StudyClass;
 import com.kltn.individualservice.entity.Subject;
 import com.kltn.individualservice.entity.Teacher;
@@ -13,6 +14,9 @@ import com.kltn.individualservice.service.StudyClassService;
 import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;
 import lombok.experimental.FieldDefaults;
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.CachePut;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
@@ -27,31 +31,37 @@ public class StudyClassServiceImpl implements StudyClassService {
     SemesterService semesterService;
 
     @Override
-    public StudyClass create(StudyClassCRU studyClassCRU) {
-        return studyClassRepository.save(createOrUpdateStudyClass(new StudyClass(), studyClassCRU));
+    @CacheEvict(value = "studyClasses", allEntries = true)
+    public StudyClass create(StudyClassCRU request) {
+        return studyClassRepository.save(createOrUpdateStudyClass(new StudyClass(), request));
     }
 
     @Override
-    public StudyClass update(StudyClassCRU studyClassCRU) {
-        StudyClass studyClass = studyClassRepository.findById(studyClassCRU.getId()).orElseThrow(() -> new NotFoundException("Study class"));
-        return studyClassRepository.save(createOrUpdateStudyClass(studyClass, studyClassCRU));
+    @CachePut(value = "studyClass", key = "#request.id")
+    @CacheEvict(value = "studyClasses", allEntries = true)
+    public StudyClass update(StudyClassCRU request) {
+        StudyClass studyClass = studyClassRepository.findById(request.getId()).orElseThrow(() -> new NotFoundException("Study class"));
+        return studyClassRepository.save(createOrUpdateStudyClass(studyClass, request));
     }
 
     @Override
+    @Cacheable(value = "studyClass", key = "#id")
     public StudyClass findById(Long id) {
         return studyClassRepository.findById(id).orElseThrow(() -> new NotFoundException("Study class"));
     }
 
     @Override
+    @CachePut(value = "studyClass", key = "#id")
+    @CacheEvict(value = "studyClasses", allEntries = true)
     public StudyClass delete(Long id) {
         StudyClass studyClass = studyClassRepository.findById(id).orElseThrow(() -> new NotFoundException("Study class"));
         studyClass.setIsActive(EntityStatus.DELETED);
         return studyClassRepository.save(studyClass);
     }
     private StudyClass createOrUpdateStudyClass(StudyClass studyClass, StudyClassCRU studyClassCRU) {
-        semesterService.findById(studyClassCRU.getSemesterId());
+        Semester semester = semesterService.findById(studyClassCRU.getSemesterId());
         studyClass.setName(studyClassCRU.getName());
-        studyClass.setSemester(semesterService.findById(studyClassCRU.getSemesterId()));
+        studyClass.setSemester(semester);
         studyClass.setClassesOfWeek(studyClassCRU.getClassesOfWeek());
         studyClass.setTeacher(new Teacher(studyClassCRU.getTeacherId()));
         studyClass.setTotalStudent(studyClassCRU.getTotalStudent());
@@ -63,11 +73,13 @@ public class StudyClassServiceImpl implements StudyClassService {
 
 
     @Override
+    @Cacheable(value = "studyClasses", key = "#statuses")
     public List<StudyClass> findAllByIsActiveIn(List<EntityStatus> statuses) {
         return studyClassRepository.findAllByIsActiveIn(statuses);
     }
 
     @Override
+    @Cacheable(value = "studyClasses", key = "#request")
     public Page<StudyClass> findAllByIsActiveIn(StudyClassRequest request, Pageable pageable) {
         return studyClassRepository.findAllByIsActiveIn(request, pageable);
     }

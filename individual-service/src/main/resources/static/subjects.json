@@ -12,7 +12,9 @@
     "credit": 2,
     "hours": 30,
     "coefficient": 1.0,
-    "requireSubjects": ["ML113"]
+    "requireSubjects": [
+      "ML113"
+    ]
   },
   {
     "code": "ML115",
@@ -20,7 +22,9 @@
     "credit": 2,
     "hours": 30,
     "coefficient": 1.0,
-    "requireSubjects": ["ML114"]
+    "requireSubjects": [
+      "ML114"
+    ]
   },
   {
     "code": "ML202",
@@ -28,7 +32,9 @@
     "credit": 2,
     "hours": 30,
     "coefficient": 1.0,
-    "requireSubjects": ["ML114"]
+    "requireSubjects": [
+      "ML114"
+    ]
   },
   {
     "code": "ML204",
@@ -36,6 +42,2962 @@
     "credit": 2,
     "hours": 30,
     "coefficient": 1.0,
-    "requireSubjects": ["ML114"]
+    "requireSubjects": [
+      "ML114"
+    ]
+  },
+  {
+    "code": "IM210",
+    "name": "Tin học âm nhạc",
+    "credit": 3,
+    "hours": 45,
+    "coefficient": 1.8
+  },
+  {
+    "code": "VL102",
+    "name": "Tiếng Việt thực hành",
+    "credit": 2,
+    "hours": 30,
+    "coefficient": 1.0
+  },
+  {
+    "code": "GE111",
+    "name": "Tiếng Anh sơ cấp 1",
+    "credit": 2,
+    "hours": 54,
+    "coefficient": 1.6
+  },
+  {
+    "code": "GE112",
+    "name": "Tiếng Anh sơ cấp 2",
+    "credit": 2,
+    "hours": 54,
+    "coefficient": 1.6,
+    "requireSubjects": [
+      "GE111"
+    ]
+  },
+  {
+    "code": "GE121",
+    "name": "Tiếng Anh sơ trung cấp 1",
+    "credit": 2,
+    "hours": 54,
+    "coefficient": 1.6,
+    "requireSubjects": [
+      "GE112"
+    ]
+  },
+  {
+    "code": "GE222",
+    "name": "Tiếng Anh sơ trung cấp 2",
+    "credit": 2,
+    "hours": 54,
+    "coefficient": 1.6,
+    "requireSubjects": [
+      "GE121"
+    ]
+  },
+  {
+    "code": "PG101",
+    "name": "Thể dục cơ bản",
+    "credit": 1,
+    "hours": 18,
+    "coefficient": 1.0
+  },
+  {
+    "code": "PG102",
+    "name": "Bóng bàn",
+    "credit": 1,
+    "hours": 18,
+    "coefficient": 1.0
+  },
+  {
+    "code": "PG103",
+    "name": "Bóng chuyền",
+    "credit": 1,
+    "hours": 18,
+    "coefficient": 1.0
+  },
+  {
+    "code": "PG104",
+    "name": "Bóng rổ",
+    "credit": 1,
+    "hours": 18,
+    "coefficient": 1.0
+  },
+  {
+    "code": "PG105",
+    "name": "Thể dục cổ truyền",
+    "credit": 1,
+    "hours": 18,
+    "coefficient": 1.0
+  },
+  {
+    "code": "PG106",
+    "name": "Thể dục nâng cao",
+    "credit": 1,
+    "hours": 18,
+    "coefficient": 1.0,
+    "requireSubjects": [
+      "PG101"
+    ]
+  },
+  {
+    "code": "PG107",
+    "name": "Nhảy hiện đại",
+    "credit": 1,
+    "hours": 18,
+    "coefficient": 1.0
+  },
+  {
+    "code": "PG121",
+    "name": "Giáo dục quốc phòng và An ninh",
+    "credit": 4,
+    "hours": 165,
+    "coefficient": 1.4
+  },
+  {
+    "code": "AN104",
+    "name": "Lý thuyết âm nhạc",
+    "credit": 4,
+    "hours": 60,
+    "coefficient": 1.6
+  },
+  {
+    "code": "AN201",
+    "name": "Tính năng nhạc cụ",
+    "credit": 2,
+    "hours": 30,
+    "coefficient": 1.8
+  },
+  {
+    "code": "AN301",
+    "name": "Hòa thanh",
+    "credit": 2,
+    "hours": 30,
+    "coefficient": 1.6
+  },
+  {
+    "code": "AN402",
+    "name": "Hòa thanh ứng dụng",
+    "credit": 2,
+    "hours": 30,
+    "coefficient": 1.6,
+    "requireSubjects": [
+      "AN301"
+    ]
+  },
+  {
+    "code": "AN303",
+    "name": "Phối khí 1",
+    "credit": 2,
+    "hours": 30,
+    "coefficient": 1.6
+  },
+  {
+    "code": "AN404",
+    "name": "Phối khí 2",
+    "credit": 2,
+    "hours": 30,
+    "coefficient": 1.6,
+    "requireSubjects": [
+      "AN303"
+    ]
+  },
+  {
+    "code": "AN211",
+    "name": "Phân tích âm nhạc",
+    "credit": 3,
+    "hours": 45,
+    "coefficient": 1.6
+  },
+  {
+    "code": "AN311",
+    "name": "Sáng tác ca khúc 1",
+    "credit": 3,
+    "hours": 45,
+    "coefficient": 1.6
+  },
+  {
+    "code": "AN412",
+    "name": "Sáng tác ca khúc 2",
+    "credit": 3,
+    "hours": 45,
+    "coefficient": 1.6,
+    "requireSubjects": [
+      "AN311"
+    ]
+  },
+  {
+    "code": "AN413",
+    "name": "Kỹ thuật phòng thu",
+    "credit": 3,
+    "hours": 45,
+    "coefficient": 1.6
+  },
+  {
+    "code": "AN112",
+    "name": "Ký xướng âm 1",
+    "credit": 4,
+    "hours": 60,
+    "coefficient": 1.6
+  },
+  {
+    "code": "AN212",
+    "name": "Ký xướng âm 2",
+    "credit": 4,
+    "hours": 60,
+    "coefficient": 1.6,
+    "requireSubjects": [
+      "AN112"
+    ]
+  },
+  {
+    "code": "AN122",
+    "name": "Piano cơ bản",
+    "credit": 4,
+    "hours": 60,
+    "coefficient": 1.8
+  },
+  {
+    "code": "AN223",
+    "name": "Piano ứng dụng 1",
+    "credit": 4,
+    "hours": 60,
+    "coefficient": 1.6,
+    "requireSubjects": [
+      "AN122"
+    ]
+  },
+  {
+    "code": "AN323",
+    "name": "Piano ứng dụng 2",
+    "credit": 4,
+    "hours": 60,
+    "coefficient": 1.6,
+    "requireSubjects": [
+      "AN223"
+    ]
+  },
+  {
+    "code": "AN131",
+    "name": "Kỹ thuật thanh nhạc 1",
+    "credit": 4,
+    "hours": 60,
+    "coefficient": 2.0
+  },
+  {
+    "code": "AN232",
+    "name": "Kỹ thuật thanh nhạc 2",
+    "credit": 4,
+    "hours": 60,
+    "coefficient": 2.0,
+    "requireSubjects": [
+      "AN131"
+    ]
+  },
+  {
+    "code": "AN333",
+    "name": "Kỹ thuật thanh nhạc 3",
+    "credit": 4,
+    "hours": 60,
+    "coefficient": 2.0,
+    "requireSubjects": [
+      "AN232"
+    ]
+  },
+  {
+    "code": "AN434",
+    "name": "Kỹ thuật thanh nhạc 4",
+    "credit": 4,
+    "hours": 60,
+    "coefficient": 2.0,
+    "requireSubjects": [
+      "AN333"
+    ]
+  },
+  {
+    "code": "AN233",
+    "name": "Thanh nhạc ứng dụng",
+    "credit": 4,
+    "hours": 60,
+    "coefficient": 2.0
+  },
+  {
+    "code": "AN141",
+    "name": "Kỹ thuật biểu diễn (vũ đạo) 1",
+    "credit": 4,
+    "hours": 60,
+    "coefficient": 2.0
+  },
+  {
+    "code": "AN242",
+    "name": "Kỹ thuật biểu diễn (vũ đạo) 2",
+    "credit": 4,
+    "hours": 60,
+    "coefficient": 2.0,
+    "requireSubjects": [
+      "AN141"
+    ]
+  },
+  {
+    "code": "AN251",
+    "name": "Thực hành biểu diễn 1",
+    "credit": 4,
+    "hours": 60,
+    "coefficient": 2.0
+  },
+  {
+    "code": "AN352",
+    "name": "Thực hành biểu diễn 2",
+    "credit": 4,
+    "hours": 60,
+    "coefficient": 2.0,
+    "requireSubjects": [
+      "AN251"
+    ]
+  },
+  {
+    "code": "AN236",
+    "name": "Kỹ thuật thanh nhạc (chuyên sâu)",
+    "credit": 3,
+    "hours": 45,
+    "coefficient": 2.0,
+    "requireSubjects": [
+      "AN131"
+    ]
+  },
+  {
+    "code": "AN237",
+    "name": "Thanh nhạc ứng dụng (chuyên sâu)",
+    "credit": 2,
+    "hours": 30,
+    "coefficient": 2.0,
+    "requireSubjects": [
+      "AN233"
+    ]
+  },
+  {
+    "code": "AN245",
+    "name": "Vũ đạo (chuyên sâu)",
+    "credit": 2,
+    "hours": 30,
+    "coefficient": 2.0,
+    "requireSubjects": [
+      "AN141"
+    ]
+  },
+  {
+    "code": "AN252",
+    "name": "Guitar",
+    "credit": 2,
+    "hours": 30,
+    "coefficient": 2.0
+  },
+  {
+    "code": "AN253",
+    "name": "Trống",
+    "credit": 2,
+    "hours": 30,
+    "coefficient": 2.0
+  },
+  {
+    "code": "AN499",
+    "name": "Chương trình tốt nghiệp",
+    "credit": 4,
+    "hours": 80,
+    "coefficient": 3.0,
+    "requireSubjects": [
+      "AN352"
+    ]
+  },
+  {
+    "code": "CS102",
+    "name": "Tin học văn phòng",
+    "credit": 2,
+    "hours": 30,
+    "coefficient": 1.3
+  },
+  {
+    "code": "MA101",
+    "name": "Logic, suy luận toán học và kỹ thuật đếm",
+    "credit": 3,
+    "hours": 63,
+    "coefficient": 1.5
+  },
+  {
+    "code": "NA151",
+    "name": "Khoa học môi trường",
+    "credit": 2,
+    "hours": 30,
+    "coefficient": 1.0
+  },
+  {
+    "code": "EC101",
+    "name": "Kinh tế học đại cương",
+    "credit": 3,
+    "hours": 45,
+    "coefficient": 1.3
+  },
+  {
+    "code": "VL101",
+    "name": "Tiếng Việt thực hành",
+    "credit": 2,
+    "hours": 30,
+    "coefficient": 1.2
+  },
+  {
+    "code": "SH131",
+    "name": "Pháp luật đại cương",
+    "credit": 2,
+    "hours": 30,
+    "coefficient": 1.2
+  },
+  {
+    "code": "GE231",
+    "name": "Tiếng Anh trung cấp 1",
+    "credit": 2,
+    "hours": 54,
+    "coefficient": 1.6,
+    "requireSubjects": [
+      "GE222"
+    ]
+  },
+  {
+    "code": "GE232",
+    "name": "Tiếng Anh trung cấp 2",
+    "credit": 2,
+    "hours": 54,
+    "coefficient": 1.6,
+    "requireSubjects": [
+      "GE231"
+    ]
+  },
+  {
+    "code": "GE333",
+    "name": "Tiếng Anh trung cấp 3",
+    "credit": 2,
+    "hours": 54,
+    "coefficient": 1.6,
+    "requireSubjects": [
+      "GE232"
+    ]
+  },
+  {
+    "code": "GF101",
+    "name": "Tiếng Pháp 1",
+    "credit": 2,
+    "hours": 54,
+    "coefficient": 1.6
+  },
+  {
+    "code": "GF102",
+    "name": "Tiếng Pháp 2",
+    "credit": 2,
+    "hours": 54,
+    "coefficient": 1.6,
+    "requireSubjects": [
+      "GF101"
+    ]
+  },
+  {
+    "code": "GJ101",
+    "name": "Tiếng Nhật 1",
+    "credit": 2,
+    "hours": 54,
+    "coefficient": 1.6
+  },
+  {
+    "code": "GJ102",
+    "name": "Tiếng Nhật 2",
+    "credit": 2,
+    "hours": 54,
+    "coefficient": 1.6,
+    "requireSubjects": [
+      "GJ101"
+    ]
+  },
+  {
+    "code": "GZ101",
+    "name": "Tiếng Trung 1",
+    "credit": 2,
+    "hours": 54,
+    "coefficient": 1.6
+  },
+  {
+    "code": "GZ102",
+    "name": "Tiếng Trung 2",
+    "credit": 2,
+    "hours": 54,
+    "coefficient": 1.6,
+    "requireSubjects": [
+      "GZ101"
+    ]
+  },
+  {
+    "code": "GI101",
+    "name": "Tiếng Ý 1",
+    "credit": 2,
+    "hours": 54,
+    "coefficient": 0.75
+  },
+  {
+    "code": "GI102",
+    "name": "Tiếng Ý 2",
+    "credit": 2,
+    "hours": 54,
+    "coefficient": 0.75,
+    "requireSubjects": [
+      "GI101"
+    ]
+  },
+  {
+    "code": "GK101",
+    "name": "Tiếng Hàn 1",
+    "credit": 2,
+    "hours": 54,
+    "coefficient": 1.6
+  },
+  {
+    "code": "GK102",
+    "name": "Tiếng Hàn 2",
+    "credit": 2,
+    "hours": 54,
+    "coefficient": 1.6,
+    "requireSubjects": [
+      "GK101"
+    ]
+  },
+  {
+    "code": "SM202",
+    "name": "Phương pháp nghiên cứu khoa học trong kinh tế",
+    "credit": 3,
+    "hours": 45,
+    "coefficient": 1.4,
+    "requireSubjects": [
+      "EC205"
+    ]
+  },
+  {
+    "code": "MA142",
+    "name": "Đại số tuyến tính, giải tích và ứng dụng trong kinh tế",
+    "credit": 4,
+    "hours": 63,
+    "coefficient": 1.4,
+    "requireSubjects": [
+      "MA101",
+      "EC101"
+    ]
+  },
+  {
+    "code": "MA231",
+    "name": "Xác suất thống kê ứng dụng",
+    "credit": 4,
+    "hours": 63,
+    "coefficient": 1.6,
+    "requireSubjects": [
+      "MA142"
+    ]
+  },
+  {
+    "code": "IM206",
+    "name": "Ứng dụng vẫn Excel",
+    "credit": 2,
+    "hours": 42,
+    "coefficient": 1.6
+  },
+  {
+    "code": "EC204",
+    "name": "Kinh tế vi mô",
+    "credit": 3,
+    "hours": 54,
+    "coefficient": 1.5,
+    "requireSubjects": [
+      "EC101"
+    ]
+  },
+  {
+    "code": "EC205",
+    "name": "Kinh tế vĩ mô",
+    "credit": 3,
+    "hours": 54,
+    "coefficient": 1.5,
+    "requireSubjects": [
+      "EC101"
+    ]
+  },
+  {
+    "code": "EC310",
+    "name": "Các phương pháp phân tích định lượng trong kinh tế",
+    "credit": 3,
+    "hours": 63,
+    "coefficient": 1.6,
+    "requireSubjects": [
+      "MA231"
+    ]
+  },
+  {
+    "code": "FN201",
+    "name": "Tài chính tiền tệ căn bản",
+    "credit": 3,
+    "hours": 45,
+    "coefficient": 1.4,
+    "requireSubjects": [
+      "BA102"
+    ]
+  },
+  {
+    "code": "FN211",
+    "name": "Tài chính doanh nghiệp",
+    "credit": 3,
+    "hours": 45,
+    "coefficient": 1.4,
+    "requireSubjects": [
+      "EC101"
+    ]
+  },
+  {
+    "code": "AC201",
+    "name": "Nguyên lý kế toán",
+    "credit": 3,
+    "hours": 45,
+    "coefficient": 1.4,
+    "requireSubjects": [
+      "EC204"
+    ]
+  },
+  {
+    "code": "BA201",
+    "name": "Quản trị học đại cương",
+    "credit": 3,
+    "hours": 45,
+    "coefficient": 1.4
+  },
+  {
+    "code": "MK202",
+    "name": "Marketing căn bản",
+    "credit": 3,
+    "hours": 45,
+    "coefficient": 1.4,
+    "requireSubjects": [
+      "EC101"
+    ]
+  },
+  {
+    "code": "IE201",
+    "name": "Kinh tế quốc tế 1",
+    "credit": 3,
+    "hours": 45,
+    "coefficient": 1.5
+  },
+  {
+    "code": "IE302",
+    "name": "Kinh tế quốc tế 2",
+    "credit": 3,
+    "hours": 45,
+    "coefficient": 1.5,
+    "requireSubjects": [
+      "IE201"
+    ]
+  },
+  {
+    "code": "IE204",
+    "name": "Kinh tế các nước ASEAN",
+    "credit": 3,
+    "hours": 45,
+    "coefficient": 1.5,
+    "requireSubjects": [
+      "IE201"
+    ]
+  },
+  {
+    "code": "IE303",
+    "name": "Chính sách Thương mại quốc tế",
+    "credit": 3,
+    "hours": 45,
+    "coefficient": 1.5,
+    "requireSubjects": [
+      "IE302"
+    ]
+  },
+  {
+    "code": "IE311",
+    "name": "Tài chính quốc tế 1",
+    "credit": 3,
+    "hours": 54,
+    "coefficient": 1.6,
+    "requireSubjects": [
+      "IE201"
+    ]
+  },
+  {
+    "code": "IE312",
+    "name": "Tài chính quốc tế 2",
+    "credit": 3,
+    "hours": 54,
+    "coefficient": 1.6,
+    "requireSubjects": [
+      "IE311"
+    ]
+  },
+  {
+    "code": "IE321",
+    "name": "Đàm phán kinh doanh quốc tế",
+    "credit": 3,
+    "hours": 45,
+    "coefficient": 1.5,
+    "requireSubjects": [
+      "IE322"
+    ]
+  },
+  {
+    "code": "IE322",
+    "name": "Kinh doanh quốc tế",
+    "credit": 3,
+    "hours": 45,
+    "coefficient": 1.5,
+    "requireSubjects": [
+      "IE201"
+    ]
+  },
+  {
+    "code": "IE331",
+    "name": "Luật thương mại quốc tế",
+    "credit": 3,
+    "hours": 45,
+    "coefficient": 1.6,
+    "requireSubjects": [
+      "IE201"
+    ]
+  },
+  {
+    "code": "IE332",
+    "name": "Tài trợ thương mại quốc tế",
+    "credit": 3,
+    "hours": 54,
+    "coefficient": 1.6,
+    "requireSubjects": [
+      "IE201"
+    ]
+  },
+  {
+    "code": "IE413",
+    "name": "Đầu tư quốc tế",
+    "credit": 3,
+    "hours": 45,
+    "coefficient": 1.5,
+    "requireSubjects": [
+      "IE201"
+    ]
+  },
+  {
+    "code": "BA331",
+    "name": "Khởi sự kinh doanh",
+    "credit": 3,
+    "hours": 54,
+    "coefficient": 1.5,
+    "requireSubjects": [
+      "BA102"
+    ]
+  },
+  {
+    "code": "BA313",
+    "name": "Quản trị chiến lược",
+    "credit": 3,
+    "hours": 45,
+    "coefficient": 1.5,
+    "requireSubjects": [
+      "BA102"
+    ]
+  },
+  {
+    "code": "BA345",
+    "name": "Thương mại điện tử",
+    "credit": 3,
+    "hours": 45,
+    "coefficient": 1.5,
+    "requireSubjects": [
+      "BA102"
+    ]
+  },
+  {
+    "code": "EC207",
+    "name": "Kinh tế vĩ mô quóc tế",
+    "credit": 3,
+    "hours": 45,
+    "coefficient": 1.6,
+    "requireSubjects": [
+      "EC205"
+    ]
+  },
+  {
+    "code": "FN334",
+    "name": "Đầu tư chứng khoán",
+    "credit": 2,
+    "hours": 45,
+    "coefficient": 1.6
+  },
+  {
+    "code": "EC208",
+    "name": "Kinh tế phát triển",
+    "credit": 3,
+    "hours": 45,
+    "coefficient": 1.5,
+    "requireSubjects": [
+      "EC205"
+    ]
+  },
+  {
+    "code": "IE405",
+    "name": "Phương pháp thực chứng trong kinh tế quốc tế",
+    "credit": 3,
+    "hours": 63,
+    "coefficient": 1.6,
+    "requireSubjects": [
+      "EC310"
+    ]
+  },
+  {
+    "code": "IE323",
+    "name": "Chính sách quản lý công ty đa quốc gia",
+    "credit": 3,
+    "hours": 45,
+    "coefficient": 1.5,
+    "requireSubjects": [
+      "EC205"
+    ]
+  },
+  {
+    "code": "IE203",
+    "name": "Kinh tế thế giới",
+    "credit": 3,
+    "hours": 45,
+    "coefficient": 1.5,
+    "requireSubjects": [
+      "IE201"
+    ]
+  },
+  {
+    "code": "LG201",
+    "name": "Nguyên lý cơ bản về Logistics và quản lý chuỗi cung ứng",
+    "credit": 3,
+    "hours": 54,
+    "coefficient": 2.1,
+    "requireSubjects": [
+      "EC101"
+    ]
+  },
+  {
+    "code": "LG202",
+    "name": "Nhập môn Logistic quốc tế",
+    "credit": 3,
+    "hours": 45,
+    "coefficient": 1.5,
+    "requireSubjects": [
+      "IE201"
+    ]
+  },
+  {
+    "code": "MK416",
+    "name": "Marketing quốc tế",
+    "credit": 3,
+    "hours": 45,
+    "coefficient": 1.5,
+    "requireSubjects": [
+      "MK202"
+    ]
+  },
+  {
+    "code": "SC201",
+    "name": "Kỹ năng giao tiếp và thuyết trình",
+    "credit": 2,
+    "hours": 30,
+    "coefficient": 1.4
+  },
+  {
+    "code": "IE495",
+    "name": "TTTN ngành Kinh tế quốc tế",
+    "credit": 3,
+    "hours": 90,
+    "coefficient": 1.8,
+    "requireCredits": 112
+  },
+  {
+    "code": "IE499",
+    "name": "KLTN ngành Kinh tế quốc tế",
+    "credit": 6,
+    "hours": 90,
+    "coefficient": 3.0,
+    "requireSubjects": [
+      "IE495"
+    ]
+  },
+  {
+    "code": "EC490",
+    "name": "CĐTN: Kinh tế học",
+    "credit": 3,
+    "hours": 54,
+    "coefficient": 3.0,
+    "requireSubjects": [
+      "IE495"
+    ]
+  },
+  {
+    "code": "IE490",
+    "name": "CĐTN: Kinh tế quốc tế",
+    "credit": 3,
+    "hours": 54,
+    "coefficient": 3.0,
+    "requireSubjects": [
+      "IE495"
+    ]
+  },
+  {
+    "code": "BA211",
+    "name": "Quản trị tác nghiệp",
+    "credit": 3,
+    "hours": 45,
+    "coefficient": 1.5,
+    "requireSubjects": [
+      "BA102"
+    ]
+  },
+  {
+    "code": "BA314",
+    "name": "Quản trị nguồn nhân lực",
+    "credit": 3,
+    "hours": 54,
+    "coefficient": 1.5,
+    "requireSubjects": [
+      "BA102"
+    ]
+  },
+  {
+    "code": "BA320",
+    "name": "Kinh doanh quốc tế",
+    "credit": 3,
+    "hours": 45,
+    "coefficient": 1.5,
+    "requireSubjects": [
+      "BA102"
+    ]
+  },
+  {
+    "code": "BA329",
+    "name": "Mô phỏng kinh doanh",
+    "credit": 3,
+    "hours": 54,
+    "coefficient": 1.5,
+    "requireSubjects": [
+      "BA102"
+    ]
+  },
+  {
+    "code": "MK302",
+    "name": "Nghiên cứu marketing",
+    "credit": 3,
+    "hours": 54,
+    "coefficient": 1.5,
+    "requireSubjects": [
+      "MK202"
+    ]
+  },
+  {
+    "code": "AC345",
+    "name": "Phân tích kinh doanh",
+    "credit": 3,
+    "hours": "40LT+10BT",
+    "coefficient": 1.3,
+    "requireSubjects": [
+      "AC201"
+    ]
+  },
+  {
+    "code": "BA224",
+    "name": "Quản trị điều hành dự án",
+    "credit": 3,
+    "hours": 45,
+    "coefficient": null,
+    "requireSubjects": [
+      "BA102"
+    ]
+  },
+  {
+    "code": "BA315",
+    "name": "Văn hóa kinh doanh",
+    "credit": 3,
+    "hours": 45,
+    "coefficient": 1.5,
+    "requireSubjects": [
+      "BA102"
+    ]
+  },
+  {
+    "code": "BA327",
+    "name": "Quản trị chất lượng",
+    "credit": 3,
+    "hours": 45,
+    "coefficient": 1.5,
+    "requireSubjects": [
+      "BA211"
+    ]
+  },
+  {
+    "code": "BA328",
+    "name": "Hành vi tổ chức",
+    "credit": 3,
+    "hours": 45,
+    "coefficient": 1.5,
+    "requireSubjects": [
+      "BA102"
+    ]
+  },
+  {
+    "code": "BA420",
+    "name": "Quản trị rủi ro trong doanh nghiệp",
+    "credit": 3,
+    "hours": 45,
+    "coefficient": 1.5,
+    "requireSubjects": [
+      "BA313"
+    ]
+  },
+  {
+    "code": "BA351",
+    "name": "Quản trị xuất nhập khẩu",
+    "credit": 3,
+    "hours": 45,
+    "coefficient": 1.5,
+    "requireSubjects": [
+      "BA102"
+    ]
+  },
+  {
+    "code": "BA352",
+    "name": "Đấu thầu quốc tế",
+    "credit": 3,
+    "hours": 45,
+    "coefficient": 1.5,
+    "requireSubjects": [
+      "BA102"
+    ]
+  },
+  {
+    "code": "BA353",
+    "name": "Quản trị dự án đầu tư quốc tế",
+    "credit": 3,
+    "hours": 45,
+    "coefficient": 1.5,
+    "requireSubjects": [
+      "BA102"
+    ]
+  },
+  {
+    "code": "BA354",
+    "name": "Quản trị chuỗi cung ứng toàn cầu",
+    "credit": 3,
+    "hours": 45,
+    "coefficient": 1.5,
+    "requireSubjects": [
+      "BA102"
+    ]
+  },
+  {
+    "code": "BA355",
+    "name": "Thanh toán trong kinh doanh quốc tế",
+    "credit": 3,
+    "hours": 45,
+    "coefficient": 1.5,
+    "requireSubjects": [
+      "FN201"
+    ]
+  },
+  {
+    "code": "BA414",
+    "name": "Kỹ năng lãnh đạo",
+    "credit": 2,
+    "hours": 30,
+    "coefficient": 1.5,
+    "requireSubjects": [
+      "BA102"
+    ]
+  },
+  {
+    "code": "MK313",
+    "name": "Quản trị thương hiệu",
+    "credit": 3,
+    "hours": 54,
+    "coefficient": 1.5,
+    "requireSubjects": [
+      "MK202"
+    ]
+  },
+  {
+    "code": "SB203",
+    "name": "Kỹ năng đàm phán trong kinh doanh",
+    "credit": 2,
+    "hours": 30,
+    "coefficient": 1.4,
+    "requireSubjects": []
+  },
+  {
+    "code": "LK332",
+    "name": "Pháp luật kinh doanh quốc tế",
+    "credit": 3,
+    "hours": 45,
+    "coefficient": 1.3,
+    "requireSubjects": [
+      "SH131"
+    ]
+  },
+  {
+    "code": "EC316",
+    "name": "Kinh tế quốc tế",
+    "credit": 3,
+    "hours": 45,
+    "coefficient": 1.5,
+    "requireSubjects": [
+      "EC101"
+    ]
+  },
+  {
+    "code": "EC221",
+    "name": "Luật kinh tế",
+    "credit": 2,
+    "hours": 30,
+    "coefficient": 1.3,
+    "requireSubjects": [
+      "SH131"
+    ]
+  },
+  {
+    "code": "BA222",
+    "name": "Phân tích và lập dự án",
+    "credit": 3,
+    "hours": 45,
+    "coefficient": 1.5,
+    "requireSubjects": [
+      "FN211"
+    ]
+  },
+  {
+    "code": "FN261",
+    "name": "Tài chính quốc tế",
+    "credit": 3,
+    "hours": 54,
+    "coefficient": 1.6,
+    "requireSubjects": [
+      "FN201"
+    ]
+  },
+  {
+    "code": "AC210",
+    "name": "Kế toán doanh nghiệp",
+    "credit": 3,
+    "hours": 45,
+    "coefficient": 1.6,
+    "requireSubjects": [
+      "AC201"
+    ]
+  },
+  {
+    "code": "IS382",
+    "name": "Công nghệ thông tin trong doanh nghiệp",
+    "credit": 2,
+    "hours": 42,
+    "coefficient": 1.6,
+    "requireSubjects": [
+      "MK202"
+    ]
+  },
+  {
+    "code": "BA495",
+    "name": "TTTN ngành Quản trị kinh doanh",
+    "credit": 3,
+    "hours": 42,
+    "coefficient": 1.6,
+    "requireSubjects": [
+      "MK202"
+    ]
+  },
+  {
+    "code": "BA499",
+    "name": "KLTN chuyên ngành Quản trị doanh nghiệp",
+    "credit": 6,
+    "hours": 90,
+    "coefficient": 3.0,
+    "requireSubjects": [
+      "BA495"
+    ]
+  },
+  {
+    "code": "BA498",
+    "name": "KLTN chuyên ngành Quản trị kinh doanh quốc tế",
+    "credit": 6,
+    "hours": 90,
+    "coefficient": 3.0,
+    "requireSubjects": [
+      "BA495"
+    ]
+  },
+  {
+    "code": "BA481",
+    "name": "CĐTN: Quản trị doanh nghiệp",
+    "credit": 3,
+    "hours": "36LT+18BT",
+    "coefficient": 3.0,
+    "requireSubjects": [
+      "BA495"
+    ]
+  },
+  {
+    "code": "BA483",
+    "name": "CĐTN: Quản trị đổi mới và sáng tạo",
+    "credit": 3,
+    "hours": "36LT+18BT",
+    "coefficient": 3.0,
+    "requireSubjects": [
+      "BA495"
+    ]
+  },
+  {
+    "code": "BA485",
+    "name": "CĐTN: Nhượng quyền kinh doanh",
+    "credit": 3,
+    "hours": "36LT+18BT",
+    "coefficient": 3.0,
+    "requireSubjects": [
+      "BA495"
+    ]
+  },
+  {
+    "code": "BA102",
+    "name": "Quản trị học đại cương",
+    "credit": 3,
+    "hours": 45,
+    "coefficient": 1.4
+  },
+  {
+    "code": "MK305",
+    "name": "Hành vi người tiêu dùng",
+    "credit": 3,
+    "hours": 54,
+    "coefficient": 1.5,
+    "requireSubjects": [
+      "MK202"
+    ]
+  },
+  {
+    "code": "MK323",
+    "name": "Quản trị sản phẩm",
+    "credit": 3,
+    "hours": 63,
+    "coefficient": 1.5,
+    "requireSubjects": [
+      "MK202"
+    ]
+  },
+  {
+    "code": "MK324",
+    "name": "Quản trị giá",
+    "credit": 3,
+    "hours": 63,
+    "coefficient": 1.5,
+    "requireSubjects": [
+      "MK202"
+    ]
+  },
+  {
+    "code": "MK325",
+    "name": "Quản trị kênh phân phối",
+    "credit": 3,
+    "hours": "36LT+18BT",
+    "coefficient": 1.5,
+    "requireSubjects": [
+      "MK202"
+    ]
+  },
+  {
+    "code": "MK334",
+    "name": "Digital marketing",
+    "credit": 3,
+    "hours": "36LT+18BT",
+    "coefficient": 1.5,
+    "requireSubjects": [
+      "MK202"
+    ]
+  },
+  {
+    "code": "MK424",
+    "name": "Quản trị bán hàng",
+    "credit": 3,
+    "hours": "36LT+18BT",
+    "coefficient": 1.5,
+    "requireSubjects": [
+      "MK202"
+    ]
+  },
+  {
+    "code": "MK426",
+    "name": "Truyền thông Marketing tích hợp",
+    "credit": 3,
+    "hours": "36LT+18BT",
+    "coefficient": 1.5,
+    "requireSubjects": [
+      "MK202"
+    ]
+  },
+  {
+    "code": "MK430",
+    "name": "Marketing dịch vụ",
+    "credit": 3,
+    "hours": "36LT+18BT",
+    "coefficient": 1.5,
+    "requireSubjects": [
+      "MK202"
+    ]
+  },
+  {
+    "code": "BA324",
+    "name": "Quản lý dự án",
+    "credit": 3,
+    "hours": 45,
+    "coefficient": 1.6,
+    "requireSubjects": [
+      "FN211"
+    ]
+  },
+  {
+    "code": "MK420",
+    "name": "Marketing công nghiệp",
+    "credit": 3,
+    "hours": 45,
+    "coefficient": 1.5,
+    "requireSubjects": [
+      "MK202"
+    ]
+  },
+  {
+    "code": "MK425",
+    "name": "Quan hệ công chúng",
+    "credit": 3,
+    "hours": 45,
+    "coefficient": 1.5,
+    "requireSubjects": [
+      "MK202"
+    ]
+  },
+  {
+    "code": "MD420",
+    "name": "Thiết kế đồ họa trong marketing",
+    "credit": 3,
+    "hours": 45,
+    "coefficient": 1.7,
+    "requireSubjects": [
+      "MK313"
+    ]
+  },
+  {
+    "code": "MK331",
+    "name": "Marketing ngân hàng",
+    "credit": 2,
+    "hours": 30,
+    "coefficient": 1.5,
+    "requireSubjects": [
+      "MK202"
+    ]
+  },
+  {
+    "code": "MK336",
+    "name": "Marketing bất động sản",
+    "credit": 3,
+    "hours": 45,
+    "coefficient": 1.4,
+    "requireSubjects": [
+      "MK202"
+    ]
+  },
+  {
+    "code": "MK338",
+    "name": "Marketing du lịch",
+    "credit": 3,
+    "hours": 45,
+    "coefficient": 1.6,
+    "requireSubjects": [
+      "MK202"
+    ]
+  },
+  {
+    "code": "MK339",
+    "name": "Marketing nông nghiệp",
+    "credit": 3,
+    "hours": 45,
+    "coefficient": 1.4,
+    "requireSubjects": [
+      "MK202"
+    ]
+  },
+  {
+    "code": "MK340",
+    "name": "Marketing bán lẻ",
+    "credit": 3,
+    "hours": 45,
+    "coefficient": 1.4,
+    "requireSubjects": [
+      "MK202"
+    ]
+  },
+  {
+    "code": "MK495",
+    "name": "TTTN ngành Marketing",
+    "credit": 3,
+    "hours": 112,
+    "coefficient": 1.8,
+    "requireSubjects": []
+  },
+  {
+    "code": "MK498",
+    "name": "KLTN ngành Marketing",
+    "credit": 6,
+    "hours": 90,
+    "coefficient": 3.0,
+    "requireSubjects": [
+      "MK495"
+    ]
+  },
+  {
+    "code": "MK481",
+    "name": "CĐTN: Quản trị marketing",
+    "credit": 3,
+    "hours": "36LT+18BT",
+    "coefficient": 3.0,
+    "requireSubjects": [
+      "MK495"
+    ]
+  },
+  {
+    "code": "MK482",
+    "name": "CĐTN: Quản trị quan hệ khách hàng",
+    "credit": 3,
+    "hours": "36LT+18BT",
+    "coefficient": 3.0,
+    "requireSubjects": [
+      "MK495"
+    ]
+  },
+  {
+    "code": "FN212",
+    "name": "Quản trị tài chính doanh nghiệp 1",
+    "credit": 3,
+    "hours": 45,
+    "coefficient": 1.4,
+    "requireSubjects": [
+      "FN211"
+    ]
+  },
+  {
+    "code": "FN222",
+    "name": "Tài chính công",
+    "credit": 3,
+    "hours": 45,
+    "coefficient": 1.5,
+    "requireSubjects": [
+      "FN211"
+    ]
+  },
+  {
+    "code": "FN331",
+    "name": "Thị trường chứng khoán",
+    "credit": 3,
+    "hours": "30LT+30BT",
+    "coefficient": 1.8,
+    "requireSubjects": [
+      "FN211"
+    ]
+  },
+  {
+    "code": "BK201",
+    "name": "Ngân hàng thương mại 1",
+    "credit": 3,
+    "hours": "30LT+30BT",
+    "coefficient": 1.8,
+    "requireSubjects": [
+      "FN211"
+    ]
+  },
+  {
+    "code": "FN416",
+    "name": "Phân tích tài chính doanh nghiệp",
+    "credit": 3,
+    "hours": 45,
+    "coefficient": 1.5,
+    "requireSubjects": [
+      "FN212"
+    ]
+  },
+  {
+    "code": "FN318",
+    "name": "Công cụ tài chính phải sinh",
+    "credit": 3,
+    "hours": 45,
+    "coefficient": 1.4,
+    "requireSubjects": [
+      "FN201"
+    ]
+  },
+  {
+    "code": "BK302",
+    "name": "Ngân hàng thương mại 2",
+    "credit": 3,
+    "hours": "30LT+30BT",
+    "coefficient": 1.8,
+    "requireSubjects": [
+      "BK201"
+    ]
+  },
+  {
+    "code": "BK313",
+    "name": "Ngân hàng trung ương",
+    "credit": 3,
+    "hours": 45,
+    "coefficient": 1.4,
+    "requireSubjects": [
+      "BK302"
+    ]
+  },
+  {
+    "code": "BK312",
+    "name": "Ngân hàng phát triển",
+    "credit": 3,
+    "hours": 45,
+    "coefficient": 1.5,
+    "requireSubjects": [
+      "BK201"
+    ]
+  },
+  {
+    "code": "BK321",
+    "name": "Thanh toán quốc tế",
+    "credit": 3,
+    "hours": "30LT+30BT",
+    "coefficient": 1.8,
+    "requireSubjects": [
+      "FN201"
+    ]
+  },
+  {
+    "code": "BK327",
+    "name": "Xuất nhập khẩu",
+    "credit": 3,
+    "hours": 45,
+    "coefficient": 1.5,
+    "requireSubjects": [
+      "FN211"
+    ]
+  },
+  {
+    "code": "BK405",
+    "name": "Quản trị rủi ro tín dụng của ngân hàng thương mại",
+    "credit": 3,
+    "hours": 45,
+    "coefficient": 1.4,
+    "requireSubjects": [
+      "BK302"
+    ]
+  },
+  {
+    "code": "AC322",
+    "name": "Kế toán ngân hàng",
+    "credit": 3,
+    "hours": 45,
+    "coefficient": 1.6,
+    "requireSubjects": [
+      "BK201"
+    ]
+  },
+  {
+    "code": "FN224",
+    "name": "Thuế",
+    "credit": 3,
+    "hours": 45,
+    "coefficient": 1.4,
+    "requireSubjects": [
+      "FN211"
+    ]
+  },
+  {
+    "code": "FN313",
+    "name": "Quản trị tài chính doanh nghiệp 2",
+    "credit": 3,
+    "hours": "36LT+18BT",
+    "coefficient": 1.6,
+    "requireSubjects": [
+      "FN212"
+    ]
+  },
+  {
+    "code": "FN333",
+    "name": "Quản trị rủi ro tài chính",
+    "credit": 3,
+    "hours": "36LT+18BT",
+    "coefficient": 1.4,
+    "requireSubjects": [
+      "FN261"
+    ]
+  },
+  {
+    "code": "FN436",
+    "name": "Định giá tài sản",
+    "credit": 3,
+    "hours": 45,
+    "coefficient": 1.4,
+    "requireSubjects": [
+      "FN313"
+    ]
+  },
+  {
+    "code": "FN438",
+    "name": "Đầu tư tài chính",
+    "credit": 3,
+    "hours": "30LT+30BT",
+    "coefficient": 1.8,
+    "requireSubjects": [
+      "FN313"
+    ]
+  },
+  {
+    "code": "FN319",
+    "name": "Fintech",
+    "credit": 3,
+    "hours": 45,
+    "coefficient": 1.5,
+    "requireSubjects": [
+      "FN211"
+    ]
+  },
+  {
+    "code": "FN335",
+    "name": "Bảo hiểm",
+    "credit": 3,
+    "hours": 45,
+    "coefficient": 1.4,
+    "requireSubjects": [
+      "FN211"
+    ]
+  },
+  {
+    "code": "FN495",
+    "name": "TTTN ngành Tài chính – Ngân hàng",
+    "credit": 3,
+    "hours": 112,
+    "coefficient": 1.8,
+    "requireSubjects": []
+  },
+  {
+    "code": "BK499",
+    "name": "KLTN chuyên ngành Ngân hàng",
+    "credit": 6,
+    "hours": 90,
+    "coefficient": 3.0,
+    "requireSubjects": [
+      "BK302",
+      "FN495"
+    ]
+  },
+  {
+    "code": "FN499",
+    "name": "KLTN chuyên ngành Tài chính",
+    "credit": 6,
+    "hours": 90,
+    "coefficient": 3.0,
+    "requireSubjects": [
+      "FN313",
+      "FN495"
+    ]
+  },
+  {
+    "code": "BK490",
+    "name": "CĐTN: Chuyên ngành Ngân hàng",
+    "credit": 3,
+    "hours": "36LT+18BT",
+    "coefficient": 3.0,
+    "requireSubjects": [
+      "FN495",
+      "BK302"
+    ]
+  },
+  {
+    "code": "FN481",
+    "name": "CĐTN: Ngành Tài chính - Ngân hàng",
+    "credit": 3,
+    "hours": "36LT+18BT",
+    "coefficient": 3.0,
+    "requireSubjects": [
+      "FN495"
+    ]
+  },
+  {
+    "code": "FN482",
+    "name": "CĐTN: Chuyên ngành Tài chính",
+    "credit": 3,
+    "hours": "36LT+18BT",
+    "coefficient": 3.0,
+    "requireSubjects": [
+      "FN495",
+      "FN313"
+    ]
+  },
+  {
+    "code": "AC211",
+    "name": "Kế toán tài chính 1",
+    "credit": 3,
+    "hours": "40LT+10BT",
+    "coefficient": 1.4,
+    "requireSubjects": [
+      "AC201"
+    ]
+  },
+  {
+    "code": "AC212",
+    "name": "Kế toán tài chính 2",
+    "credit": 3,
+    "hours": "40LT+10BT",
+    "coefficient": 1.4,
+    "requireSubjects": [
+      "AC211"
+    ]
+  },
+  {
+    "code": "AC314",
+    "name": "Kế toán máy",
+    "credit": 2,
+    "hours": "15LT+30BT",
+    "coefficient": 1.4,
+    "requireSubjects": [
+      "AC316"
+    ]
+  },
+  {
+    "code": "AC315",
+    "name": "Kế toán công",
+    "credit": 2,
+    "hours": "24LT+12BT",
+    "coefficient": 1.4,
+    "requireSubjects": [
+      "AC211"
+    ]
+  },
+  {
+    "code": "AC316",
+    "name": "Kế toán tài chính 3",
+    "credit": 3,
+    "hours": "40LT+10BT",
+    "coefficient": 1.4,
+    "requireSubjects": [
+      "AC212"
+    ]
+  },
+  {
+    "code": "AC317",
+    "name": "Tổ chức hạch toán kế toán",
+    "credit": 3,
+    "hours": "40LT+10BT",
+    "coefficient": 1.3,
+    "requireSubjects": [
+      "AC316"
+    ]
+  },
+  {
+    "code": "AC233",
+    "name": "Kế toán quốc tế (FA) 1",
+    "credit": 3,
+    "hours": "40LT+10BT",
+    "coefficient": 1.4,
+    "requireSubjects": [
+      "AC211"
+    ]
+  },
+  {
+    "code": "AC334",
+    "name": "Kế toán quốc tế (FA) 2",
+    "credit": 3,
+    "hours": "40LT+10BT",
+    "coefficient": 1.4,
+    "requireSubjects": [
+      "AC233"
+    ]
+  },
+  {
+    "code": "AC335",
+    "name": "Kế toán công ty",
+    "credit": 2,
+    "hours": "24LT+12BT",
+    "coefficient": 1.4,
+    "requireSubjects": [
+      "AC212"
+    ]
+  },
+  {
+    "code": "AC341",
+    "name": "Kế toán quản trị",
+    "credit": 3,
+    "hours": "40LT+10BT",
+    "coefficient": 1.4,
+    "requireSubjects": [
+      "AC212"
+    ]
+  },
+  {
+    "code": "AC418",
+    "name": "Lập và phân tích báo cáo tài chính",
+    "credit": 3,
+    "hours": "40LT+10BT",
+    "coefficient": 1.4,
+    "requireSubjects": [
+      "AC316"
+    ]
+  },
+  {
+    "code": "AC362",
+    "name": "Lý thuyết kiểm toán",
+    "credit": 2,
+    "hours": "24LT+12BT",
+    "coefficient": 1.3,
+    "requireSubjects": [
+      "AC212"
+    ]
+  },
+  {
+    "code": "AC364",
+    "name": "Kiểm toán báo cáo tài chính 1",
+    "credit": 3,
+    "hours": "40LT+10BT",
+    "coefficient": 1.3,
+    "requireSubjects": [
+      "AC362",
+      "AC317"
+    ]
+  },
+  {
+    "code": "AC365",
+    "name": "Kiểm toán báo cáo tài chính 2",
+    "credit": 3,
+    "hours": "40LT+10BT",
+    "coefficient": 1.5,
+    "requireSubjects": [
+      "AC364"
+    ]
+  },
+  {
+    "code": "AC495",
+    "name": "TTTN ngành Kế toán",
+    "credit": 3,
+    "hours": 112,
+    "coefficient": 1.8,
+    "requireSubjects": [
+      "AC317"
+    ]
+  },
+  {
+    "code": "AC499",
+    "name": "KLTN ngành Kế toán",
+    "credit": 6,
+    "hours": 90,
+    "coefficient": 3.0,
+    "requireSubjects": [
+      "AC495"
+    ]
+  },
+  {
+    "code": "AC481",
+    "name": "CĐTN: Kế toán tài chính",
+    "credit": 3,
+    "hours": "36LT+18BT",
+    "coefficient": 3.0,
+    "requireSubjects": [
+      "AC495"
+    ]
+  },
+  {
+    "code": "AC482",
+    "name": "CĐTN: Kế toán quản trị",
+    "credit": 3,
+    "hours": "36LT+18BT",
+    "coefficient": 3.0,
+    "requireSubjects": [
+      "AC495"
+    ]
+  },
+  {
+    "code": "SC219",
+    "name": "Chuỗi cung ứng số",
+    "credit": 3,
+    "hours": "36LT+18BT",
+    "coefficient": 2.1,
+    "requireSubjects": [
+      "LG201"
+    ]
+  },
+  {
+    "code": "LG219",
+    "name": "Quản lý logistics",
+    "credit": 3,
+    "hours": "36LT+18BT",
+    "coefficient": 2.1,
+    "requireSubjects": [
+      "LG201"
+    ]
+  },
+  {
+    "code": "SC218",
+    "name": "Quản lý chuỗi cung ứng",
+    "credit": 3,
+    "hours": "36LT+18BT",
+    "coefficient": 2.1,
+    "requireSubjects": [
+      "LG201"
+    ]
+  },
+  {
+    "code": "LG301",
+    "name": "Chiến lược logistics và quản lý cung ứng",
+    "credit": 3,
+    "hours": "36LT+18BT",
+    "coefficient": 2.1,
+    "requireSubjects": [
+      "LG219",
+      "SC218"
+    ]
+  },
+  {
+    "code": "LG302",
+    "name": "Logistics quốc tế",
+    "credit": 3,
+    "hours": "36LT+18BT",
+    "coefficient": 2.1,
+    "requireSubjects": [
+      "LG201"
+    ]
+  },
+  {
+    "code": "SC306",
+    "name": "Quản lý vận hành",
+    "credit": 3,
+    "hours": "36LT+18BT",
+    "coefficient": 2.1,
+    "requireSubjects": [
+      "SC218"
+    ]
+  },
+  {
+    "code": "LG303",
+    "name": "Vận tải logistics",
+    "credit": 3,
+    "hours": "36LT+18BT",
+    "coefficient": 2.1,
+    "requireSubjects": [
+      "LG219"
+    ]
+  },
+  {
+    "code": "LG330",
+    "name": "Quản lý kho hàng",
+    "credit": 3,
+    "hours": "36LT+18BT",
+    "coefficient": 2.1,
+    "requireSubjects": [
+      "LG201"
+    ]
+  },
+  {
+    "code": "SC305",
+    "name": "Mô phỏng Logistics và quản lý chuỗi cung ứng",
+    "credit": 3,
+    "hours": "30LT+30BT&TH",
+    "coefficient": 2.3,
+    "requireSubjects": [
+      "LG219",
+      "SC218"
+    ]
+  },
+  {
+    "code": "SC321",
+    "name": "Quản lý mua hàng",
+    "credit": 3,
+    "hours": "36LT+18BT",
+    "coefficient": 2.1,
+    "requireSubjects": [
+      "LG201"
+    ]
+  },
+  {
+    "code": "SC304",
+    "name": "Logistics xanh",
+    "credit": 2,
+    "hours": "21LT+18BT",
+    "coefficient": 1.6,
+    "requireSubjects": [
+      "LG219"
+    ]
+  },
+  {
+    "code": "SC312",
+    "name": "Đàm phán trong logistics và quản lý chuỗi cung ứng",
+    "credit": 3,
+    "hours": "36LT+18BT",
+    "coefficient": 1.6,
+    "requireSubjects": [
+      "SC218"
+    ]
+  },
+  {
+    "code": "LG215",
+    "name": "Quản lý rủi ro chuỗi cung ứng",
+    "credit": 3,
+    "hours": "36LT+18BT",
+    "coefficient": 1.6,
+    "requireSubjects": [
+      "LG201"
+    ]
+  },
+  {
+    "code": "SC340",
+    "name": "Quản lý bán hàng và phân phối",
+    "credit": 3,
+    "hours": "36LT+18BT",
+    "coefficient": 1.6,
+    "requireSubjects": [
+      "LG201"
+    ]
+  },
+  {
+    "code": "ET201",
+    "name": "Thương mại điện tử căn bản",
+    "credit": 3,
+    "hours": "36LT+18BT",
+    "coefficient": 2.0,
+    "requireSubjects": []
+  },
+  {
+    "code": "FN216",
+    "name": "Quản trị tài chính",
+    "credit": 3,
+    "hours": 45,
+    "coefficient": 1.4,
+    "requireSubjects": [
+      "FN211"
+    ]
+  },
+  {
+    "code": "LG495",
+    "name": "TTTN ngành Logistics và Quản lý chuỗi cung ứng",
+    "credit": 3,
+    "hours": 112,
+    "coefficient": 2.5,
+    "requireSubjects": []
+  },
+  {
+    "code": "LG499",
+    "name": "KLTN ngành Logistics và Quản lý chuỗi cung ứng",
+    "credit": 6,
+    "hours": 90,
+    "coefficient": 3.5,
+    "requireSubjects": [
+      "LG495"
+    ]
+  },
+  {
+    "code": "LG491",
+    "name": "CDTN: Logistics",
+    "credit": 3,
+    "hours": "36LT+18BT",
+    "coefficient": 3.0,
+    "requireSubjects": [
+      "LG495"
+    ]
+  },
+  {
+    "code": "SC492",
+    "name": "CĐTN: Chuỗi cung ứng",
+    "credit": 3,
+    "hours": "36LT+18BT",
+    "coefficient": 3.0,
+    "requireSubjects": [
+      "LG495"
+    ]
+  },
+  {
+    "code": "ET212",
+    "name": "Các mô hình kinh doanh thương mại điện tử",
+    "credit": 3,
+    "hours": "36LT+18BT",
+    "coefficient": 2.0,
+    "requireSubjects": [
+      "ET201"
+    ]
+  },
+  {
+    "code": "ET223",
+    "name": "Chiến lược kinh doanh trong thương mại điện tử",
+    "credit": 3,
+    "hours": "36LT+18BT",
+    "coefficient": 2.0,
+    "requireSubjects": [
+      "ET201"
+    ]
+  },
+  {
+    "code": "ET310",
+    "name": "Quản trị vận hành thương mại điện tử",
+    "credit": 3,
+    "hours": "36LT+18BT",
+    "coefficient": 2.0,
+    "requireSubjects": [
+      "ET201"
+    ]
+  },
+  {
+    "code": "LK335",
+    "name": "Pháp luật trong Thương mại điện tử",
+    "credit": 3,
+    "hours": "36LT+18BT",
+    "coefficient": 2.0,
+    "requireSubjects": [
+      "SH131"
+    ]
+  },
+  {
+    "code": "ET311",
+    "name": "Marketing trong Thương mại điện tử",
+    "credit": 3,
+    "hours": "36LT+18BT",
+    "coefficient": 2.0,
+    "requireSubjects": [
+      "MK202"
+    ]
+  },
+  {
+    "code": "ET315",
+    "name": "E-Logistics",
+    "credit": 3,
+    "hours": "36LT+18BT",
+    "coefficient": 2.0,
+    "requireSubjects": [
+      "LG201"
+    ]
+  },
+  {
+    "code": "ET328",
+    "name": "An toàn và bảo mật trong thương mại điện tử",
+    "credit": 3,
+    "hours": "36LT+18BT",
+    "coefficient": 2.0,
+    "requireSubjects": [
+      "ET201"
+    ]
+  },
+  {
+    "code": "ET330",
+    "name": "Xây dựng và phát triển hệ thống Thương mại điện tử",
+    "credit": 3,
+    "hours": "36LT+18BT",
+    "coefficient": 2.0,
+    "requireSubjects": [
+      "ET201"
+    ]
+  },
+  {
+    "code": "ET410",
+    "name": "Thanh toán trong Thương mại điện tử",
+    "credit": 3,
+    "hours": "36LT+18BT",
+    "coefficient": 2.0,
+    "requireSubjects": [
+      "ET212"
+    ]
+  },
+  {
+    "code": "ET313",
+    "name": "Phân tích dữ liệu thương mại điện tử",
+    "credit": 3,
+    "hours": "36LT+18BT",
+    "coefficient": 2.0,
+    "requireSubjects": [
+      "EC310"
+    ]
+  },
+  {
+    "code": "ET314",
+    "name": "Hành vi người tiêu dùng trực tuyến",
+    "credit": 3,
+    "hours": "36LT+18BT",
+    "coefficient": 2.0,
+    "requireSubjects": [
+      "ET311"
+    ]
+  },
+  {
+    "code": "ET316",
+    "name": "Quản lý quan hệ khách hàng",
+    "credit": 3,
+    "hours": "36LT+18BT",
+    "coefficient": 2.0,
+    "requireSubjects": [
+      "ET311"
+    ]
+  },
+  {
+    "code": "ET317",
+    "name": "Thương mại trên mạng xã hội",
+    "credit": 3,
+    "hours": "36LT+18BT",
+    "coefficient": 2.0,
+    "requireSubjects": [
+      "ET201"
+    ]
+  },
+  {
+    "code": "ET335",
+    "name": "Khởi sự kinh doanh thương mại điện tử",
+    "credit": 3,
+    "hours": "36LT+18BT",
+    "coefficient": 2.0,
+    "requireSubjects": [
+      "ET201"
+    ]
+  },
+  {
+    "code": "ET495",
+    "name": "TTTN ngành Thương mại điện tử",
+    "credit": 3,
+    "hours": 112,
+    "coefficient": 2.0,
+    "requireSubjects": []
+  },
+  {
+    "code": "ET499",
+    "name": "KLTN ngành Thương mại điện tử",
+    "credit": 6,
+    "hours": 90,
+    "coefficient": 3.5,
+    "requireSubjects": [
+      "ET495"
+    ]
+  },
+  {
+    "code": "ET490",
+    "name": "CĐTN: Kinh doanh thương mại điện tử",
+    "credit": 3,
+    "hours": "36LT+18BT",
+    "coefficient": 3.5,
+    "requireSubjects": [
+      "ET495"
+    ]
+  },
+  {
+    "code": "ET492",
+    "name": "CĐTN: Quản trị thương mại điện tử",
+    "credit": 3,
+    "hours": "36LT+18BT",
+    "coefficient": 3.5,
+    "requireSubjects": [
+      "ET495"
+    ]
+  },
+  {
+    "code": "EC102",
+    "name": "Nhập môn kinh tế học",
+    "credit": 2,
+    "hours": 30,
+    "coefficient": 1.3
+  },
+  {
+    "code": "CS100",
+    "name": "Tin đại cương",
+    "credit": 2,
+    "hours": 42,
+    "coefficient": 1.5
+  },
+  {
+    "code": "MA110",
+    "name": "Giải tích 1",
+    "credit": 3,
+    "hours": "27LT+36BT",
+    "coefficient": 1.6,
+    "requireSubjects": [
+      "MA101"
+    ]
+  },
+  {
+    "code": "MA111",
+    "name": "Giải tích 2",
+    "credit": 3,
+    "hours": "27LT+36BT",
+    "coefficient": 1.6,
+    "requireSubjects": [
+      "MA110",
+      "MA120"
+    ]
+  },
+  {
+    "code": "MA120",
+    "name": "Đại số tuyển tinh",
+    "credit": 3,
+    "hours": "27LT+36BT",
+    "coefficient": 1.6,
+    "requireSubjects": [
+      "MA101"
+    ]
+  },
+  {
+    "code": "MA239",
+    "name": "Xác suất thống kê",
+    "credit": 4,
+    "hours": "45LT+27TH",
+    "coefficient": 1.6,
+    "requireSubjects": [
+      "MA110"
+    ]
+  },
+  {
+    "code": "MI201",
+    "name": "Toán rời rạc",
+    "credit": 3,
+    "hours": 45,
+    "coefficient": 1.6,
+    "requireSubjects": [
+      "CS121"
+    ]
+  },
+  {
+    "code": "CF213",
+    "name": "Cấu trúc dữ liệu và giải thuật",
+    "credit": 4,
+    "hours": "45LT+36TH",
+    "coefficient": 1.8,
+    "requireSubjects": [
+      "CS121"
+    ]
+  },
+  {
+    "code": "CS121",
+    "name": "Lập trình cơ sở 1",
+    "credit": 3,
+    "hours": "27LT+36TH",
+    "coefficient": 1.6,
+    "requireSubjects": []
+  },
+  {
+    "code": "CS123",
+    "name": "Lập trình cơ sở 2",
+    "credit": 2,
+    "hours": "18LT+24TH",
+    "coefficient": 1.6,
+    "requireSubjects": [
+      "CS121"
+    ]
+  },
+  {
+    "code": "CS122",
+    "name": "Lập trình hướng đối tượng",
+    "credit": 3,
+    "hours": "27LT+36TH",
+    "coefficient": 1.6,
+    "requireSubjects": [
+      "CS121"
+    ]
+  },
+  {
+    "code": "CS212",
+    "name": "Kiến trúc máy tính",
+    "credit": 3,
+    "hours": 45,
+    "coefficient": 1.6,
+    "requireSubjects": []
+  },
+  {
+    "code": "CS315",
+    "name": "Nguyên lý hệ điều hành",
+    "credit": 3,
+    "hours": 45,
+    "coefficient": 1.6,
+    "requireSubjects": [
+      "CS212"
+    ]
+  },
+  {
+    "code": "IS222",
+    "name": "Cơ sở dữ liệu",
+    "credit": 3,
+    "hours": 45,
+    "coefficient": 1.6,
+    "requireSubjects": [
+      "CS100"
+    ]
+  },
+  {
+    "code": "NW212",
+    "name": "Mạng máy tính",
+    "credit": 2,
+    "hours": "18LT+24BT",
+    "coefficient": 1.6,
+    "requireSubjects": []
+  },
+  {
+    "code": "IS322",
+    "name": "Hệ quản trị cơ sở dữ liệu",
+    "credit": 3,
+    "hours": 45,
+    "coefficient": 1.6,
+    "requireSubjects": [
+      "IS222"
+    ]
+  },
+  {
+    "code": "IS332",
+    "name": "Phân tích thiết kế hướng đối tượng",
+    "credit": 3,
+    "hours": 45,
+    "coefficient": 1.6,
+    "requireSubjects": [
+      "IS222"
+    ]
+  },
+  {
+    "code": "IS345",
+    "name": "An toàn thông tin",
+    "credit": 3,
+    "hours": 45,
+    "coefficient": 1.6,
+    "requireSubjects": [
+      "CS122"
+    ]
+  },
+  {
+    "code": "CF231",
+    "name": "Lý thuyết thông tin và mã hóa",
+    "credit": 2,
+    "hours": "18LT+24BT",
+    "coefficient": 1.6,
+    "requireSubjects": [
+      "MA239"
+    ]
+  },
+  {
+    "code": "AI130",
+    "name": "Trí tuệ nhân tạo",
+    "credit": 3,
+    "hours": 45,
+    "coefficient": 2.5,
+    "requireSubjects": [
+      "CS100"
+    ]
+  },
+  {
+    "code": "CS320",
+    "name": "Học máy",
+    "credit": 3,
+    "hours": "36LT+18TH",
+    "coefficient": 1.8,
+    "requireSubjects": [
+      "MA239"
+    ]
+  },
+  {
+    "code": "IS330",
+    "name": "Dữ liệu lớn",
+    "credit": 2,
+    "hours": "18LT+24TH",
+    "coefficient": 1.8,
+    "requireSubjects": [
+      "IS224"
+    ]
+  },
+  {
+    "code": "IT333",
+    "name": "Công nghệ Web",
+    "credit": 3,
+    "hours": 45,
+    "coefficient": 1.8,
+    "requireSubjects": [
+      "CS122"
+    ]
+  },
+  {
+    "code": "IS224",
+    "name": "Lập trình khoa học dữ liệu",
+    "credit": 3,
+    "hours": 45,
+    "coefficient": 1.6,
+    "requireSubjects": [
+      "CS100"
+    ]
+  },
+  {
+    "code": "SE422",
+    "name": "Phát triển dự án",
+    "credit": 3,
+    "hours": 45,
+    "coefficient": 1.6,
+    "requireSubjects": [
+      "IS222"
+    ]
+  },
+  {
+    "code": "CF214",
+    "name": "Lập trình thi đấu",
+    "credit": 3,
+    "hours": "27LT+36TH",
+    "coefficient": 1.8,
+    "requireSubjects": [
+      "CS121"
+    ]
+  },
+  {
+    "code": "CS223",
+    "name": "Lập trình Java",
+    "credit": 3,
+    "hours": 45,
+    "coefficient": 1.6,
+    "requireSubjects": [
+      "CS122"
+    ]
+  },
+  {
+    "code": "CS224",
+    "name": "Lập trình .Net",
+    "credit": 3,
+    "hours": 45,
+    "coefficient": 1.6,
+    "requireSubjects": [
+      "IS222"
+    ]
+  },
+  {
+    "code": "CS318",
+    "name": "Lập trình ứng dụng di động",
+    "credit": 3,
+    "hours": 45,
+    "coefficient": 1.8,
+    "requireSubjects": [
+      "CS122"
+    ]
+  },
+  {
+    "code": "IT320",
+    "name": "Phát triển ứng dụng với Python",
+    "credit": 3,
+    "hours": 45,
+    "coefficient": 1.6,
+    "requireSubjects": [
+      "CS122"
+    ]
+  },
+  {
+    "code": "IT334",
+    "name": "Internet of Things",
+    "credit": 3,
+    "hours": 45,
+    "coefficient": 1.8,
+    "requireSubjects": [
+      "CS121"
+    ]
+  },
+  {
+    "code": "NW312",
+    "name": "Thiết kế và quản trị mạng",
+    "credit": 3,
+    "hours": "27LT+36TH",
+    "coefficient": 1.6,
+    "requireSubjects": [
+      "NW212"
+    ]
+  },
+  {
+    "code": "NW332",
+    "name": "An toàn mạng",
+    "credit": 3,
+    "hours": 45,
+    "coefficient": 1.6,
+    "requireSubjects": [
+      "NW212"
+    ]
+  },
+  {
+    "code": "MI312",
+    "name": "Đồ họa",
+    "credit": 2,
+    "hours": "18LT+24TH",
+    "coefficient": 1.6,
+    "requireSubjects": [
+      "MA120"
+    ]
+  },
+  {
+    "code": "AI322",
+    "name": "Trực quan hoá dữ liệu",
+    "credit": 2,
+    "hours": "18LT+24TH",
+    "coefficient": 1.6,
+    "requireSubjects": [
+      "CS122"
+    ]
+  },
+  {
+    "code": "AI321",
+    "name": "Thị giác máy tính",
+    "credit": 3,
+    "hours": 45,
+    "coefficient": 2.5,
+    "requireSubjects": [
+      "CS320"
+    ]
+  },
+  {
+    "code": "A1310",
+    "name": "Học sâu",
+    "credit": 3,
+    "hours": "36LT+18TH",
+    "coefficient": 2.5,
+    "requireSubjects": [
+      "CS320"
+    ]
+  },
+  {
+    "code": "A1320",
+    "name": "Xử lý ngôn ngữ tự nhiên",
+    "credit": 3,
+    "hours": 45,
+    "coefficient": 2.5,
+    "requireSubjects": [
+      "CS320"
+    ]
+  },
+  {
+    "code": "CS321",
+    "name": "Tiền xử lý dữ liệu",
+    "credit": 2,
+    "hours": "18LT+24TH",
+    "coefficient": 1.6,
+    "requireSubjects": [
+      "IS222"
+    ]
+  },
+  {
+    "code": "IS326",
+    "name": "Khai phá dữ liệu",
+    "credit": 3,
+    "hours": 45,
+    "coefficient": 1.8,
+    "requireSubjects": [
+      "IS224"
+    ]
+  },
+  {
+    "code": "IS325",
+    "name": "Cơ sở dữ liệu phân tản",
+    "credit": 2,
+    "hours": "18LT+24BT",
+    "coefficient": 1.6,
+    "requireSubjects": [
+      "IS222"
+    ]
+  },
+  {
+    "code": "IS327",
+    "name": "Kho dữ liệu",
+    "credit": 3,
+    "hours": 45,
+    "coefficient": 1.6,
+    "requireSubjects": [
+      "IS222"
+    ]
+  },
+  {
+    "code": "SE312",
+    "name": "Kiểm thử và đảm bảo chất lượng phần mềm",
+    "credit": 3,
+    "hours": 45,
+    "coefficient": 1.6,
+    "requireSubjects": [
+      "CS121"
+    ]
+  },
+  {
+    "code": "SE302",
+    "name": "Công nghệ phần mềm",
+    "credit": 2,
+    "hours": "18LT+24BT",
+    "coefficient": 1.6,
+    "requireSubjects": [
+      "IS222"
+    ]
+  },
+  {
+    "code": "CF301",
+    "name": "Ngôn ngữ hình thức và Otomat",
+    "credit": 3,
+    "hours": 45,
+    "coefficient": 1.6,
+    "requireSubjects": [
+      "MI201"
+    ]
+  },
+  {
+    "code": "CS425",
+    "name": "Một số vấn đề hiện đại trong công nghệ thông tin",
+    "credit": 2,
+    "hours": "18LT+24BT",
+    "coefficient": 1.6,
+    "requireSubjects": [
+      "CS122"
+    ]
+  },
+  {
+    "code": "IS347",
+    "name": "Lập trình an toàn",
+    "credit": 3,
+    "hours": 45,
+    "coefficient": 1.6,
+    "requireSubjects": [
+      "CS122"
+    ]
+  },
+  {
+    "code": "IS348",
+    "name": "Phân tích mã độc",
+    "credit": 3,
+    "hours": 45,
+    "coefficient": 1.6,
+    "requireSubjects": [
+      "IS345"
+    ]
+  },
+  {
+    "code": "IS349",
+    "name": "Quản lý an toàn thông tin",
+    "credit": 3,
+    "hours": 45,
+    "coefficient": 1.6,
+    "requireSubjects": [
+      "IS345"
+    ]
+  },
+  {
+    "code": "IS346",
+    "name": "Đánh giá an ninh mạng",
+    "credit": 3,
+    "hours": 45,
+    "coefficient": 1.6,
+    "requireSubjects": [
+      "IS345"
+    ]
+  },
+  {
+    "code": "IP409",
+    "name": "TTTN ngành Khoa học máy tính",
+    "credit": 3,
+    "hours": "90TH",
+    "coefficient": 1.3,
+    "requireSubjects": [
+      "CS122"
+    ]
+  },
+  {
+    "code": "CS499",
+    "name": "KLTN ngành Khoa học máy tính",
+    "credit": 6,
+    "hours": "30LT+120TH",
+    "coefficient": 3.0,
+    "requireSubjects": [
+      "IP409"
+    ]
+  },
+  {
+    "code": "CS487",
+    "name": "CĐTN ngành Khoa học máy tính",
+    "credit": 6,
+    "hours": "30LT+120TH",
+    "coefficient": 3.0,
+    "requireSubjects": []
+  },
+  {
+    "code": "IS430",
+    "name": "Công nghệ blockchain",
+    "credit": 3,
+    "hours": 45,
+    "coefficient": 1.8,
+    "requireSubjects": [
+      "CF231"
+    ]
+  },
+  {
+    "code": "IT335",
+    "name": "Công nghệ web nâng cao",
+    "credit": 3,
+    "hours": 45,
+    "coefficient": 1.8,
+    "requireSubjects": [
+      "IT333"
+    ]
+  },
+  {
+    "code": "CS323",
+    "name": "Lập trình JavaScript",
+    "credit": 3,
+    "hours": 45,
+    "coefficient": 1.6,
+    "requireSubjects": [
+      "IS222"
+    ]
+  },
+  {
+    "code": "IS324",
+    "name": "Phân tích dữ liệu",
+    "credit": 3,
+    "hours": 45,
+    "coefficient": 1.6,
+    "requireSubjects": [
+      "IS222"
+    ]
+  },
+  {
+    "code": "CS325",
+    "name": "Lập trình PHP",
+    "credit": 3,
+    "hours": 45,
+    "coefficient": 1.6,
+    "requireSubjects": [
+      "IS222"
+    ]
+  },
+  {
+    "code": "IS314",
+    "name": "Hệ thống thông tin",
+    "credit": 3,
+    "hours": 45,
+    "coefficient": 1.6,
+    "requireSubjects": [
+      "IS222"
+    ]
+  },
+  {
+    "code": "IP406",
+    "name": "TTTN ngành Công nghệ thông tin",
+    "credit": 3,
+    "hours": "90TH",
+    "coefficient": 1.8,
+    "requireSubjects": [
+      "CS122"
+    ]
+  },
+  {
+    "code": "IT499",
+    "name": "KLTN ngành Công nghệ thông tin",
+    "credit": 6,
+    "hours": "30LT+120TH",
+    "coefficient": 3.5,
+    "requireSubjects": [
+      "IP406"
+    ]
+  },
+  {
+    "code": "IT486",
+    "name": "CĐTN ngành Công nghệ thông tin",
+    "credit": 6,
+    "hours": "30LT+120TH",
+    "coefficient": 3.5,
+    "requireSubjects": []
+  },
+  {
+    "code": "AI220",
+    "name": "Các công cụ trí tuệ nhân tạo",
+    "credit": 3,
+    "hours": 45,
+    "coefficient": 2.5,
+    "requireSubjects": [
+      "CS122"
+    ]
+  },
+  {
+    "code": "AI320",
+    "name": "Xử lý ngôn ngữ tự nhiên",
+    "credit": 3,
+    "hours": 45,
+    "coefficient": 2.5,
+    "requireSubjects": [
+      "CS122"
+    ]
+  },
+  {
+    "code": "AI321",
+    "name": "Thị giác máy tính",
+    "credit": 3,
+    "hours": 45,
+    "coefficient": 2.5,
+    "requireSubjects": [
+      "CS320"
+    ]
+  },
+  {
+    "code": "MI302",
+    "name": "Tôi ưu hóa",
+    "credit": 2,
+    "hours": 42,
+    "coefficient": 1.6,
+    "requireSubjects": [
+      "MA120",
+      "MA111"
+    ]
+  },
+  {
+    "code": "NW323",
+    "name": "Lập trình mạng",
+    "credit": 2,
+    "hours": 42,
+    "coefficient": 1.6,
+    "requireSubjects": [
+      "CS121"
+    ]
+  },
+  {
+    "code": "MA238",
+    "name": "Thống kê nâng cao",
+    "credit": 3,
+    "hours": 63,
+    "coefficient": 1.8,
+    "requireSubjects": [
+      "MA120",
+      "MA239"
+    ]
+  },
+  {
+    "code": "IP410",
+    "name": "TTTN ngành Trí truệ nhân tạo",
+    "credit": 4,
+    "hours": 120,
+    "coefficient": 2.0,
+    "requireSubjects": [
+      "CS122"
+    ]
+  },
+  {
+    "code": "AI499",
+    "name": "KLTN ngành Trí tuệ nhân tạo",
+    "credit": 6,
+    "hours": 150,
+    "coefficient": 4.0,
+    "requireSubjects": [
+      "IP410"
+    ],
+    "requireCredit": 100
+  },
+  {
+    "code": "AI485",
+    "name": "CĐTN: Ngành Trí tuệ nhân tạo",
+    "credit": 6,
+    "hours": 150,
+    "coefficient": 4.0,
+    "requireCredit": 90
   }
 ]

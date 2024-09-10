@@ -20,11 +20,14 @@ import com.kltn.individualservice.util.exception.converter.DateConverter;
 import jakarta.servlet.http.HttpServletRequest;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpHeaders;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.util.*;
@@ -46,6 +49,7 @@ public class TeacherServiceImpl implements TeacherService {
     private final SubjectService subjectService;
 
     @Override
+    @Cacheable(value = "teachers", key = "#request")
     public List<Teacher> getTeachers(GetTeachersRequest request) {
         return teacherRepository.findAllByIsActiveInAndStatusIn(request);
     }
@@ -57,6 +61,8 @@ public class TeacherServiceImpl implements TeacherService {
 
 
     @Override
+    @CacheEvict(value = "teachers", allEntries = true)
+    @Transactional
     public List<Teacher> importTeachers(MultipartFile file) {
         String header = request.getHeader(HttpHeaders.AUTHORIZATION);
         List<List<Object>> excelData = fileServiceClient.convertFileToJson(header, file);
@@ -64,8 +70,8 @@ public class TeacherServiceImpl implements TeacherService {
         Set<Role> roles = new HashSet<>();
         roles.add(defaultRole);
         AtomicInteger currentMaxCode = new AtomicInteger(userService.findMaxNumberInCode(UserType.TEACHER));
-        List<Teacher> teachers = new ArrayList<>();
-        for (List<Object> rowData : excelData) {
+        List<Teacher> teachers = Collections.synchronizedList(new ArrayList<>());
+        excelData.parallelStream().forEach(rowData -> {
             this.validateTeacherImport(rowData);
             Teacher teacher = new Teacher();
             teacher.setStatus(EmployeeStatus.PROBATION);
@@ -74,7 +80,11 @@ public class TeacherServiceImpl implements TeacherService {
             String codeSuffix = String.format("%05d", currentMaxCode.incrementAndGet());
 
             User user = new User();
-            user.setCode(Optional.ofNullable((String) rowData.get(0)).orElseGet(() -> "T" + codeSuffix));
+            String code = (String) rowData.getFirst();
+            if (code == null || code.isEmpty()) {
+                code = "T" + codeSuffix;
+            }
+            user.setCode(code);
             user.setFirstname((String) rowData.get(1));
             user.setLastname((String) rowData.get(2));
             user.setPhoneNumber((String) rowData.get(3));
@@ -86,12 +96,13 @@ public class TeacherServiceImpl implements TeacherService {
             user.setRoles(roles);
             teacher.setUser(user);
             teachers.add(teacher);
-        }
+        });
 
         return teacherRepository.saveAll(teachers);
     }
 
     @Override
+    @CacheEvict(value = "teachers", allEntries = true)
     public Teacher updateTeacher(TeacherRequest request) {
         Teacher teacherEntity = teacherRepository.findById(request.getId()).orElseThrow(() -> new NotFoundException("Teacher"));
         teacherEntity.setStatus(request.getEmployeeStatus());
@@ -111,6 +122,7 @@ public class TeacherServiceImpl implements TeacherService {
     }
 
     @Override
+    @CacheEvict(value = "teachers", allEntries = true)
     public Teacher deleteTeacher(Long id) {
         Teacher teacher = teacherRepository.findById(id).orElseThrow(() -> new NotFoundException("Teacher"));
         teacher.setIsActive(EntityStatus.DELETED);
@@ -119,6 +131,7 @@ public class TeacherServiceImpl implements TeacherService {
     }
 
     @Override
+    @CacheEvict(value = "teachers", allEntries = true)
     public Teacher createTeacher(TeacherRequest request) {
         Teacher teacher = new Teacher();
         User user = new User();

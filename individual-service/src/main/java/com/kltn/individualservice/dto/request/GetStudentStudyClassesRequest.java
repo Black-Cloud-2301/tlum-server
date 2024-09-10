@@ -13,4 +13,13 @@ public class GetStudentStudyClassesRequest {
     Integer year;
     Integer semester;
     Integer studentGroup;
+
+    @Override
+    public String toString() {
+        return "GetStudentStudyClassesRequest{" +
+                "year=" + year +
+                ", semester=" + semester +
+                ", studentGroup=" + studentGroup +
+                '}';
+    }
 }

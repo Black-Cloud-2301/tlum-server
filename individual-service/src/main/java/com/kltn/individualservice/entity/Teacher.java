@@ -7,6 +7,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.io.Serial;
+import java.io.Serializable;
 import java.util.List;
 
 @Getter
@@ -14,9 +16,12 @@ import java.util.List;
 @Entity
 @NoArgsConstructor
 @Table(name = "teacher")
-public class Teacher extends BaseEntity {
+public class Teacher extends BaseEntity implements Serializable {
+    @Serial
+    private static final long serialVersionUID = 1L;
+
     @Id
-    Long id;
+    private Long id;
 
     @MapsId
     @OneToOne
@@ -32,7 +37,7 @@ public class Teacher extends BaseEntity {
     @Column
     private Long salary;
 
-    @ManyToMany
+    @ManyToMany(fetch = FetchType.EAGER)
     private List<Subject> subjects;
 
     public Teacher(Long id) {

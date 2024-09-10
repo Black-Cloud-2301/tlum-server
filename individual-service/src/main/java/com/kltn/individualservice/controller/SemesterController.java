@@ -27,17 +27,17 @@ public class SemesterController {
     }
 
     @PostMapping
-    ResponseEntity<Object> createSubject(@RequestBody Semester request) {
+    ResponseEntity<Object> createSemester(@RequestBody Semester request) {
         return ResponseUtils.getResponseEntity(semesterService.createSemester(request));
     }
 
     @PutMapping
-    ResponseEntity<Object> updateSubject(@RequestBody Semester request) {
+    ResponseEntity<Object> updateSemester(@RequestBody Semester request) {
         return ResponseUtils.getResponseEntity(semesterService.updateSemester(request));
     }
 
     @DeleteMapping("/{id}")
-    ResponseEntity<Object> deleteSubject(@PathVariable Long id) {
+    ResponseEntity<Object> deleteSemester(@PathVariable Long id) {
         semesterService.deleteSemester(id);
         return ResponseUtils.getResponseEntity("Delete success");
     }

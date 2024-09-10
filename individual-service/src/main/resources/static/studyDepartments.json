@@ -1,14 +1,34 @@
 [
   {
-    "code": "TT",
-    "name": "Toán - Tin"
-  },
-  {
-    "code": "NN",
-    "name": "Ngoại ngữ"
+    "code": "TTH",
+    "name": "Khoa Toán - Tin học"
   },
   {
     "code": "KTQL",
-    "name": "Kinh tế - Quản lý"
+    "name": "Khoa Kinh tế quản lý"
+  },
+  {
+    "code": "KHSK",
+    "name": "Khoa Khoa học sức khỏe"
+  },
+  {
+    "code": "NNK",
+    "name": "Khoa Ngoại ngữ"
+  },
+  {
+    "code": "KHXHNV",
+    "name": "Khoa Khoa học Xã hội và nhân văn"
+  },
+  {
+    "code": "DL",
+    "name": "Khoa Du lịch"
+  },
+  {
+    "code": "TTDPT",
+    "name": "Bộ môn Truyền thông đa phương tiện"
+  },
+  {
+    "code": "AMU",
+    "name": "Khoa Âm nhạc ứng dụng"
   }
 ]

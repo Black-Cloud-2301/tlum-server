@@ -74,4 +74,9 @@ public class SemesterServiceImpl implements SemesterService {
         semester.setIsActive(EntityStatus.DELETED);
         semesterRepository.save(semester);
     }
+
+    @Override
+    public Semester findNextSemester() {
+        return semesterRepository.findNextSemester();
+    }
 }

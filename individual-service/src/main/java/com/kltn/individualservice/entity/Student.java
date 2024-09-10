@@ -6,14 +6,21 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.io.Serial;
+import java.io.Serializable;
+
 @Getter
 @Setter
 @Entity
 @NoArgsConstructor
 @Table(name = "student")
-public class Student extends BaseEntity {
+public class Student extends BaseEntity implements Serializable {
+    @Serial
+    private static final long serialVersionUID = 1L;
+
     @Id
     Long id;
+
     @MapsId
     @OneToOne
     @JoinColumn(name = "id")
@@ -21,8 +28,12 @@ public class Student extends BaseEntity {
 
     @ManyToOne
     private Major majors;
+
     @Column(nullable = false)
     private StudentStatus status;
+
+    @Column(nullable = false)
+    private Integer schoolYear;
 
     public Student(User user) {
         this.user = user;
