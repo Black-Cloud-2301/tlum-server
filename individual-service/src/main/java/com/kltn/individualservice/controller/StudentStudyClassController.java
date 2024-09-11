@@ -15,7 +15,7 @@ public class StudentStudyClassController {
 
     @GetMapping
     ResponseEntity<Object> findAllBySemester(GetStudentStudyClassesRequest request) {
-            return ResponseUtils.getResponseEntity(studentStudyClassService.findAllBySemester(request));
+            return ResponseUtils.getResponseEntity(studentStudyClassService.findAllByStudentAndSemester(request));
     }
 
 //    @GetMapping("/{id}")

@@ -8,13 +8,11 @@ import com.kltn.individualservice.repository.RegistrationTimeRepository;
 import com.kltn.individualservice.service.RegistrationTimeService;
 import com.kltn.individualservice.service.SemesterService;
 import com.kltn.individualservice.service.StudentService;
+import com.kltn.individualservice.util.WebUtil;
 import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;
 import lombok.experimental.FieldDefaults;
 import org.modelmapper.ModelMapper;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.CachePut;
 import org.springframework.cache.annotation.Cacheable;
@@ -23,6 +21,10 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
+import java.time.Instant;
+import java.time.LocalDateTime;
+import java.time.ZoneId;
+import java.time.ZonedDateTime;
 import java.util.List;
 
 @Service
@@ -33,9 +35,7 @@ public class RegistrationTimeServiceImpl implements RegistrationTimeService {
     final StudentService studentService;
     final SemesterService semesterService;
     final ModelMapper modelMapper;
-
-    @Value("${scheduling.cron.processStudentsRegisterSemester}")
-    String processStudentsRegisterSemester;
+    final WebUtil webUtil;
 
     @Override
     @CacheEvict(value = "registrationTimes", allEntries = true)
@@ -61,7 +61,7 @@ public class RegistrationTimeServiceImpl implements RegistrationTimeService {
     @Override
     @Cacheable(value = "registrationTimes", key = "#request")
     public Page<RegistrationTime> searchBySemesterId(Long semesterId, RegistrationTimeRequest request, Pageable pageable) {
-        return registrationTimeRepository.searchBySemesterId(semesterId, request,pageable);
+        return registrationTimeRepository.searchBySemesterId(semesterId, request, pageable);
     }
 
     @Override
@@ -73,6 +73,13 @@ public class RegistrationTimeServiceImpl implements RegistrationTimeService {
         RegistrationTime registrationTime = registrationTimeRepository.findById(id).orElseThrow(() -> new NotFoundException("Registration Time"));
         registrationTime.setIsActive(EntityStatus.INACTIVE);
         registrationTimeRepository.save(registrationTime);
+    }
+
+    @Override
+    public RegistrationTime findByStudent() {
+        String userId = webUtil.getUserId();
+        LocalDateTime currentTimestamp = LocalDateTime.ofInstant(Instant.now(), ZoneId.of("UTC"));
+        return registrationTimeRepository.findByStudentId(Long.parseLong(userId), currentTimestamp).orElseThrow(() -> new NotFoundException("Registration Time"));
     }
 
     private RegistrationTime mapRegistrationTime(RegistrationTimeRequest request) {

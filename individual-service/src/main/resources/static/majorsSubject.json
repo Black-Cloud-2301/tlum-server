@@ -392,10 +392,6 @@
     "majorCode": "KTQT"
   },
   {
-    "subjectCode": "IE302",
-    "majorCode": "KTQT"
-  },
-  {
     "subjectCode": "IE303",
     "majorCode": "KTQT"
   },
@@ -501,27 +497,27 @@
   },
   {
     "subjectCode": "ML113",
-    "majorCode": "KTQT"
+    "majorCode": "QTKD"
   },
   {
     "subjectCode": "ML114",
-    "majorCode": "KTQT"
+    "majorCode": "QTKD"
   },
   {
     "subjectCode": "ML115",
-    "majorCode": "KTQT"
+    "majorCode": "QTKD"
   },
   {
     "subjectCode": "ML202",
-    "majorCode": "KTQT"
+    "majorCode": "QTKD"
   },
   {
     "subjectCode": "ML204",
-    "majorCode": "KTQT"
+    "majorCode": "QTKD"
   },
   {
     "subjectCode": "CS102",
-    "majorCode": "KTQT"
+    "majorCode": "QTKD"
   },
   {
     "subjectCode": "MA101",
@@ -3083,11 +3079,6 @@
     "subjectCode": "IT486",
     "majorCode": "CNTT"
   },
-
-
-
-
-
   {
     "subjectCode": "ML113",
     "majorCode": "TTNT"
@@ -3431,5 +3422,3789 @@
   {
     "subjectCode": "CS425",
     "majorCode": "TTNT"
+  },
+  {
+    "subjectCode": "ML113",
+    "majorCode": "NNA"
+  },
+  {
+    "subjectCode": "ML114",
+    "majorCode": "NNA"
+  },
+  {
+    "subjectCode": "ML115",
+    "majorCode": "NNA"
+  },
+  {
+    "subjectCode": "ML202",
+    "majorCode": "NNA"
+  },
+  {
+    "subjectCode": "ML204",
+    "majorCode": "NNA"
+  },
+  {
+    "subjectCode": "CS102",
+    "majorCode": "NNA"
+  },
+  {
+    "subjectCode": "MA100",
+    "majorCode": "NNA"
+  },
+  {
+    "subjectCode": "NA151",
+    "majorCode": "NNA"
+  },
+  {
+    "subjectCode": "EC102",
+    "majorCode": "NNA"
+  },
+  {
+    "subjectCode": "VL101",
+    "majorCode": "NNA"
+  },
+  {
+    "subjectCode": "SH131",
+    "majorCode": "NNA"
+  },
+  {
+    "subjectCode": "GE171",
+    "majorCode": "NNA"
+  },
+  {
+    "subjectCode": "GE172",
+    "majorCode": "NNA"
+  },
+  {
+    "subjectCode": "GE173",
+    "majorCode": "NNA"
+  },
+  {
+    "subjectCode": "GF101",
+    "majorCode": "NNA"
+  },
+  {
+    "subjectCode": "GF102",
+    "majorCode": "NNA"
+  },
+  {
+    "subjectCode": "GJ101",
+    "majorCode": "NNA"
+  },
+  {
+    "subjectCode": "GJ102",
+    "majorCode": "NNA"
+  },
+  {
+    "subjectCode": "GZ101",
+    "majorCode": "NNA"
+  },
+  {
+    "subjectCode": "GZ102",
+    "majorCode": "NNA"
+  },
+  {
+    "subjectCode": "GI101",
+    "majorCode": "NNA"
+  },
+  {
+    "subjectCode": "GI102",
+    "majorCode": "NNA"
+  },
+  {
+    "subjectCode": "GK101",
+    "majorCode": "NNA"
+  },
+  {
+    "subjectCode": "GK102",
+    "majorCode": "NNA"
+  },
+  {
+    "subjectCode": "PG101",
+    "majorCode": "NNA"
+  },
+  {
+    "subjectCode": "PG102",
+    "majorCode": "NNA"
+  },
+  {
+    "subjectCode": "PG103",
+    "majorCode": "NNA"
+  },
+  {
+    "subjectCode": "PG104",
+    "majorCode": "NNA"
+  },
+  {
+    "subjectCode": "PG105",
+    "majorCode": "NNA"
+  },
+  {
+    "subjectCode": "PG106",
+    "majorCode": "NNA"
+  },
+  {
+    "subjectCode": "PG107",
+    "majorCode": "NNA"
+  },
+  {
+    "subjectCode": "PG121",
+    "majorCode": "NNA"
+  },
+  {
+    "subjectCode": "MA232",
+    "majorCode": "NNA"
+  },
+  {
+    "subjectCode": "VL100",
+    "majorCode": "NNA"
+  },
+  {
+    "subjectCode": "VC200",
+    "majorCode": "NNA"
+  },
+  {
+    "subjectCode": "ES211",
+    "majorCode": "NNA"
+  },
+  {
+    "subjectCode": "ES221",
+    "majorCode": "NNA"
+  },
+  {
+    "subjectCode": "ES231",
+    "majorCode": "NNA"
+  },
+  {
+    "subjectCode": "ES241",
+    "majorCode": "NNA"
+  },
+  {
+    "subjectCode": "ES212",
+    "majorCode": "NNA"
+  },
+  {
+    "subjectCode": "ES222",
+    "majorCode": "NNA"
+  },
+  {
+    "subjectCode": "ES232",
+    "majorCode": "NNA"
+  },
+  {
+    "subjectCode": "ES242",
+    "majorCode": "NNA"
+  },
+  {
+    "subjectCode": "ES213",
+    "majorCode": "NNA"
+  },
+  {
+    "subjectCode": "ES223",
+    "majorCode": "NNA"
+  },
+  {
+    "subjectCode": "ES233",
+    "majorCode": "NNA"
+  },
+  {
+    "subjectCode": "ES243",
+    "majorCode": "NNA"
+  },
+  {
+    "subjectCode": "EL221",
+    "majorCode": "NNA"
+  },
+  {
+    "subjectCode": "EL322",
+    "majorCode": "NNA"
+  },
+  {
+    "subjectCode": "EL325",
+    "majorCode": "NNA"
+  },
+  {
+    "subjectCode": "AE212",
+    "majorCode": "NNA"
+  },
+  {
+    "subjectCode": "AE312",
+    "majorCode": "NNA"
+  },
+  {
+    "subjectCode": "SM421",
+    "majorCode": "NNA"
+  },
+  {
+    "subjectCode": "AE300",
+    "majorCode": "NNA"
+  },
+  {
+    "subjectCode": "AE301",
+    "majorCode": "NNA"
+  },
+  {
+    "subjectCode": "AE405",
+    "majorCode": "NNA"
+  },
+  {
+    "subjectCode": "AE302",
+    "majorCode": "NNA"
+  },
+  {
+    "subjectCode": "AE409",
+    "majorCode": "NNA"
+  },
+  {
+    "subjectCode": "AE350",
+    "majorCode": "NNA"
+  },
+  {
+    "subjectCode": "AE321",
+    "majorCode": "NNA"
+  },
+  {
+    "subjectCode": "BE322",
+    "majorCode": "NNA"
+  },
+  {
+    "subjectCode": "BE323",
+    "majorCode": "NNA"
+  },
+  {
+    "subjectCode": "BE324",
+    "majorCode": "NNA"
+  },
+  {
+    "subjectCode": "BE310",
+    "majorCode": "NNA"
+  },
+  {
+    "subjectCode": "PG331",
+    "majorCode": "NNA"
+  },
+  {
+    "subjectCode": "PG332",
+    "majorCode": "NNA"
+  },
+  {
+    "subjectCode": "PG341",
+    "majorCode": "NNA"
+  },
+  {
+    "subjectCode": "PG342",
+    "majorCode": "NNA"
+  },
+  {
+    "subjectCode": "EL401",
+    "majorCode": "NNA"
+  },
+  {
+    "subjectCode": "EL425",
+    "majorCode": "NNA"
+  },
+  {
+    "subjectCode": "AE430",
+    "majorCode": "NNA"
+  },
+  {
+    "subjectCode": "AE415",
+    "majorCode": "NNA"
+  },
+  {
+    "subjectCode": "BE325",
+    "majorCode": "NNA"
+  },
+  {
+    "subjectCode": "BE326",
+    "majorCode": "NNA"
+  },
+  {
+    "subjectCode": "AE432",
+    "majorCode": "NNA"
+  },
+  {
+    "subjectCode": "BE421",
+    "majorCode": "NNA"
+  },
+  {
+    "subjectCode": "PE422",
+    "majorCode": "NNA"
+  },
+  {
+    "subjectCode": "PE423",
+    "majorCode": "NNA"
+  },
+  {
+    "subjectCode": "PE431",
+    "majorCode": "NNA"
+  },
+  {
+    "subjectCode": "PE441",
+    "majorCode": "NNA"
+  },
+  {
+    "subjectCode": "BE490",
+    "majorCode": "NNA"
+  },
+  {
+    "subjectCode": "PE490",
+    "majorCode": "NNA"
+  },
+  {
+    "subjectCode": "AE499",
+    "majorCode": "NNA"
+  },
+  {
+    "subjectCode": "BE497",
+    "majorCode": "NNA"
+  },
+  {
+    "subjectCode": "AE490",
+    "majorCode": "NNA"
+  },
+  {
+    "subjectCode": "PE495",
+    "majorCode": "NNA"
+  },
+  {
+    "subjectCode": "ML113",
+    "majorCode": "NNT"
+  },
+  {
+    "subjectCode": "ML114",
+    "majorCode": "NNT"
+  },
+  {
+    "subjectCode": "ML115",
+    "majorCode": "NNT"
+  },
+  {
+    "subjectCode": "ML202",
+    "majorCode": "NNT"
+  },
+  {
+    "subjectCode": "ML204",
+    "majorCode": "NNT"
+  },
+  {
+    "subjectCode": "CS102",
+    "majorCode": "NNT"
+  },
+  {
+    "subjectCode": "MA100",
+    "majorCode": "NNT"
+  },
+  {
+    "subjectCode": "NA151",
+    "majorCode": "NNT"
+  },
+  {
+    "subjectCode": "EC102",
+    "majorCode": "NNT"
+  },
+  {
+    "subjectCode": "VL101",
+    "majorCode": "NNT"
+  },
+  {
+    "subjectCode": "SH131",
+    "majorCode": "NNT"
+  },
+  {
+    "subjectCode": "GE171",
+    "majorCode": "NNT"
+  },
+  {
+    "subjectCode": "GE172",
+    "majorCode": "NNT"
+  },
+  {
+    "subjectCode": "GE173",
+    "majorCode": "NNT"
+  },
+  {
+    "subjectCode": "GF101",
+    "majorCode": "NNT"
+  },
+  {
+    "subjectCode": "GF102",
+    "majorCode": "NNT"
+  },
+  {
+    "subjectCode": "GJ101",
+    "majorCode": "NNT"
+  },
+  {
+    "subjectCode": "GJ102",
+    "majorCode": "NNT"
+  },
+  {
+    "subjectCode": "GZ101",
+    "majorCode": "NNT"
+  },
+  {
+    "subjectCode": "GZ102",
+    "majorCode": "NNT"
+  },
+  {
+    "subjectCode": "GI101",
+    "majorCode": "NNT"
+  },
+  {
+    "subjectCode": "GI102",
+    "majorCode": "NNT"
+  },
+  {
+    "subjectCode": "GK101",
+    "majorCode": "NNT"
+  },
+  {
+    "subjectCode": "GK102",
+    "majorCode": "NNT"
+  },
+  {
+    "subjectCode": "PG101",
+    "majorCode": "NNT"
+  },
+  {
+    "subjectCode": "PG102",
+    "majorCode": "NNT"
+  },
+  {
+    "subjectCode": "PG103",
+    "majorCode": "NNT"
+  },
+  {
+    "subjectCode": "PG104",
+    "majorCode": "NNT"
+  },
+  {
+    "subjectCode": "PG105",
+    "majorCode": "NNT"
+  },
+  {
+    "subjectCode": "PG106",
+    "majorCode": "NNT"
+  },
+  {
+    "subjectCode": "PG107",
+    "majorCode": "NNT"
+  },
+  {
+    "subjectCode": "PG121",
+    "majorCode": "NNT"
+  },
+  {
+    "subjectCode": "MA232",
+    "majorCode": "NNT"
+  },
+  {
+    "subjectCode": "VL100",
+    "majorCode": "NNT"
+  },
+  {
+    "subjectCode": "VC200",
+    "majorCode": "NNT"
+  },
+  {
+    "subjectCode": "ES211",
+    "majorCode": "NNT"
+  },
+  {
+    "subjectCode": "ES221",
+    "majorCode": "NNT"
+  },
+  {
+    "subjectCode": "ES231",
+    "majorCode": "NNT"
+  },
+  {
+    "subjectCode": "ES241",
+    "majorCode": "NNT"
+  },
+  {
+    "subjectCode": "ES212",
+    "majorCode": "NNT"
+  },
+  {
+    "subjectCode": "ES222",
+    "majorCode": "NNT"
+  },
+  {
+    "subjectCode": "ES232",
+    "majorCode": "NNT"
+  },
+  {
+    "subjectCode": "ES242",
+    "majorCode": "NNT"
+  },
+  {
+    "subjectCode": "ES213",
+    "majorCode": "NNT"
+  },
+  {
+    "subjectCode": "ES223",
+    "majorCode": "NNT"
+  },
+  {
+    "subjectCode": "ES233",
+    "majorCode": "NNT"
+  },
+  {
+    "subjectCode": "ES243",
+    "majorCode": "NNT"
+  },
+  {
+    "subjectCode": "EL221",
+    "majorCode": "NNT"
+  },
+  {
+    "subjectCode": "EL322",
+    "majorCode": "NNT"
+  },
+  {
+    "subjectCode": "EL325",
+    "majorCode": "NNT"
+  },
+  {
+    "subjectCode": "AE212",
+    "majorCode": "NNT"
+  },
+  {
+    "subjectCode": "AE312",
+    "majorCode": "NNT"
+  },
+  {
+    "subjectCode": "SM421",
+    "majorCode": "NNT"
+  },
+  {
+    "subjectCode": "AE300",
+    "majorCode": "NNT"
+  },
+  {
+    "subjectCode": "AE301",
+    "majorCode": "NNT"
+  },
+  {
+    "subjectCode": "AE405",
+    "majorCode": "NNT"
+  },
+  {
+    "subjectCode": "AE302",
+    "majorCode": "NNT"
+  },
+  {
+    "subjectCode": "AE409",
+    "majorCode": "NNT"
+  },
+  {
+    "subjectCode": "AE350",
+    "majorCode": "NNT"
+  },
+  {
+    "subjectCode": "AE321",
+    "majorCode": "NNT"
+  },
+  {
+    "subjectCode": "BE322",
+    "majorCode": "NNT"
+  },
+  {
+    "subjectCode": "BE323",
+    "majorCode": "NNT"
+  },
+  {
+    "subjectCode": "BE324",
+    "majorCode": "NNT"
+  },
+  {
+    "subjectCode": "BE310",
+    "majorCode": "NNT"
+  },
+  {
+    "subjectCode": "PG331",
+    "majorCode": "NNT"
+  },
+  {
+    "subjectCode": "PG332",
+    "majorCode": "NNT"
+  },
+  {
+    "subjectCode": "PG341",
+    "majorCode": "NNT"
+  },
+  {
+    "subjectCode": "PG342",
+    "majorCode": "NNT"
+  },
+  {
+    "subjectCode": "EL401",
+    "majorCode": "NNT"
+  },
+  {
+    "subjectCode": "EL425",
+    "majorCode": "NNT"
+  },
+  {
+    "subjectCode": "AE430",
+    "majorCode": "NNT"
+  },
+  {
+    "subjectCode": "AE415",
+    "majorCode": "NNT"
+  },
+  {
+    "subjectCode": "BE325",
+    "majorCode": "NNT"
+  },
+  {
+    "subjectCode": "BE326",
+    "majorCode": "NNT"
+  },
+  {
+    "subjectCode": "AE432",
+    "majorCode": "NNT"
+  },
+  {
+    "subjectCode": "BE421",
+    "majorCode": "NNT"
+  },
+  {
+    "subjectCode": "PE422",
+    "majorCode": "NNT"
+  },
+  {
+    "subjectCode": "PE423",
+    "majorCode": "NNT"
+  },
+  {
+    "subjectCode": "PE431",
+    "majorCode": "NNT"
+  },
+  {
+    "subjectCode": "PE441",
+    "majorCode": "NNT"
+  },
+  {
+    "subjectCode": "BE490",
+    "majorCode": "NNT"
+  },
+  {
+    "subjectCode": "PE490",
+    "majorCode": "NNT"
+  },
+  {
+    "subjectCode": "AE499",
+    "majorCode": "NNT"
+  },
+  {
+    "subjectCode": "BE497",
+    "majorCode": "NNT"
+  },
+  {
+    "subjectCode": "AE490",
+    "majorCode": "NNT"
+  },
+  {
+    "subjectCode": "PE495",
+    "majorCode": "NNT"
+  },
+  {
+    "subjectCode": "ML113",
+    "majorCode": "NNN"
+  },
+  {
+    "subjectCode": "ML114",
+    "majorCode": "NNN"
+  },
+  {
+    "subjectCode": "ML115",
+    "majorCode": "NNN"
+  },
+  {
+    "subjectCode": "ML202",
+    "majorCode": "NNN"
+  },
+  {
+    "subjectCode": "ML204",
+    "majorCode": "NNN"
+  },
+  {
+    "subjectCode": "CS102",
+    "majorCode": "NNN"
+  },
+  {
+    "subjectCode": "MA100",
+    "majorCode": "NNN"
+  },
+  {
+    "subjectCode": "NA151",
+    "majorCode": "NNN"
+  },
+  {
+    "subjectCode": "EC102",
+    "majorCode": "NNN"
+  },
+  {
+    "subjectCode": "VL101",
+    "majorCode": "NNN"
+  },
+  {
+    "subjectCode": "SH131",
+    "majorCode": "NNN"
+  },
+  {
+    "subjectCode": "GE171",
+    "majorCode": "NNN"
+  },
+  {
+    "subjectCode": "GE172",
+    "majorCode": "NNN"
+  },
+  {
+    "subjectCode": "GE173",
+    "majorCode": "NNN"
+  },
+  {
+    "subjectCode": "GF101",
+    "majorCode": "NNN"
+  },
+  {
+    "subjectCode": "GF102",
+    "majorCode": "NNN"
+  },
+  {
+    "subjectCode": "GJ101",
+    "majorCode": "NNN"
+  },
+  {
+    "subjectCode": "GJ102",
+    "majorCode": "NNN"
+  },
+  {
+    "subjectCode": "GZ101",
+    "majorCode": "NNN"
+  },
+  {
+    "subjectCode": "GZ102",
+    "majorCode": "NNN"
+  },
+  {
+    "subjectCode": "GI101",
+    "majorCode": "NNN"
+  },
+  {
+    "subjectCode": "GI102",
+    "majorCode": "NNN"
+  },
+  {
+    "subjectCode": "GK101",
+    "majorCode": "NNN"
+  },
+  {
+    "subjectCode": "GK102",
+    "majorCode": "NNN"
+  },
+  {
+    "subjectCode": "PG101",
+    "majorCode": "NNN"
+  },
+  {
+    "subjectCode": "PG102",
+    "majorCode": "NNN"
+  },
+  {
+    "subjectCode": "PG103",
+    "majorCode": "NNN"
+  },
+  {
+    "subjectCode": "PG104",
+    "majorCode": "NNN"
+  },
+  {
+    "subjectCode": "PG105",
+    "majorCode": "NNN"
+  },
+  {
+    "subjectCode": "PG106",
+    "majorCode": "NNN"
+  },
+  {
+    "subjectCode": "PG107",
+    "majorCode": "NNN"
+  },
+  {
+    "subjectCode": "PG121",
+    "majorCode": "NNN"
+  },
+  {
+    "subjectCode": "MA232",
+    "majorCode": "NNN"
+  },
+  {
+    "subjectCode": "VL100",
+    "majorCode": "NNN"
+  },
+  {
+    "subjectCode": "VC200",
+    "majorCode": "NNN"
+  },
+  {
+    "subjectCode": "ES211",
+    "majorCode": "NNN"
+  },
+  {
+    "subjectCode": "ES221",
+    "majorCode": "NNN"
+  },
+  {
+    "subjectCode": "ES231",
+    "majorCode": "NNN"
+  },
+  {
+    "subjectCode": "ES241",
+    "majorCode": "NNN"
+  },
+  {
+    "subjectCode": "ES212",
+    "majorCode": "NNN"
+  },
+  {
+    "subjectCode": "ES222",
+    "majorCode": "NNN"
+  },
+  {
+    "subjectCode": "ES232",
+    "majorCode": "NNN"
+  },
+  {
+    "subjectCode": "ES242",
+    "majorCode": "NNN"
+  },
+  {
+    "subjectCode": "ES213",
+    "majorCode": "NNN"
+  },
+  {
+    "subjectCode": "ES223",
+    "majorCode": "NNN"
+  },
+  {
+    "subjectCode": "ES233",
+    "majorCode": "NNN"
+  },
+  {
+    "subjectCode": "ES243",
+    "majorCode": "NNN"
+  },
+  {
+    "subjectCode": "EL221",
+    "majorCode": "NNN"
+  },
+  {
+    "subjectCode": "EL322",
+    "majorCode": "NNN"
+  },
+  {
+    "subjectCode": "EL325",
+    "majorCode": "NNN"
+  },
+  {
+    "subjectCode": "AE212",
+    "majorCode": "NNN"
+  },
+  {
+    "subjectCode": "AE312",
+    "majorCode": "NNN"
+  },
+  {
+    "subjectCode": "SM421",
+    "majorCode": "NNN"
+  },
+  {
+    "subjectCode": "AE300",
+    "majorCode": "NNN"
+  },
+  {
+    "subjectCode": "AE301",
+    "majorCode": "NNN"
+  },
+  {
+    "subjectCode": "AE405",
+    "majorCode": "NNN"
+  },
+  {
+    "subjectCode": "AE302",
+    "majorCode": "NNN"
+  },
+  {
+    "subjectCode": "AE409",
+    "majorCode": "NNN"
+  },
+  {
+    "subjectCode": "AE350",
+    "majorCode": "NNN"
+  },
+  {
+    "subjectCode": "AE321",
+    "majorCode": "NNN"
+  },
+  {
+    "subjectCode": "BE322",
+    "majorCode": "NNN"
+  },
+  {
+    "subjectCode": "BE323",
+    "majorCode": "NNN"
+  },
+  {
+    "subjectCode": "BE324",
+    "majorCode": "NNN"
+  },
+  {
+    "subjectCode": "BE310",
+    "majorCode": "NNN"
+  },
+  {
+    "subjectCode": "PG331",
+    "majorCode": "NNN"
+  },
+  {
+    "subjectCode": "PG332",
+    "majorCode": "NNN"
+  },
+  {
+    "subjectCode": "PG341",
+    "majorCode": "NNN"
+  },
+  {
+    "subjectCode": "PG342",
+    "majorCode": "NNN"
+  },
+  {
+    "subjectCode": "EL401",
+    "majorCode": "NNN"
+  },
+  {
+    "subjectCode": "EL425",
+    "majorCode": "NNN"
+  },
+  {
+    "subjectCode": "AE430",
+    "majorCode": "NNN"
+  },
+  {
+    "subjectCode": "AE415",
+    "majorCode": "NNN"
+  },
+  {
+    "subjectCode": "BE325",
+    "majorCode": "NNN"
+  },
+  {
+    "subjectCode": "BE326",
+    "majorCode": "NNN"
+  },
+  {
+    "subjectCode": "AE432",
+    "majorCode": "NNN"
+  },
+  {
+    "subjectCode": "BE421",
+    "majorCode": "NNN"
+  },
+  {
+    "subjectCode": "PE422",
+    "majorCode": "NNN"
+  },
+  {
+    "subjectCode": "PE423",
+    "majorCode": "NNN"
+  },
+  {
+    "subjectCode": "PE431",
+    "majorCode": "NNN"
+  },
+  {
+    "subjectCode": "PE441",
+    "majorCode": "NNN"
+  },
+  {
+    "subjectCode": "BE490",
+    "majorCode": "NNN"
+  },
+  {
+    "subjectCode": "PE490",
+    "majorCode": "NNN"
+  },
+  {
+    "subjectCode": "AE499",
+    "majorCode": "NNN"
+  },
+  {
+    "subjectCode": "BE497",
+    "majorCode": "NNN"
+  },
+  {
+    "subjectCode": "AE490",
+    "majorCode": "NNN"
+  },
+  {
+    "subjectCode": "PE495",
+    "majorCode": "NNN"
+  },
+  {
+    "subjectCode": "ML113",
+    "majorCode": "NNH"
+  },
+  {
+    "subjectCode": "ML114",
+    "majorCode": "NNH"
+  },
+  {
+    "subjectCode": "ML115",
+    "majorCode": "NNH"
+  },
+  {
+    "subjectCode": "ML202",
+    "majorCode": "NNH"
+  },
+  {
+    "subjectCode": "ML204",
+    "majorCode": "NNH"
+  },
+  {
+    "subjectCode": "CS102",
+    "majorCode": "NNH"
+  },
+  {
+    "subjectCode": "MA100",
+    "majorCode": "NNH"
+  },
+  {
+    "subjectCode": "NA151",
+    "majorCode": "NNH"
+  },
+  {
+    "subjectCode": "EC102",
+    "majorCode": "NNH"
+  },
+  {
+    "subjectCode": "VL101",
+    "majorCode": "NNH"
+  },
+  {
+    "subjectCode": "SH131",
+    "majorCode": "NNH"
+  },
+  {
+    "subjectCode": "GE171",
+    "majorCode": "NNH"
+  },
+  {
+    "subjectCode": "GE172",
+    "majorCode": "NNH"
+  },
+  {
+    "subjectCode": "GE173",
+    "majorCode": "NNH"
+  },
+  {
+    "subjectCode": "GF101",
+    "majorCode": "NNH"
+  },
+  {
+    "subjectCode": "GF102",
+    "majorCode": "NNH"
+  },
+  {
+    "subjectCode": "GJ101",
+    "majorCode": "NNH"
+  },
+  {
+    "subjectCode": "GJ102",
+    "majorCode": "NNH"
+  },
+  {
+    "subjectCode": "GZ101",
+    "majorCode": "NNH"
+  },
+  {
+    "subjectCode": "GZ102",
+    "majorCode": "NNH"
+  },
+  {
+    "subjectCode": "GI101",
+    "majorCode": "NNH"
+  },
+  {
+    "subjectCode": "GI102",
+    "majorCode": "NNH"
+  },
+  {
+    "subjectCode": "GK101",
+    "majorCode": "NNH"
+  },
+  {
+    "subjectCode": "GK102",
+    "majorCode": "NNH"
+  },
+  {
+    "subjectCode": "PG101",
+    "majorCode": "NNH"
+  },
+  {
+    "subjectCode": "PG102",
+    "majorCode": "NNH"
+  },
+  {
+    "subjectCode": "PG103",
+    "majorCode": "NNH"
+  },
+  {
+    "subjectCode": "PG104",
+    "majorCode": "NNH"
+  },
+  {
+    "subjectCode": "PG105",
+    "majorCode": "NNH"
+  },
+  {
+    "subjectCode": "PG106",
+    "majorCode": "NNH"
+  },
+  {
+    "subjectCode": "PG107",
+    "majorCode": "NNH"
+  },
+  {
+    "subjectCode": "PG121",
+    "majorCode": "NNH"
+  },
+  {
+    "subjectCode": "MA232",
+    "majorCode": "NNH"
+  },
+  {
+    "subjectCode": "VL100",
+    "majorCode": "NNH"
+  },
+  {
+    "subjectCode": "VC200",
+    "majorCode": "NNH"
+  },
+  {
+    "subjectCode": "ES211",
+    "majorCode": "NNH"
+  },
+  {
+    "subjectCode": "ES221",
+    "majorCode": "NNH"
+  },
+  {
+    "subjectCode": "ES231",
+    "majorCode": "NNH"
+  },
+  {
+    "subjectCode": "ES241",
+    "majorCode": "NNH"
+  },
+  {
+    "subjectCode": "ES212",
+    "majorCode": "NNH"
+  },
+  {
+    "subjectCode": "ES222",
+    "majorCode": "NNH"
+  },
+  {
+    "subjectCode": "ES232",
+    "majorCode": "NNH"
+  },
+  {
+    "subjectCode": "ES242",
+    "majorCode": "NNH"
+  },
+  {
+    "subjectCode": "ES213",
+    "majorCode": "NNH"
+  },
+  {
+    "subjectCode": "ES223",
+    "majorCode": "NNH"
+  },
+  {
+    "subjectCode": "ES233",
+    "majorCode": "NNH"
+  },
+  {
+    "subjectCode": "ES243",
+    "majorCode": "NNH"
+  },
+  {
+    "subjectCode": "EL221",
+    "majorCode": "NNH"
+  },
+  {
+    "subjectCode": "EL322",
+    "majorCode": "NNH"
+  },
+  {
+    "subjectCode": "EL325",
+    "majorCode": "NNH"
+  },
+  {
+    "subjectCode": "AE212",
+    "majorCode": "NNH"
+  },
+  {
+    "subjectCode": "AE312",
+    "majorCode": "NNH"
+  },
+  {
+    "subjectCode": "SM421",
+    "majorCode": "NNH"
+  },
+  {
+    "subjectCode": "AE300",
+    "majorCode": "NNH"
+  },
+  {
+    "subjectCode": "AE301",
+    "majorCode": "NNH"
+  },
+  {
+    "subjectCode": "AE405",
+    "majorCode": "NNH"
+  },
+  {
+    "subjectCode": "AE302",
+    "majorCode": "NNH"
+  },
+  {
+    "subjectCode": "AE409",
+    "majorCode": "NNH"
+  },
+  {
+    "subjectCode": "AE350",
+    "majorCode": "NNH"
+  },
+  {
+    "subjectCode": "AE321",
+    "majorCode": "NNH"
+  },
+  {
+    "subjectCode": "BE322",
+    "majorCode": "NNH"
+  },
+  {
+    "subjectCode": "BE323",
+    "majorCode": "NNH"
+  },
+  {
+    "subjectCode": "BE324",
+    "majorCode": "NNH"
+  },
+  {
+    "subjectCode": "BE310",
+    "majorCode": "NNH"
+  },
+  {
+    "subjectCode": "PG331",
+    "majorCode": "NNH"
+  },
+  {
+    "subjectCode": "PG332",
+    "majorCode": "NNH"
+  },
+  {
+    "subjectCode": "PG341",
+    "majorCode": "NNH"
+  },
+  {
+    "subjectCode": "PG342",
+    "majorCode": "NNH"
+  },
+  {
+    "subjectCode": "EL401",
+    "majorCode": "NNH"
+  },
+  {
+    "subjectCode": "EL425",
+    "majorCode": "NNH"
+  },
+  {
+    "subjectCode": "AE430",
+    "majorCode": "NNH"
+  },
+  {
+    "subjectCode": "AE415",
+    "majorCode": "NNH"
+  },
+  {
+    "subjectCode": "BE325",
+    "majorCode": "NNH"
+  },
+  {
+    "subjectCode": "BE326",
+    "majorCode": "NNH"
+  },
+  {
+    "subjectCode": "AE432",
+    "majorCode": "NNH"
+  },
+  {
+    "subjectCode": "BE421",
+    "majorCode": "NNH"
+  },
+  {
+    "subjectCode": "PE422",
+    "majorCode": "NNH"
+  },
+  {
+    "subjectCode": "PE423",
+    "majorCode": "NNH"
+  },
+  {
+    "subjectCode": "PE431",
+    "majorCode": "NNH"
+  },
+  {
+    "subjectCode": "PE441",
+    "majorCode": "NNH"
+  },
+  {
+    "subjectCode": "BE490",
+    "majorCode": "NNH"
+  },
+  {
+    "subjectCode": "PE490",
+    "majorCode": "NNH"
+  },
+  {
+    "subjectCode": "AE499",
+    "majorCode": "NNH"
+  },
+  {
+    "subjectCode": "BE497",
+    "majorCode": "NNH"
+  },
+  {
+    "subjectCode": "AE490",
+    "majorCode": "NNH"
+  },
+  {
+    "subjectCode": "PE495",
+    "majorCode": "NNH"
+  },
+  {
+    "subjectCode": "ML113",
+    "majorCode": "DD"
+  },
+  {
+    "subjectCode": "ML114",
+    "majorCode": "DD"
+  },
+  {
+    "subjectCode": "ML115",
+    "majorCode": "DD"
+  },
+  {
+    "subjectCode": "ML202",
+    "majorCode": "DD"
+  },
+  {
+    "subjectCode": "ML204",
+    "majorCode": "DD"
+  },
+  {
+    "subjectCode": "CS102",
+    "majorCode": "DD"
+  },
+  {
+    "subjectCode": "MA100",
+    "majorCode": "DD"
+  },
+  {
+    "subjectCode": "NA151",
+    "majorCode": "DD"
+  },
+  {
+    "subjectCode": "EC102",
+    "majorCode": "DD"
+  },
+  {
+    "subjectCode": "VL101",
+    "majorCode": "DD"
+  },
+  {
+    "subjectCode": "SH131",
+    "majorCode": "DD"
+  },
+  {
+    "subjectCode": "GE171",
+    "majorCode": "DD"
+  },
+  {
+    "subjectCode": "GE172",
+    "majorCode": "DD"
+  },
+  {
+    "subjectCode": "GE173",
+    "majorCode": "DD"
+  },
+  {
+    "subjectCode": "GF101",
+    "majorCode": "DD"
+  },
+  {
+    "subjectCode": "GF102",
+    "majorCode": "DD"
+  },
+  {
+    "subjectCode": "GJ101",
+    "majorCode": "DD"
+  },
+  {
+    "subjectCode": "GJ102",
+    "majorCode": "DD"
+  },
+  {
+    "subjectCode": "GZ101",
+    "majorCode": "DD"
+  },
+  {
+    "subjectCode": "GZ102",
+    "majorCode": "DD"
+  },
+  {
+    "subjectCode": "GI101",
+    "majorCode": "DD"
+  },
+  {
+    "subjectCode": "GI102",
+    "majorCode": "DD"
+  },
+  {
+    "subjectCode": "GK101",
+    "majorCode": "DD"
+  },
+  {
+    "subjectCode": "GK102",
+    "majorCode": "DD"
+  },
+  {
+    "subjectCode": "PG101",
+    "majorCode": "DD"
+  },
+  {
+    "subjectCode": "PG102",
+    "majorCode": "DD"
+  },
+  {
+    "subjectCode": "PG103",
+    "majorCode": "DD"
+  },
+  {
+    "subjectCode": "PG104",
+    "majorCode": "DD"
+  },
+  {
+    "subjectCode": "PG105",
+    "majorCode": "DD"
+  },
+  {
+    "subjectCode": "PG106",
+    "majorCode": "DD"
+  },
+  {
+    "subjectCode": "PG107",
+    "majorCode": "DD"
+  },
+  {
+    "subjectCode": "PG121",
+    "majorCode": "DD"
+  },
+  {
+    "subjectCode": "MA232",
+    "majorCode": "DD"
+  },
+  {
+    "subjectCode": "VL100",
+    "majorCode": "DD"
+  },
+  {
+    "subjectCode": "VC200",
+    "majorCode": "DD"
+  },
+  {
+    "subjectCode": "ES211",
+    "majorCode": "DD"
+  },
+  {
+    "subjectCode": "ES221",
+    "majorCode": "DD"
+  },
+  {
+    "subjectCode": "ES231",
+    "majorCode": "DD"
+  },
+  {
+    "subjectCode": "ES241",
+    "majorCode": "DD"
+  },
+  {
+    "subjectCode": "ES212",
+    "majorCode": "DD"
+  },
+  {
+    "subjectCode": "ES222",
+    "majorCode": "DD"
+  },
+  {
+    "subjectCode": "ES232",
+    "majorCode": "DD"
+  },
+  {
+    "subjectCode": "ES242",
+    "majorCode": "DD"
+  },
+  {
+    "subjectCode": "ES213",
+    "majorCode": "DD"
+  },
+  {
+    "subjectCode": "ES223",
+    "majorCode": "DD"
+  },
+  {
+    "subjectCode": "ES233",
+    "majorCode": "DD"
+  },
+  {
+    "subjectCode": "ES243",
+    "majorCode": "DD"
+  },
+  {
+    "subjectCode": "EL221",
+    "majorCode": "DD"
+  },
+  {
+    "subjectCode": "EL322",
+    "majorCode": "DD"
+  },
+  {
+    "subjectCode": "EL325",
+    "majorCode": "DD"
+  },
+  {
+    "subjectCode": "AE212",
+    "majorCode": "DD"
+  },
+  {
+    "subjectCode": "AE312",
+    "majorCode": "DD"
+  },
+  {
+    "subjectCode": "SM421",
+    "majorCode": "DD"
+  },
+  {
+    "subjectCode": "AE300",
+    "majorCode": "DD"
+  },
+  {
+    "subjectCode": "AE301",
+    "majorCode": "DD"
+  },
+  {
+    "subjectCode": "AE405",
+    "majorCode": "DD"
+  },
+  {
+    "subjectCode": "AE302",
+    "majorCode": "DD"
+  },
+  {
+    "subjectCode": "AE409",
+    "majorCode": "DD"
+  },
+  {
+    "subjectCode": "AE350",
+    "majorCode": "DD"
+  },
+  {
+    "subjectCode": "AE321",
+    "majorCode": "DD"
+  },
+  {
+    "subjectCode": "BE322",
+    "majorCode": "DD"
+  },
+  {
+    "subjectCode": "BE323",
+    "majorCode": "DD"
+  },
+  {
+    "subjectCode": "BE324",
+    "majorCode": "DD"
+  },
+  {
+    "subjectCode": "BE310",
+    "majorCode": "DD"
+  },
+  {
+    "subjectCode": "PG331",
+    "majorCode": "DD"
+  },
+  {
+    "subjectCode": "PG332",
+    "majorCode": "DD"
+  },
+  {
+    "subjectCode": "PG341",
+    "majorCode": "DD"
+  },
+  {
+    "subjectCode": "PG342",
+    "majorCode": "DD"
+  },
+  {
+    "subjectCode": "EL401",
+    "majorCode": "DD"
+  },
+  {
+    "subjectCode": "EL425",
+    "majorCode": "DD"
+  },
+  {
+    "subjectCode": "AE430",
+    "majorCode": "DD"
+  },
+  {
+    "subjectCode": "AE415",
+    "majorCode": "DD"
+  },
+  {
+    "subjectCode": "BE325",
+    "majorCode": "DD"
+  },
+  {
+    "subjectCode": "BE326",
+    "majorCode": "DD"
+  },
+  {
+    "subjectCode": "AE432",
+    "majorCode": "DD"
+  },
+  {
+    "subjectCode": "BE421",
+    "majorCode": "DD"
+  },
+  {
+    "subjectCode": "PE422",
+    "majorCode": "DD"
+  },
+  {
+    "subjectCode": "PE423",
+    "majorCode": "DD"
+  },
+  {
+    "subjectCode": "PE431",
+    "majorCode": "DD"
+  },
+  {
+    "subjectCode": "PE441",
+    "majorCode": "DD"
+  },
+  {
+    "subjectCode": "BE490",
+    "majorCode": "DD"
+  },
+  {
+    "subjectCode": "PE490",
+    "majorCode": "DD"
+  },
+  {
+    "subjectCode": "AE499",
+    "majorCode": "DD"
+  },
+  {
+    "subjectCode": "BE497",
+    "majorCode": "DD"
+  },
+  {
+    "subjectCode": "AE490",
+    "majorCode": "DD"
+  },
+  {
+    "subjectCode": "PE495",
+    "majorCode": "DD"
+  },
+  {
+    "subjectCode": "ML113",
+    "majorCode": "VNH"
+  },
+  {
+    "subjectCode": "ML114",
+    "majorCode": "VNH"
+  },
+  {
+    "subjectCode": "ML115",
+    "majorCode": "VNH"
+  },
+  {
+    "subjectCode": "ML202",
+    "majorCode": "VNH"
+  },
+  {
+    "subjectCode": "ML204",
+    "majorCode": "VNH"
+  },
+  {
+    "subjectCode": "CS102",
+    "majorCode": "VNH"
+  },
+  {
+    "subjectCode": "MA100",
+    "majorCode": "VNH"
+  },
+  {
+    "subjectCode": "NA151",
+    "majorCode": "VNH"
+  },
+  {
+    "subjectCode": "EC102",
+    "majorCode": "VNH"
+  },
+  {
+    "subjectCode": "VL101",
+    "majorCode": "VNH"
+  },
+  {
+    "subjectCode": "SH131",
+    "majorCode": "VNH"
+  },
+  {
+    "subjectCode": "GE171",
+    "majorCode": "VNH"
+  },
+  {
+    "subjectCode": "GE172",
+    "majorCode": "VNH"
+  },
+  {
+    "subjectCode": "GE173",
+    "majorCode": "VNH"
+  },
+  {
+    "subjectCode": "GF101",
+    "majorCode": "VNH"
+  },
+  {
+    "subjectCode": "GF102",
+    "majorCode": "VNH"
+  },
+  {
+    "subjectCode": "GJ101",
+    "majorCode": "VNH"
+  },
+  {
+    "subjectCode": "GJ102",
+    "majorCode": "VNH"
+  },
+  {
+    "subjectCode": "GZ101",
+    "majorCode": "VNH"
+  },
+  {
+    "subjectCode": "GZ102",
+    "majorCode": "VNH"
+  },
+  {
+    "subjectCode": "GI101",
+    "majorCode": "VNH"
+  },
+  {
+    "subjectCode": "GI102",
+    "majorCode": "VNH"
+  },
+  {
+    "subjectCode": "GK101",
+    "majorCode": "VNH"
+  },
+  {
+    "subjectCode": "GK102",
+    "majorCode": "VNH"
+  },
+  {
+    "subjectCode": "PG101",
+    "majorCode": "VNH"
+  },
+  {
+    "subjectCode": "PG102",
+    "majorCode": "VNH"
+  },
+  {
+    "subjectCode": "PG103",
+    "majorCode": "VNH"
+  },
+  {
+    "subjectCode": "PG104",
+    "majorCode": "VNH"
+  },
+  {
+    "subjectCode": "PG105",
+    "majorCode": "VNH"
+  },
+  {
+    "subjectCode": "PG106",
+    "majorCode": "VNH"
+  },
+  {
+    "subjectCode": "PG107",
+    "majorCode": "VNH"
+  },
+  {
+    "subjectCode": "PG121",
+    "majorCode": "VNH"
+  },
+  {
+    "subjectCode": "MA232",
+    "majorCode": "VNH"
+  },
+  {
+    "subjectCode": "VL100",
+    "majorCode": "VNH"
+  },
+  {
+    "subjectCode": "VC200",
+    "majorCode": "VNH"
+  },
+  {
+    "subjectCode": "ES211",
+    "majorCode": "VNH"
+  },
+  {
+    "subjectCode": "ES221",
+    "majorCode": "VNH"
+  },
+  {
+    "subjectCode": "ES231",
+    "majorCode": "VNH"
+  },
+  {
+    "subjectCode": "ES241",
+    "majorCode": "VNH"
+  },
+  {
+    "subjectCode": "ES212",
+    "majorCode": "VNH"
+  },
+  {
+    "subjectCode": "ES222",
+    "majorCode": "VNH"
+  },
+  {
+    "subjectCode": "ES232",
+    "majorCode": "VNH"
+  },
+  {
+    "subjectCode": "ES242",
+    "majorCode": "VNH"
+  },
+  {
+    "subjectCode": "ES213",
+    "majorCode": "VNH"
+  },
+  {
+    "subjectCode": "ES223",
+    "majorCode": "VNH"
+  },
+  {
+    "subjectCode": "ES233",
+    "majorCode": "VNH"
+  },
+  {
+    "subjectCode": "ES243",
+    "majorCode": "VNH"
+  },
+  {
+    "subjectCode": "EL221",
+    "majorCode": "VNH"
+  },
+  {
+    "subjectCode": "EL322",
+    "majorCode": "VNH"
+  },
+  {
+    "subjectCode": "EL325",
+    "majorCode": "VNH"
+  },
+  {
+    "subjectCode": "AE212",
+    "majorCode": "VNH"
+  },
+  {
+    "subjectCode": "AE312",
+    "majorCode": "VNH"
+  },
+  {
+    "subjectCode": "SM421",
+    "majorCode": "VNH"
+  },
+  {
+    "subjectCode": "AE300",
+    "majorCode": "VNH"
+  },
+  {
+    "subjectCode": "AE301",
+    "majorCode": "VNH"
+  },
+  {
+    "subjectCode": "AE405",
+    "majorCode": "VNH"
+  },
+  {
+    "subjectCode": "AE302",
+    "majorCode": "VNH"
+  },
+  {
+    "subjectCode": "AE409",
+    "majorCode": "VNH"
+  },
+  {
+    "subjectCode": "AE350",
+    "majorCode": "VNH"
+  },
+  {
+    "subjectCode": "AE321",
+    "majorCode": "VNH"
+  },
+  {
+    "subjectCode": "BE322",
+    "majorCode": "VNH"
+  },
+  {
+    "subjectCode": "BE323",
+    "majorCode": "VNH"
+  },
+  {
+    "subjectCode": "BE324",
+    "majorCode": "VNH"
+  },
+  {
+    "subjectCode": "BE310",
+    "majorCode": "VNH"
+  },
+  {
+    "subjectCode": "PG331",
+    "majorCode": "VNH"
+  },
+  {
+    "subjectCode": "PG332",
+    "majorCode": "VNH"
+  },
+  {
+    "subjectCode": "PG341",
+    "majorCode": "VNH"
+  },
+  {
+    "subjectCode": "PG342",
+    "majorCode": "VNH"
+  },
+  {
+    "subjectCode": "EL401",
+    "majorCode": "VNH"
+  },
+  {
+    "subjectCode": "EL425",
+    "majorCode": "VNH"
+  },
+  {
+    "subjectCode": "AE430",
+    "majorCode": "VNH"
+  },
+  {
+    "subjectCode": "AE415",
+    "majorCode": "VNH"
+  },
+  {
+    "subjectCode": "BE325",
+    "majorCode": "VNH"
+  },
+  {
+    "subjectCode": "BE326",
+    "majorCode": "VNH"
+  },
+  {
+    "subjectCode": "AE432",
+    "majorCode": "VNH"
+  },
+  {
+    "subjectCode": "BE421",
+    "majorCode": "VNH"
+  },
+  {
+    "subjectCode": "PE422",
+    "majorCode": "VNH"
+  },
+  {
+    "subjectCode": "PE423",
+    "majorCode": "VNH"
+  },
+  {
+    "subjectCode": "PE431",
+    "majorCode": "VNH"
+  },
+  {
+    "subjectCode": "PE441",
+    "majorCode": "VNH"
+  },
+  {
+    "subjectCode": "BE490",
+    "majorCode": "VNH"
+  },
+  {
+    "subjectCode": "PE490",
+    "majorCode": "VNH"
+  },
+  {
+    "subjectCode": "AE499",
+    "majorCode": "VNH"
+  },
+  {
+    "subjectCode": "BE497",
+    "majorCode": "VNH"
+  },
+  {
+    "subjectCode": "AE490",
+    "majorCode": "VNH"
+  },
+  {
+    "subjectCode": "PE495",
+    "majorCode": "VNH"
+  },
+  {
+    "subjectCode": "ML113",
+    "majorCode": "TTDPT"
+  },
+  {
+    "subjectCode": "ML114",
+    "majorCode": "TTDPT"
+  },
+  {
+    "subjectCode": "ML115",
+    "majorCode": "TTDPT"
+  },
+  {
+    "subjectCode": "ML202",
+    "majorCode": "TTDPT"
+  },
+  {
+    "subjectCode": "ML204",
+    "majorCode": "TTDPT"
+  },
+  {
+    "subjectCode": "CS102",
+    "majorCode": "TTDPT"
+  },
+  {
+    "subjectCode": "MA100",
+    "majorCode": "TTDPT"
+  },
+  {
+    "subjectCode": "NA151",
+    "majorCode": "TTDPT"
+  },
+  {
+    "subjectCode": "EC102",
+    "majorCode": "TTDPT"
+  },
+  {
+    "subjectCode": "VL101",
+    "majorCode": "TTDPT"
+  },
+  {
+    "subjectCode": "SH131",
+    "majorCode": "TTDPT"
+  },
+  {
+    "subjectCode": "GE171",
+    "majorCode": "TTDPT"
+  },
+  {
+    "subjectCode": "GE172",
+    "majorCode": "TTDPT"
+  },
+  {
+    "subjectCode": "GE173",
+    "majorCode": "TTDPT"
+  },
+  {
+    "subjectCode": "GF101",
+    "majorCode": "TTDPT"
+  },
+  {
+    "subjectCode": "GF102",
+    "majorCode": "TTDPT"
+  },
+  {
+    "subjectCode": "GJ101",
+    "majorCode": "TTDPT"
+  },
+  {
+    "subjectCode": "GJ102",
+    "majorCode": "TTDPT"
+  },
+  {
+    "subjectCode": "GZ101",
+    "majorCode": "TTDPT"
+  },
+  {
+    "subjectCode": "GZ102",
+    "majorCode": "TTDPT"
+  },
+  {
+    "subjectCode": "GI101",
+    "majorCode": "TTDPT"
+  },
+  {
+    "subjectCode": "GI102",
+    "majorCode": "TTDPT"
+  },
+  {
+    "subjectCode": "GK101",
+    "majorCode": "TTDPT"
+  },
+  {
+    "subjectCode": "GK102",
+    "majorCode": "TTDPT"
+  },
+  {
+    "subjectCode": "PG101",
+    "majorCode": "TTDPT"
+  },
+  {
+    "subjectCode": "PG102",
+    "majorCode": "TTDPT"
+  },
+  {
+    "subjectCode": "PG103",
+    "majorCode": "TTDPT"
+  },
+  {
+    "subjectCode": "PG104",
+    "majorCode": "TTDPT"
+  },
+  {
+    "subjectCode": "PG105",
+    "majorCode": "TTDPT"
+  },
+  {
+    "subjectCode": "PG106",
+    "majorCode": "TTDPT"
+  },
+  {
+    "subjectCode": "PG107",
+    "majorCode": "TTDPT"
+  },
+  {
+    "subjectCode": "PG121",
+    "majorCode": "TTDPT"
+  },
+  {
+    "subjectCode": "MA232",
+    "majorCode": "TTDPT"
+  },
+  {
+    "subjectCode": "VL100",
+    "majorCode": "TTDPT"
+  },
+  {
+    "subjectCode": "VC200",
+    "majorCode": "TTDPT"
+  },
+  {
+    "subjectCode": "ES211",
+    "majorCode": "TTDPT"
+  },
+  {
+    "subjectCode": "ES221",
+    "majorCode": "TTDPT"
+  },
+  {
+    "subjectCode": "ES231",
+    "majorCode": "TTDPT"
+  },
+  {
+    "subjectCode": "ES241",
+    "majorCode": "TTDPT"
+  },
+  {
+    "subjectCode": "ES212",
+    "majorCode": "TTDPT"
+  },
+  {
+    "subjectCode": "ES222",
+    "majorCode": "TTDPT"
+  },
+  {
+    "subjectCode": "ES232",
+    "majorCode": "TTDPT"
+  },
+  {
+    "subjectCode": "ES242",
+    "majorCode": "TTDPT"
+  },
+  {
+    "subjectCode": "ES213",
+    "majorCode": "TTDPT"
+  },
+  {
+    "subjectCode": "ES223",
+    "majorCode": "TTDPT"
+  },
+  {
+    "subjectCode": "ES233",
+    "majorCode": "TTDPT"
+  },
+  {
+    "subjectCode": "ES243",
+    "majorCode": "TTDPT"
+  },
+  {
+    "subjectCode": "EL221",
+    "majorCode": "TTDPT"
+  },
+  {
+    "subjectCode": "EL322",
+    "majorCode": "TTDPT"
+  },
+  {
+    "subjectCode": "EL325",
+    "majorCode": "TTDPT"
+  },
+  {
+    "subjectCode": "AE212",
+    "majorCode": "TTDPT"
+  },
+  {
+    "subjectCode": "AE312",
+    "majorCode": "TTDPT"
+  },
+  {
+    "subjectCode": "SM421",
+    "majorCode": "TTDPT"
+  },
+  {
+    "subjectCode": "AE300",
+    "majorCode": "TTDPT"
+  },
+  {
+    "subjectCode": "AE301",
+    "majorCode": "TTDPT"
+  },
+  {
+    "subjectCode": "AE405",
+    "majorCode": "TTDPT"
+  },
+  {
+    "subjectCode": "AE302",
+    "majorCode": "TTDPT"
+  },
+  {
+    "subjectCode": "AE409",
+    "majorCode": "TTDPT"
+  },
+  {
+    "subjectCode": "AE350",
+    "majorCode": "TTDPT"
+  },
+  {
+    "subjectCode": "AE321",
+    "majorCode": "TTDPT"
+  },
+  {
+    "subjectCode": "BE322",
+    "majorCode": "TTDPT"
+  },
+  {
+    "subjectCode": "BE323",
+    "majorCode": "TTDPT"
+  },
+  {
+    "subjectCode": "BE324",
+    "majorCode": "TTDPT"
+  },
+  {
+    "subjectCode": "BE310",
+    "majorCode": "TTDPT"
+  },
+  {
+    "subjectCode": "PG331",
+    "majorCode": "TTDPT"
+  },
+  {
+    "subjectCode": "PG332",
+    "majorCode": "TTDPT"
+  },
+  {
+    "subjectCode": "PG341",
+    "majorCode": "TTDPT"
+  },
+  {
+    "subjectCode": "PG342",
+    "majorCode": "TTDPT"
+  },
+  {
+    "subjectCode": "EL401",
+    "majorCode": "TTDPT"
+  },
+  {
+    "subjectCode": "EL425",
+    "majorCode": "TTDPT"
+  },
+  {
+    "subjectCode": "AE430",
+    "majorCode": "TTDPT"
+  },
+  {
+    "subjectCode": "AE415",
+    "majorCode": "TTDPT"
+  },
+  {
+    "subjectCode": "BE325",
+    "majorCode": "TTDPT"
+  },
+  {
+    "subjectCode": "BE326",
+    "majorCode": "TTDPT"
+  },
+  {
+    "subjectCode": "AE432",
+    "majorCode": "TTDPT"
+  },
+  {
+    "subjectCode": "BE421",
+    "majorCode": "TTDPT"
+  },
+  {
+    "subjectCode": "PE422",
+    "majorCode": "TTDPT"
+  },
+  {
+    "subjectCode": "PE423",
+    "majorCode": "TTDPT"
+  },
+  {
+    "subjectCode": "PE431",
+    "majorCode": "TTDPT"
+  },
+  {
+    "subjectCode": "PE441",
+    "majorCode": "TTDPT"
+  },
+  {
+    "subjectCode": "BE490",
+    "majorCode": "TTDPT"
+  },
+  {
+    "subjectCode": "PE490",
+    "majorCode": "TTDPT"
+  },
+  {
+    "subjectCode": "AE499",
+    "majorCode": "TTDPT"
+  },
+  {
+    "subjectCode": "BE497",
+    "majorCode": "TTDPT"
+  },
+  {
+    "subjectCode": "AE490",
+    "majorCode": "TTDPT"
+  },
+  {
+    "subjectCode": "PE495",
+    "majorCode": "TTDPT"
+  },
+  {
+    "subjectCode": "ML113",
+    "majorCode": "TKDH"
+  },
+  {
+    "subjectCode": "ML114",
+    "majorCode": "TKDH"
+  },
+  {
+    "subjectCode": "ML115",
+    "majorCode": "TKDH"
+  },
+  {
+    "subjectCode": "ML202",
+    "majorCode": "TKDH"
+  },
+  {
+    "subjectCode": "ML204",
+    "majorCode": "TKDH"
+  },
+  {
+    "subjectCode": "CS102",
+    "majorCode": "TKDH"
+  },
+  {
+    "subjectCode": "MA100",
+    "majorCode": "TKDH"
+  },
+  {
+    "subjectCode": "NA151",
+    "majorCode": "TKDH"
+  },
+  {
+    "subjectCode": "EC102",
+    "majorCode": "TKDH"
+  },
+  {
+    "subjectCode": "VL101",
+    "majorCode": "TKDH"
+  },
+  {
+    "subjectCode": "SH131",
+    "majorCode": "TKDH"
+  },
+  {
+    "subjectCode": "GE171",
+    "majorCode": "TKDH"
+  },
+  {
+    "subjectCode": "GE172",
+    "majorCode": "TKDH"
+  },
+  {
+    "subjectCode": "GE173",
+    "majorCode": "TKDH"
+  },
+  {
+    "subjectCode": "GF101",
+    "majorCode": "TKDH"
+  },
+  {
+    "subjectCode": "GF102",
+    "majorCode": "TKDH"
+  },
+  {
+    "subjectCode": "GJ101",
+    "majorCode": "TKDH"
+  },
+  {
+    "subjectCode": "GJ102",
+    "majorCode": "TKDH"
+  },
+  {
+    "subjectCode": "GZ101",
+    "majorCode": "TKDH"
+  },
+  {
+    "subjectCode": "GZ102",
+    "majorCode": "TKDH"
+  },
+  {
+    "subjectCode": "GI101",
+    "majorCode": "TKDH"
+  },
+  {
+    "subjectCode": "GI102",
+    "majorCode": "TKDH"
+  },
+  {
+    "subjectCode": "GK101",
+    "majorCode": "TKDH"
+  },
+  {
+    "subjectCode": "GK102",
+    "majorCode": "TKDH"
+  },
+  {
+    "subjectCode": "PG101",
+    "majorCode": "TKDH"
+  },
+  {
+    "subjectCode": "PG102",
+    "majorCode": "TKDH"
+  },
+  {
+    "subjectCode": "PG103",
+    "majorCode": "TKDH"
+  },
+  {
+    "subjectCode": "PG104",
+    "majorCode": "TKDH"
+  },
+  {
+    "subjectCode": "PG105",
+    "majorCode": "TKDH"
+  },
+  {
+    "subjectCode": "PG106",
+    "majorCode": "TKDH"
+  },
+  {
+    "subjectCode": "PG107",
+    "majorCode": "TKDH"
+  },
+  {
+    "subjectCode": "PG121",
+    "majorCode": "TKDH"
+  },
+  {
+    "subjectCode": "MA232",
+    "majorCode": "TKDH"
+  },
+  {
+    "subjectCode": "VL100",
+    "majorCode": "TKDH"
+  },
+  {
+    "subjectCode": "VC200",
+    "majorCode": "TKDH"
+  },
+  {
+    "subjectCode": "ES211",
+    "majorCode": "TKDH"
+  },
+  {
+    "subjectCode": "ES221",
+    "majorCode": "TKDH"
+  },
+  {
+    "subjectCode": "ES231",
+    "majorCode": "TKDH"
+  },
+  {
+    "subjectCode": "ES241",
+    "majorCode": "TKDH"
+  },
+  {
+    "subjectCode": "ES212",
+    "majorCode": "TKDH"
+  },
+  {
+    "subjectCode": "ES222",
+    "majorCode": "TKDH"
+  },
+  {
+    "subjectCode": "ES232",
+    "majorCode": "TKDH"
+  },
+  {
+    "subjectCode": "ES242",
+    "majorCode": "TKDH"
+  },
+  {
+    "subjectCode": "ES213",
+    "majorCode": "TKDH"
+  },
+  {
+    "subjectCode": "ES223",
+    "majorCode": "TKDH"
+  },
+  {
+    "subjectCode": "ES233",
+    "majorCode": "TKDH"
+  },
+  {
+    "subjectCode": "ES243",
+    "majorCode": "TKDH"
+  },
+  {
+    "subjectCode": "EL221",
+    "majorCode": "TKDH"
+  },
+  {
+    "subjectCode": "EL322",
+    "majorCode": "TKDH"
+  },
+  {
+    "subjectCode": "EL325",
+    "majorCode": "TKDH"
+  },
+  {
+    "subjectCode": "AE212",
+    "majorCode": "TKDH"
+  },
+  {
+    "subjectCode": "AE312",
+    "majorCode": "TKDH"
+  },
+  {
+    "subjectCode": "SM421",
+    "majorCode": "TKDH"
+  },
+  {
+    "subjectCode": "AE300",
+    "majorCode": "TKDH"
+  },
+  {
+    "subjectCode": "AE301",
+    "majorCode": "TKDH"
+  },
+  {
+    "subjectCode": "AE405",
+    "majorCode": "TKDH"
+  },
+  {
+    "subjectCode": "AE302",
+    "majorCode": "TKDH"
+  },
+  {
+    "subjectCode": "AE409",
+    "majorCode": "TKDH"
+  },
+  {
+    "subjectCode": "AE350",
+    "majorCode": "TKDH"
+  },
+  {
+    "subjectCode": "AE321",
+    "majorCode": "TKDH"
+  },
+  {
+    "subjectCode": "BE322",
+    "majorCode": "TKDH"
+  },
+  {
+    "subjectCode": "BE323",
+    "majorCode": "TKDH"
+  },
+  {
+    "subjectCode": "BE324",
+    "majorCode": "TKDH"
+  },
+  {
+    "subjectCode": "BE310",
+    "majorCode": "TKDH"
+  },
+  {
+    "subjectCode": "PG331",
+    "majorCode": "TKDH"
+  },
+  {
+    "subjectCode": "PG332",
+    "majorCode": "TKDH"
+  },
+  {
+    "subjectCode": "PG341",
+    "majorCode": "TKDH"
+  },
+  {
+    "subjectCode": "PG342",
+    "majorCode": "TKDH"
+  },
+  {
+    "subjectCode": "EL401",
+    "majorCode": "TKDH"
+  },
+  {
+    "subjectCode": "EL425",
+    "majorCode": "TKDH"
+  },
+  {
+    "subjectCode": "AE430",
+    "majorCode": "TKDH"
+  },
+  {
+    "subjectCode": "AE415",
+    "majorCode": "TKDH"
+  },
+  {
+    "subjectCode": "BE325",
+    "majorCode": "TKDH"
+  },
+  {
+    "subjectCode": "BE326",
+    "majorCode": "TKDH"
+  },
+  {
+    "subjectCode": "AE432",
+    "majorCode": "TKDH"
+  },
+  {
+    "subjectCode": "BE421",
+    "majorCode": "TKDH"
+  },
+  {
+    "subjectCode": "PE422",
+    "majorCode": "TKDH"
+  },
+  {
+    "subjectCode": "PE423",
+    "majorCode": "TKDH"
+  },
+  {
+    "subjectCode": "PE431",
+    "majorCode": "TKDH"
+  },
+  {
+    "subjectCode": "PE441",
+    "majorCode": "TKDH"
+  },
+  {
+    "subjectCode": "BE490",
+    "majorCode": "TKDH"
+  },
+  {
+    "subjectCode": "PE490",
+    "majorCode": "TKDH"
+  },
+  {
+    "subjectCode": "AE499",
+    "majorCode": "TKDH"
+  },
+  {
+    "subjectCode": "BE497",
+    "majorCode": "TKDH"
+  },
+  {
+    "subjectCode": "AE490",
+    "majorCode": "TKDH"
+  },
+  {
+    "subjectCode": "PE495",
+    "majorCode": "TKDH"
+  },
+  {
+    "subjectCode": "ML113",
+    "majorCode": "LKT"
+  },
+  {
+    "subjectCode": "ML114",
+    "majorCode": "LKT"
+  },
+  {
+    "subjectCode": "ML115",
+    "majorCode": "LKT"
+  },
+  {
+    "subjectCode": "ML202",
+    "majorCode": "LKT"
+  },
+  {
+    "subjectCode": "ML204",
+    "majorCode": "LKT"
+  },
+  {
+    "subjectCode": "CS102",
+    "majorCode": "LKT"
+  },
+  {
+    "subjectCode": "MA100",
+    "majorCode": "LKT"
+  },
+  {
+    "subjectCode": "NA151",
+    "majorCode": "LKT"
+  },
+  {
+    "subjectCode": "EC102",
+    "majorCode": "LKT"
+  },
+  {
+    "subjectCode": "VL101",
+    "majorCode": "LKT"
+  },
+  {
+    "subjectCode": "SH131",
+    "majorCode": "LKT"
+  },
+  {
+    "subjectCode": "GE171",
+    "majorCode": "LKT"
+  },
+  {
+    "subjectCode": "GE172",
+    "majorCode": "LKT"
+  },
+  {
+    "subjectCode": "GE173",
+    "majorCode": "LKT"
+  },
+  {
+    "subjectCode": "GF101",
+    "majorCode": "LKT"
+  },
+  {
+    "subjectCode": "GF102",
+    "majorCode": "LKT"
+  },
+  {
+    "subjectCode": "GJ101",
+    "majorCode": "LKT"
+  },
+  {
+    "subjectCode": "GJ102",
+    "majorCode": "LKT"
+  },
+  {
+    "subjectCode": "GZ101",
+    "majorCode": "LKT"
+  },
+  {
+    "subjectCode": "GZ102",
+    "majorCode": "LKT"
+  },
+  {
+    "subjectCode": "GI101",
+    "majorCode": "LKT"
+  },
+  {
+    "subjectCode": "GI102",
+    "majorCode": "LKT"
+  },
+  {
+    "subjectCode": "GK101",
+    "majorCode": "LKT"
+  },
+  {
+    "subjectCode": "GK102",
+    "majorCode": "LKT"
+  },
+  {
+    "subjectCode": "PG101",
+    "majorCode": "LKT"
+  },
+  {
+    "subjectCode": "PG102",
+    "majorCode": "LKT"
+  },
+  {
+    "subjectCode": "PG103",
+    "majorCode": "LKT"
+  },
+  {
+    "subjectCode": "PG104",
+    "majorCode": "LKT"
+  },
+  {
+    "subjectCode": "PG105",
+    "majorCode": "LKT"
+  },
+  {
+    "subjectCode": "PG106",
+    "majorCode": "LKT"
+  },
+  {
+    "subjectCode": "PG107",
+    "majorCode": "LKT"
+  },
+  {
+    "subjectCode": "PG121",
+    "majorCode": "LKT"
+  },
+  {
+    "subjectCode": "MA232",
+    "majorCode": "LKT"
+  },
+  {
+    "subjectCode": "VL100",
+    "majorCode": "LKT"
+  },
+  {
+    "subjectCode": "VC200",
+    "majorCode": "LKT"
+  },
+  {
+    "subjectCode": "ES211",
+    "majorCode": "LKT"
+  },
+  {
+    "subjectCode": "ES221",
+    "majorCode": "LKT"
+  },
+  {
+    "subjectCode": "ES231",
+    "majorCode": "LKT"
+  },
+  {
+    "subjectCode": "ES241",
+    "majorCode": "LKT"
+  },
+  {
+    "subjectCode": "ES212",
+    "majorCode": "LKT"
+  },
+  {
+    "subjectCode": "ES222",
+    "majorCode": "LKT"
+  },
+  {
+    "subjectCode": "ES232",
+    "majorCode": "LKT"
+  },
+  {
+    "subjectCode": "ES242",
+    "majorCode": "LKT"
+  },
+  {
+    "subjectCode": "ES213",
+    "majorCode": "LKT"
+  },
+  {
+    "subjectCode": "ES223",
+    "majorCode": "LKT"
+  },
+  {
+    "subjectCode": "ES233",
+    "majorCode": "LKT"
+  },
+  {
+    "subjectCode": "ES243",
+    "majorCode": "LKT"
+  },
+  {
+    "subjectCode": "EL221",
+    "majorCode": "LKT"
+  },
+  {
+    "subjectCode": "EL322",
+    "majorCode": "LKT"
+  },
+  {
+    "subjectCode": "EL325",
+    "majorCode": "LKT"
+  },
+  {
+    "subjectCode": "AE212",
+    "majorCode": "LKT"
+  },
+  {
+    "subjectCode": "AE312",
+    "majorCode": "LKT"
+  },
+  {
+    "subjectCode": "SM421",
+    "majorCode": "LKT"
+  },
+  {
+    "subjectCode": "AE300",
+    "majorCode": "LKT"
+  },
+  {
+    "subjectCode": "AE301",
+    "majorCode": "LKT"
+  },
+  {
+    "subjectCode": "AE405",
+    "majorCode": "LKT"
+  },
+  {
+    "subjectCode": "AE302",
+    "majorCode": "LKT"
+  },
+  {
+    "subjectCode": "AE409",
+    "majorCode": "LKT"
+  },
+  {
+    "subjectCode": "AE350",
+    "majorCode": "LKT"
+  },
+  {
+    "subjectCode": "AE321",
+    "majorCode": "LKT"
+  },
+  {
+    "subjectCode": "BE322",
+    "majorCode": "LKT"
+  },
+  {
+    "subjectCode": "BE323",
+    "majorCode": "LKT"
+  },
+  {
+    "subjectCode": "BE324",
+    "majorCode": "LKT"
+  },
+  {
+    "subjectCode": "BE310",
+    "majorCode": "LKT"
+  },
+  {
+    "subjectCode": "PG331",
+    "majorCode": "LKT"
+  },
+  {
+    "subjectCode": "PG332",
+    "majorCode": "LKT"
+  },
+  {
+    "subjectCode": "PG341",
+    "majorCode": "LKT"
+  },
+  {
+    "subjectCode": "PG342",
+    "majorCode": "LKT"
+  },
+  {
+    "subjectCode": "EL401",
+    "majorCode": "LKT"
+  },
+  {
+    "subjectCode": "EL425",
+    "majorCode": "LKT"
+  },
+  {
+    "subjectCode": "AE430",
+    "majorCode": "LKT"
+  },
+  {
+    "subjectCode": "AE415",
+    "majorCode": "LKT"
+  },
+  {
+    "subjectCode": "BE325",
+    "majorCode": "LKT"
+  },
+  {
+    "subjectCode": "BE326",
+    "majorCode": "LKT"
+  },
+  {
+    "subjectCode": "AE432",
+    "majorCode": "LKT"
+  },
+  {
+    "subjectCode": "BE421",
+    "majorCode": "LKT"
+  },
+  {
+    "subjectCode": "PE422",
+    "majorCode": "LKT"
+  },
+  {
+    "subjectCode": "PE423",
+    "majorCode": "LKT"
+  },
+  {
+    "subjectCode": "PE431",
+    "majorCode": "LKT"
+  },
+  {
+    "subjectCode": "PE441",
+    "majorCode": "LKT"
+  },
+  {
+    "subjectCode": "BE490",
+    "majorCode": "LKT"
+  },
+  {
+    "subjectCode": "PE490",
+    "majorCode": "LKT"
+  },
+  {
+    "subjectCode": "AE499",
+    "majorCode": "LKT"
+  },
+  {
+    "subjectCode": "BE497",
+    "majorCode": "LKT"
+  },
+  {
+    "subjectCode": "AE490",
+    "majorCode": "LKT"
+  },
+  {
+    "subjectCode": "PE495",
+    "majorCode": "LKT"
+  },
+  {
+    "subjectCode": "ML113",
+    "majorCode": "DLLH"
+  },
+  {
+    "subjectCode": "ML114",
+    "majorCode": "DLLH"
+  },
+  {
+    "subjectCode": "ML115",
+    "majorCode": "DLLH"
+  },
+  {
+    "subjectCode": "ML202",
+    "majorCode": "DLLH"
+  },
+  {
+    "subjectCode": "ML204",
+    "majorCode": "DLLH"
+  },
+  {
+    "subjectCode": "CS102",
+    "majorCode": "DLLH"
+  },
+  {
+    "subjectCode": "MA100",
+    "majorCode": "DLLH"
+  },
+  {
+    "subjectCode": "NA151",
+    "majorCode": "DLLH"
+  },
+  {
+    "subjectCode": "EC102",
+    "majorCode": "DLLH"
+  },
+  {
+    "subjectCode": "VL101",
+    "majorCode": "DLLH"
+  },
+  {
+    "subjectCode": "SH131",
+    "majorCode": "DLLH"
+  },
+  {
+    "subjectCode": "GE171",
+    "majorCode": "DLLH"
+  },
+  {
+    "subjectCode": "GE172",
+    "majorCode": "DLLH"
+  },
+  {
+    "subjectCode": "GE173",
+    "majorCode": "DLLH"
+  },
+  {
+    "subjectCode": "GF101",
+    "majorCode": "DLLH"
+  },
+  {
+    "subjectCode": "GF102",
+    "majorCode": "DLLH"
+  },
+  {
+    "subjectCode": "GJ101",
+    "majorCode": "DLLH"
+  },
+  {
+    "subjectCode": "GJ102",
+    "majorCode": "DLLH"
+  },
+  {
+    "subjectCode": "GZ101",
+    "majorCode": "DLLH"
+  },
+  {
+    "subjectCode": "GZ102",
+    "majorCode": "DLLH"
+  },
+  {
+    "subjectCode": "GI101",
+    "majorCode": "DLLH"
+  },
+  {
+    "subjectCode": "GI102",
+    "majorCode": "DLLH"
+  },
+  {
+    "subjectCode": "GK101",
+    "majorCode": "DLLH"
+  },
+  {
+    "subjectCode": "GK102",
+    "majorCode": "DLLH"
+  },
+  {
+    "subjectCode": "PG101",
+    "majorCode": "DLLH"
+  },
+  {
+    "subjectCode": "PG102",
+    "majorCode": "DLLH"
+  },
+  {
+    "subjectCode": "PG103",
+    "majorCode": "DLLH"
+  },
+  {
+    "subjectCode": "PG104",
+    "majorCode": "DLLH"
+  },
+  {
+    "subjectCode": "PG105",
+    "majorCode": "DLLH"
+  },
+  {
+    "subjectCode": "PG106",
+    "majorCode": "DLLH"
+  },
+  {
+    "subjectCode": "PG107",
+    "majorCode": "DLLH"
+  },
+  {
+    "subjectCode": "PG121",
+    "majorCode": "DLLH"
+  },
+  {
+    "subjectCode": "MA232",
+    "majorCode": "DLLH"
+  },
+  {
+    "subjectCode": "VL100",
+    "majorCode": "DLLH"
+  },
+  {
+    "subjectCode": "VC200",
+    "majorCode": "DLLH"
+  },
+  {
+    "subjectCode": "ES211",
+    "majorCode": "DLLH"
+  },
+  {
+    "subjectCode": "ES221",
+    "majorCode": "DLLH"
+  },
+  {
+    "subjectCode": "ES231",
+    "majorCode": "DLLH"
+  },
+  {
+    "subjectCode": "ES241",
+    "majorCode": "DLLH"
+  },
+  {
+    "subjectCode": "ES212",
+    "majorCode": "DLLH"
+  },
+  {
+    "subjectCode": "ES222",
+    "majorCode": "DLLH"
+  },
+  {
+    "subjectCode": "ES232",
+    "majorCode": "DLLH"
+  },
+  {
+    "subjectCode": "ES242",
+    "majorCode": "DLLH"
+  },
+  {
+    "subjectCode": "ES213",
+    "majorCode": "DLLH"
+  },
+  {
+    "subjectCode": "ES223",
+    "majorCode": "DLLH"
+  },
+  {
+    "subjectCode": "ES233",
+    "majorCode": "DLLH"
+  },
+  {
+    "subjectCode": "ES243",
+    "majorCode": "DLLH"
+  },
+  {
+    "subjectCode": "EL221",
+    "majorCode": "DLLH"
+  },
+  {
+    "subjectCode": "EL322",
+    "majorCode": "DLLH"
+  },
+  {
+    "subjectCode": "EL325",
+    "majorCode": "DLLH"
+  },
+  {
+    "subjectCode": "AE212",
+    "majorCode": "DLLH"
+  },
+  {
+    "subjectCode": "AE312",
+    "majorCode": "DLLH"
+  },
+  {
+    "subjectCode": "SM421",
+    "majorCode": "DLLH"
+  },
+  {
+    "subjectCode": "AE300",
+    "majorCode": "DLLH"
+  },
+  {
+    "subjectCode": "AE301",
+    "majorCode": "DLLH"
+  },
+  {
+    "subjectCode": "AE405",
+    "majorCode": "DLLH"
+  },
+  {
+    "subjectCode": "AE302",
+    "majorCode": "DLLH"
+  },
+  {
+    "subjectCode": "AE409",
+    "majorCode": "DLLH"
+  },
+  {
+    "subjectCode": "AE350",
+    "majorCode": "DLLH"
+  },
+  {
+    "subjectCode": "AE321",
+    "majorCode": "DLLH"
+  },
+  {
+    "subjectCode": "BE322",
+    "majorCode": "DLLH"
+  },
+  {
+    "subjectCode": "BE323",
+    "majorCode": "DLLH"
+  },
+  {
+    "subjectCode": "BE324",
+    "majorCode": "DLLH"
+  },
+  {
+    "subjectCode": "BE310",
+    "majorCode": "DLLH"
+  },
+  {
+    "subjectCode": "PG331",
+    "majorCode": "DLLH"
+  },
+  {
+    "subjectCode": "PG332",
+    "majorCode": "DLLH"
+  },
+  {
+    "subjectCode": "PG341",
+    "majorCode": "DLLH"
+  },
+  {
+    "subjectCode": "PG342",
+    "majorCode": "DLLH"
+  },
+  {
+    "subjectCode": "EL401",
+    "majorCode": "DLLH"
+  },
+  {
+    "subjectCode": "EL425",
+    "majorCode": "DLLH"
+  },
+  {
+    "subjectCode": "AE430",
+    "majorCode": "DLLH"
+  },
+  {
+    "subjectCode": "AE415",
+    "majorCode": "DLLH"
+  },
+  {
+    "subjectCode": "BE325",
+    "majorCode": "DLLH"
+  },
+  {
+    "subjectCode": "BE326",
+    "majorCode": "DLLH"
+  },
+  {
+    "subjectCode": "AE432",
+    "majorCode": "DLLH"
+  },
+  {
+    "subjectCode": "BE421",
+    "majorCode": "DLLH"
+  },
+  {
+    "subjectCode": "PE422",
+    "majorCode": "DLLH"
+  },
+  {
+    "subjectCode": "PE423",
+    "majorCode": "DLLH"
+  },
+  {
+    "subjectCode": "PE431",
+    "majorCode": "DLLH"
+  },
+  {
+    "subjectCode": "PE441",
+    "majorCode": "DLLH"
+  },
+  {
+    "subjectCode": "BE490",
+    "majorCode": "DLLH"
+  },
+  {
+    "subjectCode": "PE490",
+    "majorCode": "DLLH"
+  },
+  {
+    "subjectCode": "AE499",
+    "majorCode": "DLLH"
+  },
+  {
+    "subjectCode": "BE497",
+    "majorCode": "DLLH"
+  },
+  {
+    "subjectCode": "AE490",
+    "majorCode": "DLLH"
+  },
+  {
+    "subjectCode": "PE495",
+    "majorCode": "DLLH"
+  },
+  {
+    "subjectCode": "ML113",
+    "majorCode": "QTKS"
+  },
+  {
+    "subjectCode": "ML114",
+    "majorCode": "QTKS"
+  },
+  {
+    "subjectCode": "ML115",
+    "majorCode": "QTKS"
+  },
+  {
+    "subjectCode": "ML202",
+    "majorCode": "QTKS"
+  },
+  {
+    "subjectCode": "ML204",
+    "majorCode": "QTKS"
+  },
+  {
+    "subjectCode": "CS102",
+    "majorCode": "QTKS"
+  },
+  {
+    "subjectCode": "MA100",
+    "majorCode": "QTKS"
+  },
+  {
+    "subjectCode": "NA151",
+    "majorCode": "QTKS"
+  },
+  {
+    "subjectCode": "EC102",
+    "majorCode": "QTKS"
+  },
+  {
+    "subjectCode": "VL101",
+    "majorCode": "QTKS"
+  },
+  {
+    "subjectCode": "SH131",
+    "majorCode": "QTKS"
+  },
+  {
+    "subjectCode": "GE171",
+    "majorCode": "QTKS"
+  },
+  {
+    "subjectCode": "GE172",
+    "majorCode": "QTKS"
+  },
+  {
+    "subjectCode": "GE173",
+    "majorCode": "QTKS"
+  },
+  {
+    "subjectCode": "GF101",
+    "majorCode": "QTKS"
+  },
+  {
+    "subjectCode": "GF102",
+    "majorCode": "QTKS"
+  },
+  {
+    "subjectCode": "GJ101",
+    "majorCode": "QTKS"
+  },
+  {
+    "subjectCode": "GJ102",
+    "majorCode": "QTKS"
+  },
+  {
+    "subjectCode": "GZ101",
+    "majorCode": "QTKS"
+  },
+  {
+    "subjectCode": "GZ102",
+    "majorCode": "QTKS"
+  },
+  {
+    "subjectCode": "GI101",
+    "majorCode": "QTKS"
+  },
+  {
+    "subjectCode": "GI102",
+    "majorCode": "QTKS"
+  },
+  {
+    "subjectCode": "GK101",
+    "majorCode": "QTKS"
+  },
+  {
+    "subjectCode": "GK102",
+    "majorCode": "QTKS"
+  },
+  {
+    "subjectCode": "PG101",
+    "majorCode": "QTKS"
+  },
+  {
+    "subjectCode": "PG102",
+    "majorCode": "QTKS"
+  },
+  {
+    "subjectCode": "PG103",
+    "majorCode": "QTKS"
+  },
+  {
+    "subjectCode": "PG104",
+    "majorCode": "QTKS"
+  },
+  {
+    "subjectCode": "PG105",
+    "majorCode": "QTKS"
+  },
+  {
+    "subjectCode": "PG106",
+    "majorCode": "QTKS"
+  },
+  {
+    "subjectCode": "PG107",
+    "majorCode": "QTKS"
+  },
+  {
+    "subjectCode": "PG121",
+    "majorCode": "QTKS"
+  },
+  {
+    "subjectCode": "MA232",
+    "majorCode": "QTKS"
+  },
+  {
+    "subjectCode": "VL100",
+    "majorCode": "QTKS"
+  },
+  {
+    "subjectCode": "VC200",
+    "majorCode": "QTKS"
+  },
+  {
+    "subjectCode": "ES211",
+    "majorCode": "QTKS"
+  },
+  {
+    "subjectCode": "ES221",
+    "majorCode": "QTKS"
+  },
+  {
+    "subjectCode": "ES231",
+    "majorCode": "QTKS"
+  },
+  {
+    "subjectCode": "ES241",
+    "majorCode": "QTKS"
+  },
+  {
+    "subjectCode": "ES212",
+    "majorCode": "QTKS"
+  },
+  {
+    "subjectCode": "ES222",
+    "majorCode": "QTKS"
+  },
+  {
+    "subjectCode": "ES232",
+    "majorCode": "QTKS"
+  },
+  {
+    "subjectCode": "ES242",
+    "majorCode": "QTKS"
+  },
+  {
+    "subjectCode": "ES213",
+    "majorCode": "QTKS"
+  },
+  {
+    "subjectCode": "ES223",
+    "majorCode": "QTKS"
+  },
+  {
+    "subjectCode": "ES233",
+    "majorCode": "QTKS"
+  },
+  {
+    "subjectCode": "ES243",
+    "majorCode": "QTKS"
+  },
+  {
+    "subjectCode": "EL221",
+    "majorCode": "QTKS"
+  },
+  {
+    "subjectCode": "EL322",
+    "majorCode": "QTKS"
+  },
+  {
+    "subjectCode": "EL325",
+    "majorCode": "QTKS"
+  },
+  {
+    "subjectCode": "AE212",
+    "majorCode": "QTKS"
+  },
+  {
+    "subjectCode": "AE312",
+    "majorCode": "QTKS"
+  },
+  {
+    "subjectCode": "SM421",
+    "majorCode": "QTKS"
+  },
+  {
+    "subjectCode": "AE300",
+    "majorCode": "QTKS"
+  },
+  {
+    "subjectCode": "AE301",
+    "majorCode": "QTKS"
+  },
+  {
+    "subjectCode": "AE405",
+    "majorCode": "QTKS"
+  },
+  {
+    "subjectCode": "AE302",
+    "majorCode": "QTKS"
+  },
+  {
+    "subjectCode": "AE409",
+    "majorCode": "QTKS"
+  },
+  {
+    "subjectCode": "AE350",
+    "majorCode": "QTKS"
+  },
+  {
+    "subjectCode": "AE321",
+    "majorCode": "QTKS"
+  },
+  {
+    "subjectCode": "BE322",
+    "majorCode": "QTKS"
+  },
+  {
+    "subjectCode": "BE323",
+    "majorCode": "QTKS"
+  },
+  {
+    "subjectCode": "BE324",
+    "majorCode": "QTKS"
+  },
+  {
+    "subjectCode": "BE310",
+    "majorCode": "QTKS"
+  },
+  {
+    "subjectCode": "PG331",
+    "majorCode": "QTKS"
+  },
+  {
+    "subjectCode": "PG332",
+    "majorCode": "QTKS"
+  },
+  {
+    "subjectCode": "PG341",
+    "majorCode": "QTKS"
+  },
+  {
+    "subjectCode": "PG342",
+    "majorCode": "QTKS"
+  },
+  {
+    "subjectCode": "EL401",
+    "majorCode": "QTKS"
+  },
+  {
+    "subjectCode": "EL425",
+    "majorCode": "QTKS"
+  },
+  {
+    "subjectCode": "AE430",
+    "majorCode": "QTKS"
+  },
+  {
+    "subjectCode": "AE415",
+    "majorCode": "QTKS"
+  },
+  {
+    "subjectCode": "BE325",
+    "majorCode": "QTKS"
+  },
+  {
+    "subjectCode": "BE326",
+    "majorCode": "QTKS"
+  },
+  {
+    "subjectCode": "AE432",
+    "majorCode": "QTKS"
+  },
+  {
+    "subjectCode": "BE421",
+    "majorCode": "QTKS"
+  },
+  {
+    "subjectCode": "PE422",
+    "majorCode": "QTKS"
+  },
+  {
+    "subjectCode": "PE423",
+    "majorCode": "QTKS"
+  },
+  {
+    "subjectCode": "PE431",
+    "majorCode": "QTKS"
+  },
+  {
+    "subjectCode": "PE441",
+    "majorCode": "QTKS"
+  },
+  {
+    "subjectCode": "BE490",
+    "majorCode": "QTKS"
+  },
+  {
+    "subjectCode": "PE490",
+    "majorCode": "QTKS"
+  },
+  {
+    "subjectCode": "AE499",
+    "majorCode": "QTKS"
+  },
+  {
+    "subjectCode": "BE497",
+    "majorCode": "QTKS"
+  },
+  {
+    "subjectCode": "AE490",
+    "majorCode": "QTKS"
+  },
+  {
+    "subjectCode": "PE495",
+    "majorCode": "QTKS"
   }
 ]

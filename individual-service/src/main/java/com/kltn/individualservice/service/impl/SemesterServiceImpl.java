@@ -77,6 +77,6 @@ public class SemesterServiceImpl implements SemesterService {
 
     @Override
     public Semester findNextSemester() {
-        return semesterRepository.findNextSemester();
+        return semesterRepository.findNextSemester().orElseThrow(() -> new NotFoundException("Semester"));
     }
 }

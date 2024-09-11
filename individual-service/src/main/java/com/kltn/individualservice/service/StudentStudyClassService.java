@@ -7,6 +7,6 @@ import java.util.List;
 
 public interface StudentStudyClassService {
     StudentStudyClass create(String studyClassId);
-    List<StudentStudyClass> findAllBySemester(GetStudentStudyClassesRequest request);
+    List<StudentStudyClass> findAllByStudentAndSemester(GetStudentStudyClassesRequest request);
     StudentStudyClass delete(Long id);
 }

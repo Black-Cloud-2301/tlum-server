@@ -9,20 +9,13 @@ import com.kltn.individualservice.entity.Student;
 import com.kltn.individualservice.repository.RegistrationTimeRepository;
 import com.kltn.individualservice.service.SemesterService;
 import com.kltn.individualservice.service.StudentService;
-import com.kltn.individualservice.service.impl.RegistrationTimeServiceImpl;
-import jakarta.servlet.http.HttpServletRequest;
 import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;
 import lombok.experimental.FieldDefaults;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.http.HttpHeaders;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
-import org.springframework.web.context.request.RequestAttributes;
-import org.springframework.web.context.request.RequestContextHolder;
-import org.springframework.web.context.request.ServletRequestAttributes;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
@@ -31,14 +24,14 @@ import java.util.List;
 @Component
 @EnableScheduling
 @RequiredArgsConstructor
+@Slf4j
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class RegistrationTimeSchedule {
-    final Logger LOGGER = LoggerFactory.getLogger(RegistrationTimeServiceImpl.class);
     final RegistrationTimeRepository registrationTimeRepository;
     final SemesterService semesterService;
     final StudentService studentService;
 
-//    @Scheduled(cron = "0 * * * * ?")
+    @Scheduled(cron = "${scheduling.cron.processStudentsRegisterSemester}")
     public void processStudentsRegisterSemester() {
         Semester semester = semesterService.findNextSemester();
         GetStudentsRequest request = new GetStudentsRequest();
@@ -70,5 +63,6 @@ public class RegistrationTimeSchedule {
         }
 
         registrationTimeRepository.saveAll(registrationTimes);
+        log.info("Process students register semester done with: {}", registrationTimes.size());
     }
 }

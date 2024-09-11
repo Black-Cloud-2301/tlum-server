@@ -40,4 +40,9 @@ public class RegistrationTimeController {
         registrationTimeService.delete(id);
         return ResponseUtils.getResponseEntity("Delete success");
     }
+
+    @GetMapping("/student")
+    ResponseEntity<Object> getRegistrationTimeByStudent() {
+        return ResponseUtils.getResponseEntity(registrationTimeService.findByStudent());
+    }
 }

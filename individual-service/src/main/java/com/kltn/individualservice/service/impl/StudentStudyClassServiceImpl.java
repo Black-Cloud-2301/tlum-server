@@ -10,14 +10,12 @@ import com.kltn.individualservice.exception.NotFoundException;
 import com.kltn.individualservice.repository.StudentRepository;
 import com.kltn.individualservice.repository.StudentStudyClassRepository;
 import com.kltn.individualservice.repository.StudyClassRepository;
-import com.kltn.individualservice.service.SemesterService;
 import com.kltn.individualservice.service.StudentStudyClassService;
 import com.kltn.individualservice.util.WebUtil;
 import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;
 import lombok.experimental.FieldDefaults;
 import org.springframework.cache.annotation.CacheEvict;
-import org.springframework.cache.annotation.CachePut;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.cache.annotation.Caching;
 import org.springframework.stereotype.Service;
@@ -48,11 +46,10 @@ public class StudentStudyClassServiceImpl implements StudentStudyClassService {
         }
     }
 
-    @Override
     @Cacheable(value = "studentStudyClasses", key = "#request")
-    public List<StudentStudyClass> findAllBySemester(GetStudentStudyClassesRequest request) {
+    public List<StudentStudyClass> findAllByStudentAndSemester(GetStudentStudyClassesRequest request) {
         Long userId = Long.parseLong(webUtil.getUserId());
-        return studentStudyClassRepository.findAllByStudentId(userId);
+        return studentStudyClassRepository.findAllByStudentId(userId, request.getSemesterId());
     }
 
     @Override

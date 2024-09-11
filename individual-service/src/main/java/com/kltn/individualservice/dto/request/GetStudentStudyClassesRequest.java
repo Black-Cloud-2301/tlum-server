@@ -10,16 +10,14 @@ import java.util.List;
 @Setter
 @Getter
 public class GetStudentStudyClassesRequest {
-    Integer year;
-    Integer semester;
-    Integer studentGroup;
+    Long semesterId;
+    Long studentId;
 
     @Override
     public String toString() {
         return "GetStudentStudyClassesRequest{" +
-                "year=" + year +
-                ", semester=" + semester +
-                ", studentGroup=" + studentGroup +
+                "semesterId=" + semesterId +
+                ", studentId=" + studentId +
                 '}';
     }
 }

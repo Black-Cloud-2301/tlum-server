@@ -9,6 +9,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 
 import java.util.List;
+import java.util.Optional;
 
 public interface SemesterRepository extends JpaRepository<Semester, Long> {
     List<Semester> findAllByIsActiveIn(List<EntityStatus> isActive);
@@ -21,6 +22,7 @@ public interface SemesterRepository extends JpaRepository<Semester, Long> {
             "AND (:#{#request.semester} IS NULL OR s.semester IN :#{#request.semester})")
     Page<Semester> findAllByIsActiveIn(SemesterRequest request, Pageable pageable);
 
+
     @Query("SELECT s FROM Semester s WHERE s.isActive = 1 AND s.fromDate > CURRENT_DATE ORDER BY s.fromDate ASC LIMIT 1")
-    Semester findNextSemester();
+    Optional<Semester> findNextSemester();
 }

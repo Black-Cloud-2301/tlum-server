@@ -26,6 +26,11 @@ public class SemesterController {
         }
     }
 
+//    @GetMapping("/next")
+//    ResponseEntity<Object> findNextSemester() {
+//        return ResponseUtils.getResponseEntity(semesterService.findNextSemester());
+//    }
+
     @PostMapping
     ResponseEntity<Object> createSemester(@RequestBody Semester request) {
         return ResponseUtils.getResponseEntity(semesterService.createSemester(request));

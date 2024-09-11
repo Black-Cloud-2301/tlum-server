@@ -1,0 +1,9 @@
+[
+  {
+    "code": "creditPrice",
+    "tableCode": "creditPrice",
+    "tableName": "Giá tiền 1 tín chỉ",
+    "value": "1000000",
+    "valueType": "currency"
+  }
+]

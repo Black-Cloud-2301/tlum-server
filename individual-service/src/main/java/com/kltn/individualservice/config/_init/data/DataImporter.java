@@ -2,8 +2,10 @@ package com.kltn.individualservice.config._init.data;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.kltn.individualservice.constant.EntityStatus;
 import com.kltn.individualservice.dto.request.MajorImport;
 import com.kltn.individualservice.dto.request.SubjectImport;
+import com.kltn.individualservice.dto.request.SubjectMajorImport;
 import com.kltn.individualservice.entity.*;
 import com.kltn.individualservice.exception.NotFoundException;
 import com.kltn.individualservice.repository.*;
@@ -17,10 +19,8 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 
 import java.io.IOException;
 import java.net.URL;
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
+import java.util.stream.Collectors;
 
 @Configuration
 @RequiredArgsConstructor
@@ -35,6 +35,7 @@ public class DataImporter extends com.kltn.individualservice.config._init.DataIm
     private final StudyDepartmentRepository studyDepartmentRepository;
     private final MajorRepository majorRepository;
     private final SubjectRepository subjectRepository;
+    private final SettingRepository settingRepository;
 
     @Value("classpath:static/user.json")
     private Resource usersData;
@@ -48,6 +49,10 @@ public class DataImporter extends com.kltn.individualservice.config._init.DataIm
     private Resource majorsData;
     @Value("classpath:static/subjects.json")
     private Resource subjectsData;
+    @Value("classpath:static/majorsSubject.json")
+    private Resource majorsSubjectData;
+    @Value("classpath:static/settings.json")
+    private Resource settingsData;
 
 
     @Override
@@ -145,9 +150,16 @@ public class DataImporter extends com.kltn.individualservice.config._init.DataIm
         }
         if (subjectRepository.count() == 0) {
             try {
-                URL url = subjectsData.getURL();
-                List<SubjectImport> subjectsDto = objectMapper.readValue(url, new TypeReference<>() {
+                URL majorSubjectUrl = majorsSubjectData.getURL();
+                List<SubjectMajorImport> subjectsMajorDto = objectMapper.readValue(majorSubjectUrl, new TypeReference<>() {
                 });
+                Map<String, Major> majors = majorRepository.findByIsActiveIn(List.of(EntityStatus.ACTIVE)).stream()
+                        .collect(Collectors.toMap(Major::getCode, major -> major));
+
+                URL subjectUrl = subjectsData.getURL();
+                List<SubjectImport> subjectsDto = objectMapper.readValue(subjectUrl, new TypeReference<>() {
+                });
+                List<Subject> subjects = new ArrayList<>();
                 subjectsDto.forEach(subjectDto -> {
                     Subject subject = new Subject();
                     subject.setCode(subjectDto.getCode());
@@ -156,10 +168,26 @@ public class DataImporter extends com.kltn.individualservice.config._init.DataIm
                     subject.setHours(subjectDto.getHours());
                     subject.setCoefficient(subjectDto.getCoefficient());
                     subject.setRequireSubjects(subjectRepository.findAllByCodeIn(subjectDto.getRequireSubjects()));
-                    subjectRepository.save(subject);
+                    List<Major> subjectMajors = subjectsMajorDto.stream()
+                            .filter(subjectMajorDto -> subjectMajorDto.getSubjectCode().equals(subjectDto.getCode()))
+                            .map(subjectMajorDto -> majors.get(subjectMajorDto.getMajorCode()))
+                            .collect(Collectors.toList());
+                    subject.setMajors(subjectMajors);
+                    subjects.add(subject);
                 });
+                subjectRepository.saveAll(subjects);
             } catch (IOException e) {
                 LOGGER.error("Failed to import subject data", e);
+            }
+        }
+        if(settingRepository.count() == 0) {
+            try {
+                URL url = settingsData.getURL();
+                List<Setting> settings = objectMapper.readValue(url, new TypeReference<>() {
+                });
+                settingRepository.saveAll(settings);
+            } catch (IOException e) {
+                LOGGER.error("Failed to import setting data", e);
             }
         }
     }

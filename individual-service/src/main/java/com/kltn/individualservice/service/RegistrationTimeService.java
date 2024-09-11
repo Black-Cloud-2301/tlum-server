@@ -13,4 +13,5 @@ public interface RegistrationTimeService {
     List<RegistrationTime> searchBySemesterId(Long semesterId, RegistrationTimeRequest request);
     Page<RegistrationTime> searchBySemesterId(Long semesterId, RegistrationTimeRequest request, Pageable pageable);
     void delete(Long id);
+    RegistrationTime findByStudent();
 }
