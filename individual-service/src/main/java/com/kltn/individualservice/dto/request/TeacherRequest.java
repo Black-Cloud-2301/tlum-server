@@ -1,6 +1,7 @@
 package com.kltn.individualservice.dto.request;
 
 import com.kltn.individualservice.constant.EmployeeStatus;
+import com.kltn.individualservice.constant.Gender;
 import lombok.Getter;
 
 import java.time.LocalDate;
@@ -13,6 +14,7 @@ public class TeacherRequest {
     private String lastname;
     private String phoneNumber;
     private String email;
+    private Gender gender;
     private LocalDate dateOfBirth;
     private String address;
     private Long studyDepartmentId;

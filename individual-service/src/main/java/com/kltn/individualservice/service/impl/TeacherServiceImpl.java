@@ -146,6 +146,9 @@ public class TeacherServiceImpl implements TeacherService {
         user.setEmail(request.getEmail());
         user.setDateOfBirth(request.getDateOfBirth());
         user.setAddress(request.getAddress());
+        user.setPassword(passwordEncoder.encode(defaultPassword));
+        user.setGender(request.getGender());
+        user.setRoles(Set.of(roleService.getRoleByCode(UserType.TEACHER.name())));
         user.setCode("T" + codeSuffix);
         teacher.setUser(user);
 
