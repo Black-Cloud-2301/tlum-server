@@ -72,6 +72,11 @@ public class SubjectServiceImpl implements SubjectService {
         subjectRepository.deleteById(id);
     }
 
+//    @Override
+//    public List<Subject> findAllSubjectCanRegister(Long studentId) {
+//        return subjectRepository.findAllSubjectCanRegister(studentId);
+//    }
+
     private void findMajorsAndSubject(Subject request) {
         if(request.getMajorIds() != null && !request.getMajorIds().isEmpty()) {
             List<Major> majors = majorService.getMajorByIds(request.getMajorIds());

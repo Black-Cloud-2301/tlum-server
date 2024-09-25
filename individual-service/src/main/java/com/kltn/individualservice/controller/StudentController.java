@@ -17,13 +17,13 @@ import org.springframework.web.multipart.MultipartFile;
 @RestController
 @RequestMapping("/v1/student")
 @RequiredArgsConstructor
-@FunctionPermission("INDIVIDUAL/STUDENT")
+//@FunctionPermission("INDIVIDUAL/STUDENT")
 public class StudentController {
 
     private final StudentService studentService;
 
     @GetMapping
-    @ActionPermission("VIEW")
+//    @ActionPermission("VIEW")
     public ResponseEntity<Object> getStudents(GetStudentsRequest request) {
         if (request.getPageNumber() != null && request.getPageSize() != null) {
             Pageable pageable = CommonUtil.createPageable(request);
@@ -38,6 +38,11 @@ public class StudentController {
             return ResponseUtils.getResponseEntity(studentService.findById(id));
     }
 
+    @GetMapping("/study-class")
+    public ResponseEntity<Object> getStudentsByStudyClass(@RequestParam Long studyClassId) {
+        return ResponseUtils.getResponseEntity(studentService.getStudentsByStudyClass(studyClassId));
+    }
+
     @PostMapping
     @ActionPermission("CREATE")
     public ResponseEntity<Object> createStudent(@ModelAttribute StudentRequestCRU request) {
@@ -45,7 +50,7 @@ public class StudentController {
     }
 
     @PostMapping("/import")
-    @ActionPermission("IMPORT")
+//    @ActionPermission("IMPORT")
     public ResponseEntity<Object> importStudent(@RequestPart("file") MultipartFile file) {
         return ResponseUtils.getResponseEntity(studentService.importStudents(file));
     }

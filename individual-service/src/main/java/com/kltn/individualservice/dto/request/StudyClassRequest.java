@@ -18,7 +18,6 @@ public class StudyClassRequest extends PageableRequest {
     private Long teacherId;
     private List<EntityStatus> entityStatuses;
 
-
     @Override
     public String toString() {
         return "StudyClassRequest{" +

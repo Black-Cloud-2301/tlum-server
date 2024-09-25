@@ -160,6 +160,8 @@ public class DataImporter extends com.kltn.individualservice.config._init.DataIm
                 List<SubjectImport> subjectsDto = objectMapper.readValue(subjectUrl, new TypeReference<>() {
                 });
                 List<Subject> subjects = new ArrayList<>();
+
+                // Step 1: Save subjects without requireSubjects
                 subjectsDto.forEach(subjectDto -> {
                     Subject subject = new Subject();
                     subject.setCode(subjectDto.getCode());
@@ -167,7 +169,7 @@ public class DataImporter extends com.kltn.individualservice.config._init.DataIm
                     subject.setCredit(subjectDto.getCredit());
                     subject.setHours(subjectDto.getHours());
                     subject.setCoefficient(subjectDto.getCoefficient());
-                    subject.setRequireSubjects(subjectRepository.findAllByCodeIn(subjectDto.getRequireSubjects()));
+                    subject.setRequireCredit(subjectDto.getRequireCredit());
                     List<Major> subjectMajors = subjectsMajorDto.stream()
                             .filter(subjectMajorDto -> subjectMajorDto.getSubjectCode().equals(subjectDto.getCode()))
                             .map(subjectMajorDto -> majors.get(subjectMajorDto.getMajorCode()))
@@ -175,12 +177,28 @@ public class DataImporter extends com.kltn.individualservice.config._init.DataIm
                     subject.setMajors(subjectMajors);
                     subjects.add(subject);
                 });
-                subjectRepository.saveAll(subjects);
+                List<Subject> subjectsSaved = subjectRepository.saveAll(subjects);
+
+                // Step 2: Update subjects with requireSubjects
+                subjectsSaved.forEach(subject -> {
+                    List<String> requireSubjectCodes = subjectsDto.stream()
+                            .filter(subjectDto -> subjectDto.getCode().equals(subject.getCode()))
+                            .findFirst()
+                            .map(SubjectImport::getRequireSubjects)
+                            .orElse(Collections.emptyList());
+
+                    List<Subject> requireSubjects = subjectsSaved.stream()
+                            .filter(savedSubject -> requireSubjectCodes.contains(savedSubject.getCode()))
+                            .collect(Collectors.toList());
+
+                    subject.setRequireSubjects(requireSubjects);
+                });
+                subjectRepository.saveAll(subjectsSaved);
             } catch (IOException e) {
                 LOGGER.error("Failed to import subject data", e);
             }
         }
-        if(settingRepository.count() == 0) {
+        if (settingRepository.count() == 0) {
             try {
                 URL url = settingsData.getURL();
                 List<Setting> settings = objectMapper.readValue(url, new TypeReference<>() {

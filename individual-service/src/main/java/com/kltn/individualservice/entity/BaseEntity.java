@@ -44,8 +44,13 @@ public abstract class BaseEntity {
 
     @PreUpdate
     void preUpdate() {
-        HttpServletRequest request = ((ServletRequestAttributes) RequestContextHolder.currentRequestAttributes()).getRequest();
-        this.lastUpdatedBy = request.getHeader("userId");
+        RequestAttributes requestAttributes = RequestContextHolder.getRequestAttributes();
+        if (requestAttributes instanceof ServletRequestAttributes) {
+            HttpServletRequest request = ((ServletRequestAttributes) requestAttributes).getRequest();
+            this.lastUpdatedBy = request.getHeader("userId");
+        } else {
+            this.lastUpdatedBy = "system";
+        }
         this.lastUpdatedAt = LocalDateTime.now();
     }
 }

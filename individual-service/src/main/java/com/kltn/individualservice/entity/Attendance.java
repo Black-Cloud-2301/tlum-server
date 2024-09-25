@@ -16,15 +16,15 @@ public class Attendance extends BaseEntity implements Serializable {
     private static final long serialVersionUID = 1L;
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
-    @MapsId
-    @OneToOne
-    @JoinColumn(name = "id")
-    private StudentStudyClass studentStudyClass;
 
     @Column(nullable = false)
     private Integer weekNumber;
+
+    @ManyToOne
+    @JoinColumn(name = "student_study_class_id", nullable = false)
+    private StudentStudyClass studentStudyClass;
 
     @Column(nullable = false)
     private Boolean attendance;

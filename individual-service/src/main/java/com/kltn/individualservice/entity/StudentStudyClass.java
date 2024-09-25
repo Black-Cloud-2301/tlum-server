@@ -7,6 +7,7 @@ import lombok.Setter;
 
 import java.io.Serial;
 import java.io.Serializable;
+import java.util.List;
 
 @Setter
 @Getter
@@ -26,6 +27,9 @@ public class StudentStudyClass extends BaseEntity implements Serializable {
 
     @ManyToOne
     private StudyClass studyClass;
+
+    @OneToMany(mappedBy = "studentStudyClass")
+    private List<Attendance> attendances;
 
     @Column
     private Double middleScore;

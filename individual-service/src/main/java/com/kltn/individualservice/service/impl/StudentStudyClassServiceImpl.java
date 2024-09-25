@@ -3,6 +3,7 @@ package com.kltn.individualservice.service.impl;
 import com.kltn.individualservice.config.I18n;
 import com.kltn.individualservice.constant.EntityStatus;
 import com.kltn.individualservice.dto.request.GetStudentStudyClassesRequest;
+import com.kltn.individualservice.dto.request.StudentStudyClassRequest;
 import com.kltn.individualservice.entity.Student;
 import com.kltn.individualservice.entity.StudentStudyClass;
 import com.kltn.individualservice.entity.StudyClass;
@@ -12,6 +13,7 @@ import com.kltn.individualservice.repository.StudentStudyClassRepository;
 import com.kltn.individualservice.repository.StudyClassRepository;
 import com.kltn.individualservice.service.StudentStudyClassService;
 import com.kltn.individualservice.util.WebUtil;
+import jakarta.transaction.Transactional;
 import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;
 import lombok.experimental.FieldDefaults;
@@ -22,15 +24,16 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE, makeFinal = true)
 public class StudentStudyClassServiceImpl implements StudentStudyClassService {
-   StudentStudyClassRepository studentStudyClassRepository;
-   StudentRepository studentRepository;
-   StudyClassRepository studyClassRepository;
-   WebUtil webUtil;
+    StudentStudyClassRepository studentStudyClassRepository;
+    StudentRepository studentRepository;
+    StudyClassRepository studyClassRepository;
+    WebUtil webUtil;
 
     @Override
     @CacheEvict(value = "studentStudyClasses", allEntries = true)
@@ -61,5 +64,42 @@ public class StudentStudyClassServiceImpl implements StudentStudyClassService {
         StudentStudyClass studentStudyClass = studentStudyClassRepository.findByIdAndIsActive(id, EntityStatus.ACTIVE).orElseThrow(() -> new NotFoundException(I18n.getMessage("msg.field.student_class_register")));
         studentStudyClass.setIsActive(EntityStatus.INACTIVE);
         return studentStudyClassRepository.save(studentStudyClass);
+    }
+
+    @Override
+    public List<StudentStudyClass> findByStudyClass(Long studyClassId) {
+        return studentStudyClassRepository.findByStudyClassId(studyClassId);
+    }
+
+    public void optimizeRegistration() {
+
+    }
+
+    @Override
+    @Transactional
+    public List<StudentStudyClass> update(List<StudentStudyClassRequest> request) {
+        List<StudentStudyClass> studentStudyClasses = studentStudyClassRepository.findAllById(
+                request.stream().map(StudentStudyClassRequest::getId).toList()
+        );
+        studentStudyClasses.forEach(studentStudyClass -> {
+            mapStudentStudyClass(studentStudyClass, request.stream()
+                    .filter(r -> r.getId().equals(studentStudyClass.getId()))
+                    .findFirst()
+                    .orElseThrow()
+            );
+        });
+        return studentStudyClassRepository.saveAll(studentStudyClasses);
+    }
+
+    private void mapStudentStudyClass(StudentStudyClass studentStudyClass, StudentStudyClassRequest request) {
+        studentStudyClass.setMiddleScore(request.getMiddleScore());
+        studentStudyClass.setFinalScore(request.getFinalScore());
+        studentStudyClass.setAttendances(
+                request.getAttendances().stream().peek(attendance -> {
+                    if (attendance.getAttendance() == null) {
+                        attendance.setAttendance(false);
+                    }
+                }).toList()
+        );
     }
 }

@@ -26,6 +26,11 @@ public class SubjectController {
         }
     }
 
+//    @GetMapping("/register")
+//    ResponseEntity<Object> getSubjectsCanRegister(Long studentId) {
+//        return ResponseUtils.getResponseEntity(subjectService.findAllSubjectCanRegister(studentId));
+//    }
+
     @PostMapping
     ResponseEntity<Object> createSubject(@RequestBody Subject request) {
         return ResponseUtils.getResponseEntity(subjectService.createSubject(request));

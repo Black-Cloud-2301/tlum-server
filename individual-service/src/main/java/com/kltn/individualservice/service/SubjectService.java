@@ -17,4 +17,5 @@ public interface SubjectService {
 
     List<Subject> findAllById(List<Long> subjectIds);
     void deleteSubject(Long id);
+//    List<Subject> findAllSubjectCanRegister(Long studentId);
 }

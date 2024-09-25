@@ -12,6 +12,7 @@ import java.util.List;
 public interface StudentService {
     List<Student> getStudents(GetStudentsRequest request);
     List<Student> getStudentsNotRegister(GetStudentsRequest request);
+    List<Student> getStudentsByStudyClass(Long studyClassId);
     Page<Student> getStudents(GetStudentsRequest request, Pageable pageable);
     Student findById(Long id);
     Student createStudent(StudentRequestCRU request);

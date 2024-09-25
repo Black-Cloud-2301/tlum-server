@@ -15,5 +15,6 @@ public interface StudyClassService {
     StudyClass findById(Long id);
     StudyClass delete(Long id);
     List<StudyClass> findAllByIsActiveIn(List<EntityStatus> statuses);
+    List<StudyClass> findStudyClassByStudent(Long studentId);
     Page<StudyClass> findAllByIsActiveIn(StudyClassRequest request, Pageable pageable);
 }

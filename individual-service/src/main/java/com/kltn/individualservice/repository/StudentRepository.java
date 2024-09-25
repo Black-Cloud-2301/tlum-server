@@ -43,4 +43,9 @@ public interface StudentRepository extends JpaRepository<Student, Long> {
             "AND (:#{#request.semesterId} IS NULL OR s.id NOT IN (SELECT r.student.id FROM RegistrationTime r " +
             "WHERE r.semester.id = :#{#request.semesterId} AND r.endTime >= CURRENT_TIMESTAMP))")
     List<Student> findStudentsNotRegister(GetStudentsRequest request);
+
+    @Query("SELECT s.student " +
+            "FROM StudentStudyClass s " +
+            "WHERE s.studyClass.id = :studyClassId AND s.isActive = 1")
+    List<Student> findStudentByStudyClass(Long studyClassId);
 }

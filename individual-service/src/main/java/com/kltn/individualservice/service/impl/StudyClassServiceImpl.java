@@ -79,6 +79,11 @@ public class StudyClassServiceImpl implements StudyClassService {
     }
 
     @Override
+    public List<StudyClass> findStudyClassByStudent(Long studentId) {
+        return studyClassRepository.findStudyClassByStudent(studentId);
+    }
+
+    @Override
     @Cacheable(value = "studyClasses", key = "#request")
     public Page<StudyClass> findAllByIsActiveIn(StudyClassRequest request, Pageable pageable) {
         return studyClassRepository.findAllByIsActiveIn(request, pageable);

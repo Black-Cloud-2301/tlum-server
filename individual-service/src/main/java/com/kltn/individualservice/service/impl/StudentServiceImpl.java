@@ -64,6 +64,11 @@ public class StudentServiceImpl implements StudentService {
         return studentRepository.findStudentsNotRegister(request);
     }
 
+    @Override
+    public List<Student> getStudentsByStudyClass(Long studyClassId) {
+        return studentRepository.findStudentByStudyClass(studyClassId);
+    }
+
     @Cacheable(value = "students", key = "#request")
     public Page<Student> getStudents(GetStudentsRequest request, Pageable pageable) {
         return studentRepository.findByIsActiveInAndStatusIn(request, pageable);
