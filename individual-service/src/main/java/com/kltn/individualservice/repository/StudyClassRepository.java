@@ -30,11 +30,12 @@ public interface StudyClassRepository extends JpaRepository<StudyClass, Long> {
 
     @Query("SELECT s FROM StudyClass s " +
             "WHERE s.isActive = 1 " +
+            "AND s.semester.id = :semesterId " +
             "AND s.subject.id IN " +
             "(SELECT s.id FROM Subject s LEFT JOIN s.requireSubjects sr " +
             "WHERE s.isActive = 1 AND (sr.id IS NULL OR sr.id IN " +
-            "(SELECT ss.studyClass.subject.id FROM StudentStudyClass ss WHERE ss.isActive = 1 AND ss.student.id = :studentId))) " +
+            "(SELECT ss.studyClass.subject.id FROM StudentStudyClass ss WHERE ss.isActive = 1 AND ss.student.id = :studentId AND ss.finalScore > 0))) " +
             "AND (s.subject.requireCredit IS NULL OR s.subject.requireCredit <= (SELECT SUM(st2.studyClass.subject.credit) FROM StudentStudyClass st2 " +
             "WHERE st2.isActive = 1 AND st2.studyClass.isActive = 1 AND st2.student.id = :studentId))")
-    List<StudyClass> findStudyClassByStudent(Long studentId);
+    List<StudyClass> findStudyClassByStudentAndSemester(Long studentId, Long semesterId);
 }

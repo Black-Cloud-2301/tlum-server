@@ -31,9 +31,9 @@ public class StudyClassController {
         return ResponseUtils.getResponseEntity(studyClassService.findById(id));
     }
 
-    @GetMapping("/register")
-    ResponseEntity<Object> findStudyClassByStudent(@RequestParam Long studentId) {
-        return ResponseUtils.getResponseEntity(studyClassService.findStudyClassByStudent(studentId));
+    @GetMapping("/can-register")
+    ResponseEntity<Object> findStudyClassByStudent(@RequestParam Long semesterId) {
+        return ResponseUtils.getResponseEntity(studyClassService.findStudyClassByStudent(semesterId));
     }
 
     @PostMapping

@@ -11,6 +11,7 @@ import com.kltn.individualservice.exception.NotFoundException;
 import com.kltn.individualservice.repository.StudyClassRepository;
 import com.kltn.individualservice.service.SemesterService;
 import com.kltn.individualservice.service.StudyClassService;
+import com.kltn.individualservice.util.WebUtil;
 import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;
 import lombok.experimental.FieldDefaults;
@@ -29,6 +30,7 @@ import java.util.List;
 public class StudyClassServiceImpl implements StudyClassService {
     StudyClassRepository studyClassRepository;
     SemesterService semesterService;
+    WebUtil webUtil;
 
     @Override
     @CacheEvict(value = "studyClasses", allEntries = true)
@@ -58,6 +60,7 @@ public class StudyClassServiceImpl implements StudyClassService {
         studyClass.setIsActive(EntityStatus.DELETED);
         return studyClassRepository.save(studyClass);
     }
+
     private StudyClass createOrUpdateStudyClass(StudyClass studyClass, StudyClassCRU studyClassCRU) {
         Semester semester = semesterService.findById(studyClassCRU.getSemesterId());
         studyClass.setName(studyClassCRU.getName());
@@ -70,8 +73,6 @@ public class StudyClassServiceImpl implements StudyClassService {
         return studyClass;
     }
 
-
-
     @Override
     @Cacheable(value = "studyClasses", key = "#statuses")
     public List<StudyClass> findAllByIsActiveIn(List<EntityStatus> statuses) {
@@ -79,8 +80,9 @@ public class StudyClassServiceImpl implements StudyClassService {
     }
 
     @Override
-    public List<StudyClass> findStudyClassByStudent(Long studentId) {
-        return studyClassRepository.findStudyClassByStudent(studentId);
+    public List<StudyClass> findStudyClassByStudent(Long semesterId) {
+        Long userId = Long.parseLong(webUtil.getUserId());
+        return studyClassRepository.findStudyClassByStudentAndSemester(userId, semesterId);
     }
 
     @Override

@@ -1,5 +1,7 @@
 package com.kltn.individualservice.service.impl;
 
+import com.kltn.individualservice.annotation.redis.CustomCacheEvict;
+import com.kltn.individualservice.annotation.redis.CustomCacheable;
 import com.kltn.individualservice.config.I18n;
 import com.kltn.individualservice.constant.EntityStatus;
 import com.kltn.individualservice.dto.request.GetStudentStudyClassesRequest;
@@ -8,24 +10,28 @@ import com.kltn.individualservice.entity.Student;
 import com.kltn.individualservice.entity.StudentStudyClass;
 import com.kltn.individualservice.entity.StudyClass;
 import com.kltn.individualservice.exception.NotFoundException;
+import com.kltn.individualservice.redis.BaseRedisService;
+import com.kltn.individualservice.redis.RedisKey;
 import com.kltn.individualservice.repository.StudentRepository;
 import com.kltn.individualservice.repository.StudentStudyClassRepository;
 import com.kltn.individualservice.repository.StudyClassRepository;
 import com.kltn.individualservice.service.StudentStudyClassService;
 import com.kltn.individualservice.util.WebUtil;
+import com.kltn.individualservice.util.dto.RegisterGraphColoringUtil;
 import jakarta.transaction.Transactional;
 import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;
 import lombok.experimental.FieldDefaults;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.cache.annotation.CacheEvict;
-import org.springframework.cache.annotation.Cacheable;
 import org.springframework.cache.annotation.Caching;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
-import java.util.stream.Collectors;
 
+@Slf4j
 @Service
 @RequiredArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE, makeFinal = true)
@@ -34,11 +40,12 @@ public class StudentStudyClassServiceImpl implements StudentStudyClassService {
     StudentRepository studentRepository;
     StudyClassRepository studyClassRepository;
     WebUtil webUtil;
+    BaseRedisService baseRedisService;
 
     @Override
     @CacheEvict(value = "studentStudyClasses", allEntries = true)
     public StudentStudyClass create(String studyClassId) {
-        Long userId = Long.parseLong(webUtil.getUserId());
+        Long userId = Long.parseLong(getUserId());
         Student student = studentRepository.findByIdAndIsActive(userId, EntityStatus.ACTIVE).orElseThrow(() -> new NotFoundException(I18n.getMessage("msg.field.student")));
         StudyClass studyClass = studyClassRepository.findByIdAndIsActive(Long.parseLong(studyClassId), EntityStatus.ACTIVE).orElseThrow(() -> new NotFoundException(I18n.getMessage("msg.field.class")));
         Optional<StudentStudyClass> studentStudyClass = studentStudyClassRepository.findByStudentAndStudyClassAndIsActive(student, studyClass, EntityStatus.ACTIVE);
@@ -49,11 +56,36 @@ public class StudentStudyClassServiceImpl implements StudentStudyClassService {
         }
     }
 
-    @Cacheable(value = "studentStudyClasses", key = "#request")
+    @Override
+    @CustomCacheable(key = RedisKey.STUDENT_STUDY_CLASSES, field = "#request.studentId + '::' + #request.semesterId")
     public List<StudentStudyClass> findAllByStudentAndSemester(GetStudentStudyClassesRequest request) {
-        Long userId = Long.parseLong(webUtil.getUserId());
-        return studentStudyClassRepository.findAllByStudentId(userId, request.getSemesterId());
+        return studentStudyClassRepository.findAllByStudentId(request.getStudentId(), request.getSemesterId());
     }
+
+    public String getUserId() {
+        return webUtil.getUserId();
+    }
+
+//    @Override
+//    public List<StudentStudyClass> findAllByStudentAndSemester(GetStudentStudyClassesRequest request) {
+//        Long userId = Long.parseLong(getUserId());
+//        String cacheKey = "studentStudyClasses";
+//        String cacheField = userId + "::" + request.getSemesterId();
+//
+//        // Check cache first
+//        List<StudentStudyClass> cachedResult = (List<StudentStudyClass>) baseRedisService.hashGet(cacheKey, cacheField);
+//        if (cachedResult != null) {
+//            return cachedResult;
+//        }
+//
+//        // Fetch from repository if not in cache
+//        List<StudentStudyClass> result = studentStudyClassRepository.findAllByStudentId(userId, request.getSemesterId());
+//
+//        // Store result in cache
+//        baseRedisService.hashSet(cacheKey, cacheField, result);
+//
+//        return result;
+//    }
 
     @Override
     @Caching(evict = {
@@ -71,8 +103,30 @@ public class StudentStudyClassServiceImpl implements StudentStudyClassService {
         return studentStudyClassRepository.findByStudyClassId(studyClassId);
     }
 
-    public void optimizeRegistration() {
+    @Override
+    @CustomCacheEvict(key = "studentStudyClasses", allEntries = true)
+    public List<StudentStudyClass> optimizeRegistration(Long semesterId) {
+        Long userId = Long.parseLong(getUserId());
+        List<StudyClass> studyClasses = studyClassRepository.findStudyClassByStudentAndSemester(userId, semesterId);
+        List<StudyClass> registeredStudyClasses = studentStudyClassRepository.findAllByStudentId(userId, semesterId).stream().map(StudentStudyClass::getStudyClass).toList();
 
+        List<StudyClass> nonRegisteredClasses = new ArrayList<>(studyClasses);
+        nonRegisteredClasses.removeAll(registeredStudyClasses);
+
+        try {
+            Student student = studentRepository.findByIdAndIsActive(userId, EntityStatus.ACTIVE).orElseThrow(() -> new NotFoundException(I18n.getMessage("msg.field.student")));
+
+            List<StudyClass> newStudyClasses = RegisterGraphColoringUtil.scheduleClasses(nonRegisteredClasses, registeredStudyClasses);
+
+            // Save all new study classes
+            List<StudentStudyClass> studentStudyClasses = newStudyClasses.stream()
+                    .map(studyClass -> new StudentStudyClass(student, studyClass))
+                    .toList();
+            return studentStudyClassRepository.saveAll(studentStudyClasses);
+        } catch (Exception e) {
+            log.error("Error while optimizing registration", e);
+        }
+        return List.of();
     }
 
     @Override

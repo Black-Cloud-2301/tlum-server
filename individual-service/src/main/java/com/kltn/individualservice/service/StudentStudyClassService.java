@@ -12,4 +12,5 @@ public interface StudentStudyClassService {
     List<StudentStudyClass> findAllByStudentAndSemester(GetStudentStudyClassesRequest request);
     StudentStudyClass delete(Long id);
     List<StudentStudyClass> findByStudyClass(Long studyClassId);
+    List<StudentStudyClass> optimizeRegistration(Long semesterId);
 }

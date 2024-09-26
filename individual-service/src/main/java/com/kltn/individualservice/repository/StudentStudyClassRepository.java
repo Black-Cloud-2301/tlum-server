@@ -27,4 +27,6 @@ public interface StudentStudyClassRepository extends JpaRepository<StudentStudyC
           "WHERE ssc.isActive = 1 " +
           "AND ssc.studyClass.id = :studyClassId")
   List<StudentStudyClass> findByStudyClassId(Long studyClassId);
+
+
 }
