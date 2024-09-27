@@ -3,6 +3,7 @@ package com.kltn.individualservice.service.impl;
 import com.kltn.individualservice.constant.EntityStatus;
 import com.kltn.individualservice.dto.request.StudyClassCRU;
 import com.kltn.individualservice.dto.request.StudyClassRequest;
+import com.kltn.individualservice.dto.response.CountStudentRegistered;
 import com.kltn.individualservice.entity.Semester;
 import com.kltn.individualservice.entity.StudyClass;
 import com.kltn.individualservice.entity.Subject;
@@ -12,6 +13,7 @@ import com.kltn.individualservice.repository.StudyClassRepository;
 import com.kltn.individualservice.service.SemesterService;
 import com.kltn.individualservice.service.StudyClassService;
 import com.kltn.individualservice.util.WebUtil;
+import com.kltn.individualservice.util.dto.RegisterGraphColoringUtil;
 import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;
 import lombok.experimental.FieldDefaults;
@@ -61,8 +63,22 @@ public class StudyClassServiceImpl implements StudyClassService {
         return studyClassRepository.save(studyClass);
     }
 
+    @Override
+    public List<CountStudentRegistered> countStudentRegistered(List<Long> studyClassIds) {
+        return studyClassRepository.countStudentRegistered(studyClassIds);
+    }
+
     private StudyClass createOrUpdateStudyClass(StudyClass studyClass, StudyClassCRU studyClassCRU) {
         Semester semester = semesterService.findById(studyClassCRU.getSemesterId());
+        List<StudyClass> studyClassesCrossSemester = studyClassRepository.findStudyClassesCrossSemester(semester, studyClassCRU.getTeacherId());
+
+        // Check for overlapping schedules
+        try {
+            RegisterGraphColoringUtil.checkForOverlappingSchedules(studyClassCRU.getClassesOfWeek(), studyClassesCrossSemester);
+        } catch (Exception e) {
+            throw new RuntimeException("Error parsing class schedules or checking for overlaps", e);
+        }
+
         studyClass.setName(studyClassCRU.getName());
         studyClass.setSemester(semester);
         studyClass.setClassesOfWeek(studyClassCRU.getClassesOfWeek());

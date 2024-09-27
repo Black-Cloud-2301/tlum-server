@@ -10,6 +10,8 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/v1/study-class")
@@ -34,6 +36,11 @@ public class StudyClassController {
     @GetMapping("/can-register")
     ResponseEntity<Object> findStudyClassByStudent(@RequestParam Long semesterId) {
         return ResponseUtils.getResponseEntity(studyClassService.findStudyClassByStudent(semesterId));
+    }
+
+    @GetMapping("/count-student-registered")
+    ResponseEntity<Object> countStudentRegistered(@RequestParam List<Long> studyClassIds) {
+        return ResponseUtils.getResponseEntity(studyClassService.countStudentRegistered(studyClassIds));
     }
 
     @PostMapping

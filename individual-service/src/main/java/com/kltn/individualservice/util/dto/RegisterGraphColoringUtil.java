@@ -122,4 +122,13 @@ public class RegisterGraphColoringUtil {
         }
         return false;
     }
+
+    public static void checkForOverlappingSchedules(String classesOfWeek, List<StudyClass> studyClassesCrossSemester) throws Exception {
+        List<ClassSchedule> newClassSchedule = parseClassesOfWeek(classesOfWeek);
+        for (StudyClass existingClass : studyClassesCrossSemester) {
+            if (isOverlapping(newClassSchedule, existingClass)) {
+                throw new Exception("The study class schedule overlaps with an existing class.");
+            }
+        }
+    }
 }

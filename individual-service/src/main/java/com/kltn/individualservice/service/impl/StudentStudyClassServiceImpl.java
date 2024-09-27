@@ -10,7 +10,6 @@ import com.kltn.individualservice.entity.Student;
 import com.kltn.individualservice.entity.StudentStudyClass;
 import com.kltn.individualservice.entity.StudyClass;
 import com.kltn.individualservice.exception.NotFoundException;
-import com.kltn.individualservice.redis.BaseRedisService;
 import com.kltn.individualservice.redis.RedisKey;
 import com.kltn.individualservice.repository.StudentRepository;
 import com.kltn.individualservice.repository.StudentStudyClassRepository;
@@ -18,6 +17,7 @@ import com.kltn.individualservice.repository.StudyClassRepository;
 import com.kltn.individualservice.service.StudentStudyClassService;
 import com.kltn.individualservice.util.WebUtil;
 import com.kltn.individualservice.util.dto.RegisterGraphColoringUtil;
+import com.kltn.individualservice.util.exception.CustomException;
 import jakarta.transaction.Transactional;
 import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;
@@ -40,17 +40,21 @@ public class StudentStudyClassServiceImpl implements StudentStudyClassService {
     StudentRepository studentRepository;
     StudyClassRepository studyClassRepository;
     WebUtil webUtil;
-    BaseRedisService baseRedisService;
 
     @Override
-    @CacheEvict(value = "studentStudyClasses", allEntries = true)
+    @CustomCacheEvict(key = "studentStudyClasses", allEntries = true)
     public StudentStudyClass create(String studyClassId) {
         Long userId = Long.parseLong(getUserId());
         Student student = studentRepository.findByIdAndIsActive(userId, EntityStatus.ACTIVE).orElseThrow(() -> new NotFoundException(I18n.getMessage("msg.field.student")));
         StudyClass studyClass = studyClassRepository.findByIdAndIsActive(Long.parseLong(studyClassId), EntityStatus.ACTIVE).orElseThrow(() -> new NotFoundException(I18n.getMessage("msg.field.class")));
         Optional<StudentStudyClass> studentStudyClass = studentStudyClassRepository.findByStudentAndStudyClassAndIsActive(student, studyClass, EntityStatus.ACTIVE);
+        List<StudentStudyClass> registeredStudyClasses = studentStudyClassRepository.findAllByStudentId(userId, studyClass.getSemester().getId());
+
+        if (registeredStudyClasses.size() >= 10) {
+            throw new CustomException(I18n.getMessage("msg.error.register_class_limit"));
+        }
         if (studentStudyClass.isPresent()) {
-            throw new NotFoundException(I18n.getMessage("msg.error.already_register_class"));
+            throw new CustomException(I18n.getMessage("msg.error.already_register_class"));
         } else {
             return studentStudyClassRepository.save(new StudentStudyClass(student, studyClass));
         }
@@ -108,9 +112,11 @@ public class StudentStudyClassServiceImpl implements StudentStudyClassService {
     public List<StudentStudyClass> optimizeRegistration(Long semesterId) {
         Long userId = Long.parseLong(getUserId());
         List<StudyClass> studyClasses = studyClassRepository.findStudyClassByStudentAndSemester(userId, semesterId);
+        List<StudyClass> fullClasses = studyClassRepository.findStudyClassFullStudent(semesterId);
         List<StudyClass> registeredStudyClasses = studentStudyClassRepository.findAllByStudentId(userId, semesterId).stream().map(StudentStudyClass::getStudyClass).toList();
 
         List<StudyClass> nonRegisteredClasses = new ArrayList<>(studyClasses);
+        nonRegisteredClasses.removeAll(fullClasses);
         nonRegisteredClasses.removeAll(registeredStudyClasses);
 
         try {
