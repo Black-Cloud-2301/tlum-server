@@ -6,6 +6,7 @@ import com.kltn.individualservice.config.I18n;
 import com.kltn.individualservice.constant.EntityStatus;
 import com.kltn.individualservice.dto.request.GetStudentStudyClassesRequest;
 import com.kltn.individualservice.dto.request.StudentStudyClassRequest;
+import com.kltn.individualservice.entity.Attendance;
 import com.kltn.individualservice.entity.Student;
 import com.kltn.individualservice.entity.StudentStudyClass;
 import com.kltn.individualservice.entity.StudyClass;
@@ -137,6 +138,7 @@ public class StudentStudyClassServiceImpl implements StudentStudyClassService {
 
     @Override
     @Transactional
+    @CustomCacheEvict(key = "studentStudyClasses", allEntries = true)
     public List<StudentStudyClass> update(List<StudentStudyClassRequest> request) {
         List<StudentStudyClass> studentStudyClasses = studentStudyClassRepository.findAllById(
                 request.stream().map(StudentStudyClassRequest::getId).toList()
@@ -151,15 +153,24 @@ public class StudentStudyClassServiceImpl implements StudentStudyClassService {
         return studentStudyClassRepository.saveAll(studentStudyClasses);
     }
 
-    private void mapStudentStudyClass(StudentStudyClass studentStudyClass, StudentStudyClassRequest request) {
+    public void mapStudentStudyClass(StudentStudyClass studentStudyClass, StudentStudyClassRequest request) {
         studentStudyClass.setMiddleScore(request.getMiddleScore());
         studentStudyClass.setFinalScore(request.getFinalScore());
-        studentStudyClass.setAttendances(
-                request.getAttendances().stream().peek(attendance -> {
+
+        // Clear existing attendances and add new ones
+        studentStudyClass.getAttendances().clear();
+        List<Attendance> newAttendances = request.getAttendances().stream()
+                .map(attendanceRequest -> {
+                    Attendance attendance = new Attendance(attendanceRequest.getWeekNumber(),
+                            attendanceRequest.getAttendance(),
+                            studentStudyClass);
+                    // Set attendance to false if it's null
                     if (attendance.getAttendance() == null) {
                         attendance.setAttendance(false);
                     }
-                }).toList()
-        );
+                    return attendance;
+                }).toList();
+        studentStudyClass.getAttendances().addAll(newAttendances);
     }
+
 }

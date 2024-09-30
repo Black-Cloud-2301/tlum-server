@@ -2,6 +2,7 @@ package com.kltn.individualservice.entity;
 
 import jakarta.persistence.*;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.io.Serial;
@@ -11,6 +12,7 @@ import java.io.Serializable;
 @Getter
 @Entity
 @Table(name = "attendance")
+@NoArgsConstructor
 public class Attendance extends BaseEntity implements Serializable {
     @Serial
     private static final long serialVersionUID = 1L;
@@ -28,4 +30,10 @@ public class Attendance extends BaseEntity implements Serializable {
 
     @Column(nullable = false)
     private Boolean attendance;
+
+    public Attendance(Integer weekNumber, Boolean attendance, StudentStudyClass studentStudyClass) {
+        this.weekNumber = weekNumber;
+        this.studentStudyClass = studentStudyClass;
+        this.attendance = attendance;
+    }
 }

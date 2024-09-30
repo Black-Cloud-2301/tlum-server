@@ -7,6 +7,7 @@ import lombok.Setter;
 
 import java.io.Serial;
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 
 @Setter
@@ -29,7 +30,7 @@ public class StudentStudyClass extends BaseEntity implements Serializable {
     private StudyClass studyClass;
 
     @OneToMany(mappedBy = "studentStudyClass", fetch = FetchType.EAGER)
-    private List<Attendance> attendances;
+    private List<Attendance> attendances = new ArrayList<>();
 
     @Column
     private Double middleScore;
