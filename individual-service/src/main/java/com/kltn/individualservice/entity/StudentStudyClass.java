@@ -29,8 +29,8 @@ public class StudentStudyClass extends BaseEntity implements Serializable {
     @ManyToOne
     private StudyClass studyClass;
 
-    @OneToMany(mappedBy = "studentStudyClass", fetch = FetchType.EAGER)
-    private List<Attendance> attendances = new ArrayList<>();
+    @Column
+    private String attendances;
 
     @Column
     private Double middleScore;

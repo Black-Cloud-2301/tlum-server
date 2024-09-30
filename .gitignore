@@ -2,3 +2,4 @@
 .gradle
 log-backend
 docker/storage
+*.log

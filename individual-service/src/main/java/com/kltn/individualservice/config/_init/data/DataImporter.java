@@ -87,11 +87,11 @@ public class DataImporter extends com.kltn.individualservice.config._init.DataIm
                     switch (role.getCode()) {
                         case "SYS_ADMIN" -> role.setPermissions(permissionRepository.findAll());
                         case "STUDENT" -> {
-                            List<Permission> permissions = permissionRepository.findByModuleInAndFunctionInAndActionIn(List.of("INDIVIDUAL"), List.of("STUDENT"), List.of("VIEW"));
+                            List<Permission> permissions = permissionRepository.findByModuleInAndFunctionInAndActionIn(List.of("INDIVIDUAL"), List.of("REGISTER-STUDY"), List.of("REGISTER"));
                             role.setPermissions(permissions);
                         }
                         case "TEACHER" -> {
-                            List<Permission> permissions = permissionRepository.findByModuleInAndFunctionInAndActionIn(List.of("INDIVIDUAL"), List.of("TEACHER"), List.of("VIEW"));
+                            List<Permission> permissions = permissionRepository.findByModuleInAndFunctionInAndActionIn(List.of("INDIVIDUAL"), List.of("TEACHER", "MY-CLASS"), List.of("VIEW"));
                             role.setPermissions(permissions);
                         }
                         case "EMPLOYEE" -> {

@@ -6,7 +6,6 @@ import com.kltn.individualservice.config.I18n;
 import com.kltn.individualservice.constant.EntityStatus;
 import com.kltn.individualservice.dto.request.GetStudentStudyClassesRequest;
 import com.kltn.individualservice.dto.request.StudentStudyClassRequest;
-import com.kltn.individualservice.entity.Attendance;
 import com.kltn.individualservice.entity.Student;
 import com.kltn.individualservice.entity.StudentStudyClass;
 import com.kltn.individualservice.entity.StudyClass;
@@ -24,8 +23,6 @@ import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;
 import lombok.experimental.FieldDefaults;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.cache.annotation.CacheEvict;
-import org.springframework.cache.annotation.Caching;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -93,10 +90,7 @@ public class StudentStudyClassServiceImpl implements StudentStudyClassService {
 //    }
 
     @Override
-    @Caching(evict = {
-            @CacheEvict(value = "studentStudyClasses", allEntries = true),
-            @CacheEvict(value = "studentStudyClass", key = "#id")
-    })
+    @CustomCacheEvict(key = "studentStudyClasses", allEntries = true)
     public StudentStudyClass delete(Long id) {
         StudentStudyClass studentStudyClass = studentStudyClassRepository.findByIdAndIsActive(id, EntityStatus.ACTIVE).orElseThrow(() -> new NotFoundException(I18n.getMessage("msg.field.student_class_register")));
         studentStudyClass.setIsActive(EntityStatus.INACTIVE);
@@ -143,34 +137,18 @@ public class StudentStudyClassServiceImpl implements StudentStudyClassService {
         List<StudentStudyClass> studentStudyClasses = studentStudyClassRepository.findAllById(
                 request.stream().map(StudentStudyClassRequest::getId).toList()
         );
+
         studentStudyClasses.forEach(studentStudyClass -> {
-            mapStudentStudyClass(studentStudyClass, request.stream()
+            StudentStudyClassRequest matchingRequest = request.stream()
                     .filter(r -> r.getId().equals(studentStudyClass.getId()))
                     .findFirst()
-                    .orElseThrow()
-            );
+                    .orElseThrow(() -> new NotFoundException("Request not found for id: " + studentStudyClass.getId()));
+
+            studentStudyClass.setMiddleScore(matchingRequest.getMiddleScore());
+            studentStudyClass.setFinalScore(matchingRequest.getFinalScore());
+            studentStudyClass.setAttendances(matchingRequest.getAttendances()); // Assuming attendances is a String in the request
         });
+
         return studentStudyClassRepository.saveAll(studentStudyClasses);
     }
-
-    public void mapStudentStudyClass(StudentStudyClass studentStudyClass, StudentStudyClassRequest request) {
-        studentStudyClass.setMiddleScore(request.getMiddleScore());
-        studentStudyClass.setFinalScore(request.getFinalScore());
-
-        // Clear existing attendances and add new ones
-        studentStudyClass.getAttendances().clear();
-        List<Attendance> newAttendances = request.getAttendances().stream()
-                .map(attendanceRequest -> {
-                    Attendance attendance = new Attendance(attendanceRequest.getWeekNumber(),
-                            attendanceRequest.getAttendance(),
-                            studentStudyClass);
-                    // Set attendance to false if it's null
-                    if (attendance.getAttendance() == null) {
-                        attendance.setAttendance(false);
-                    }
-                    return attendance;
-                }).toList();
-        studentStudyClass.getAttendances().addAll(newAttendances);
-    }
-
 }

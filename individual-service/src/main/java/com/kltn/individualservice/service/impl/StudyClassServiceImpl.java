@@ -72,6 +72,10 @@ public class StudyClassServiceImpl implements StudyClassService {
         Semester semester = semesterService.findById(studyClassCRU.getSemesterId());
         List<StudyClass> studyClassesCrossSemester = studyClassRepository.findStudyClassesCrossSemester(semester, studyClassCRU.getTeacherId());
 
+        if(studyClassCRU.getId() != null) {
+            studyClassesCrossSemester.removeIf(sc -> sc.getId().equals(studyClassCRU.getId()));
+        }
+
         // Check for overlapping schedules
         try {
             RegisterGraphColoringUtil.checkForOverlappingSchedules(studyClassCRU.getClassesOfWeek(), studyClassesCrossSemester);

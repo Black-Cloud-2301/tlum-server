@@ -13,5 +13,35 @@
     "module": "INDIVIDUAL",
     "function": "EMPLOYEE",
     "action": "VIEW,CREATE,UPDATE,DELETE,LOCK,IMPORT"
+  },
+  {
+    "module": "INDIVIDUAL",
+    "function": "MY-CLASS",
+    "action": "VIEW,CREATE,UPDATE,DELETE"
+  },
+  {
+    "module": "INDIVIDUAL",
+    "function": "REGISTER-STUDY",
+    "action": "REGISTER"
+  },
+  {
+    "module": "INDIVIDUAL",
+    "function": "STUDY-CLASS",
+    "action": "VIEW,CREATE,UPDATE,DELETE"
+  },
+  {
+    "module": "INDIVIDUAL",
+    "function": "SUBJECT",
+    "action": "VIEW,CREATE,UPDATE,DELETE"
+  },
+  {
+    "module": "INDIVIDUAL",
+    "function": "SETTING-SEMESTER",
+    "action": "VIEW,CREATE,UPDATE,DELETE"
+  },
+  {
+    "module": "INDIVIDUAL",
+    "function": "SETTING-GENERAL",
+    "action": "VIEW,UPDATE"
   }
 ]
