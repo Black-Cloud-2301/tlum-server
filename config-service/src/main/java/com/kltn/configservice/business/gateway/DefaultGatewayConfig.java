@@ -37,7 +37,8 @@ public class DefaultGatewayConfig {
                 .add(generateRoute("config-service", "config"))
                 .add(generateRoute("auth-service", "auth"))
                 .add(generateRoute("file-service", "file"))
-                .add(generateRoute("individual-service", "individual"));
+                .add(generateRoute("individual-service", "individual"))
+                .add(generateRoute("notification", "notification"));
     }
 
     private ObjectNode discovery() {

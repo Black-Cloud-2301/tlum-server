@@ -40,7 +40,7 @@ public class StudentStudyClassServiceImpl implements StudentStudyClassService {
     WebUtil webUtil;
 
     @Override
-    @CustomCacheEvict(key = "studentStudyClasses", allEntries = true)
+    @CustomCacheEvict(key = RedisKey.STUDENT_STUDY_CLASSES, allEntries = true)
     public StudentStudyClass create(String studyClassId) {
         Long userId = Long.parseLong(getUserId());
         Student student = studentRepository.findByIdAndIsActive(userId, EntityStatus.ACTIVE).orElseThrow(() -> new NotFoundException(I18n.getMessage("msg.field.student")));
@@ -71,7 +71,7 @@ public class StudentStudyClassServiceImpl implements StudentStudyClassService {
 //    @Override
 //    public List<StudentStudyClass> findAllByStudentAndSemester(GetStudentStudyClassesRequest request) {
 //        Long userId = Long.parseLong(getUserId());
-//        String cacheKey = "studentStudyClasses";
+//        String cachekey = RedisKey.STUDENT_STUDY_CLASSES;
 //        String cacheField = userId + "::" + request.getSemesterId();
 //
 //        // Check cache first
@@ -90,7 +90,7 @@ public class StudentStudyClassServiceImpl implements StudentStudyClassService {
 //    }
 
     @Override
-    @CustomCacheEvict(key = "studentStudyClasses", allEntries = true)
+    @CustomCacheEvict(key = RedisKey.STUDENT_STUDY_CLASSES, allEntries = true)
     public StudentStudyClass delete(Long id) {
         StudentStudyClass studentStudyClass = studentStudyClassRepository.findByIdAndIsActive(id, EntityStatus.ACTIVE).orElseThrow(() -> new NotFoundException(I18n.getMessage("msg.field.student_class_register")));
         studentStudyClass.setIsActive(EntityStatus.INACTIVE);
@@ -103,7 +103,7 @@ public class StudentStudyClassServiceImpl implements StudentStudyClassService {
     }
 
     @Override
-    @CustomCacheEvict(key = "studentStudyClasses", allEntries = true)
+    @CustomCacheEvict(key = RedisKey.STUDENT_STUDY_CLASSES, allEntries = true)
     public List<StudentStudyClass> optimizeRegistration(Long semesterId) {
         Long userId = Long.parseLong(getUserId());
         List<StudyClass> studyClasses = studyClassRepository.findStudyClassByStudentAndSemester(userId, semesterId);
@@ -131,8 +131,19 @@ public class StudentStudyClassServiceImpl implements StudentStudyClassService {
     }
 
     @Override
+    @CustomCacheable(key = RedisKey.STUDENT_STUDY_CLASSES, field = "#studentId")
+    public List<StudentStudyClass> findCurrentTimetable(Long studentId) {
+        return studentStudyClassRepository.findCurrentTimetable(studentId);
+    }
+
+    @Override
+    public List<StudentStudyClass> findByStudentId(Long studentId) {
+        return studentStudyClassRepository.findAllByStudentIdAndIsActive(studentId, EntityStatus.ACTIVE);
+    }
+
+    @Override
     @Transactional
-    @CustomCacheEvict(key = "studentStudyClasses", allEntries = true)
+    @CustomCacheEvict(key = RedisKey.STUDENT_STUDY_CLASSES, allEntries = true)
     public List<StudentStudyClass> update(List<StudentStudyClassRequest> request) {
         List<StudentStudyClass> studentStudyClasses = studentStudyClassRepository.findAllById(
                 request.stream().map(StudentStudyClassRequest::getId).toList()

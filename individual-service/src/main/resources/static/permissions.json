@@ -43,5 +43,10 @@
     "module": "INDIVIDUAL",
     "function": "SETTING-GENERAL",
     "action": "VIEW,UPDATE"
+  },
+  {
+    "module": "INDIVIDUAL",
+    "function": "TRANSCRIPT",
+    "action": "VIEW"
   }
 ]

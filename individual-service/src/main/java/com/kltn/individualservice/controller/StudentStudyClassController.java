@@ -38,6 +38,19 @@ public class StudentStudyClassController {
         return ResponseUtils.getResponseEntity(studentStudyClassService.findByStudyClass(studyClassId));
     }
 
+    @GetMapping("/current-timetable")
+    ResponseEntity<Object> findCurrentTimetable() {
+        return ResponseUtils.getResponseEntity(studentStudyClassService.findCurrentTimetable(Long.parseLong(webUtil.getUserId())));
+    }
+
+    @GetMapping("/by-student")
+    ResponseEntity<Object> findByStudentId(@RequestParam(required = false) Long studentId) {
+        if (studentId == null) {
+            studentId = Long.parseLong(webUtil.getUserId());
+        }
+        return ResponseUtils.getResponseEntity(studentStudyClassService.findCurrentTimetable(studentId));
+    }
+
     @PostMapping
     ResponseEntity<Object> create(@RequestBody String studyClassId) {
         return ResponseUtils.getResponseEntity(studentStudyClassService.create(studyClassId));

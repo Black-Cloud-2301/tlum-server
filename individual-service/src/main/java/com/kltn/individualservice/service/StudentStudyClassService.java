@@ -13,4 +13,6 @@ public interface StudentStudyClassService {
     StudentStudyClass delete(Long id);
     List<StudentStudyClass> findByStudyClass(Long studyClassId);
     List<StudentStudyClass> optimizeRegistration(Long semesterId);
+    List<StudentStudyClass> findCurrentTimetable(Long studentId);
+    List<StudentStudyClass> findByStudentId(Long studentId);
 }
