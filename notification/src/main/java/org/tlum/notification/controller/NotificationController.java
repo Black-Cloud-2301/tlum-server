@@ -1,21 +1,23 @@
 package org.tlum.notification.controller;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.messaging.handler.annotation.MessageMapping;
+import org.springframework.messaging.handler.annotation.SendTo;
+import org.springframework.scheduling.annotation.Scheduled;
+import org.springframework.stereotype.Controller;
+import org.springframework.messaging.simp.SimpMessagingTemplate;
 
-@RestController
-@RequestMapping("/api")
+@Controller
 public class NotificationController {
 
-//    @MessageMapping("/send")
-//    @SendTo("/topic/notifications")
-//    public NotificationMessage send(NotificationMessage message) {
-//        return message;
-//    }
+    private final SimpMessagingTemplate messagingTemplate;
 
-    @GetMapping
-    public String get() {
-        return "index";
+    public NotificationController(SimpMessagingTemplate messagingTemplate) {
+        this.messagingTemplate = messagingTemplate;
+    }
+
+    // Định kỳ gửi thông báo mỗi 5 giây
+    @Scheduled(fixedRate = 5000)
+    public void sendNotification() {
+        messagingTemplate.convertAndSend("/topic/notifications", "New Notification at " + System.currentTimeMillis());
     }
 }
