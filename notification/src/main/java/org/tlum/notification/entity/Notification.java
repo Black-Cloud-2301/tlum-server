@@ -31,9 +31,6 @@ public class Notification extends BaseEntity {
     private Instant scheduledTime;
 
     @Column
-    private boolean sent;
-
-    @Column
     private String link;
 
     @Column

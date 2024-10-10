@@ -4,12 +4,17 @@ import com.kltn.individualservice.annotation.redis.CustomCacheEvict;
 import com.kltn.individualservice.annotation.redis.CustomCacheable;
 import com.kltn.individualservice.config.I18n;
 import com.kltn.individualservice.constant.EntityStatus;
+import com.kltn.individualservice.constant.NotificationObject;
+import com.kltn.individualservice.constant.NotificationType;
+import com.kltn.individualservice.dto.Notification;
+import com.kltn.individualservice.dto.UserNotification;
 import com.kltn.individualservice.dto.request.GetStudentStudyClassesRequest;
 import com.kltn.individualservice.dto.request.StudentStudyClassRequest;
 import com.kltn.individualservice.entity.Student;
 import com.kltn.individualservice.entity.StudentStudyClass;
 import com.kltn.individualservice.entity.StudyClass;
 import com.kltn.individualservice.exception.NotFoundException;
+import com.kltn.individualservice.kafka.NotificationProducer;
 import com.kltn.individualservice.redis.RedisKey;
 import com.kltn.individualservice.repository.StudentRepository;
 import com.kltn.individualservice.repository.StudentStudyClassRepository;
@@ -25,6 +30,7 @@ import lombok.experimental.FieldDefaults;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
+import java.time.Instant;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -38,6 +44,7 @@ public class StudentStudyClassServiceImpl implements StudentStudyClassService {
     StudentRepository studentRepository;
     StudyClassRepository studyClassRepository;
     WebUtil webUtil;
+    NotificationProducer notificationProducer;
 
     @Override
     @CustomCacheEvict(key = RedisKey.STUDENT_STUDY_CLASSES, allEntries = true)
@@ -137,11 +144,6 @@ public class StudentStudyClassServiceImpl implements StudentStudyClassService {
     }
 
     @Override
-    public List<StudentStudyClass> findByStudentId(Long studentId) {
-        return studentStudyClassRepository.findAllByStudentIdAndIsActive(studentId, EntityStatus.ACTIVE);
-    }
-
-    @Override
     @Transactional
     @CustomCacheEvict(key = RedisKey.STUDENT_STUDY_CLASSES, allEntries = true)
     public List<StudentStudyClass> update(List<StudentStudyClassRequest> request) {
@@ -155,9 +157,27 @@ public class StudentStudyClassServiceImpl implements StudentStudyClassService {
                     .findFirst()
                     .orElseThrow(() -> new NotFoundException("Request not found for id: " + studentStudyClass.getId()));
 
+            boolean isMiddleScoreUpdated = matchingRequest.getMiddleScore() != null && !matchingRequest.getMiddleScore().equals(studentStudyClass.getMiddleScore());
+            boolean isFinalScoreUpdated = matchingRequest.getFinalScore() != null && !matchingRequest.getFinalScore().equals(studentStudyClass.getFinalScore());
+
             studentStudyClass.setMiddleScore(matchingRequest.getMiddleScore());
             studentStudyClass.setFinalScore(matchingRequest.getFinalScore());
-            studentStudyClass.setAttendances(matchingRequest.getAttendances()); // Assuming attendances is a String in the request
+            studentStudyClass.setAttendances(matchingRequest.getAttendances());
+
+            if (isMiddleScoreUpdated || isFinalScoreUpdated) {
+                String scoreType = isMiddleScoreUpdated ? "giữa kỳ" : "cuối kỳ";
+//                                TODO: get link to view
+                Notification notification = new Notification(
+                        "Điểm thi",
+                        "Điểm thi " + scoreType + " " + studentStudyClass.getStudyClass().getSubject().getName() + " đã được cập nhật",
+                        Instant.now(),
+                        null,
+                        NotificationType.AUTO_GENERATE,
+                        NotificationObject.STUDENT
+                );
+                UserNotification userNotification = new UserNotification(studentStudyClass.getStudent().getId(), notification);
+                notificationProducer.sendNotification(userNotification);
+            }
         });
 
         return studentStudyClassRepository.saveAll(studentStudyClasses);
