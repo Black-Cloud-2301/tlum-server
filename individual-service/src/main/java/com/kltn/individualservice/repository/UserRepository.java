@@ -1,7 +1,6 @@
 package com.kltn.individualservice.repository;
 
 import com.kltn.individualservice.constant.EmployeeStatus;
-import com.kltn.individualservice.constant.NotificationObject;
 import com.kltn.individualservice.constant.StudentStatus;
 import com.kltn.individualservice.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;

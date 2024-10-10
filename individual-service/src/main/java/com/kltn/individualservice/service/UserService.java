@@ -1,6 +1,6 @@
 package com.kltn.individualservice.service;
 
-import com.kltn.individualservice.constant.NotificationObject;
+import com.kltn.sharedto.constants.NotificationObject;
 import com.kltn.individualservice.constant.UserType;
 import com.kltn.individualservice.dto.request.UserRequestCRU;
 import com.kltn.individualservice.entity.User;

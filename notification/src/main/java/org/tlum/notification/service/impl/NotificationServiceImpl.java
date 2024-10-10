@@ -1,5 +1,7 @@
 package org.tlum.notification.service.impl;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.kltn.sharedto.UserNotificationDto;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
@@ -20,6 +22,7 @@ import org.tlum.notification.service.NotificationService;
 import org.tlum.notification.webSocket.NotificationHandler;
 
 import java.time.Instant;
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -30,6 +33,7 @@ public class NotificationServiceImpl implements NotificationService {
     private final UserServiceClient userServiceClient;
     private final HttpServletRequest request;
     private final NotificationHandler notificationHandler;
+    private final ObjectMapper objectMapper;
 
     @Override
     @Transactional
@@ -44,6 +48,41 @@ public class NotificationServiceImpl implements NotificationService {
             NotificationJob.scheduleNotifications(notificationHandler, savedUserNotifications);
         }
         return result;
+    }
+
+    @Override
+    @Transactional
+    public void createUserNotifications(UserNotificationDto notificationDto) {
+        var notification = objectMapper.convertValue(notificationDto.getNotificationDto(), Notification.class);
+        notification = notificationRepository.save(notification);
+
+        List<UserNotification> userNotifications = new ArrayList<>();
+
+        for (Long userId : notificationDto.getUserIds()) {
+            var userNotification = new UserNotification(userId, notification);
+            userNotifications.add(userNotification);
+        }
+
+        userNotifications = userNotificationRepository.saveAll(userNotifications);
+
+        List<UserNotification> immediateNotifications = new ArrayList<>();
+        List<UserNotification> scheduledNotifications = new ArrayList<>();
+
+        for (UserNotification userNotification : userNotifications) {
+            if (!notification.getScheduledTime().isAfter(Instant.now())) {
+                immediateNotifications.add(userNotification);
+            } else {
+                scheduledNotifications.add(userNotification);
+            }
+        }
+
+        if (!immediateNotifications.isEmpty()) {
+            notificationHandler.broadcastMessages(immediateNotifications);
+        }
+
+        if (!scheduledNotifications.isEmpty()) {
+            NotificationJob.scheduleNotifications(notificationHandler, scheduledNotifications);
+        }
     }
 
     @Override

@@ -1,4 +1,4 @@
-package com.kltn.individualservice.constant;
+package com.kltn.sharedto.constants;
 
 public enum NotificationObject {
     ALL,

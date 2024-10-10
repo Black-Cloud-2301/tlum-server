@@ -12167,237 +12167,396 @@ Positive matches:
       - @ConditionalOnMissingBean (names: redisHealthIndicator,redisHealthContributor; SearchStrategy: all) did not find any beans (OnBeanCondition)
 
 
-Negative matches:
------------------
+2024-10-10T21:27:23.437+07:00  INFO 17852 --- [individual-service] [restartedMain] c.k.i.IndividualServiceApplication       : Starting IndividualServiceApplication using Java 21.0.4 with PID 17852 (D:\code\tlum\server\individual-service\build\classes\java\main started by tuank in D:\code\tlum\server)
+2024-10-10T21:27:23.439+07:00  INFO 17852 --- [individual-service] [restartedMain] c.k.i.IndividualServiceApplication       : The following 1 profile is active: "dev"
+2024-10-10T21:27:23.475+07:00  INFO 17852 --- [individual-service] [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2024-10-10T21:27:23.475+07:00  INFO 17852 --- [individual-service] [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=auth-service,file-service, profiles=[dev], label=null, version=null, state=null
+2024-10-10T21:27:23.476+07:00  INFO 17852 --- [individual-service] [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\tuank\.gradle\caches\modules-2\files-2.1\org.apache.kafka\kafka-clients\3.7.0\b8f9f75bc3edc06f842dd16071465544198bc045\kafka-clients-3.7.0.jar referenced one or more files that do not exist: file:/C:/Users/tuank/.gradle/caches/modules-2/files-2.1/org.apache.kafka/kafka-clients/3.7.0/b8f9f75bc3edc06f842dd16071465544198bc045/zstd-jni-1.5.5-6.jar,file:/C:/Users/tuank/.gradle/caches/modules-2/files-2.1/org.apache.kafka/kafka-clients/3.7.0/b8f9f75bc3edc06f842dd16071465544198bc045/lz4-java-1.8.0.jar,file:/C:/Users/tuank/.gradle/caches/modules-2/files-2.1/org.apache.kafka/kafka-clients/3.7.0/b8f9f75bc3edc06f842dd16071465544198bc045/snappy-java-1.1.10.5.jar,file:/C:/Users/tuank/.gradle/caches/modules-2/files-2.1/org.apache.kafka/kafka-clients/3.7.0/b8f9f75bc3edc06f842dd16071465544198bc045/slf4j-api-1.7.36.jar
+2024-10-10T21:27:23.477+07:00  INFO 17852 --- [individual-service] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-10-10T21:27:23.477+07:00  INFO 17852 --- [individual-service] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-10-10T21:27:24.151+07:00  INFO 17852 --- [individual-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-10-10T21:27:24.152+07:00  INFO 17852 --- [individual-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-10T21:27:24.253+07:00  INFO 17852 --- [individual-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 97 ms. Found 14 JPA repository interfaces.
+2024-10-10T21:27:24.262+07:00  INFO 17852 --- [individual-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-10-10T21:27:24.263+07:00  INFO 17852 --- [individual-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-10-10T21:27:24.272+07:00  INFO 17852 --- [individual-service] [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.kltn.individualservice.repository.DocumentRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2024-10-10T21:27:24.273+07:00  INFO 17852 --- [individual-service] [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.kltn.individualservice.repository.MajorRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2024-10-10T21:27:24.273+07:00  INFO 17852 --- [individual-service] [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.kltn.individualservice.repository.PermissionRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2024-10-10T21:27:24.273+07:00  INFO 17852 --- [individual-service] [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.kltn.individualservice.repository.RegistrationTimeRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2024-10-10T21:27:24.273+07:00  INFO 17852 --- [individual-service] [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.kltn.individualservice.repository.RoleRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2024-10-10T21:27:24.273+07:00  INFO 17852 --- [individual-service] [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.kltn.individualservice.repository.SemesterRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2024-10-10T21:27:24.273+07:00  INFO 17852 --- [individual-service] [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.kltn.individualservice.repository.SettingRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2024-10-10T21:27:24.273+07:00  INFO 17852 --- [individual-service] [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.kltn.individualservice.repository.StudentRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2024-10-10T21:27:24.273+07:00  INFO 17852 --- [individual-service] [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.kltn.individualservice.repository.StudentStudyClassRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2024-10-10T21:27:24.274+07:00  INFO 17852 --- [individual-service] [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.kltn.individualservice.repository.StudyClassRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2024-10-10T21:27:24.274+07:00  INFO 17852 --- [individual-service] [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.kltn.individualservice.repository.StudyDepartmentRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2024-10-10T21:27:24.274+07:00  INFO 17852 --- [individual-service] [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.kltn.individualservice.repository.SubjectRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2024-10-10T21:27:24.274+07:00  INFO 17852 --- [individual-service] [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.kltn.individualservice.repository.TeacherRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2024-10-10T21:27:24.274+07:00  INFO 17852 --- [individual-service] [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.kltn.individualservice.repository.UserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2024-10-10T21:27:24.274+07:00  INFO 17852 --- [individual-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6 ms. Found 0 Redis repository interfaces.
+2024-10-10T21:27:24.488+07:00  INFO 17852 --- [individual-service] [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=b9a06556-10f9-3fe2-985d-ad69209fdbf8
+2024-10-10T21:27:24.718+07:00  WARN 17852 --- [individual-service] [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-10-10T21:27:24.720+07:00  WARN 17852 --- [individual-service] [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-10-10T21:27:24.994+07:00  INFO 17852 --- [individual-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9002 (http)
+2024-10-10T21:27:25.001+07:00  INFO 17852 --- [individual-service] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-10-10T21:27:25.002+07:00  INFO 17852 --- [individual-service] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.24]
+2024-10-10T21:27:25.036+07:00  INFO 17852 --- [individual-service] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-10-10T21:27:25.037+07:00  INFO 17852 --- [individual-service] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1559 ms
+2024-10-10T21:27:25.600+07:00  INFO 17852 --- [individual-service] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-10T21:27:25.618+07:00  INFO 17852 --- [individual-service] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-10-10T21:27:25.695+07:00  INFO 17852 --- [individual-service] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@57246798
+2024-10-10T21:27:25.696+07:00  INFO 17852 --- [individual-service] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-10-10T21:27:26.657+07:00  INFO 17852 --- [individual-service] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-10T21:27:27.050+07:00  INFO 17852 --- [individual-service] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-10-10T21:27:27.706+07:00  WARN 17852 --- [individual-service] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-10-10T21:27:27.784+07:00  INFO 17852 --- [individual-service] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-10-10T21:27:27.823+07:00  INFO 17852 --- [individual-service] [restartedMain] o.s.c.openfeign.FeignClientFactoryBean   : For 'file-service' URL not provided. Will try picking an instance via load-balancing.
+2024-10-10T21:27:29.301+07:00  INFO 17852 --- [individual-service] [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2024-10-10T21:27:29.342+07:00  WARN 17852 --- [individual-service] [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2024-10-10T21:27:29.358+07:00  INFO 17852 --- [individual-service] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 19 endpoints beneath base path '/actuator'
+2024-10-10T21:27:29.427+07:00  INFO 17852 --- [individual-service] [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2024-10-10T21:27:29.453+07:00  INFO 17852 --- [individual-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2024-10-10T21:27:29.456+07:00  INFO 17852 --- [individual-service] [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-10-10T21:27:29.468+07:00  INFO 17852 --- [individual-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2024-10-10T21:27:29.468+07:00  INFO 17852 --- [individual-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2024-10-10T21:27:29.468+07:00  INFO 17852 --- [individual-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2024-10-10T21:27:29.468+07:00  INFO 17852 --- [individual-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2024-10-10T21:27:29.468+07:00  INFO 17852 --- [individual-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2024-10-10T21:27:29.468+07:00  INFO 17852 --- [individual-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2024-10-10T21:27:29.468+07:00  INFO 17852 --- [individual-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2024-10-10T21:27:29.667+07:00  INFO 17852 --- [individual-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2024-10-10T21:27:29.668+07:00  INFO 17852 --- [individual-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2024-10-10T21:27:29.669+07:00  INFO 17852 --- [individual-service] [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2024-10-10T21:27:29.672+07:00  INFO 17852 --- [individual-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1728570449672 with initial instances count: 5
+2024-10-10T21:27:29.677+07:00  INFO 17852 --- [individual-service] [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application INDIVIDUAL-SERVICE with eureka with status UP
+2024-10-10T21:27:29.678+07:00  INFO 17852 --- [individual-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1728570449678, current=UP, previous=STARTING]
+2024-10-10T21:27:29.679+07:00  INFO 17852 --- [individual-service] [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_INDIVIDUAL-SERVICE/192.168.0.104:individual-service:9002: registering service...
+2024-10-10T21:27:29.688+07:00  INFO 17852 --- [individual-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9002 (http) with context path '/'
+2024-10-10T21:27:29.689+07:00  INFO 17852 --- [individual-service] [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 9002
+2024-10-10T21:27:29.703+07:00  INFO 17852 --- [individual-service] [restartedMain] c.k.i.IndividualServiceApplication       : Started IndividualServiceApplication in 6.778 seconds (process running for 7.381)
+2024-10-10T21:27:29.703+07:00  INFO 17852 --- [individual-service] [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_INDIVIDUAL-SERVICE/192.168.0.104:individual-service:9002 - registration status: 204
+2024-10-10T21:27:30.163+07:00  INFO 17852 --- [individual-service] [RMI TCP Connection(5)-192.168.0.104] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-10-10T21:32:29.482+07:00  INFO 17852 --- [individual-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-10-10T21:37:29.484+07:00  INFO 17852 --- [individual-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-10-10T21:42:29.501+07:00  INFO 17852 --- [individual-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-10-10T21:47:29.513+07:00  INFO 17852 --- [individual-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-10-10T21:52:29.518+07:00  INFO 17852 --- [individual-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-10-10T21:57:29.531+07:00  INFO 17852 --- [individual-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-10-10T21:58:05.400+07:00  INFO 17852 --- [individual-service] [http-nio-9002-exec-2] o.a.k.clients.producer.ProducerConfig    : ProducerConfig values: 
+	acks = -1
+	auto.include.jmx.reporter = true
+	batch.size = 16384
+	bootstrap.servers = [localhost:29092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = individual-service-producer-1
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	enable.metrics.push = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.adaptive.partitioning.enable = true
+	partitioner.availability.timeout.ms = 0
+	partitioner.class = null
+	partitioner.ignore.keys = false
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.springframework.kafka.support.serializer.JsonSerializer
 
-   KafkaAutoConfiguration#kafkaProducerFactory:
-      Did not match:
-         - @ConditionalOnMissingBean (types: org.springframework.kafka.core.ProducerFactory; SearchStrategy: all) found beans of type 'org.springframework.kafka.core.ProducerFactory' producerFactory (OnBeanCondition)
-
-   KafkaAutoConfiguration#kafkaTemplate:
-      Did not match:
-         - @ConditionalOnMissingBean (types: org.springframework.kafka.core.KafkaTemplate; SearchStrategy: all) found beans of type 'org.springframework.kafka.core.KafkaTemplate' kafkaTemplate (OnBeanCondition)
-
-   LettuceConnectionConfiguration#redisConnectionFactory:
-      Did not match:
-         - @ConditionalOnMissingBean (types: org.springframework.data.redis.connection.RedisConnectionFactory; SearchStrategy: all) found beans of type 'org.springframework.data.redis.connection.RedisConnectionFactory' jedisConnectionFactory (OnBeanCondition)
-
-   RedisAutoConfiguration#redisTemplate:
-      Did not match:
-         - @ConditionalOnMissingBean (names: redisTemplate; SearchStrategy: all) found beans named redisTemplate (OnBeanCondition)
-
-   RedisReactiveAutoConfiguration#reactiveRedisTemplate:
-      Did not match:
-         - @ConditionalOnBean (types: org.springframework.data.redis.connection.ReactiveRedisConnectionFactory; SearchStrategy: all) did not find any beans of type org.springframework.data.redis.connection.ReactiveRedisConnectionFactory (OnBeanCondition)
-
-   RedisReactiveAutoConfiguration#reactiveStringRedisTemplate:
-      Did not match:
-         - @ConditionalOnBean (types: org.springframework.data.redis.connection.ReactiveRedisConnectionFactory; SearchStrategy: all) did not find any beans of type org.springframework.data.redis.connection.ReactiveRedisConnectionFactory (OnBeanCondition)
-
-   RedisReactiveHealthContributorAutoConfiguration:
-      Did not match:
-         - @ConditionalOnBean (types: org.springframework.data.redis.connection.ReactiveRedisConnectionFactory; SearchStrategy: all) did not find any beans of type org.springframework.data.redis.connection.ReactiveRedisConnectionFactory (OnBeanCondition)
-      Matched:
-         - @ConditionalOnClass found required classes 'org.springframework.data.redis.connection.ReactiveRedisConnectionFactory', 'reactor.core.publisher.Flux' (OnClassCondition)
-         - @ConditionalOnEnabledHealthIndicator management.health.defaults.enabled is considered true (OnEnabledHealthIndicatorCondition)
-
-   WebMvcAutoConfiguration.EnableWebMvcConfiguration#localeResolver:
-      Did not match:
-         - @ConditionalOnMissingBean (names: localeResolver; SearchStrategy: all) found beans named localeResolver (OnBeanCondition)
-
-
-Exclusions:
------------
-
-    None
-
-
-Unconditional classes:
-----------------------
-
-    None
-
-
-
-2024-09-05T20:22:59.552+07:00  INFO 10912 --- [individual-service] [http-nio-9002-exec-5] o.a.c.c.C.[Tomcat-6].[localhost].[/]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-09-05T20:22:59.607+07:00  WARN 10912 --- [individual-service] [http-nio-9002-exec-10] PageModule$PlainPageSerializationWarning : Serializing PageImpl instances as-is is not supported, meaning that there is no guarantee about the stability of the resulting JSON structure!
+2024-10-10T21:58:05.423+07:00  INFO 17852 --- [individual-service] [http-nio-9002-exec-2] o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
+2024-10-10T21:58:05.436+07:00  INFO 17852 --- [individual-service] [http-nio-9002-exec-2] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=individual-service-producer-1] Instantiated an idempotent producer.
+2024-10-10T21:58:05.466+07:00  INFO 17852 --- [individual-service] [http-nio-9002-exec-2] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.7.0
+2024-10-10T21:58:05.466+07:00  INFO 17852 --- [individual-service] [http-nio-9002-exec-2] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 2ae524ed625438c5
+2024-10-10T21:58:05.466+07:00  INFO 17852 --- [individual-service] [http-nio-9002-exec-2] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1728572285465
+2024-10-10T21:58:05.662+07:00  INFO 17852 --- [individual-service] [kafka-producer-network-thread | individual-service-producer-1] org.apache.kafka.clients.Metadata        : [Producer clientId=individual-service-producer-1] Cluster ID: S5MJKaohSDKFiONT109TXA
+2024-10-10T21:58:05.662+07:00  INFO 17852 --- [individual-service] [kafka-producer-network-thread | individual-service-producer-1] o.a.k.c.p.internals.TransactionManager   : [Producer clientId=individual-service-producer-1] ProducerId set to 2 with epoch 0
+2024-10-10T21:58:05.773+07:00  WARN 17852 --- [individual-service] [http-nio-9002-exec-4] PageModule$PlainPageSerializationWarning : Serializing PageImpl instances as-is is not supported, meaning that there is no guarantee about the stability of the resulting JSON structure!
 	For a stable JSON structure, please use Spring Data's PagedModel (globally via @EnableSpringDataWebSupport(pageSerializationMode = VIA_DTO))
 	or Spring HATEOAS and Spring Data's PagedResourcesAssembler as documented in https://docs.spring.io/spring-data/commons/reference/repositories/core-extensions.html#core.web.pageables.
 
-2024-09-05T20:26:35.554+07:00  INFO 10912 --- [individual-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2024-09-05T20:31:35.571+07:00  INFO 10912 --- [individual-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2024-09-05T20:36:35.576+07:00  INFO 10912 --- [individual-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2024-09-05T20:41:35.591+07:00  INFO 10912 --- [individual-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2024-09-05T20:44:59.744+07:00  INFO 10912 --- [individual-service] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 117 class path changes (0 additions, 117 deletions, 0 modifications)
-2024-09-05T20:44:59.746+07:00  INFO 10912 --- [individual-service] [Thread-65] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application INDIVIDUAL-SERVICE with eureka with status DOWN
-2024-09-05T20:44:59.746+07:00  INFO 10912 --- [individual-service] [Thread-65] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1725543899746, current=DOWN, previous=UP]
-2024-09-05T20:44:59.746+07:00  INFO 10912 --- [individual-service] [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_INDIVIDUAL-SERVICE/tuank.mshome.net:individual-service:9002: registering service...
-2024-09-05T20:44:59.773+07:00  INFO 10912 --- [individual-service] [Thread-65] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-09-05T20:44:59.775+07:00  INFO 10912 --- [individual-service] [Thread-65] com.zaxxer.hikari.HikariDataSource       : HikariPool-15 - Shutdown initiated...
-2024-09-05T20:44:59.780+07:00  INFO 10912 --- [individual-service] [Thread-65] com.zaxxer.hikari.HikariDataSource       : HikariPool-15 - Shutdown completed.
-2024-09-05T20:44:59.781+07:00  INFO 10912 --- [individual-service] [Thread-65] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
-2024-09-05T20:44:59.791+07:00  INFO 10912 --- [individual-service] [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_INDIVIDUAL-SERVICE/tuank.mshome.net:individual-service:9002 - registration status: 204
-2024-09-05T20:44:59.795+07:00  INFO 10912 --- [individual-service] [Thread-65] com.netflix.discovery.DiscoveryClient    : Unregistering ...
-2024-09-05T20:44:59.798+07:00  INFO 10912 --- [individual-service] [Thread-65] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_INDIVIDUAL-SERVICE/tuank.mshome.net:individual-service:9002 - deregister  status: 200
-2024-09-05T20:44:59.809+07:00  INFO 10912 --- [individual-service] [Thread-65] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
-2024-09-05T20:45:00.232+07:00  INFO 10912 --- [individual-service] [restartedMain] c.k.i.IndividualServiceApplication       : Starting IndividualServiceApplication using Java 21.0.3 with PID 10912 (C:\Users\tuank\code\tlum\server\individual-service\build\classes\java\main started by tuank in C:\Users\tuank\code\tlum\server)
-2024-09-05T20:45:00.232+07:00  INFO 10912 --- [individual-service] [restartedMain] c.k.i.IndividualServiceApplication       : The following 1 profile is active: "dev"
-2024-09-05T20:45:00.239+07:00  INFO 10912 --- [individual-service] [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://tuank.mshome.net:8888/
-2024-09-05T20:45:00.239+07:00  INFO 10912 --- [individual-service] [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=auth-service,file-service, profiles=[dev], label=null, version=null, state=null
-2024-09-05T20:45:01.323+07:00  INFO 10912 --- [individual-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-2024-09-05T20:45:01.323+07:00  INFO 10912 --- [individual-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-09-05T20:45:01.388+07:00  INFO 10912 --- [individual-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 65 ms. Found 11 JPA repository interfaces.
-2024-09-05T20:45:01.395+07:00  INFO 10912 --- [individual-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-2024-09-05T20:45:01.395+07:00  INFO 10912 --- [individual-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2024-09-05T20:45:01.401+07:00  INFO 10912 --- [individual-service] [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.kltn.individualservice.repository.DocumentRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2024-09-05T20:45:01.401+07:00  INFO 10912 --- [individual-service] [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.kltn.individualservice.repository.MajorRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2024-09-05T20:45:01.401+07:00  INFO 10912 --- [individual-service] [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.kltn.individualservice.repository.PermissionRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2024-09-05T20:45:01.401+07:00  INFO 10912 --- [individual-service] [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.kltn.individualservice.repository.RoleRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2024-09-05T20:45:01.401+07:00  INFO 10912 --- [individual-service] [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.kltn.individualservice.repository.StudentRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2024-09-05T20:45:01.401+07:00  INFO 10912 --- [individual-service] [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.kltn.individualservice.repository.StudentStudyClassRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2024-09-05T20:45:01.402+07:00  INFO 10912 --- [individual-service] [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.kltn.individualservice.repository.StudyClassRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2024-09-05T20:45:01.402+07:00  INFO 10912 --- [individual-service] [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.kltn.individualservice.repository.StudyDepartmentRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2024-09-05T20:45:01.402+07:00  INFO 10912 --- [individual-service] [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.kltn.individualservice.repository.SubjectRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2024-09-05T20:45:01.402+07:00  INFO 10912 --- [individual-service] [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.kltn.individualservice.repository.TeacherRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2024-09-05T20:45:01.402+07:00  INFO 10912 --- [individual-service] [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.kltn.individualservice.repository.UserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2024-09-05T20:45:01.402+07:00  INFO 10912 --- [individual-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6 ms. Found 0 Redis repository interfaces.
-2024-09-05T20:45:01.566+07:00  WARN 10912 --- [individual-service] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: java.lang.NullPointerException: Cannot read field "generatedClass" because "data" is null
-2024-09-05T20:45:01.579+07:00  INFO 10912 --- [individual-service] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+2024-10-10T22:02:29.536+07:00  INFO 17852 --- [individual-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-10-10T22:07:19.415+07:00  INFO 17852 --- [individual-service] [kafka-producer-network-thread | individual-service-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=individual-service-producer-1] Node -1 disconnected.
+2024-10-10T22:07:29.550+07:00  INFO 17852 --- [individual-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-10-10T22:12:29.562+07:00  INFO 17852 --- [individual-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-10-10T22:17:05.744+07:00  INFO 17852 --- [individual-service] [kafka-producer-network-thread | individual-service-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=individual-service-producer-1] Node -1 disconnected.
+2024-10-10T22:17:29.565+07:00  INFO 17852 --- [individual-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-10-10T22:22:11.426+07:00  INFO 17852 --- [individual-service] [SpringApplicationShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application INDIVIDUAL-SERVICE with eureka with status DOWN
+2024-10-10T22:22:11.426+07:00  INFO 17852 --- [individual-service] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1728573731426, current=DOWN, previous=UP]
+2024-10-10T22:22:11.426+07:00  INFO 17852 --- [individual-service] [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_INDIVIDUAL-SERVICE/192.168.0.104:individual-service:9002: registering service...
+2024-10-10T22:22:11.431+07:00  INFO 17852 --- [individual-service] [SpringApplicationShutdownHook] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=individual-service-producer-1] Closing the Kafka producer with timeoutMillis = 30000 ms.
+2024-10-10T22:22:11.434+07:00  INFO 17852 --- [individual-service] [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_INDIVIDUAL-SERVICE/192.168.0.104:individual-service:9002 - registration status: 204
+2024-10-10T22:22:11.435+07:00  INFO 17852 --- [individual-service] [SpringApplicationShutdownHook] o.apache.kafka.common.metrics.Metrics    : Metrics scheduler closed
+2024-10-10T22:22:11.436+07:00  INFO 17852 --- [individual-service] [SpringApplicationShutdownHook] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2024-10-10T22:22:11.436+07:00  INFO 17852 --- [individual-service] [SpringApplicationShutdownHook] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.telemetry.internals.ClientTelemetryReporter
+2024-10-10T22:22:11.436+07:00  INFO 17852 --- [individual-service] [SpringApplicationShutdownHook] o.apache.kafka.common.metrics.Metrics    : Metrics reporters closed
+2024-10-10T22:22:11.436+07:00  INFO 17852 --- [individual-service] [SpringApplicationShutdownHook] o.a.kafka.common.utils.AppInfoParser     : App info kafka.producer for individual-service-producer-1 unregistered
+2024-10-10T22:22:11.448+07:00  INFO 17852 --- [individual-service] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-10T22:22:11.450+07:00  INFO 17852 --- [individual-service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-10-10T22:22:11.454+07:00  INFO 17852 --- [individual-service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-10-10T22:22:11.455+07:00  INFO 17852 --- [individual-service] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2024-10-10T22:22:14.456+07:00  INFO 17852 --- [individual-service] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2024-10-10T22:22:14.473+07:00  INFO 17852 --- [individual-service] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_INDIVIDUAL-SERVICE/192.168.0.104:individual-service:9002 - deregister  status: 200
+2024-10-10T22:22:14.476+07:00  INFO 17852 --- [individual-service] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2024-10-10T22:22:25.429+07:00  INFO 19324 --- [individual-service] [restartedMain] c.k.i.IndividualServiceApplication       : Starting IndividualServiceApplication using Java 21.0.4 with PID 19324 (D:\code\tlum\server\individual-service\build\classes\java\main started by tuank in D:\code\tlum\server)
+2024-10-10T22:22:25.431+07:00  INFO 19324 --- [individual-service] [restartedMain] c.k.i.IndividualServiceApplication       : The following 1 profile is active: "dev"
+2024-10-10T22:22:25.482+07:00  INFO 19324 --- [individual-service] [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2024-10-10T22:22:25.483+07:00  INFO 19324 --- [individual-service] [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=auth-service,file-service, profiles=[dev], label=null, version=null, state=null
+2024-10-10T22:22:25.484+07:00  INFO 19324 --- [individual-service] [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\tuank\.gradle\caches\modules-2\files-2.1\org.apache.kafka\kafka-clients\3.7.0\b8f9f75bc3edc06f842dd16071465544198bc045\kafka-clients-3.7.0.jar referenced one or more files that do not exist: file:/C:/Users/tuank/.gradle/caches/modules-2/files-2.1/org.apache.kafka/kafka-clients/3.7.0/b8f9f75bc3edc06f842dd16071465544198bc045/zstd-jni-1.5.5-6.jar,file:/C:/Users/tuank/.gradle/caches/modules-2/files-2.1/org.apache.kafka/kafka-clients/3.7.0/b8f9f75bc3edc06f842dd16071465544198bc045/lz4-java-1.8.0.jar,file:/C:/Users/tuank/.gradle/caches/modules-2/files-2.1/org.apache.kafka/kafka-clients/3.7.0/b8f9f75bc3edc06f842dd16071465544198bc045/snappy-java-1.1.10.5.jar,file:/C:/Users/tuank/.gradle/caches/modules-2/files-2.1/org.apache.kafka/kafka-clients/3.7.0/b8f9f75bc3edc06f842dd16071465544198bc045/slf4j-api-1.7.36.jar
+2024-10-10T22:22:25.484+07:00  INFO 19324 --- [individual-service] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-10-10T22:22:25.484+07:00  INFO 19324 --- [individual-service] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-10-10T22:22:26.755+07:00  INFO 19324 --- [individual-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-10-10T22:22:26.756+07:00  INFO 19324 --- [individual-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-10T22:22:26.947+07:00  INFO 19324 --- [individual-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 184 ms. Found 14 JPA repository interfaces.
+2024-10-10T22:22:26.976+07:00  INFO 19324 --- [individual-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-10-10T22:22:26.977+07:00  INFO 19324 --- [individual-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-10-10T22:22:26.995+07:00  INFO 19324 --- [individual-service] [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.kltn.individualservice.repository.DocumentRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2024-10-10T22:22:26.995+07:00  INFO 19324 --- [individual-service] [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.kltn.individualservice.repository.MajorRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2024-10-10T22:22:26.995+07:00  INFO 19324 --- [individual-service] [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.kltn.individualservice.repository.PermissionRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2024-10-10T22:22:26.995+07:00  INFO 19324 --- [individual-service] [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.kltn.individualservice.repository.RegistrationTimeRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2024-10-10T22:22:26.996+07:00  INFO 19324 --- [individual-service] [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.kltn.individualservice.repository.RoleRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2024-10-10T22:22:26.996+07:00  INFO 19324 --- [individual-service] [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.kltn.individualservice.repository.SemesterRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2024-10-10T22:22:26.996+07:00  INFO 19324 --- [individual-service] [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.kltn.individualservice.repository.SettingRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2024-10-10T22:22:26.996+07:00  INFO 19324 --- [individual-service] [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.kltn.individualservice.repository.StudentRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2024-10-10T22:22:26.996+07:00  INFO 19324 --- [individual-service] [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.kltn.individualservice.repository.StudentStudyClassRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2024-10-10T22:22:26.996+07:00  INFO 19324 --- [individual-service] [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.kltn.individualservice.repository.StudyClassRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2024-10-10T22:22:26.996+07:00  INFO 19324 --- [individual-service] [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.kltn.individualservice.repository.StudyDepartmentRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2024-10-10T22:22:26.997+07:00  INFO 19324 --- [individual-service] [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.kltn.individualservice.repository.SubjectRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2024-10-10T22:22:26.997+07:00  INFO 19324 --- [individual-service] [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.kltn.individualservice.repository.TeacherRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2024-10-10T22:22:26.997+07:00  INFO 19324 --- [individual-service] [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.kltn.individualservice.repository.UserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2024-10-10T22:22:26.998+07:00  INFO 19324 --- [individual-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8 ms. Found 0 Redis repository interfaces.
+2024-10-10T22:22:27.378+07:00  INFO 19324 --- [individual-service] [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=b9a06556-10f9-3fe2-985d-ad69209fdbf8
+2024-10-10T22:22:27.744+07:00  WARN 19324 --- [individual-service] [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-10-10T22:22:27.747+07:00  WARN 19324 --- [individual-service] [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-10-10T22:22:28.327+07:00  INFO 19324 --- [individual-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9002 (http)
+2024-10-10T22:22:28.340+07:00  INFO 19324 --- [individual-service] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-10-10T22:22:28.341+07:00  INFO 19324 --- [individual-service] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.24]
+2024-10-10T22:22:28.377+07:00  INFO 19324 --- [individual-service] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-10-10T22:22:28.377+07:00  INFO 19324 --- [individual-service] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2892 ms
+2024-10-10T22:22:29.073+07:00  INFO 19324 --- [individual-service] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-10T22:22:29.091+07:00  INFO 19324 --- [individual-service] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-10-10T22:22:29.194+07:00  INFO 19324 --- [individual-service] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@1f3ec74
+2024-10-10T22:22:29.195+07:00  INFO 19324 --- [individual-service] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-10-10T22:22:30.396+07:00  INFO 19324 --- [individual-service] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-10T22:22:31.064+07:00  INFO 19324 --- [individual-service] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-10-10T22:22:32.571+07:00  WARN 19324 --- [individual-service] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-10-10T22:22:32.705+07:00  INFO 19324 --- [individual-service] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-10-10T22:22:32.795+07:00  INFO 19324 --- [individual-service] [restartedMain] o.s.c.openfeign.FeignClientFactoryBean   : For 'file-service' URL not provided. Will try picking an instance via load-balancing.
+2024-10-10T22:22:35.235+07:00  INFO 19324 --- [individual-service] [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2024-10-10T22:22:35.295+07:00  WARN 19324 --- [individual-service] [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2024-10-10T22:22:35.322+07:00  INFO 19324 --- [individual-service] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 19 endpoints beneath base path '/actuator'
+2024-10-10T22:22:35.432+07:00  INFO 19324 --- [individual-service] [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2024-10-10T22:22:35.474+07:00  INFO 19324 --- [individual-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2024-10-10T22:22:35.478+07:00  INFO 19324 --- [individual-service] [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-10-10T22:22:35.501+07:00  INFO 19324 --- [individual-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2024-10-10T22:22:35.502+07:00  INFO 19324 --- [individual-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2024-10-10T22:22:35.502+07:00  INFO 19324 --- [individual-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2024-10-10T22:22:35.502+07:00  INFO 19324 --- [individual-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2024-10-10T22:22:35.502+07:00  INFO 19324 --- [individual-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2024-10-10T22:22:35.502+07:00  INFO 19324 --- [individual-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2024-10-10T22:22:35.502+07:00  INFO 19324 --- [individual-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2024-10-10T22:22:35.772+07:00  INFO 19324 --- [individual-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2024-10-10T22:22:35.775+07:00  INFO 19324 --- [individual-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2024-10-10T22:22:35.778+07:00  INFO 19324 --- [individual-service] [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2024-10-10T22:22:35.782+07:00  INFO 19324 --- [individual-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1728573755782 with initial instances count: 4
+2024-10-10T22:22:35.789+07:00  INFO 19324 --- [individual-service] [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application INDIVIDUAL-SERVICE with eureka with status UP
+2024-10-10T22:22:35.790+07:00  INFO 19324 --- [individual-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1728573755790, current=UP, previous=STARTING]
+2024-10-10T22:22:35.791+07:00  INFO 19324 --- [individual-service] [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_INDIVIDUAL-SERVICE/192.168.0.104:individual-service:9002: registering service...
+2024-10-10T22:22:35.805+07:00  INFO 19324 --- [individual-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9002 (http) with context path '/'
+2024-10-10T22:22:35.807+07:00  INFO 19324 --- [individual-service] [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 9002
+2024-10-10T22:22:35.835+07:00  INFO 19324 --- [individual-service] [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_INDIVIDUAL-SERVICE/192.168.0.104:individual-service:9002 - registration status: 204
+2024-10-10T22:22:35.837+07:00  INFO 19324 --- [individual-service] [restartedMain] c.k.i.IndividualServiceApplication       : Started IndividualServiceApplication in 11.007 seconds (process running for 11.83)
+2024-10-10T22:22:36.304+07:00  INFO 19324 --- [individual-service] [RMI TCP Connection(8)-192.168.0.104] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-10-10T22:24:05.270+07:00  INFO 19324 --- [individual-service] [http-nio-9002-exec-2] o.a.k.clients.producer.ProducerConfig    : ProducerConfig values: 
+	acks = -1
+	auto.include.jmx.reporter = true
+	batch.size = 16384
+	bootstrap.servers = [localhost:29092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = individual-service-producer-1
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	enable.metrics.push = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.adaptive.partitioning.enable = true
+	partitioner.availability.timeout.ms = 0
+	partitioner.class = null
+	partitioner.ignore.keys = false
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.springframework.kafka.support.serializer.JsonSerializer
 
-Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-2024-09-05T20:45:01.587+07:00 ERROR 10912 --- [individual-service] [restartedMain] o.s.boot.SpringApplication               : Application run failed
-
-java.lang.NullPointerException: Cannot read field "generatedClass" because "data" is null
-	at org.springframework.cglib.proxy.Enhancer.nextInstance(Enhancer.java:783) ~[spring-core-6.1.8.jar:6.1.8]
-	at org.springframework.cglib.core.AbstractClassGenerator.create(AbstractClassGenerator.java:321) ~[spring-core-6.1.8.jar:6.1.8]
-	at org.springframework.cglib.proxy.Enhancer.createHelper(Enhancer.java:562) ~[spring-core-6.1.8.jar:6.1.8]
-	at org.springframework.cglib.proxy.Enhancer.createClass(Enhancer.java:407) ~[spring-core-6.1.8.jar:6.1.8]
-	at org.springframework.context.annotation.ConfigurationClassEnhancer.createClass(ConfigurationClassEnhancer.java:147) ~[spring-context-6.1.8.jar:6.1.8]
-	at org.springframework.context.annotation.ConfigurationClassEnhancer.enhance(ConfigurationClassEnhancer.java:112) ~[spring-context-6.1.8.jar:6.1.8]
-	at org.springframework.context.annotation.ConfigurationClassPostProcessor.enhanceConfigurationClasses(ConfigurationClassPostProcessor.java:534) ~[spring-context-6.1.8.jar:6.1.8]
-	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanFactory(ConfigurationClassPostProcessor.java:311) ~[spring-context-6.1.8.jar:6.1.8]
-	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:363) ~[spring-context-6.1.8.jar:6.1.8]
-	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:153) ~[spring-context-6.1.8.jar:6.1.8]
-	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:788) ~[spring-context-6.1.8.jar:6.1.8]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:606) ~[spring-context-6.1.8.jar:6.1.8]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.3.0.jar:3.3.0]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-3.3.0.jar:3.3.0]
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) ~[spring-boot-3.3.0.jar:3.3.0]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335) ~[spring-boot-3.3.0.jar:3.3.0]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363) ~[spring-boot-3.3.0.jar:3.3.0]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352) ~[spring-boot-3.3.0.jar:3.3.0]
-	at com.kltn.individualservice.IndividualServiceApplication.main(IndividualServiceApplication.java:14) ~[main/:na]
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
-	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.3.0.jar:3.3.0]
-
-2024-09-05T20:45:20.997+07:00  INFO 10912 --- [individual-service] [restartedMain] c.k.i.IndividualServiceApplication       : Starting IndividualServiceApplication using Java 21.0.3 with PID 10912 (C:\Users\tuank\code\tlum\server\individual-service\build\classes\java\main started by tuank in C:\Users\tuank\code\tlum\server)
-2024-09-05T20:45:20.998+07:00  INFO 10912 --- [individual-service] [restartedMain] c.k.i.IndividualServiceApplication       : The following 1 profile is active: "dev"
-2024-09-05T20:45:21.001+07:00  INFO 10912 --- [individual-service] [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://tuank.mshome.net:8888/
-2024-09-05T20:45:21.001+07:00  INFO 10912 --- [individual-service] [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=auth-service,file-service, profiles=[dev], label=null, version=null, state=null
-2024-09-05T20:45:21.486+07:00  INFO 10912 --- [individual-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-2024-09-05T20:45:21.486+07:00  INFO 10912 --- [individual-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-09-05T20:45:21.487+07:00  INFO 10912 --- [individual-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 1 ms. Found 0 JPA repository interfaces.
-2024-09-05T20:45:21.490+07:00  INFO 10912 --- [individual-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-2024-09-05T20:45:21.490+07:00  INFO 10912 --- [individual-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2024-09-05T20:45:21.491+07:00  INFO 10912 --- [individual-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 0 ms. Found 0 Redis repository interfaces.
-2024-09-05T20:45:21.600+07:00  WARN 10912 --- [individual-service] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: java.lang.NullPointerException: Cannot read field "generatedClass" because "data" is null
-2024-09-05T20:45:21.607+07:00  INFO 10912 --- [individual-service] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
-
-Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-2024-09-05T20:45:21.615+07:00 ERROR 10912 --- [individual-service] [restartedMain] o.s.boot.SpringApplication               : Application run failed
-
-java.lang.NullPointerException: Cannot read field "generatedClass" because "data" is null
-	at org.springframework.cglib.proxy.Enhancer.nextInstance(Enhancer.java:783) ~[spring-core-6.1.8.jar:6.1.8]
-	at org.springframework.cglib.core.AbstractClassGenerator.create(AbstractClassGenerator.java:321) ~[spring-core-6.1.8.jar:6.1.8]
-	at org.springframework.cglib.proxy.Enhancer.createHelper(Enhancer.java:562) ~[spring-core-6.1.8.jar:6.1.8]
-	at org.springframework.cglib.proxy.Enhancer.createClass(Enhancer.java:407) ~[spring-core-6.1.8.jar:6.1.8]
-	at org.springframework.context.annotation.ConfigurationClassEnhancer.createClass(ConfigurationClassEnhancer.java:147) ~[spring-context-6.1.8.jar:6.1.8]
-	at org.springframework.context.annotation.ConfigurationClassEnhancer.enhance(ConfigurationClassEnhancer.java:112) ~[spring-context-6.1.8.jar:6.1.8]
-	at org.springframework.context.annotation.ConfigurationClassPostProcessor.enhanceConfigurationClasses(ConfigurationClassPostProcessor.java:534) ~[spring-context-6.1.8.jar:6.1.8]
-	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanFactory(ConfigurationClassPostProcessor.java:311) ~[spring-context-6.1.8.jar:6.1.8]
-	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:363) ~[spring-context-6.1.8.jar:6.1.8]
-	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:153) ~[spring-context-6.1.8.jar:6.1.8]
-	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:788) ~[spring-context-6.1.8.jar:6.1.8]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:606) ~[spring-context-6.1.8.jar:6.1.8]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.3.0.jar:3.3.0]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-3.3.0.jar:3.3.0]
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) ~[spring-boot-3.3.0.jar:3.3.0]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335) ~[spring-boot-3.3.0.jar:3.3.0]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363) ~[spring-boot-3.3.0.jar:3.3.0]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352) ~[spring-boot-3.3.0.jar:3.3.0]
-	at com.kltn.individualservice.IndividualServiceApplication.main(IndividualServiceApplication.java:14) ~[main/:na]
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
-	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.3.0.jar:3.3.0]
-
-2024-09-05T20:45:28.021+07:00  INFO 10912 --- [individual-service] [restartedMain] c.k.i.IndividualServiceApplication       : Starting IndividualServiceApplication using Java 21.0.3 with PID 10912 (C:\Users\tuank\code\tlum\server\individual-service\build\classes\java\main started by tuank in C:\Users\tuank\code\tlum\server)
-2024-09-05T20:45:28.022+07:00  INFO 10912 --- [individual-service] [restartedMain] c.k.i.IndividualServiceApplication       : The following 1 profile is active: "dev"
-2024-09-05T20:45:28.117+07:00  INFO 10912 --- [individual-service] [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://tuank.mshome.net:8888/
-2024-09-05T20:45:28.118+07:00  INFO 10912 --- [individual-service] [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=auth-service,file-service, profiles=[dev], label=null, version=null, state=null
-2024-09-05T20:45:34.471+07:00  INFO 10912 --- [individual-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-2024-09-05T20:45:34.471+07:00  INFO 10912 --- [individual-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-09-05T20:45:34.515+07:00  INFO 10912 --- [individual-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 43 ms. Found 11 JPA repository interfaces.
-2024-09-05T20:45:34.527+07:00  INFO 10912 --- [individual-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-2024-09-05T20:45:34.527+07:00  INFO 10912 --- [individual-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2024-09-05T20:45:34.532+07:00  INFO 10912 --- [individual-service] [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.kltn.individualservice.repository.DocumentRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2024-09-05T20:45:34.532+07:00  INFO 10912 --- [individual-service] [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.kltn.individualservice.repository.MajorRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2024-09-05T20:45:34.532+07:00  INFO 10912 --- [individual-service] [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.kltn.individualservice.repository.PermissionRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2024-09-05T20:45:34.532+07:00  INFO 10912 --- [individual-service] [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.kltn.individualservice.repository.RoleRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2024-09-05T20:45:34.532+07:00  INFO 10912 --- [individual-service] [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.kltn.individualservice.repository.StudentRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2024-09-05T20:45:34.533+07:00  INFO 10912 --- [individual-service] [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.kltn.individualservice.repository.StudentStudyClassRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2024-09-05T20:45:34.533+07:00  INFO 10912 --- [individual-service] [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.kltn.individualservice.repository.StudyClassRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2024-09-05T20:45:34.533+07:00  INFO 10912 --- [individual-service] [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.kltn.individualservice.repository.StudyDepartmentRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2024-09-05T20:45:34.533+07:00  INFO 10912 --- [individual-service] [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.kltn.individualservice.repository.SubjectRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2024-09-05T20:45:34.533+07:00  INFO 10912 --- [individual-service] [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.kltn.individualservice.repository.TeacherRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2024-09-05T20:45:34.533+07:00  INFO 10912 --- [individual-service] [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.kltn.individualservice.repository.UserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2024-09-05T20:45:34.533+07:00  INFO 10912 --- [individual-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5 ms. Found 0 Redis repository interfaces.
-2024-09-05T20:45:34.703+07:00  INFO 10912 --- [individual-service] [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=5e1889ee-a182-3a21-8edc-c2688fd50777
-2024-09-05T20:45:34.809+07:00  WARN 10912 --- [individual-service] [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
-2024-09-05T20:45:34.812+07:00  WARN 10912 --- [individual-service] [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
-2024-09-05T20:45:35.027+07:00  INFO 10912 --- [individual-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9002 (http)
-2024-09-05T20:45:35.029+07:00  INFO 10912 --- [individual-service] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-09-05T20:45:35.029+07:00  INFO 10912 --- [individual-service] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.24]
-2024-09-05T20:45:35.071+07:00  INFO 10912 --- [individual-service] [restartedMain] o.a.c.c.C.[Tomcat-6].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
-2024-09-05T20:45:35.071+07:00  INFO 10912 --- [individual-service] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 6953 ms
-2024-09-05T20:45:35.403+07:00  INFO 10912 --- [individual-service] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-09-05T20:45:35.417+07:00  INFO 10912 --- [individual-service] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-16 - Starting...
-2024-09-05T20:45:35.488+07:00  INFO 10912 --- [individual-service] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-16 - Added connection org.postgresql.jdbc.PgConnection@1e318c4a
-2024-09-05T20:45:35.488+07:00  INFO 10912 --- [individual-service] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-16 - Start completed.
-2024-09-05T20:45:36.284+07:00  INFO 10912 --- [individual-service] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-09-05T20:45:36.938+07:00  WARN 10912 --- [individual-service] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-09-05T20:45:37.025+07:00  INFO 10912 --- [individual-service] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2024-09-05T20:45:37.064+07:00  INFO 10912 --- [individual-service] [restartedMain] o.s.c.openfeign.FeignClientFactoryBean   : For 'file-service' URL not provided. Will try picking an instance via load-balancing.
-2024-09-05T20:45:38.581+07:00  INFO 10912 --- [individual-service] [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
-2024-09-05T20:45:38.630+07:00  WARN 10912 --- [individual-service] [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-2024-09-05T20:45:38.649+07:00  INFO 10912 --- [individual-service] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 19 endpoints beneath base path '/actuator'
-2024-09-05T20:45:38.720+07:00  INFO 10912 --- [individual-service] [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
-2024-09-05T20:45:38.726+07:00  INFO 10912 --- [individual-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
-2024-09-05T20:45:38.726+07:00  INFO 10912 --- [individual-service] [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2024-09-05T20:45:38.729+07:00  INFO 10912 --- [individual-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
-2024-09-05T20:45:38.729+07:00  INFO 10912 --- [individual-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
-2024-09-05T20:45:38.729+07:00  INFO 10912 --- [individual-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
-2024-09-05T20:45:38.729+07:00  INFO 10912 --- [individual-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
-2024-09-05T20:45:38.729+07:00  INFO 10912 --- [individual-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
-2024-09-05T20:45:38.729+07:00  INFO 10912 --- [individual-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
-2024-09-05T20:45:38.730+07:00  INFO 10912 --- [individual-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
-2024-09-05T20:45:38.770+07:00  INFO 10912 --- [individual-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
-2024-09-05T20:45:38.771+07:00  INFO 10912 --- [individual-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
-2024-09-05T20:45:38.773+07:00  INFO 10912 --- [individual-service] [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
-2024-09-05T20:45:38.774+07:00  INFO 10912 --- [individual-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1725543938774 with initial instances count: 4
-2024-09-05T20:45:38.783+07:00  INFO 10912 --- [individual-service] [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application INDIVIDUAL-SERVICE with eureka with status UP
-2024-09-05T20:45:38.784+07:00  INFO 10912 --- [individual-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1725543938784, current=UP, previous=STARTING]
-2024-09-05T20:45:38.784+07:00  INFO 10912 --- [individual-service] [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_INDIVIDUAL-SERVICE/tuank.mshome.net:individual-service:9002: registering service...
-2024-09-05T20:45:38.788+07:00  INFO 10912 --- [individual-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9002 (http) with context path '/'
-2024-09-05T20:45:38.790+07:00  INFO 10912 --- [individual-service] [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 9002
-2024-09-05T20:45:38.817+07:00  INFO 10912 --- [individual-service] [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_INDIVIDUAL-SERVICE/tuank.mshome.net:individual-service:9002 - registration status: 204
-2024-09-05T20:45:38.817+07:00  INFO 10912 --- [individual-service] [restartedMain] c.k.i.IndividualServiceApplication       : Started IndividualServiceApplication in 13.813 seconds (process running for 10457.15)
-2024-09-05T20:45:38.822+07:00  INFO 10912 --- [individual-service] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2024-09-05T20:50:38.737+07:00  INFO 10912 --- [individual-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2024-09-05T20:55:38.747+07:00  INFO 10912 --- [individual-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2024-09-05T21:00:19.641+07:00  INFO 10912 --- [individual-service] [http-nio-9002-exec-1] o.a.c.c.C.[Tomcat-6].[localhost].[/]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-09-05T21:00:19.859+07:00  WARN 10912 --- [individual-service] [http-nio-9002-exec-2] PageModule$PlainPageSerializationWarning : Serializing PageImpl instances as-is is not supported, meaning that there is no guarantee about the stability of the resulting JSON structure!
+2024-10-10T22:24:05.299+07:00  INFO 19324 --- [individual-service] [http-nio-9002-exec-2] o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
+2024-10-10T22:24:05.312+07:00  INFO 19324 --- [individual-service] [http-nio-9002-exec-2] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=individual-service-producer-1] Instantiated an idempotent producer.
+2024-10-10T22:24:05.344+07:00  INFO 19324 --- [individual-service] [http-nio-9002-exec-2] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.7.0
+2024-10-10T22:24:05.344+07:00  INFO 19324 --- [individual-service] [http-nio-9002-exec-2] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 2ae524ed625438c5
+2024-10-10T22:24:05.344+07:00  INFO 19324 --- [individual-service] [http-nio-9002-exec-2] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1728573845343
+2024-10-10T22:24:05.564+07:00  INFO 19324 --- [individual-service] [kafka-producer-network-thread | individual-service-producer-1] org.apache.kafka.clients.Metadata        : [Producer clientId=individual-service-producer-1] Cluster ID: S5MJKaohSDKFiONT109TXA
+2024-10-10T22:24:05.564+07:00  INFO 19324 --- [individual-service] [kafka-producer-network-thread | individual-service-producer-1] o.a.k.c.p.internals.TransactionManager   : [Producer clientId=individual-service-producer-1] ProducerId set to 3 with epoch 0
+2024-10-10T22:24:05.664+07:00  WARN 19324 --- [individual-service] [http-nio-9002-exec-3] PageModule$PlainPageSerializationWarning : Serializing PageImpl instances as-is is not supported, meaning that there is no guarantee about the stability of the resulting JSON structure!
 	For a stable JSON structure, please use Spring Data's PagedModel (globally via @EnableSpringDataWebSupport(pageSerializationMode = VIA_DTO))
 	or Spring HATEOAS and Spring Data's PagedResourcesAssembler as documented in https://docs.spring.io/spring-data/commons/reference/repositories/core-extensions.html#core.web.pageables.
 
-2024-09-05T21:00:38.758+07:00  INFO 10912 --- [individual-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-10-10T22:27:35.504+07:00  INFO 19324 --- [individual-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-10-10T22:32:35.512+07:00  INFO 19324 --- [individual-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-10-10T22:33:32.605+07:00  INFO 19324 --- [individual-service] [kafka-producer-network-thread | individual-service-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=individual-service-producer-1] Node -1 disconnected.
+2024-10-10T22:34:39.442+07:00  INFO 19324 --- [individual-service] [SpringApplicationShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application INDIVIDUAL-SERVICE with eureka with status DOWN
+2024-10-10T22:34:39.443+07:00  INFO 19324 --- [individual-service] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1728574479443, current=DOWN, previous=UP]
+2024-10-10T22:34:39.443+07:00  INFO 19324 --- [individual-service] [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_INDIVIDUAL-SERVICE/192.168.0.104:individual-service:9002: registering service...
+2024-10-10T22:34:39.450+07:00  INFO 19324 --- [individual-service] [SpringApplicationShutdownHook] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=individual-service-producer-1] Closing the Kafka producer with timeoutMillis = 30000 ms.
+2024-10-10T22:34:39.454+07:00  INFO 19324 --- [individual-service] [SpringApplicationShutdownHook] o.apache.kafka.common.metrics.Metrics    : Metrics scheduler closed
+2024-10-10T22:34:39.454+07:00  INFO 19324 --- [individual-service] [SpringApplicationShutdownHook] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2024-10-10T22:34:39.454+07:00  INFO 19324 --- [individual-service] [SpringApplicationShutdownHook] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.telemetry.internals.ClientTelemetryReporter
+2024-10-10T22:34:39.454+07:00  INFO 19324 --- [individual-service] [SpringApplicationShutdownHook] o.apache.kafka.common.metrics.Metrics    : Metrics reporters closed
+2024-10-10T22:34:39.454+07:00  INFO 19324 --- [individual-service] [SpringApplicationShutdownHook] o.a.kafka.common.utils.AppInfoParser     : App info kafka.producer for individual-service-producer-1 unregistered
+2024-10-10T22:34:39.460+07:00  INFO 19324 --- [individual-service] [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_INDIVIDUAL-SERVICE/192.168.0.104:individual-service:9002 - registration status: 204
+2024-10-10T22:34:39.469+07:00  INFO 19324 --- [individual-service] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-10T22:34:39.471+07:00  INFO 19324 --- [individual-service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-10-10T22:34:39.476+07:00  INFO 19324 --- [individual-service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-10-10T22:34:39.477+07:00  INFO 19324 --- [individual-service] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2024-10-10T22:34:42.488+07:00  INFO 19324 --- [individual-service] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2024-10-10T22:34:42.505+07:00  INFO 19324 --- [individual-service] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_INDIVIDUAL-SERVICE/192.168.0.104:individual-service:9002 - deregister  status: 200
+2024-10-10T22:34:42.507+07:00  INFO 19324 --- [individual-service] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient

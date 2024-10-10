@@ -4,10 +4,8 @@ import com.kltn.individualservice.annotation.redis.CustomCacheEvict;
 import com.kltn.individualservice.annotation.redis.CustomCacheable;
 import com.kltn.individualservice.config.I18n;
 import com.kltn.individualservice.constant.EntityStatus;
-import com.kltn.individualservice.constant.NotificationObject;
-import com.kltn.individualservice.constant.NotificationType;
-import com.kltn.individualservice.dto.Notification;
-import com.kltn.individualservice.dto.UserNotification;
+import com.kltn.sharedto.constants.NotificationObject;
+import com.kltn.sharedto.constants.NotificationType;
 import com.kltn.individualservice.dto.request.GetStudentStudyClassesRequest;
 import com.kltn.individualservice.dto.request.StudentStudyClassRequest;
 import com.kltn.individualservice.entity.Student;
@@ -23,6 +21,8 @@ import com.kltn.individualservice.service.StudentStudyClassService;
 import com.kltn.individualservice.util.WebUtil;
 import com.kltn.individualservice.util.dto.RegisterGraphColoringUtil;
 import com.kltn.individualservice.util.exception.CustomException;
+import com.kltn.sharedto.NotificationDto;
+import com.kltn.sharedto.UserNotificationDto;
 import jakarta.transaction.Transactional;
 import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;
@@ -151,7 +151,10 @@ public class StudentStudyClassServiceImpl implements StudentStudyClassService {
                 request.stream().map(StudentStudyClassRequest::getId).toList()
         );
 
-        studentStudyClasses.forEach(studentStudyClass -> {
+        List<Long> userIds = new ArrayList<>();
+        NotificationDto notification = null;
+
+        for (StudentStudyClass studentStudyClass : studentStudyClasses) {
             StudentStudyClassRequest matchingRequest = request.stream()
                     .filter(r -> r.getId().equals(studentStudyClass.getId()))
                     .findFirst()
@@ -166,19 +169,24 @@ public class StudentStudyClassServiceImpl implements StudentStudyClassService {
 
             if (isMiddleScoreUpdated || isFinalScoreUpdated) {
                 String scoreType = isMiddleScoreUpdated ? "giữa kỳ" : "cuối kỳ";
-//                                TODO: get link to view
-                Notification notification = new Notification(
-                        "Điểm thi",
-                        "Điểm thi " + scoreType + " " + studentStudyClass.getStudyClass().getSubject().getName() + " đã được cập nhật",
-                        Instant.now(),
-                        null,
-                        NotificationType.AUTO_GENERATE,
-                        NotificationObject.STUDENT
-                );
-                UserNotification userNotification = new UserNotification(studentStudyClass.getStudent().getId(), notification);
-                notificationProducer.sendNotification(userNotification);
+                if (notification == null) {
+                    notification = new NotificationDto(
+                            "Điểm thi",
+                            "Điểm thi " + scoreType + " " + studentStudyClass.getStudyClass().getSubject().getName() + " đã được cập nhật",
+                            Instant.now(),
+                            null,
+                            NotificationType.AUTO_GENERATE,
+                            NotificationObject.STUDENT
+                    );
+                }
+                userIds.add(studentStudyClass.getStudent().getId());
             }
-        });
+        }
+
+        if (notification != null) {
+            UserNotificationDto userNotification = new UserNotificationDto(userIds, notification);
+            notificationProducer.sendNotification(userNotification);
+        }
 
         return studentStudyClassRepository.saveAll(studentStudyClasses);
     }
