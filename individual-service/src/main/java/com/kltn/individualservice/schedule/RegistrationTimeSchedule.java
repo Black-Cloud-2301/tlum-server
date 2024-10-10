@@ -17,7 +17,9 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
+import java.time.Instant;
 import java.time.LocalDateTime;
+import java.time.ZoneId;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -42,7 +44,12 @@ public class RegistrationTimeSchedule {
         List<RegistrationTime> registrationTimes = new ArrayList<>();
 
         int groupSize = 50;
-        LocalDateTime startTime = LocalDateTime.now().plusDays(3).withHour(9).withMinute(0).withSecond(0).withNano(0);
+        LocalDateTime startTime = LocalDateTime.ofInstant(Instant.now(), ZoneId.systemDefault())
+                .plusDays(3)
+                .withHour(9)
+                .withMinute(0)
+                .withSecond(0)
+                .withNano(0);
         LocalDateTime endTime = startTime.plusHours(1);
 
         for (int i = 0; i < students.size(); i++) {
@@ -57,8 +64,8 @@ public class RegistrationTimeSchedule {
             RegistrationTime registrationTime = new RegistrationTime();
             registrationTime.setStudent(students.get(i));
             registrationTime.setSemester(semester);
-            registrationTime.setStartTime(startTime);
-            registrationTime.setEndTime(endTime);
+            registrationTime.setStartTime(startTime.atZone(ZoneId.systemDefault()).toInstant());
+            registrationTime.setEndTime(endTime.atZone(ZoneId.systemDefault()).toInstant());
             registrationTimes.add(registrationTime);
         }
 

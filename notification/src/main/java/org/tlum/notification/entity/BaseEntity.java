@@ -1,5 +1,6 @@
 package org.tlum.notification.entity;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import jakarta.persistence.MappedSuperclass;
 import jakarta.persistence.PrePersist;
 import jakarta.persistence.PreUpdate;
@@ -11,21 +12,22 @@ import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 import org.tlum.notification.constant.EntityStatus;
 
-import java.time.LocalDateTime;
+import java.time.Instant;
 
 @Setter
 @Getter
 @MappedSuperclass
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public abstract class BaseEntity {
-    private LocalDateTime createdAt;
+    private Instant createdAt;
     private String createdBy;
-    private LocalDateTime lastUpdatedAt;
+    private Instant lastUpdatedAt;
     private String lastUpdatedBy;
     private EntityStatus isActive;
 
     public BaseEntity() {
-        this.createdAt = LocalDateTime.now();
-        this.lastUpdatedAt = LocalDateTime.now();
+        this.createdAt = Instant.now();
+        this.lastUpdatedAt = Instant.now();
         this.isActive = EntityStatus.ACTIVE;
     }
 
@@ -51,6 +53,6 @@ public abstract class BaseEntity {
         } else {
             this.lastUpdatedBy = "system";
         }
-        this.lastUpdatedAt = LocalDateTime.now();
+        this.lastUpdatedAt = Instant.now();
     }
 }

@@ -11,21 +11,21 @@ import org.springframework.web.context.request.RequestAttributes;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 
-import java.time.LocalDateTime;
+import java.time.Instant;
 
 @Setter
 @Getter
 @MappedSuperclass
 public abstract class BaseEntity {
-    private LocalDateTime createdAt;
+    private Instant createdAt;
     private String createdBy;
-    private LocalDateTime lastUpdatedAt;
+    private Instant lastUpdatedAt;
     private String lastUpdatedBy;
     private EntityStatus isActive;
 
     public BaseEntity() {
-        this.createdAt = LocalDateTime.now();
-        this.lastUpdatedAt = LocalDateTime.now();
+        this.createdAt = Instant.now();
+        this.lastUpdatedAt = Instant.now();
         this.isActive = EntityStatus.ACTIVE;
     }
 
@@ -51,6 +51,6 @@ public abstract class BaseEntity {
         } else {
             this.lastUpdatedBy = "system";
         }
-        this.lastUpdatedAt = LocalDateTime.now();
+        this.lastUpdatedAt = Instant.now();
     }
 }

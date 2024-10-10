@@ -20,7 +20,7 @@ public class MajorController {
     private final MajorService majorService;
 
     @GetMapping
-    ResponseEntity<Object> getStudyDepartments(GetMajorsRequest request) {
+    ResponseEntity<Object> getMajors(GetMajorsRequest request) {
         if (request.getPageNumber() != null && request.getPageSize() != null) {
             Pageable pageable = CommonUtil.createPageable(request);
             return ResponseUtils.getResponseEntity(majorService.getMajors(request, pageable));

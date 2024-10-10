@@ -1,8 +1,7 @@
 package com.kltn.individualservice.service.impl;
 
 import com.kltn.individualservice.config.I18n;
-import com.kltn.individualservice.constant.MinioChanel;
-import com.kltn.individualservice.constant.UserType;
+import com.kltn.individualservice.constant.*;
 import com.kltn.individualservice.dto.request.UploadRequest;
 import com.kltn.individualservice.dto.request.UserRequestCRU;
 import com.kltn.individualservice.dto.response.ObjectFileDTO;
@@ -25,6 +24,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -34,7 +34,6 @@ public class UserServiceImpl implements UserService {
     @Value("${minio.bucket}")
     private String bucket;
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(UserServiceImpl.class);
     private final UserRepository userRepository;
     private final FileServiceClient fileServiceClient;
     private final HttpServletRequest request;
@@ -63,25 +62,20 @@ public class UserServiceImpl implements UserService {
         return userRepository.findMaxNumberInCode(findCodeByUserType(type));
     }
 
-    private void validateUserImport(List<Object> rowData) {
-        if (rowData.get(1) == null || rowData.get(1).toString().isEmpty()) {
-            throw new RequireException(I18n.getMessage("msg.validate.required", I18n.getMessage("msg.field.user.firstname")));
+    @Override
+    public List<Long> getUserIdsByObject(NotificationObject object) {
+        List<Long> userIds = new ArrayList<>();
+        if (object == NotificationObject.ALL) {
+            userIds.addAll(userRepository.findStudentIdsByObject(List.of(StudentStatus.REGISTERED, StudentStatus.STUDYING)));
+            userIds.addAll(userRepository.findTeacherIdsByObject(List.of(EmployeeStatus.OFFICIAL, EmployeeStatus.PROBATION)));
+        } else if (object == NotificationObject.STUDENT) {
+            userIds.addAll(userRepository.findStudentIdsByObject(List.of(StudentStatus.REGISTERED, StudentStatus.STUDYING)));
+        } else if (object == NotificationObject.TEACHER) {
+            userIds.addAll(userRepository.findTeacherIdsByObject(List.of(EmployeeStatus.OFFICIAL, EmployeeStatus.PROBATION)));
+//        } else if (object == NotificationObject.EMPLOYEE) {
+//            userIds.addAll(userRepository.findEmployeeIdsByObject(List.of(EmployeeStatus.OFFICIAL, EmployeeStatus.PROBATION)));
         }
-        if (rowData.get(2) == null || rowData.get(2).toString().isEmpty()) {
-            throw new RequireException(I18n.getMessage("msg.validate.required", I18n.getMessage("msg.field.user.lastname")));
-        }
-        if (rowData.get(3) == null || rowData.get(3).toString().isEmpty()) {
-            throw new RequireException(I18n.getMessage("msg.validate.required", I18n.getMessage("msg.field.user.phone")));
-        }
-        if (rowData.get(4) == null || rowData.get(4).toString().isEmpty()) {
-            throw new RequireException(I18n.getMessage("msg.validate.required", "Email"));
-        }
-        if (rowData.get(5) == null || rowData.get(5).toString().isEmpty()) {
-            throw new RequireException(I18n.getMessage("msg.validate.required", I18n.getMessage("msg.field.user.gender")));
-        }
-        if (rowData.get(6) == null || rowData.get(6).toString().isEmpty()) {
-            throw new RequireException(I18n.getMessage("msg.validate.required", I18n.getMessage("msg.field.user.dateOfBirth")));
-        }
+        return userIds;
     }
 
     private String findCodeByUserType(UserType type) {

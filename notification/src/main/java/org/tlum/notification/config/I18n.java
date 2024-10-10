@@ -1,4 +1,4 @@
-package com.kltn.individualservice.config;
+package org.tlum.notification.config;
 
 import lombok.AccessLevel;
 import lombok.experimental.FieldDefaults;
@@ -16,6 +16,7 @@ import java.util.Locale;
 @Slf4j
 public class I18n {
     static MessageSource messageSource;
+
 
     @Autowired
     I18n(ResourceBundleMessageSource messageSource) {

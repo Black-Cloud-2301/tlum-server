@@ -1,14 +1,12 @@
-package com.kltn.individualservice.util.dto;
+package org.tlum.notification.utils;
 
-
-import com.kltn.individualservice.config.I18n;
-import com.kltn.individualservice.constant.ErrorApp;
-import com.kltn.individualservice.dto.response.BaseResponse;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.tlum.notification.config.I18n;
+import org.tlum.notification.constant.ErrorApp;
+import org.tlum.notification.dto.response.BaseResponse;
 
 public class ResponseUtils {
-
 
     /**
      * Return data to client

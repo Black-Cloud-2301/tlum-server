@@ -8,7 +8,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 
-import java.time.LocalDateTime;
+import java.time.Instant;
 import java.util.List;
 import java.util.Optional;
 
@@ -33,5 +33,5 @@ public interface RegistrationTimeRepository extends JpaRepository<RegistrationTi
             "AND rt.student.id = :studentId " +
             "AND rt.endTime >= :now " +
             "ORDER BY rt.startTime DESC LIMIT 1")
-    Optional<RegistrationTime> findByStudentId(Long studentId, LocalDateTime now);
+    Optional<RegistrationTime> findByStudentId(Long studentId, Instant now);
 }

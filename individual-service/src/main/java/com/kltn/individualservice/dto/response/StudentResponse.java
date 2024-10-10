@@ -6,7 +6,7 @@ import com.kltn.individualservice.entity.Student;
 import lombok.Getter;
 
 import java.time.LocalDate;
-import java.time.LocalDateTime;
+import java.time.Instant;
 
 @Getter
 public class StudentResponse {
@@ -20,9 +20,9 @@ public class StudentResponse {
     private final String email;
     private final String address;
     private final Long avatar;
-    private final LocalDateTime createdAt;
+    private final Instant createdAt;
     private final String createdBy;
-    private final LocalDateTime lastUpdatedAt;
+    private final Instant lastUpdatedAt;
     private final String lastUpdatedBy;
     private final EntityStatus isActive;
 

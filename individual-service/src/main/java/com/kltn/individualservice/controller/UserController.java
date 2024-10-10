@@ -1,5 +1,6 @@
 package com.kltn.individualservice.controller;
 
+import com.kltn.individualservice.constant.NotificationObject;
 import com.kltn.individualservice.dto.request.UserRequestCRU;
 import com.kltn.individualservice.entity.User;
 import com.kltn.individualservice.service.UserService;
@@ -18,5 +19,10 @@ public class UserController {
     ResponseEntity<Object> updateUser(@ModelAttribute UserRequestCRU userDto) {
         User updatedUser = userService.updateUser(userDto);
         return ResponseUtils.getResponseEntity(updatedUser);
+    }
+
+    @GetMapping("/by-object")
+    ResponseEntity<Object> getUserIdsByObject(@RequestParam NotificationObject object) {
+        return ResponseUtils.getResponseEntity(userService.getUserIdsByObject(object));
     }
 }

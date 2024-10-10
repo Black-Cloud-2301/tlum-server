@@ -7,7 +7,7 @@ import lombok.Setter;
 
 import java.io.Serial;
 import java.io.Serializable;
-import java.time.LocalDateTime;
+import java.time.Instant;
 
 @Setter
 @Getter
@@ -23,8 +23,6 @@ public class RegistrationTime extends BaseEntity implements Serializable {
     private Semester semester;
     @ManyToOne
     private Student student;
-    @JsonFormat(pattern = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'")
-    private LocalDateTime startTime;
-    @JsonFormat(pattern = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'")
-    private LocalDateTime endTime;
+    private Instant startTime;
+    private Instant endTime;
 }

@@ -22,9 +22,6 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.time.Instant;
-import java.time.LocalDateTime;
-import java.time.ZoneId;
-import java.time.ZonedDateTime;
 import java.util.List;
 
 @Service
@@ -78,8 +75,9 @@ public class RegistrationTimeServiceImpl implements RegistrationTimeService {
     @Override
     public RegistrationTime findByStudent() {
         String userId = webUtil.getUserId();
-        LocalDateTime currentTimestamp = LocalDateTime.ofInstant(Instant.now(), ZoneId.of("UTC"));
-        return registrationTimeRepository.findByStudentId(Long.parseLong(userId), currentTimestamp).orElseThrow(() -> new NotFoundException("Registration Time"));
+        Instant currentTimestamp = Instant.now();
+        return registrationTimeRepository.findByStudentId(Long.parseLong(userId), currentTimestamp)
+                .orElseThrow(() -> new NotFoundException("Registration Time"));
     }
 
     private RegistrationTime mapRegistrationTime(RegistrationTimeRequest request) {
