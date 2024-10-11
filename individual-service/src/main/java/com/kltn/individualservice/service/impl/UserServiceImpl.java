@@ -12,7 +12,7 @@ import com.kltn.individualservice.feign.FileServiceClient;
 import com.kltn.individualservice.repository.UserRepository;
 import com.kltn.individualservice.service.DocumentService;
 import com.kltn.individualservice.service.UserService;
-import com.kltn.sharedto.constants.NotificationObject;
+import com.kltn.individualservice.constant.NotificationObject;
 import jakarta.servlet.http.HttpServletRequest;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;

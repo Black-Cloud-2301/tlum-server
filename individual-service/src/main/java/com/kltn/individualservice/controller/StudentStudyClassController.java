@@ -51,6 +51,11 @@ public class StudentStudyClassController {
         return ResponseUtils.getResponseEntity(studentStudyClassService.findCurrentTimetable(studentId));
     }
 
+    @GetMapping("/report-card")
+    ResponseEntity<Object> findReportCard(@RequestParam Long semesterId) {
+        return ResponseUtils.getResponseEntity(studentStudyClassService.findReportCard(semesterId, Long.parseLong(webUtil.getUserId())));
+    }
+
     @PostMapping
     ResponseEntity<Object> create(@RequestBody String studyClassId) {
         return ResponseUtils.getResponseEntity(studentStudyClassService.create(studyClassId));

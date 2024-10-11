@@ -5,4 +5,4 @@ pluginManagement {
 }
 rootProject.name = "server"
 
-include 'eureka', 'config-service', 'gateway', 'auth-service', 'individual-service', 'file-service', 'notification', 'share-dto'
+include 'eureka', 'config-service', 'gateway', 'auth-service', 'individual-service', 'file-service', 'notification'

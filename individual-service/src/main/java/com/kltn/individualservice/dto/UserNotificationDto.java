@@ -1,4 +1,4 @@
-package com.kltn.sharedto;
+package com.kltn.individualservice.dto;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -11,10 +11,10 @@ public class UserNotificationDto {
 
     private List<Long> userIds;
 
-    private NotificationDto notificationDto;
+    private Notification notification;
 
-    public UserNotificationDto(List<Long> userId, NotificationDto notificationDto) {
+    public UserNotificationDto(List<Long> userId, Notification notification) {
         this.userIds = userId;
-        this.notificationDto = notificationDto;
+        this.notification = notification;
     }
 }

@@ -213,6 +213,7 @@ services:
     environment:
       - eureka.client.service-url.defaultZone=${EUREKA_URL}
       - TZ=Asia/Ho_Chi_Minh
+      - CURRENT_PROFILE=${CURRENT_PROFILE}
       - CONFIG_PROFILE=${CURRENT_PROFILE}
     volumes:
       - kltn:/kltn
@@ -258,6 +259,7 @@ services:
       - eureka.client.service-url.defaultZone=${EUREKA_URL}
       - TZ=Asia/Ho_Chi_Minh
       - CURRENT_PROFILE=${CURRENT_PROFILE}
+      - CONFIG_PROFILE=${CURRENT_PROFILE}
     volumes:
       - kltn:/kltn
     networks:
@@ -310,6 +312,7 @@ services:
       - POSTGRES_USER=${POSTGRES_USER}
       - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
       - POSTGRES_URL_NOTIFICATION=${POSTGRES_URL_NOTIFICATION}
+      - KAFKA_URL=${KAFKA_URL}
       - KAFKA_GROUP_ID=${KAFKA_GROUP_ID}
     volumes:
       - kltn:/kltn

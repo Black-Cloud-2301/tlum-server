@@ -1,21 +1,18 @@
 package com.kltn.individualservice.kafka;
 
-import com.kltn.sharedto.UserNotificationDto;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
-
-import java.util.List;
 
 @Service
 public class NotificationProducer {
 
-    private final KafkaTemplate<String, UserNotificationDto> kafkaTemplate;
+    private final KafkaTemplate<String, String> kafkaTemplate;
 
-    public NotificationProducer(KafkaTemplate<String, UserNotificationDto> kafkaTemplate) {
+    public NotificationProducer(KafkaTemplate<String, String> kafkaTemplate) {
         this.kafkaTemplate = kafkaTemplate;
     }
 
-    public void sendNotification(UserNotificationDto notification) {
+    public void sendNotification(String notification) {
         kafkaTemplate.send("notification-topic", notification);
     }
 }

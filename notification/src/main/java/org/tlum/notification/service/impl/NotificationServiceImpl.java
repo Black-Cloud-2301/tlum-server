@@ -1,15 +1,16 @@
 package org.tlum.notification.service.impl;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.kltn.sharedto.UserNotificationDto;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpHeaders;
 import org.springframework.stereotype.Service;
 import org.tlum.notification.constant.NotificationObject;
+import org.tlum.notification.dto.UserNotificationDto;
 import org.tlum.notification.dto.request.GetNotificationsRequest;
 import org.tlum.notification.dto.response.BaseResponseTemplate;
 import org.tlum.notification.entity.Notification;
@@ -27,6 +28,7 @@ import java.util.List;
 
 @Service
 @RequiredArgsConstructor
+@Slf4j
 public class NotificationServiceImpl implements NotificationService {
     private final NotificationRepository notificationRepository;
     private final UserNotificationRepository userNotificationRepository;
@@ -52,36 +54,40 @@ public class NotificationServiceImpl implements NotificationService {
 
     @Override
     @Transactional
-    public void createUserNotifications(UserNotificationDto notificationDto) {
-        var notification = objectMapper.convertValue(notificationDto.getNotificationDto(), Notification.class);
-        notification = notificationRepository.save(notification);
+    public void createUserNotifications(String notificationDto) {
+        try {
+            UserNotificationDto dto = objectMapper.readValue(notificationDto, UserNotificationDto.class);
+            Notification notification = notificationRepository.save(dto.getNotification());
 
-        List<UserNotification> userNotifications = new ArrayList<>();
+            List<UserNotification> userNotifications = new ArrayList<>();
 
-        for (Long userId : notificationDto.getUserIds()) {
-            var userNotification = new UserNotification(userId, notification);
-            userNotifications.add(userNotification);
-        }
-
-        userNotifications = userNotificationRepository.saveAll(userNotifications);
-
-        List<UserNotification> immediateNotifications = new ArrayList<>();
-        List<UserNotification> scheduledNotifications = new ArrayList<>();
-
-        for (UserNotification userNotification : userNotifications) {
-            if (!notification.getScheduledTime().isAfter(Instant.now())) {
-                immediateNotifications.add(userNotification);
-            } else {
-                scheduledNotifications.add(userNotification);
+            for (Long userId : dto.getUserIds()) {
+                UserNotification userNotification = new UserNotification(userId, notification);
+                userNotifications.add(userNotification);
             }
-        }
 
-        if (!immediateNotifications.isEmpty()) {
-            notificationHandler.broadcastMessages(immediateNotifications);
-        }
+            userNotifications = userNotificationRepository.saveAll(userNotifications);
 
-        if (!scheduledNotifications.isEmpty()) {
-            NotificationJob.scheduleNotifications(notificationHandler, scheduledNotifications);
+            List<UserNotification> immediateNotifications = new ArrayList<>();
+            List<UserNotification> scheduledNotifications = new ArrayList<>();
+
+            for (UserNotification userNotification : userNotifications) {
+                if (!notification.getScheduledTime().isAfter(Instant.now())) {
+                    immediateNotifications.add(userNotification);
+                } else {
+                    scheduledNotifications.add(userNotification);
+                }
+            }
+
+            if (!immediateNotifications.isEmpty()) {
+                notificationHandler.broadcastMessages(immediateNotifications);
+            }
+
+            if (!scheduledNotifications.isEmpty()) {
+                NotificationJob.scheduleNotifications(notificationHandler, scheduledNotifications);
+            }
+        } catch (Exception e) {
+            log.error("Error deserializing UserNotificationDto", e);
         }
     }
 
