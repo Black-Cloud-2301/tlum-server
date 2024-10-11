@@ -7,6 +7,7 @@ import org.tlum.notification.dto.request.GetNotificationsRequest;
 import org.tlum.notification.entity.Notification;
 import org.tlum.notification.entity.UserNotification;
 
+import java.time.LocalDate;
 import java.util.List;
 
 public interface NotificationService {
@@ -16,4 +17,5 @@ public interface NotificationService {
     void createUserNotifications(String dto);
     Page<Notification> getNotifications(GetNotificationsRequest request, Pageable pageable);
     List<UserNotification> readNotifications(List<Long> notificationIds, Long userId);
+    List<UserNotification> getNotificationsByDate(LocalDate date);
 }

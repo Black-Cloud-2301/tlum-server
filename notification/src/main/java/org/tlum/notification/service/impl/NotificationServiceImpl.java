@@ -23,6 +23,8 @@ import org.tlum.notification.service.NotificationService;
 import org.tlum.notification.webSocket.NotificationHandler;
 
 import java.time.Instant;
+import java.time.LocalDate;
+import java.time.ZoneOffset;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -112,6 +114,13 @@ public class NotificationServiceImpl implements NotificationService {
         userNotifications.forEach(userNotification -> userNotification.setRead(true));
         userNotificationRepository.saveAll(userNotifications);
         return getNotificationsByUser(userId);
+    }
+
+    @Override
+    public List<UserNotification> getNotificationsByDate(LocalDate date) {
+        Instant startOfDay = date.atStartOfDay().toInstant(ZoneOffset.UTC);
+        Instant endOfDay = date.plusDays(1).atStartOfDay().toInstant(ZoneOffset.UTC);
+        return userNotificationRepository.findByScheduledDate(startOfDay, endOfDay);
     }
 
     private List<Long> getUserIdsByObject(NotificationObject object) {

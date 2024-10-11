@@ -1,11 +1,17 @@
 package com.kltn.individualservice.schedule;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.kltn.individualservice.constant.EntityStatus;
+import com.kltn.individualservice.constant.NotificationObject;
+import com.kltn.individualservice.constant.NotificationType;
 import com.kltn.individualservice.constant.StudentStatus;
+import com.kltn.individualservice.dto.Notification;
+import com.kltn.individualservice.dto.UserNotificationDto;
 import com.kltn.individualservice.dto.request.GetStudentsRequest;
 import com.kltn.individualservice.entity.RegistrationTime;
 import com.kltn.individualservice.entity.Semester;
 import com.kltn.individualservice.entity.Student;
+import com.kltn.individualservice.kafka.NotificationProducer;
 import com.kltn.individualservice.repository.RegistrationTimeRepository;
 import com.kltn.individualservice.service.SemesterService;
 import com.kltn.individualservice.service.StudentService;
@@ -21,7 +27,9 @@ import java.time.Instant;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @Component
 @EnableScheduling
@@ -32,8 +40,10 @@ public class RegistrationTimeSchedule {
     final RegistrationTimeRepository registrationTimeRepository;
     final SemesterService semesterService;
     final StudentService studentService;
+    final NotificationProducer notificationProducer;
+    final ObjectMapper objectMapper;
 
-    @Scheduled(cron = "${scheduling.cron.processStudentsRegisterSemester}")
+    @Scheduled(cron = "0 * * * * ?")
     public void processStudentsRegisterSemester() {
         Semester semester = semesterService.findNextSemester();
         GetStudentsRequest request = new GetStudentsRequest();
@@ -44,13 +54,16 @@ public class RegistrationTimeSchedule {
         List<RegistrationTime> registrationTimes = new ArrayList<>();
 
         int groupSize = 50;
-        LocalDateTime startTime = LocalDateTime.ofInstant(Instant.now(), ZoneId.systemDefault())
+        ZoneId vietnamZoneId = ZoneId.of("Asia/Ho_Chi_Minh");
+        LocalDateTime startTime = LocalDateTime.ofInstant(Instant.now(), vietnamZoneId)
                 .plusDays(3)
                 .withHour(9)
                 .withMinute(0)
                 .withSecond(0)
                 .withNano(0);
         LocalDateTime endTime = startTime.plusHours(1);
+
+        Map<LocalDateTime, List<Long>> notificationMap = new HashMap<>();
 
         for (int i = 0; i < students.size(); i++) {
             if (i % groupSize == 0 && i != 0) {
@@ -64,12 +77,32 @@ public class RegistrationTimeSchedule {
             RegistrationTime registrationTime = new RegistrationTime();
             registrationTime.setStudent(students.get(i));
             registrationTime.setSemester(semester);
-            registrationTime.setStartTime(startTime.atZone(ZoneId.systemDefault()).toInstant());
-            registrationTime.setEndTime(endTime.atZone(ZoneId.systemDefault()).toInstant());
+            registrationTime.setStartTime(startTime.atZone(vietnamZoneId).toInstant());
+            registrationTime.setEndTime(endTime.atZone(vietnamZoneId).toInstant());
             registrationTimes.add(registrationTime);
+
+            notificationMap.computeIfAbsent(startTime, k -> new ArrayList<>()).add(students.get(i).getId());
         }
 
         registrationTimeRepository.saveAll(registrationTimes);
-        log.info("Process students register semester done with: {}", registrationTimes.size());
+
+        for (Map.Entry<LocalDateTime, List<Long>> entry : notificationMap.entrySet()) {
+            LocalDateTime notificationStartTime = entry.getKey();
+            List<Long> studentIds = entry.getValue();
+            Notification notification = new Notification(
+                    "Đăng ký học kỳ",
+                    "Chuẩn bị đăng ký học kỳ mới",
+                    notificationStartTime.minusDays(3).toInstant(vietnamZoneId.getRules().getOffset(notificationStartTime)),
+                    "/student/register-for-study",
+                    NotificationType.AUTO_GENERATE,
+                    NotificationObject.STUDENT
+            );
+            UserNotificationDto userNotificationDto = new UserNotificationDto(studentIds, notification);
+            try {
+                notificationProducer.sendNotification(objectMapper.writeValueAsString(userNotificationDto));
+            } catch (Exception e) {
+                log.error("Error when send notification: {}", e.getMessage());
+            }
+        }
     }
 }
