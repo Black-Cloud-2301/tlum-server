@@ -9,7 +9,6 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class ReportCard {
     String subjectName;
-    Integer attendance;
     Double middleScore;
     Double finalScore;
 }

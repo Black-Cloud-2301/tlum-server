@@ -148,8 +148,7 @@ public class StudentStudyClassServiceImpl implements StudentStudyClassService {
 
     @Override
     public List<ReportCard> findReportCard(Long semesterId, Long studentId) {
-//        return studentStudyClassRepository.findReportCard(semesterId, studentId);
-        return List.of();
+        return studentStudyClassRepository.findReportCard(semesterId, studentId);
     }
 
     @Override
@@ -183,7 +182,7 @@ public class StudentStudyClassServiceImpl implements StudentStudyClassService {
                             "Điểm thi",
                             "Điểm thi " + scoreType + " " + studentStudyClass.getStudyClass().getSubject().getName() + " đã được cập nhật",
                             Instant.now(),
-                            null,
+                            "/student/report-card?semesterId=" + studentStudyClass.getStudyClass().getSemester().getId(),
                             NotificationType.AUTO_GENERATE,
                             NotificationObject.STUDENT
                     );

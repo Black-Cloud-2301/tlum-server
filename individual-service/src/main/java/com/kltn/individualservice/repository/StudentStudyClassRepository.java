@@ -37,15 +37,13 @@ public interface StudentStudyClassRepository extends JpaRepository<StudentStudyC
            "AND (current_date BETWEEN ssc.studyClass.semester.fromDate AND ssc.studyClass.semester.toDate)")
     List<StudentStudyClass> findCurrentTimetable(Long studentId);
 
-//    @Query("SELECT new com.kltn.individualservice.dto.response.ReportCard(s.name, COUNT(a.id), ssc.middleScore, ssc.finalScore) " +
-//           "FROM StudentStudyClass ssc " +
-//           "JOIN ssc.studyClass sc " +
-//           "JOIN sc.subject s " +
-//           "JOIN ssc.attendances a " +
-//           "WHERE ssc.isActive = 1 " +
-//           "AND ssc.student.id = :studentId " +
-//           "AND sc.semester.id = :semesterId " +
-//           "AND a.attendance = true " +
-//           "GROUP BY ssc.id, s.name, ssc.middleScore, ssc.finalScore")
-//    List<ReportCard> findReportCard(Long semesterId, Long studentId);
+    @Query("SELECT new com.kltn.individualservice.dto.response.ReportCard(s.name, ssc.middleScore, ssc.finalScore) " +
+           "FROM StudentStudyClass ssc " +
+           "JOIN ssc.studyClass sc " +
+           "JOIN sc.subject s " +
+           "WHERE ssc.isActive = 1 " +
+           "AND ssc.student.id = :studentId " +
+           "AND sc.semester.id = :semesterId " +
+           "GROUP BY ssc.id, s.name, ssc.middleScore, ssc.finalScore")
+    List<ReportCard> findReportCard(Long semesterId, Long studentId);
 }
