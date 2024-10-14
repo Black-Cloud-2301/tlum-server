@@ -1,0 +1,42 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: file-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: file-service
+  template:
+    metadata:
+      labels:
+        app: file-service
+    spec:
+      containers:
+        - name: file-service
+          image: tuank230194/kltn:file-service
+          env:
+            - name: eureka.client.service-url.defaultZone
+              valueFrom:
+                configMapKeyRef:
+                  name: app-config
+                  key: EUREKA_URL
+            - name: TZ
+              value: Asia/Ho_Chi_Minh
+            - name: CURRENT_PROFILE
+              valueFrom:
+                configMapKeyRef:
+                  name: app-config
+                  key: CURRENT_PROFILE
+            - name: CONFIG_PROFILE
+              valueFrom:
+                configMapKeyRef:
+                  name: app-config
+                  key: CONFIG_PROFILE
+          volumeMounts:
+            - name: kltn-volume
+              mountPath: /kltn
+      volumes:
+        - name: kltn-volume
+          persistentVolumeClaim:
+            claimName: kltn-pvc

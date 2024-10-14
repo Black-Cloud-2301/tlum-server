@@ -1,0 +1,79 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: config-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: config-service
+  template:
+    metadata:
+      labels:
+        app: config-service
+    spec:
+      containers:
+        - name: config-service
+          image: tuank230194/kltn:config-service
+          env:
+            - name: eureka.client.service-url.defaultZone
+              valueFrom:
+                configMapKeyRef:
+                  name: app-config
+                  key: EUREKA_URL
+            - name: CURRENT_PROFILE
+              valueFrom:
+                configMapKeyRef:
+                  name: app-config
+                  key: CURRENT_PROFILE
+            - name: MONGO_HOST
+              valueFrom:
+                configMapKeyRef:
+                  name: app-config
+                  key: MONGO_HOST
+            - name: MONGO_AUTHENTICATION_DATABASE
+              valueFrom:
+                configMapKeyRef:
+                  name: app-config
+                  key: MONGO_AUTHENTICATION_DATABASE
+            - name: MONGO_USERNAME
+              valueFrom:
+                  secretKeyRef:
+                    name: app-secrets
+                    key: MONGO_INITDB_ROOT_USERNAME
+            - name: MONGO_PASSWORD
+              valueFrom:
+                  secretKeyRef:
+                    name: app-secrets
+                    key: MONGO_INITDB_ROOT_PASSWORD
+            - name: MONGO_DATABASE
+              valueFrom:
+                configMapKeyRef:
+                    name: app-config
+                    key: MONGO_CONFIG_DATABASE
+            - name: SECRET
+              valueFrom:
+                secretKeyRef:
+                  name: app-secrets
+                  key: SECRET
+            - name: MINIO_ACCESS_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: app-secrets
+                  key: MINIO_ROOT_USER
+            - name: MINIO_SECRET_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: app-secrets
+                  key: MINIO_ROOT_PASSWORD
+            - name: TZ
+              value: Asia/Ho_Chi_Minh
+          ports:
+            - containerPort: 8888
+          volumeMounts:
+            - name: kltn-volume
+              mountPath: /kltn
+      volumes:
+        - name: kltn-volume
+          persistentVolumeClaim:
+            claimName: kltn-pvc

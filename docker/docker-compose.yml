@@ -145,6 +145,7 @@ services:
     container_name: eureka
     build:
       context: ../eureka
+    image: tuank230194/kltn:eureka
     environment:
       - EUREKA_USERNAME=${EUREKA_USERNAME}
       - EUREKA_PASSWORD=${EUREKA_PASSWORD}
@@ -185,6 +186,7 @@ services:
     container_name: config-service
     build:
       context: ../config-service
+    image: tuank230194/kltn:config-service
     environment:
       - eureka.client.service-url.defaultZone=${EUREKA_URL}
       - TZ=Asia/Ho_Chi_Minh
@@ -210,6 +212,7 @@ services:
     container_name: gateway
     build:
       context: ../gateway
+    image: tuank230194/kltn:gateway
     environment:
       - eureka.client.service-url.defaultZone=${EUREKA_URL}
       - TZ=Asia/Ho_Chi_Minh
@@ -229,6 +232,7 @@ services:
     container_name: auth-service
     build:
       context: ../auth-service
+    image: tuank230194/kltn:auth-service
     environment:
       - eureka.client.service-url.defaultZone=${EUREKA_URL}
       - TZ=Asia/Ho_Chi_Minh
@@ -255,11 +259,12 @@ services:
     container_name: file-service
     build:
       context: ../file-service
+    image: tuank230194/kltn:file-service
     environment:
       - eureka.client.service-url.defaultZone=${EUREKA_URL}
       - TZ=Asia/Ho_Chi_Minh
       - CURRENT_PROFILE=${CURRENT_PROFILE}
-      - CONFIG_PROFILE=${CURRENT_PROFILE}
+      - CONFIG_PROFILE=${CONFIG_PROFILE}
     volumes:
       - kltn:/kltn
     networks:
@@ -276,6 +281,7 @@ services:
     container_name: individual-service
     build:
       context: ../individual-service
+    image: tuank230194/kltn:individual-service
     environment:
       - eureka.client.service-url.defaultZone=${EUREKA_URL}
       - TZ=Asia/Ho_Chi_Minh
@@ -304,6 +310,7 @@ services:
     container_name: notification
     build:
       context: ../notification
+    image: tuank230194/kltn:notification
     environment:
       - eureka.client.service-url.defaultZone=${EUREKA_URL}
       - TZ=Asia/Ho_Chi_Minh

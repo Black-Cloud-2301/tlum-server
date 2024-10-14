@@ -1,0 +1,67 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: notification
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: notification
+  template:
+    metadata:
+      labels:
+        app: notification
+    spec:
+      containers:
+        - name: notification
+          image: tuank230194/kltn:notification
+          env:
+            - name: eureka.client.service-url.defaultZone
+              valueFrom:
+                configMapKeyRef:
+                  name: app-config
+                  key: EUREKA_URL
+            - name: TZ
+              value: Asia/Ho_Chi_Minh
+            - name: CURRENT_PROFILE
+              valueFrom:
+                configMapKeyRef:
+                  name: app-config
+                  key: CURRENT_PROFILE
+            - name: CONFIG_PROFILE
+              valueFrom:
+                configMapKeyRef:
+                  name: app-config
+                  key: CONFIG_PROFILE
+            - name: POSTGRES_USER
+              valueFrom:
+                secretKeyRef:
+                  name: app-secrets
+                  key: POSTGRES_USER
+            - name: POSTGRES_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: app-secrets
+                  key: POSTGRES_PASSWORD
+            - name: POSTGRES_URL_NOTIFICATION
+              valueFrom:
+                configMapKeyRef:
+                  name: app-config
+                  key: POSTGRES_URL_NOTIFICATION
+            - name: KAFKA_URL
+              valueFrom:
+                configMapKeyRef:
+                  name: app-config
+                  key: KAFKA_URL
+            - name: KAFKA_GROUP_ID
+              valueFrom:
+                configMapKeyRef:
+                  name: app-config
+                  key: KAFKA_GROUP_ID
+          volumeMounts:
+            - name: kltn-volume
+              mountPath: /kltn
+      volumes:
+        - name: kltn-volume
+          persistentVolumeClaim:
+            claimName: kltn-pvc

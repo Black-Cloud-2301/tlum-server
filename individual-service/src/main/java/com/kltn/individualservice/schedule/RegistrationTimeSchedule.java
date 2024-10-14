@@ -43,7 +43,7 @@ public class RegistrationTimeSchedule {
     final NotificationProducer notificationProducer;
     final ObjectMapper objectMapper;
 
-    @Scheduled(cron = "0 * * * * ?")
+    @Scheduled(cron = "${scheduling.cron.processStudentsRegisterSemester}")
     public void processStudentsRegisterSemester() {
         Semester semester = semesterService.findNextSemester();
         GetStudentsRequest request = new GetStudentsRequest();

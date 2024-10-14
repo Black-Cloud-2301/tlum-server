@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: eureka
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: eureka
+  template:
+    metadata:
+      labels:
+        app: eureka
+    spec:
+      containers:
+        - name: eureka
+          image: tuank230194/kltn:eureka
+          env:
+            - name: EUREKA_USERNAME
+              valueFrom:
+                secretKeyRef:
+                  name: app-secrets
+                  key: EUREKA_USERNAME
+            - name: EUREKA_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: app-secrets
+                  key: EUREKA_PASSWORD
+            - name: TZ
+              value: Asia/Ho_Chi_Minh
+          ports:
+            - containerPort: 8761
+          volumeMounts:
+            - name: kltn-volume
+              mountPath: /kltn
+      volumes:
+        - name: kltn-volume
+          persistentVolumeClaim:
+            claimName: kltn-pvc

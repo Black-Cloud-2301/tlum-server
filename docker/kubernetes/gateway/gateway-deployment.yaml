@@ -1,0 +1,42 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: gateway
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: gateway
+  template:
+    metadata:
+      labels:
+        app: gateway
+    spec:
+      containers:
+        - name: gateway
+          image: tuank230194/kltn:gateway
+          ports:
+            - containerPort: 8080
+          env:
+            - name: eureka.client.service-url.defaultZone
+              valueFrom:
+                configMapKeyRef:
+                  name: app-config
+                  key: EUREKA_URL
+            - name: CURRENT_PROFILE
+              valueFrom:
+                configMapKeyRef:
+                  name: app-config
+                  key: CURRENT_PROFILE
+            - name: CONFIG_PROFILE
+              valueFrom:
+                configMapKeyRef:
+                  name: app-config
+                  key: CONFIG_PROFILE
+          volumeMounts:
+            - name: config-volume
+              mountPath: /path/to/mount
+      volumes:
+        - name: config-volume
+          configMap:
+            name: app-config
