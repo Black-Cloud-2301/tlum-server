@@ -264,7 +264,7 @@ services:
       - eureka.client.service-url.defaultZone=${EUREKA_URL}
       - TZ=Asia/Ho_Chi_Minh
       - CURRENT_PROFILE=${CURRENT_PROFILE}
-      - CONFIG_PROFILE=${CONFIG_PROFILE}
+      - CONFIG_PROFILE=${CURRENT_PROFILE}
     volumes:
       - kltn:/kltn
     networks:
@@ -286,7 +286,7 @@ services:
       - eureka.client.service-url.defaultZone=${EUREKA_URL}
       - TZ=Asia/Ho_Chi_Minh
       - CURRENT_PROFILE=${CURRENT_PROFILE}
-      - CONFIG_PROFILE=${CONFIG_PROFILE}
+      - CONFIG_PROFILE=${CURRENT_PROFILE}
       - POSTGRES_URL=${POSTGRES_URL}
       - POSTGRES_USER=${POSTGRES_USER}
       - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}

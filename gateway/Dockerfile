@@ -1,4 +1,4 @@
-FROM gradle:8.7.0-jdk21-alpine as builder
+FROM gradle:8.7.0-jdk21-alpine AS builder
 WORKDIR /gateway
 COPY . .
 RUN --mount=type=cache,id=gradle,target=/root/.gradle \

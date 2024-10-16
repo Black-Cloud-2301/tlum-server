@@ -53,7 +53,7 @@ scrape_configs:
     static_configs:
         - targets: [ "postgres-exporter:9187" ]
 
-  - job_name: 'mongo-exporter'
-    scrape_interval: 15s
-    static_configs:
-        - targets: [ "mongo-exporter:9216" ]
+#  - job_name: 'mongo-exporter'
+#    scrape_interval: 15s
+#    static_configs:
+#        - targets: [ "mongo-exporter:9216" ]
