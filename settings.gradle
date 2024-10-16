@@ -1,8 +1,3 @@
-pluginManagement {
-    plugins {
-        id 'org.jetbrains.kotlin.jvm' version '1.9.23'
-    }
-}
 rootProject.name = "server"
 
 include 'eureka', 'config-service', 'gateway', 'auth-service', 'individual-service', 'file-service', 'notification'
