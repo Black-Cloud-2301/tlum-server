@@ -42,6 +42,12 @@ public class RegistrationTimeServiceImpl implements RegistrationTimeService {
 
     @Override
     @CacheEvict(value = "registrationTimes", allEntries = true)
+    public List<RegistrationTime> saveWithCache(List<RegistrationTime> request) {
+        return registrationTimeRepository.saveAll(request);
+    }
+
+    @Override
+    @CacheEvict(value = "registrationTimes", allEntries = true)
     @CachePut(value = "registrationTime", key = "#request.id")
     public RegistrationTime update(RegistrationTimeRequest request) {
         RegistrationTime registrationTime = registrationTimeRepository.findById(request.getId()).orElseThrow(() -> new NotFoundException("Registration Time"));

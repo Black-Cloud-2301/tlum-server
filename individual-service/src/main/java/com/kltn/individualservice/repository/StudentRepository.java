@@ -3,6 +3,7 @@ package com.kltn.individualservice.repository;
 import com.kltn.individualservice.constant.EntityStatus;
 import com.kltn.individualservice.constant.StudentStatus;
 import com.kltn.individualservice.dto.request.GetStudentsRequest;
+import com.kltn.individualservice.dto.response.MyStudyInfoResponse;
 import com.kltn.individualservice.entity.Student;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -48,4 +49,15 @@ public interface StudentRepository extends JpaRepository<Student, Long> {
             "FROM StudentStudyClass s " +
             "WHERE s.studyClass.id = :studyClassId AND s.isActive = 1")
     List<Student> findStudentByStudyClass(Long studyClassId);
+
+    @Query("SELECT new com.kltn.individualservice.dto.response.MyStudyInfoResponse(" +
+           "SUM(s.studyClass.subject.credit), " +
+           "AVG(s.middleScore * 0.3 + s.finalScore * 0.7)) " +
+           "FROM StudentStudyClass s " +
+           "WHERE s.student.id = :userId " +
+           "AND s.isActive = 1 " +
+           "AND s.middleScore IS NOT NULL " +
+           "AND s.finalScore IS NOT NULL " +
+           "AND s.middleScore * 0.3 + s.finalScore * 0.7 >= 5")
+    MyStudyInfoResponse getMyStudyInfo(Long userId);
 }

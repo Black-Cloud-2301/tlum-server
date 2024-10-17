@@ -24,6 +24,9 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
+import java.time.DayOfWeek;
+import java.time.LocalDate;
+import java.time.temporal.TemporalAdjusters;
 import java.util.List;
 
 @Service
@@ -109,5 +112,13 @@ public class StudyClassServiceImpl implements StudyClassService {
     @Cacheable(value = "studyClasses", key = "#request")
     public Page<StudyClass> findAllByIsActiveIn(StudyClassRequest request, Pageable pageable) {
         return studyClassRepository.findAllByIsActiveIn(request, pageable);
+    }
+
+    @Override
+    public List<StudyClass> findStudyClassesForCurrentWeek(Long teacherId) {
+        LocalDate now = LocalDate.now();
+        LocalDate startOfWeek = now.with(TemporalAdjusters.previousOrSame(DayOfWeek.MONDAY));
+        LocalDate endOfWeek = now.with(TemporalAdjusters.nextOrSame(DayOfWeek.SUNDAY));
+        return studyClassRepository.findStudyClassesForCurrentWeek(teacherId, startOfWeek, endOfWeek);
     }
 }

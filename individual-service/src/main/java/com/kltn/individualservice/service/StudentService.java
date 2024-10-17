@@ -2,6 +2,7 @@ package com.kltn.individualservice.service;
 
 import com.kltn.individualservice.dto.request.GetStudentsRequest;
 import com.kltn.individualservice.dto.request.StudentRequestCRU;
+import com.kltn.individualservice.dto.response.MyStudyInfoResponse;
 import com.kltn.individualservice.entity.Student;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -17,4 +18,5 @@ public interface StudentService {
     Student findById(Long id);
     Student createStudent(StudentRequestCRU request);
     List<Student> importStudents(MultipartFile file);
+    MyStudyInfoResponse getMyInfo(Long userId);
 }

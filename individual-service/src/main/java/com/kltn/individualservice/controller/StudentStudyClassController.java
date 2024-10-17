@@ -51,6 +51,11 @@ public class StudentStudyClassController {
         return ResponseUtils.getResponseEntity(studentStudyClassService.findCurrentTimetable(studentId));
     }
 
+    @GetMapping("/semester-average")
+    ResponseEntity<Object> findSemesterAverage() {
+        return ResponseUtils.getResponseEntity(studentStudyClassService.findSemesterAverageByStudent(Long.parseLong(webUtil.getUserId())));
+    }
+
     @GetMapping("/report-card")
     ResponseEntity<Object> findReportCard(@RequestParam Long semesterId) {
         return ResponseUtils.getResponseEntity(studentStudyClassService.findReportCard(semesterId, Long.parseLong(webUtil.getUserId())));

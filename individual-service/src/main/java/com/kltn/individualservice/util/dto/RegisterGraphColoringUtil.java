@@ -42,60 +42,66 @@ public class RegisterGraphColoringUtil {
 
         return maxCreditClasses;
     }
+
     private static Map<StudyClass, Integer> scheduleClassesGraph(List<StudyClass> nonRegisteredClasses, List<StudyClass> registeredStudyClasses) throws Exception {
 
-        List<ClassSchedule> registeredSchedules = new ArrayList<>();
-        for (StudyClass cls : registeredStudyClasses) {
-            registeredSchedules.addAll(parseClassesOfWeek(cls.getClassesOfWeek()));
-        }
-
-        // Filter out classes that overlap with registered schedules or have the same subject as registered classes
-        List<StudyClass> filteredClasses = new ArrayList<>();
-        Set<Long> registeredSubjects = new HashSet<>();
-        for (StudyClass registeredClass : registeredStudyClasses) {
-            registeredSubjects.add(registeredClass.getSubject().getId());
-        }
-
-        for (StudyClass cls : nonRegisteredClasses) {
-            if (!registeredSubjects.contains(cls.getSubject().getId()) && !isOverlappingWithRegistered(registeredSchedules, cls)) {
-                filteredClasses.add(cls);
-            }
-        }
-
-        // Create a graph
-        Map<StudyClass, List<StudyClass>> graph = new HashMap<>();
-        for (StudyClass cls : filteredClasses) {
-            graph.put(cls, new ArrayList<>());
-        }
-
-        // Add edges to the graph
-        for (int i = 0; i < filteredClasses.size(); i++) {
-            for (int j = i + 1; j < filteredClasses.size(); j++) {
-                if (isOverlapping(parseClassesOfWeek(filteredClasses.get(i).getClassesOfWeek()), filteredClasses.get(j))) {
-                    graph.get(filteredClasses.get(i)).add(filteredClasses.get(j));
-                    graph.get(filteredClasses.get(j)).add(filteredClasses.get(i));
-                }
-            }
-        }
-
-        // Apply graph coloring
-        Map<StudyClass, Integer> colorMap = new HashMap<>();
-        for (StudyClass cls : filteredClasses) {
-            Set<Integer> usedColors = new HashSet<>();
-            for (StudyClass neighbor : graph.get(cls)) {
-                if (colorMap.containsKey(neighbor)) {
-                    usedColors.add(colorMap.get(neighbor));
-                }
-            }
-            int color = 0;
-            while (usedColors.contains(color)) {
-                color++;
-            }
-            colorMap.put(cls, color);
-        }
-
-        return colorMap;
+    List<ClassSchedule> registeredSchedules = new ArrayList<>();
+    for (StudyClass cls : registeredStudyClasses) {
+        registeredSchedules.addAll(parseClassesOfWeek(cls.getClassesOfWeek()));
     }
+
+    // Filter out classes that overlap with registered schedules or have the same subject as registered classes
+    List<StudyClass> filteredClasses = new ArrayList<>();
+    Set<Long> registeredSubjects = new HashSet<>();
+    for (StudyClass registeredClass : registeredStudyClasses) {
+        registeredSubjects.add(registeredClass.getSubject().getId());
+    }
+
+    for (StudyClass cls : nonRegisteredClasses) {
+        if (!registeredSubjects.contains(cls.getSubject().getId()) && !isOverlappingWithRegistered(registeredSchedules, cls)) {
+            filteredClasses.add(cls);
+        }
+    }
+
+    // Create a graph
+    Map<StudyClass, List<StudyClass>> graph = new HashMap<>();
+    Set<Long> addedSubjects = new HashSet<>();
+    for (StudyClass cls : filteredClasses) {
+        if (!addedSubjects.contains(cls.getSubject().getId())) {
+            graph.put(cls, new ArrayList<>());
+            addedSubjects.add(cls.getSubject().getId());
+        }
+    }
+
+    // Add edges to the graph
+    List<StudyClass> graphClasses = new ArrayList<>(graph.keySet());
+    for (int i = 0; i < graphClasses.size(); i++) {
+        for (int j = i + 1; j < graphClasses.size(); j++) {
+            if (isOverlapping(parseClassesOfWeek(graphClasses.get(i).getClassesOfWeek()), graphClasses.get(j))) {
+                graph.get(graphClasses.get(i)).add(graphClasses.get(j));
+                graph.get(graphClasses.get(j)).add(graphClasses.get(i));
+            }
+        }
+    }
+
+    // Apply graph coloring
+    Map<StudyClass, Integer> colorMap = new HashMap<>();
+    for (StudyClass cls : graphClasses) {
+        Set<Integer> usedColors = new HashSet<>();
+        for (StudyClass neighbor : graph.get(cls)) {
+            if (colorMap.containsKey(neighbor)) {
+                usedColors.add(colorMap.get(neighbor));
+            }
+        }
+        int color = 0;
+        while (usedColors.contains(color)) {
+            color++;
+        }
+        colorMap.put(cls, color);
+    }
+
+    return colorMap;
+}
 
     private static boolean isOverlappingWithRegistered(List<ClassSchedule> registeredSchedules, StudyClass studyClass) throws Exception {
         List<ClassSchedule> schedule = parseClassesOfWeek(studyClass.getClassesOfWeek());

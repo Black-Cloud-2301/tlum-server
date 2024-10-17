@@ -1,5 +1,6 @@
 package com.kltn.individualservice.service.impl;
 
+import com.kltn.individualservice.annotation.redis.CustomCacheEvict;
 import com.kltn.individualservice.constant.EntityStatus;
 import com.kltn.individualservice.dto.request.SemesterRequest;
 import com.kltn.individualservice.dto.request.SubjectsRequest;
@@ -7,6 +8,7 @@ import com.kltn.individualservice.entity.Major;
 import com.kltn.individualservice.entity.Semester;
 import com.kltn.individualservice.entity.Subject;
 import com.kltn.individualservice.exception.NotFoundException;
+import com.kltn.individualservice.redis.RedisKey;
 import com.kltn.individualservice.repository.SemesterRepository;
 import com.kltn.individualservice.repository.SubjectRepository;
 import com.kltn.individualservice.service.MajorService;
@@ -51,6 +53,7 @@ public class SemesterServiceImpl implements SemesterService {
 
     @Override
     @CacheEvict(value = "semesters", allEntries = true)
+    @CustomCacheEvict(key = RedisKey.STUDENT_STUDY_CLASSES, allEntries = true)
     public Semester updateSemester(Semester request) {
         if (request.getId() == null) {
             throw new IllegalArgumentException("Id is required");
@@ -69,6 +72,7 @@ public class SemesterServiceImpl implements SemesterService {
 
     @Override
     @CacheEvict(value = "semesters", allEntries = true)
+    @CustomCacheEvict(key = RedisKey.STUDENT_STUDY_CLASSES, allEntries = true)
     public void deleteSemester(Long id) {
         Semester semester = semesterRepository.findById(id).orElseThrow(() -> new NotFoundException("Semester"));
         semester.setIsActive(EntityStatus.DELETED);

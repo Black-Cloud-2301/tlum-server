@@ -19,4 +19,5 @@ public interface StudyClassService {
     List<StudyClass> findAllByIsActiveIn(List<EntityStatus> statuses);
     List<StudyClass> findStudyClassByStudent(Long studentId);
     Page<StudyClass> findAllByIsActiveIn(StudyClassRequest request, Pageable pageable);
+    List<StudyClass> findStudyClassesForCurrentWeek(Long teacherId);
 }

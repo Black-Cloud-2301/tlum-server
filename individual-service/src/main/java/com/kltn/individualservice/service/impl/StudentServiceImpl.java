@@ -8,6 +8,7 @@ import com.kltn.individualservice.constant.UserType;
 import com.kltn.individualservice.dto.request.GetMajorsRequest;
 import com.kltn.individualservice.dto.request.GetStudentsRequest;
 import com.kltn.individualservice.dto.request.StudentRequestCRU;
+import com.kltn.individualservice.dto.response.MyStudyInfoResponse;
 import com.kltn.individualservice.entity.Major;
 import com.kltn.individualservice.entity.Role;
 import com.kltn.individualservice.entity.Student;
@@ -136,6 +137,11 @@ public class StudentServiceImpl implements StudentService {
 
         log.info("Import student: {}", students.size());
         return studentRepository.saveAll(students);
+    }
+
+    @Override
+    public MyStudyInfoResponse getMyInfo(Long userId) {
+        return studentRepository.getMyStudyInfo(userId);
     }
 
 

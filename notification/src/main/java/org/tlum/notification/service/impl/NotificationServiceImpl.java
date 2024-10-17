@@ -95,7 +95,12 @@ public class NotificationServiceImpl implements NotificationService {
 
     @Override
     public List<Notification> getNotifications(GetNotificationsRequest request) {
-        return notificationRepository.findAll();
+        return notificationRepository.findAllManual();
+    }
+
+    @Override
+    public Page<Notification> getNotifications(GetNotificationsRequest request, Pageable pageable) {
+        return notificationRepository.findAllManual(pageable);
     }
 
     @Override
@@ -103,10 +108,6 @@ public class NotificationServiceImpl implements NotificationService {
         return notificationRepository.findNotificationsByUser(userId);
     }
 
-    @Override
-    public Page<Notification> getNotifications(GetNotificationsRequest request, Pageable pageable) {
-        return notificationRepository.findAll(pageable);
-    }
 
     @Override
     public List<UserNotification> readNotifications(List<Long> notificationIds, Long userId) {

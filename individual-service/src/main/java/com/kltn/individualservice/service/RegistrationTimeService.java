@@ -9,6 +9,7 @@ import java.util.List;
 
 public interface RegistrationTimeService {
     RegistrationTime create(RegistrationTimeRequest request);
+    List<RegistrationTime> saveWithCache(List<RegistrationTime> request);
     RegistrationTime update(RegistrationTimeRequest request);
     List<RegistrationTime> searchBySemesterId(Long semesterId, RegistrationTimeRequest request);
     Page<RegistrationTime> searchBySemesterId(Long semesterId, RegistrationTimeRequest request, Pageable pageable);

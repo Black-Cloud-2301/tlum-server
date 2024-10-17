@@ -10,6 +10,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 
+import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
 
@@ -62,4 +63,7 @@ public interface StudyClassRepository extends JpaRepository<StudyClass, Long> {
            "AND (:#{#semester.fromDate} BETWEEN s.semester.fromDate AND s.semester.toDate " +
            "OR :#{#semester.toDate} BETWEEN s.semester.fromDate AND s.semester.toDate)")
     List<StudyClass> findStudyClassesCrossSemester(Semester semester, Long teacherId);
+
+    @Query("SELECT sc FROM StudyClass sc JOIN sc.semester s WHERE sc.teacher.id = :teacherId AND (s.fromDate BETWEEN :startDate AND :endDate OR s.toDate BETWEEN :startDate AND :endDate OR :startDate BETWEEN s.fromDate AND s.toDate OR :endDate BETWEEN s.fromDate AND s.toDate)")
+    List<StudyClass> findStudyClassesForCurrentWeek(Long teacherId, LocalDate startDate, LocalDate endDate);
 }

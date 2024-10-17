@@ -11,6 +11,7 @@ import com.kltn.individualservice.dto.Notification;
 import com.kltn.individualservice.dto.request.GetStudentStudyClassesRequest;
 import com.kltn.individualservice.dto.request.StudentStudyClassRequest;
 import com.kltn.individualservice.dto.response.ReportCard;
+import com.kltn.individualservice.dto.response.SemesterAverageResponse;
 import com.kltn.individualservice.entity.Student;
 import com.kltn.individualservice.entity.StudentStudyClass;
 import com.kltn.individualservice.entity.StudyClass;
@@ -149,6 +150,11 @@ public class StudentStudyClassServiceImpl implements StudentStudyClassService {
     @Override
     public List<ReportCard> findReportCard(Long semesterId, Long studentId) {
         return studentStudyClassRepository.findReportCard(semesterId, studentId);
+    }
+
+    @Override
+    public List<SemesterAverageResponse> findSemesterAverageByStudent(Long studentId) {
+        return studentStudyClassRepository.findSemesterAverageByStudent(studentId);
     }
 
     @Override

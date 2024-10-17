@@ -12,7 +12,7 @@ import com.kltn.individualservice.entity.RegistrationTime;
 import com.kltn.individualservice.entity.Semester;
 import com.kltn.individualservice.entity.Student;
 import com.kltn.individualservice.kafka.NotificationProducer;
-import com.kltn.individualservice.repository.RegistrationTimeRepository;
+import com.kltn.individualservice.service.RegistrationTimeService;
 import com.kltn.individualservice.service.SemesterService;
 import com.kltn.individualservice.service.StudentService;
 import lombok.AccessLevel;
@@ -37,13 +37,13 @@ import java.util.Map;
 @Slf4j
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class RegistrationTimeSchedule {
-    final RegistrationTimeRepository registrationTimeRepository;
+    final RegistrationTimeService registrationTimeService;
     final SemesterService semesterService;
     final StudentService studentService;
     final NotificationProducer notificationProducer;
     final ObjectMapper objectMapper;
 
-    @Scheduled(cron = "${scheduling.cron.processStudentsRegisterSemester}")
+    @Scheduled(cron = "0 * * * * ?")
     public void processStudentsRegisterSemester() {
         Semester semester = semesterService.findNextSemester();
         GetStudentsRequest request = new GetStudentsRequest();
@@ -84,7 +84,7 @@ public class RegistrationTimeSchedule {
             notificationMap.computeIfAbsent(startTime, k -> new ArrayList<>()).add(students.get(i).getId());
         }
 
-        registrationTimeRepository.saveAll(registrationTimes);
+        registrationTimeService.saveWithCache(registrationTimes);
 
         for (Map.Entry<LocalDateTime, List<Long>> entry : notificationMap.entrySet()) {
             LocalDateTime notificationStartTime = entry.getKey();

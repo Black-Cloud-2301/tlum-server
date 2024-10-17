@@ -4,6 +4,7 @@ import com.kltn.individualservice.dto.request.StudyClassCRU;
 import com.kltn.individualservice.dto.request.StudyClassRequest;
 import com.kltn.individualservice.service.StudyClassService;
 import com.kltn.individualservice.util.CommonUtil;
+import com.kltn.individualservice.util.WebUtil;
 import com.kltn.individualservice.util.dto.ResponseUtils;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Pageable;
@@ -17,6 +18,7 @@ import java.util.List;
 @RequestMapping("/v1/study-class")
 public class StudyClassController {
     private final StudyClassService studyClassService;
+    private final WebUtil webUtil;
 
     @GetMapping
     ResponseEntity<Object> findAllByIsActiveIn(StudyClassRequest request) {
@@ -41,6 +43,11 @@ public class StudyClassController {
     @GetMapping("/count-student-registered")
     ResponseEntity<Object> countStudentRegistered(@RequestParam List<Long> studyClassIds) {
         return ResponseUtils.getResponseEntity(studyClassService.countStudentRegistered(studyClassIds));
+    }
+
+    @GetMapping("/teacher-week")
+    ResponseEntity<Object> findStudyClassesForCurrentWeek() {
+        return ResponseUtils.getResponseEntity(studyClassService.findStudyClassesForCurrentWeek(Long.parseLong(webUtil.getUserId())));
     }
 
     @PostMapping

@@ -3,6 +3,7 @@ package com.kltn.individualservice.repository;
 import com.kltn.individualservice.constant.EmployeeStatus;
 import com.kltn.individualservice.constant.EntityStatus;
 import com.kltn.individualservice.dto.request.GetTeachersRequest;
+import com.kltn.individualservice.dto.response.MonthlyClassCountResponse;
 import com.kltn.individualservice.entity.Teacher;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
