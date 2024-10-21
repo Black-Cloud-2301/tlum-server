@@ -65,11 +65,10 @@ public class RegisterGraphColoringUtil {
 
     // Create a graph
     Map<StudyClass, List<StudyClass>> graph = new HashMap<>();
-    Set<Long> addedSubjects = new HashSet<>();
+    Set<Long> addedSubjects = new HashSet<>(registeredStudyClasses.stream().map(cls -> cls.getSubject().getId()).toList());
     for (StudyClass cls : filteredClasses) {
         if (!addedSubjects.contains(cls.getSubject().getId())) {
             graph.put(cls, new ArrayList<>());
-            addedSubjects.add(cls.getSubject().getId());
         }
     }
 

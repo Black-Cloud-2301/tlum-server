@@ -44,7 +44,7 @@ public interface StudyClassRepository extends JpaRepository<StudyClass, Long> {
 
     @Query("SELECT new com.kltn.individualservice.dto.response.CountStudentRegistered(s.id, COUNT(ss.id)) " +
            "FROM StudyClass s LEFT JOIN StudentStudyClass ss ON s.id = ss.studyClass.id " +
-           "WHERE s.isActive = 1 AND s.id IN :studyClassIds " +
+           "WHERE s.isActive = 1 AND ss.isActive = 1 AND s.id IN :studyClassIds " +
            "GROUP BY s.id")
     List<CountStudentRegistered> countStudentRegistered(List<Long> studyClassIds);
 
