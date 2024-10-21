@@ -1,0 +1,102 @@
+[
+  {
+    "code": "STUDENT",
+    "permission": [
+      {
+        "module": "INDIVIDUAL",
+        "function": "REGISTER-STUDY",
+        "action": "REGISTER"
+      },
+      {
+        "module": "INDIVIDUAL",
+        "function": "STUDY-CLASS",
+        "action": "VIEW"
+      },
+      {
+        "module": "INDIVIDUAL",
+        "function": "REPORT-CARD",
+        "action": "VIEW"
+      },
+      {
+        "module": "INDIVIDUAL",
+        "function": "TRANSCRIPT",
+        "action": "VIEW"
+      }
+    ]
+  },
+  {
+    "code": "TEACHER",
+    "permission": [
+      {
+        "module": "INDIVIDUAL",
+        "function": "STUDENT",
+        "action": "VIEW"
+      },
+      {
+        "module": "INDIVIDUAL",
+        "function": "MY-CLASS",
+        "action": "VIEW,UPDATE,DELETE"
+      },
+      {
+        "module": "INDIVIDUAL",
+        "function": "TRANSCRIPT",
+        "action": "VIEW"
+      }
+    ]
+  },
+  {
+    "code": "EMPLOYEE",
+    "permission": [
+      {
+        "module": "INDIVIDUAL",
+        "function": "STUDENT",
+        "action": "VIEW,CREATE,UPDATE,DELETE,LOCK,IMPORT"
+      },
+      {
+        "module": "INDIVIDUAL",
+        "function": "TEACHER",
+        "action": "VIEW,CREATE,UPDATE,DELETE,LOCK,IMPORT"
+      },
+      {
+        "module": "INDIVIDUAL",
+        "function": "EMPLOYEE",
+        "action": "VIEW,CREATE,UPDATE,DELETE,LOCK,IMPORT"
+      },
+      {
+        "module": "INDIVIDUAL",
+        "function": "STUDY-CLASS",
+        "action": "VIEW,CREATE,UPDATE,DELETE"
+      },
+      {
+        "module": "INDIVIDUAL",
+        "function": "SUBJECT",
+        "action": "VIEW,CREATE,UPDATE,DELETE"
+      },
+      {
+        "module": "INDIVIDUAL",
+        "function": "SETTING-SEMESTER",
+        "action": "VIEW,CREATE,UPDATE,DELETE"
+      },
+      {
+        "module": "INDIVIDUAL",
+        "function": "SETTING-GENERAL",
+        "action": "VIEW,UPDATE"
+      },
+      {
+        "module": "INDIVIDUAL",
+        "function": "TRANSCRIPT",
+        "action": "VIEW"
+      },
+      {
+        "module": "INDIVIDUAL",
+        "function": "REPORT-CARD",
+        "action": "VIEW"
+      },
+      {
+        "module": "NOTIFICATION",
+        "function": "NOTIFICATION",
+        "action": "VIEW,CREATE,UPDATE,DELETE"
+      }
+    ]
+  }
+]

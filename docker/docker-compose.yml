@@ -331,6 +331,17 @@ services:
     depends_on:
       - gateway
 
+  client:
+    build:
+      context: ../../tlum-client
+    image: tuank230194/kltn:client
+    container_name: client
+    ports:
+      - "4200:80"
+    restart: unless-stopped
+    networks:
+      - kltn
+
 
 volumes:
   postgres:

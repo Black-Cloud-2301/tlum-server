@@ -17,7 +17,7 @@
   {
     "module": "INDIVIDUAL",
     "function": "MY-CLASS",
-    "action": "VIEW,CREATE,UPDATE,DELETE"
+    "action": "VIEW,UPDATE,DELETE"
   },
   {
     "module": "INDIVIDUAL",
@@ -48,5 +48,15 @@
     "module": "INDIVIDUAL",
     "function": "TRANSCRIPT",
     "action": "VIEW"
+  },
+  {
+    "module": "INDIVIDUAL",
+    "function": "REPORT-CARD",
+    "action": "VIEW"
+  },
+  {
+    "module": "NOTIFICATION",
+    "function": "NOTIFICATION",
+    "action": "VIEW,CREATE,UPDATE,DELETE"
   }
 ]

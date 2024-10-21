@@ -10,8 +10,7 @@ import com.kltn.individualservice.entity.*;
 import com.kltn.individualservice.exception.NotFoundException;
 import com.kltn.individualservice.repository.*;
 import lombok.RequiredArgsConstructor;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.io.Resource;
@@ -24,9 +23,9 @@ import java.util.stream.Collectors;
 
 @Configuration
 @RequiredArgsConstructor
+@Slf4j
 public class DataImporter extends com.kltn.individualservice.config._init.DataImporter {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(DataImporter.class);
     private final ObjectMapper objectMapper;
     private final PasswordEncoder passwordEncoder;
     private final UserRepository userRepository;
@@ -43,6 +42,8 @@ public class DataImporter extends com.kltn.individualservice.config._init.DataIm
     private Resource rolesData;
     @Value("classpath:static/permissions.json")
     private Resource permissionsData;
+    @Value("classpath:static/roles-permissions.json")
+    private Resource rolesPermissionsData;
     @Value("classpath:static/studyDepartments.json")
     private Resource studyDepartmentsData;
     @Value("classpath:static/majors.json")
@@ -75,7 +76,7 @@ public class DataImporter extends com.kltn.individualservice.config._init.DataIm
                 });
                 permissionRepository.saveAll(permissions);
             } catch (IOException e) {
-                LOGGER.error("Failed to import permissions data", e);
+                log.error("Failed to import permissions data", e);
             }
         }
         if (roleRepository.count() == 0) {
@@ -83,26 +84,36 @@ public class DataImporter extends com.kltn.individualservice.config._init.DataIm
                 URL url = rolesData.getURL();
                 List<Role> roles = objectMapper.readValue(url, new TypeReference<>() {
                 });
+                List<Map<String, Object>> rolesPermissions = objectMapper.readValue(rolesPermissionsData.getURL(), new TypeReference<>() {
+                });
+
                 roles.forEach(role -> {
-                    switch (role.getCode()) {
-                        case "SYS_ADMIN" -> role.setPermissions(permissionRepository.findAll());
-                        case "STUDENT" -> {
-                            List<Permission> permissions = permissionRepository.findByModuleInAndFunctionInAndActionIn(List.of("INDIVIDUAL"), List.of("REGISTER-STUDY"), List.of("REGISTER"));
-                            role.setPermissions(permissions);
-                        }
-                        case "TEACHER" -> {
-                            List<Permission> permissions = permissionRepository.findByModuleInAndFunctionInAndActionIn(List.of("INDIVIDUAL"), List.of("TEACHER", "MY-CLASS"), List.of("VIEW"));
-                            role.setPermissions(permissions);
-                        }
-                        case "EMPLOYEE" -> {
-                            List<Permission> permissions = permissionRepository.findByModuleInAndFunctionInAndActionIn(List.of("INDIVIDUAL"), List.of("EMPLOYEE"), List.of("VIEW"));
-                            role.setPermissions(permissions);
-                        }
+                    if ("SYS_ADMIN".equals(role.getCode())) {
+                        role.setPermissions(permissionRepository.findAll());
+                    } else {
+                        rolesPermissions.forEach(rolePermission -> {
+                            if (role.getCode().equals(rolePermission.get("code"))) {
+                                List<Map<String, String>> permissionsList = (List<Map<String, String>>) rolePermission.get("permission");
+                                List<Permission> permissions = new ArrayList<>();
+                                permissionsList.forEach(permissionMap -> {
+                                    String module = permissionMap.get("module");
+                                    String function = permissionMap.get("function");
+                                    String[] actions = permissionMap.get("action").split(",");
+                                    for (String action : actions) {
+                                        Permission permission = permissionRepository.findByModuleAndFunctionAndAction(module, function, action).orElseThrow(() -> new NotFoundException("Permission"));
+                                        if (permission != null) {
+                                            permissions.add(permission);
+                                        }
+                                    }
+                                });
+                                role.setPermissions(permissions);
+                            }
+                        });
                     }
                 });
                 roleRepository.saveAll(roles);
             } catch (IOException e) {
-                LOGGER.error("Failed to import roles data", e);
+                log.error("Failed to import roles data", e);
             }
         }
         if (userRepository.count() == 0) {
@@ -117,7 +128,7 @@ public class DataImporter extends com.kltn.individualservice.config._init.DataIm
                 });
                 userRepository.saveAll(users);
             } catch (IOException e) {
-                LOGGER.error("Failed to import user data", e);
+                log.error("Failed to import user data", e);
             }
         }
         if (studyDepartmentRepository.count() == 0) {
@@ -127,7 +138,7 @@ public class DataImporter extends com.kltn.individualservice.config._init.DataIm
                 });
                 studyDepartmentRepository.saveAll(studyDepartments);
             } catch (IOException e) {
-                LOGGER.error("Failed to import study department data", e);
+                log.error("Failed to import study department data", e);
             }
         }
         if (majorRepository.count() == 0) {
@@ -145,7 +156,7 @@ public class DataImporter extends com.kltn.individualservice.config._init.DataIm
                 });
                 majorRepository.saveAll(majorList);
             } catch (IOException e) {
-                LOGGER.error("Failed to import major data", e);
+                log.error("Failed to import major data", e);
             }
         }
         if (subjectRepository.count() == 0) {
@@ -195,7 +206,7 @@ public class DataImporter extends com.kltn.individualservice.config._init.DataIm
                 });
                 subjectRepository.saveAll(subjectsSaved);
             } catch (IOException e) {
-                LOGGER.error("Failed to import subject data", e);
+                log.error("Failed to import subject data", e);
             }
         }
         if (settingRepository.count() == 0) {
@@ -205,7 +216,7 @@ public class DataImporter extends com.kltn.individualservice.config._init.DataIm
                 });
                 settingRepository.saveAll(settings);
             } catch (IOException e) {
-                LOGGER.error("Failed to import setting data", e);
+                log.error("Failed to import setting data", e);
             }
         }
     }
