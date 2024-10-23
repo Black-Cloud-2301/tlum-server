@@ -333,7 +333,7 @@ services:
 
   client:
     build:
-      context: ../../tlum-client
+      context: ../../client/
     image: tuank230194/kltn:client
     container_name: client
     ports:

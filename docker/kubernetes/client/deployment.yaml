@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: client
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: client
+  template:
+    metadata:
+      labels:
+        app: client
+    spec:
+      containers:
+        - name: client
+          image: tuank230194/kltn:client
+          ports:
+            - containerPort: 80
+          env:
+            - name: TZ
+              value: Asia/Ho_Chi_Minh
+          volumeMounts:
+            - name: kltn-volume
+              mountPath: /kltn
+      volumes:
+        - name: kltn-volume
+          persistentVolumeClaim:
+            claimName: kltn-pvc
