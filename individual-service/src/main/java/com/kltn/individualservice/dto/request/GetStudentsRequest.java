@@ -17,17 +17,4 @@ public class GetStudentsRequest extends PageableRequest {
     private List<StudentStatus> statuses;
     private List<EntityStatus> entityStatuses;
     private Long semesterId;
-
-    @Override
-    public String toString() {
-        return "GetStudentsRequest{" +
-                "pageNumber=" + getPageNumber() +
-                ", pageSize=" + getPageSize() +
-                ", entityStatuses=" + entityStatuses +
-                ", code=" + code +
-                ", name=" + name +
-                ", majorIds=" + majorIds +
-                ", statuses=" + statuses +
-                '}';
-    }
 }

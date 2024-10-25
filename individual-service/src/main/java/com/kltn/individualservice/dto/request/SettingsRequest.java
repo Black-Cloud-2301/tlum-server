@@ -17,16 +17,4 @@ public class SettingsRequest extends PageableRequest {
     private String code;
     private String value;
     private List<EntityStatus> entityStatuses;
-
-    @Override
-    public String toString() {
-        return "SettingsRequest{" +
-                "tableName=" + tableName +
-                ", pageNumber=" + getPageNumber() +
-                ", pageSize=" + getPageSize() +
-                ", code=" + code +
-                ", tableCode=" + tableCode +
-                ", entityStatuses=" + entityStatuses +
-                '}';
-    }
 }

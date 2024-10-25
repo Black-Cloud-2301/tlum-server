@@ -18,17 +18,4 @@ public class SemesterRequest extends PageableRequest {
     private Integer semester;
     private LocalDate fromDate;
     private LocalDate toDate;
-
-    @Override
-    public String toString() {
-        return "SemesterRequest{" +
-                "pageNumber=" + getPageNumber() +
-                ", pageSize=" + getPageSize() +
-                ", entityStatuses=" + entityStatuses +
-                ", id=" + id +
-                ", year=" + year +
-                ", studentGroup=" + studentGroup +
-                ", semester=" + semester +
-                '}';
-    }
 }

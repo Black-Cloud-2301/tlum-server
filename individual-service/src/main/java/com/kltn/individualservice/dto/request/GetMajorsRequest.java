@@ -15,15 +15,6 @@ import java.util.List;
 public class GetMajorsRequest extends PageableRequest {
     private List<EntityStatus> entityStatuses;
 
-    @Override
-    public String toString() {
-        return "GetMajorsRequest{" +
-                "pageNumber=" + getPageNumber() +
-                ", pageSize=" + getPageSize() +
-                ", entityStatuses=" + entityStatuses +
-                '}';
-    }
-
     public GetMajorsRequest(List<EntityStatus> entityStatuses) {
         this.entityStatuses = entityStatuses;
     }

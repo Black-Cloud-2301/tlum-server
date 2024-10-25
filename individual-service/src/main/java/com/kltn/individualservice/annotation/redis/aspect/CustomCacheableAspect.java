@@ -13,6 +13,7 @@ import org.springframework.expression.spel.support.StandardEvaluationContext;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
+import java.util.Objects;
 
 @Aspect
 @Component
@@ -40,7 +41,7 @@ public class CustomCacheableAspect {
 
         // Evaluate key and field expressions
         String key = customCacheable.key();
-        String field = parser.parseExpression(customCacheable.field()).getValue(context, String.class);
+        String field = Objects.requireNonNull(parser.parseExpression(customCacheable.field()).getValue(context)).toString();
 
         // Check cache first
         List<?> cachedResult = (List<?>) baseRedisService.hashGet(key, field);

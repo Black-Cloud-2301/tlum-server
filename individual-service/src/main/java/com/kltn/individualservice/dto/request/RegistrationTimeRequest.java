@@ -17,19 +17,4 @@ public class RegistrationTimeRequest extends PageableRequest {
     private Instant endTime;
     private String code;
     private String name;
-
-    @Override
-    public String toString() {
-        return "SemesterRequest{" +
-                "pageNumber=" + getPageNumber() +
-                ", pageSize=" + getPageSize() +
-                ", id=" + id +
-                ", semesterId=" + semesterId +
-                ", studentId=" + studentId +
-                ", startTime=" + startTime +
-                ", endTime=" + endTime +
-                ", code=" + code +
-                ", name=" + name +
-                '}';
-    }
 }
