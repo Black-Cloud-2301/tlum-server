@@ -35,9 +35,14 @@ public class StudentController {
         }
     }
 
+    @GetMapping("/options")
+    public ResponseEntity<Object> getStudentOptions(GetStudentsRequest request) {
+        return ResponseUtils.getResponseEntity(studentService.getStudentOptions(request));
+    }
+
     @GetMapping("/{id}")
     public ResponseEntity<Object> getStudents(@PathVariable Long id) {
-            return ResponseUtils.getResponseEntity(studentService.findById(id));
+        return ResponseUtils.getResponseEntity(studentService.findById(id));
     }
 
     @GetMapping("/my-study-info")

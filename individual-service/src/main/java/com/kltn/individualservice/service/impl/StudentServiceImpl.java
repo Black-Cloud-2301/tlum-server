@@ -1,5 +1,7 @@
 package com.kltn.individualservice.service.impl;
 
+import com.kltn.individualservice.annotation.redis.CustomCacheEvict;
+import com.kltn.individualservice.annotation.redis.CustomCacheable;
 import com.kltn.individualservice.config.I18n;
 import com.kltn.individualservice.constant.EntityStatus;
 import com.kltn.individualservice.constant.Gender;
@@ -9,6 +11,7 @@ import com.kltn.individualservice.dto.request.GetMajorsRequest;
 import com.kltn.individualservice.dto.request.GetStudentsRequest;
 import com.kltn.individualservice.dto.request.StudentRequestCRU;
 import com.kltn.individualservice.dto.response.MyStudyInfoResponse;
+import com.kltn.individualservice.dto.response.StudentOptions;
 import com.kltn.individualservice.entity.Major;
 import com.kltn.individualservice.entity.Role;
 import com.kltn.individualservice.entity.Student;
@@ -16,6 +19,7 @@ import com.kltn.individualservice.entity.User;
 import com.kltn.individualservice.exception.NotFoundException;
 import com.kltn.individualservice.exception.RequireException;
 import com.kltn.individualservice.feign.FileServiceClient;
+import com.kltn.individualservice.redis.RedisKey;
 import com.kltn.individualservice.repository.StudentRepository;
 import com.kltn.individualservice.service.MajorService;
 import com.kltn.individualservice.service.RoleService;
@@ -26,8 +30,6 @@ import jakarta.servlet.http.HttpServletRequest;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.cache.annotation.CacheEvict;
-import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpHeaders;
@@ -55,7 +57,7 @@ public class StudentServiceImpl implements StudentService {
     private final RoleService roleService;
     private final PasswordEncoder passwordEncoder;
 
-    @Cacheable(value = "students", key = "#request")
+    @CustomCacheable(key = RedisKey.STUDENTS, field = "#request")
     public List<Student> getStudents(GetStudentsRequest request) {
         return studentRepository.findByIsActiveInAndStatusIn(request);
     }
@@ -70,18 +72,18 @@ public class StudentServiceImpl implements StudentService {
         return studentRepository.findStudentByStudyClass(studyClassId);
     }
 
-    @Cacheable(value = "students", key = "#request")
+    @CustomCacheable(key = RedisKey.STUDENTS, field = "#request")
     public Page<Student> getStudents(GetStudentsRequest request, Pageable pageable) {
         return studentRepository.findByIsActiveInAndStatusIn(request, pageable);
     }
 
-    @Cacheable(value = "student", key = "#id")
+    @CustomCacheable(key = RedisKey.STUDENT, field = "#id")
     public Student findById(Long id) {
         return studentRepository.findById(id).orElseThrow(() -> new NotFoundException(I18n.getMessage("msg.field.student")));
     }
 
-    @Cacheable(value = "student", key = "#result.id")
-    @CacheEvict(value = "students", allEntries = true)
+    @CustomCacheable(key = RedisKey.STUDENT, field = "#result.id")
+    @CustomCacheEvict(key = RedisKey.STUDENTS, allEntries = true)
     public Student createStudent(StudentRequestCRU request) {
         Student student = new Student();
         student.setMajors(majorService.getMajor(request.getMajorId()));
@@ -90,7 +92,7 @@ public class StudentServiceImpl implements StudentService {
     }
 
     @Override
-    @CacheEvict(value = "students", allEntries = true)
+    @CustomCacheEvict(key = RedisKey.STUDENTS, allEntries = true)
     @Transactional
     public List<Student> importStudents(MultipartFile file) {
         String header = request.getHeader(HttpHeaders.AUTHORIZATION);
@@ -100,7 +102,7 @@ public class StudentServiceImpl implements StudentService {
         roles.add(defaultRole);
         AtomicInteger currentMaxCode = new AtomicInteger(userService.findMaxNumberInCode(UserType.STUDENT));
         List<Student> students = Collections.synchronizedList(new ArrayList<>());
-        Map<String,Major> majors = majorService.getMajors(new GetMajorsRequest(List.of(EntityStatus.ACTIVE))).stream()
+        Map<String, Major> majors = majorService.getMajors(new GetMajorsRequest(List.of(EntityStatus.ACTIVE))).stream()
                 .collect(Collectors.toMap(Major::getCode, major -> major));
 
         excelData.parallelStream().forEach(rowData -> {
@@ -142,6 +144,12 @@ public class StudentServiceImpl implements StudentService {
     @Override
     public MyStudyInfoResponse getMyInfo(Long userId) {
         return studentRepository.getMyStudyInfo(userId);
+    }
+
+    @Override
+    @CustomCacheable(key = RedisKey.STUDENTS, field = "'options_'+#request")
+    public List<StudentOptions> getStudentOptions(GetStudentsRequest request) {
+        return studentRepository.findStudentOptions(request);
     }
 
 

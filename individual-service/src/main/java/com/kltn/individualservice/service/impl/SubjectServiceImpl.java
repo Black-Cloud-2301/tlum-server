@@ -1,9 +1,12 @@
 package com.kltn.individualservice.service.impl;
 
+import com.kltn.individualservice.annotation.redis.CustomCacheEvict;
+import com.kltn.individualservice.annotation.redis.CustomCacheable;
 import com.kltn.individualservice.dto.request.SubjectsRequest;
 import com.kltn.individualservice.entity.Major;
 import com.kltn.individualservice.entity.Subject;
 import com.kltn.individualservice.exception.NotFoundException;
+import com.kltn.individualservice.redis.RedisKey;
 import com.kltn.individualservice.repository.SubjectRepository;
 import com.kltn.individualservice.service.MajorService;
 import com.kltn.individualservice.service.SubjectService;
@@ -11,8 +14,6 @@ import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;
 import lombok.experimental.FieldDefaults;
 import org.modelmapper.ModelMapper;
-import org.springframework.cache.annotation.CacheEvict;
-import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
@@ -28,26 +29,26 @@ public class SubjectServiceImpl implements SubjectService {
     ModelMapper modelMapper;
 
     @Override
-    @Cacheable(value = "subjects", key = "#request")
+    @CustomCacheable(key = RedisKey.SUBJECTS, field = "#request")
     public List<Subject> getSubjects(SubjectsRequest request) {
         return subjectRepository.findAllByIsActiveIn(request.getEntityStatuses());
     }
 
     @Override
-    @Cacheable(value = "subjects", key = "#request")
+    @CustomCacheable(key = RedisKey.SUBJECTS, field = "#request")
     public Page<Subject> getSubjects(SubjectsRequest request, Pageable pageable) {
         return subjectRepository.findAllByIsActiveIn(request, pageable);
     }
 
     @Override
-    @CacheEvict(value = "subjects", allEntries = true)
+    @CustomCacheEvict(key = RedisKey.SUBJECTS, allEntries = true)
     public Subject createSubject(Subject request) {
         findMajorsAndSubject(request);
         return subjectRepository.save(request);
     }
 
     @Override
-    @CacheEvict(value = "subjects", allEntries = true)
+    @CustomCacheEvict(key = RedisKey.SUBJECTS, allEntries = true)
     public Subject updateSubject(Subject request) {
         if(request.getId() == null) {
             throw new IllegalArgumentException("Id is required");
@@ -61,13 +62,13 @@ public class SubjectServiceImpl implements SubjectService {
     }
 
     @Override
-    @Cacheable(value = "subjects", key = "#subjectIds")
+    @CustomCacheable(key = RedisKey.SUBJECTS, field = "#subjectIds")
     public List<Subject> findAllById(List<Long> subjectIds) {
         return subjectRepository.findAllById(subjectIds);
     }
 
     @Override
-    @CacheEvict(value = "subjects", allEntries = true)
+    @CustomCacheEvict(key = RedisKey.SUBJECTS, allEntries = true)
     public void deleteSubject(Long id) {
         subjectRepository.deleteById(id);
     }

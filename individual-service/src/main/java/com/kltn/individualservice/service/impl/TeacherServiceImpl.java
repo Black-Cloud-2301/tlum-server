@@ -1,5 +1,7 @@
 package com.kltn.individualservice.service.impl;
 
+import com.kltn.individualservice.annotation.redis.CustomCacheEvict;
+import com.kltn.individualservice.annotation.redis.CustomCacheable;
 import com.kltn.individualservice.config.I18n;
 import com.kltn.individualservice.constant.EmployeeStatus;
 import com.kltn.individualservice.constant.EntityStatus;
@@ -14,14 +16,13 @@ import com.kltn.individualservice.entity.User;
 import com.kltn.individualservice.exception.NotFoundException;
 import com.kltn.individualservice.exception.RequireException;
 import com.kltn.individualservice.feign.FileServiceClient;
+import com.kltn.individualservice.redis.RedisKey;
 import com.kltn.individualservice.repository.TeacherRepository;
 import com.kltn.individualservice.service.*;
 import com.kltn.individualservice.util.exception.converter.DateConverter;
 import jakarta.servlet.http.HttpServletRequest;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.cache.annotation.CacheEvict;
-import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpHeaders;
@@ -49,7 +50,7 @@ public class TeacherServiceImpl implements TeacherService {
     private final SubjectService subjectService;
 
     @Override
-    @Cacheable(value = "teachers", key = "#request")
+    @CustomCacheable(key = RedisKey.TEACHERS, field = "#request")
     public List<Teacher> getTeachers(GetTeachersRequest request) {
         return teacherRepository.findAllByIsActiveInAndStatusIn(request);
     }
@@ -61,7 +62,7 @@ public class TeacherServiceImpl implements TeacherService {
 
 
     @Override
-    @CacheEvict(value = "teachers", allEntries = true)
+    @CustomCacheEvict(key = RedisKey.TEACHERS, allEntries = true)
     @Transactional
     public List<Teacher> importTeachers(MultipartFile file) {
         String header = request.getHeader(HttpHeaders.AUTHORIZATION);
@@ -102,7 +103,7 @@ public class TeacherServiceImpl implements TeacherService {
     }
 
     @Override
-    @CacheEvict(value = "teachers", allEntries = true)
+    @CustomCacheEvict(key = RedisKey.TEACHERS, allEntries = true)
     public Teacher updateTeacher(TeacherRequest request) {
         Teacher teacherEntity = teacherRepository.findById(request.getId()).orElseThrow(() -> new NotFoundException("Teacher"));
         teacherEntity.setStatus(request.getEmployeeStatus());
@@ -122,7 +123,7 @@ public class TeacherServiceImpl implements TeacherService {
     }
 
     @Override
-    @CacheEvict(value = "teachers", allEntries = true)
+    @CustomCacheEvict(key = RedisKey.TEACHERS, allEntries = true)
     public Teacher deleteTeacher(Long id) {
         Teacher teacher = teacherRepository.findById(id).orElseThrow(() -> new NotFoundException("Teacher"));
         teacher.setIsActive(EntityStatus.DELETED);
@@ -131,7 +132,7 @@ public class TeacherServiceImpl implements TeacherService {
     }
 
     @Override
-    @CacheEvict(value = "teachers", allEntries = true)
+    @CustomCacheEvict(key = RedisKey.TEACHERS, allEntries = true)
     public Teacher createTeacher(TeacherRequest request) {
         Teacher teacher = new Teacher();
         User user = new User();

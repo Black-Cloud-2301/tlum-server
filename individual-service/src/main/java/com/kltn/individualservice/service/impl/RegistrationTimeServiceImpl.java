@@ -1,9 +1,14 @@
 package com.kltn.individualservice.service.impl;
 
+import com.kltn.individualservice.annotation.redis.CustomCacheEvict;
+import com.kltn.individualservice.annotation.redis.CustomCachePut;
+import com.kltn.individualservice.annotation.redis.CustomCacheable;
+import com.kltn.individualservice.annotation.redis.CustomCaching;
 import com.kltn.individualservice.constant.EntityStatus;
 import com.kltn.individualservice.dto.request.RegistrationTimeRequest;
 import com.kltn.individualservice.entity.RegistrationTime;
 import com.kltn.individualservice.exception.NotFoundException;
+import com.kltn.individualservice.redis.RedisKey;
 import com.kltn.individualservice.repository.RegistrationTimeRepository;
 import com.kltn.individualservice.service.RegistrationTimeService;
 import com.kltn.individualservice.service.SemesterService;
@@ -13,10 +18,6 @@ import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;
 import lombok.experimental.FieldDefaults;
 import org.modelmapper.ModelMapper;
-import org.springframework.cache.annotation.CacheEvict;
-import org.springframework.cache.annotation.CachePut;
-import org.springframework.cache.annotation.Cacheable;
-import org.springframework.cache.annotation.Caching;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
@@ -35,20 +36,20 @@ public class RegistrationTimeServiceImpl implements RegistrationTimeService {
     final WebUtil webUtil;
 
     @Override
-    @CacheEvict(value = "registrationTimes", allEntries = true)
+    @CustomCacheEvict(key = RedisKey.REGISTRATION_TIMES, allEntries = true)
     public RegistrationTime create(RegistrationTimeRequest request) {
         return registrationTimeRepository.save(mapRegistrationTime(request));
     }
 
     @Override
-    @CacheEvict(value = "registrationTimes", allEntries = true)
+    @CustomCacheEvict(key = RedisKey.REGISTRATION_TIMES, allEntries = true)
     public List<RegistrationTime> saveWithCache(List<RegistrationTime> request) {
         return registrationTimeRepository.saveAll(request);
     }
 
     @Override
-    @CacheEvict(value = "registrationTimes", allEntries = true)
-    @CachePut(value = "registrationTime", key = "#request.id")
+    @CustomCacheEvict(key = RedisKey.REGISTRATION_TIMES, allEntries = true)
+    @CustomCachePut(key = "registrationTime", field = "#request.id")
     public RegistrationTime update(RegistrationTimeRequest request) {
         RegistrationTime registrationTime = registrationTimeRepository.findById(request.getId()).orElseThrow(() -> new NotFoundException("Registration Time"));
         modelMapper.map(mapRegistrationTime(request), registrationTime);
@@ -56,21 +57,21 @@ public class RegistrationTimeServiceImpl implements RegistrationTimeService {
     }
 
     @Override
-    @Cacheable(value = "registrationTimes", key = "#request")
+    @CustomCacheable(key = RedisKey.REGISTRATION_TIMES, field = "#request")
     public List<RegistrationTime> searchBySemesterId(Long semesterId, RegistrationTimeRequest request) {
         return registrationTimeRepository.searchBySemesterId(semesterId, request);
     }
 
     @Override
-    @Cacheable(value = "registrationTimes", key = "#request")
+    @CustomCacheable(key = RedisKey.REGISTRATION_TIMES, field = "#request")
     public Page<RegistrationTime> searchBySemesterId(Long semesterId, RegistrationTimeRequest request, Pageable pageable) {
         return registrationTimeRepository.searchBySemesterId(semesterId, request, pageable);
     }
 
     @Override
-    @Caching(evict = {
-            @CacheEvict(value = "registrationTimes", allEntries = true),
-            @CacheEvict(value = "registrationTime", key = "#id")
+    @CustomCaching(evict = {
+            @CustomCacheEvict(key = RedisKey.REGISTRATION_TIMES, allEntries = true),
+            @CustomCacheEvict(key = "registrationTime", field = "#id")
     })
     public void delete(Long id) {
         RegistrationTime registrationTime = registrationTimeRepository.findById(id).orElseThrow(() -> new NotFoundException("Registration Time"));

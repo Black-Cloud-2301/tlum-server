@@ -64,6 +64,11 @@ data:
         scrape_interval: 15s
         static_configs:
           - targets: ['postgres-exporter:9187']
+            
+      - job_name: 'postgres-notification-exporter'
+        scrape_interval: 15s
+        static_configs:
+          - targets: ['postgres-notification-exporter:9187']
 
       - job_name: 'kubernetes-pods'
         kubernetes_sd_configs:
@@ -87,3 +92,16 @@ data:
           - source_labels: [__meta_kubernetes_pod_name]
             action: replace
             target_label: kubernetes_pod_name
+
+  alert.rules.yml: |
+    groups:
+      - name: microservice_alerts
+        rules:
+          - alert: MicroserviceDown
+            expr: up == 0
+            for: 1m
+            labels:
+              severity: critical
+            annotations:
+              summary: "Instance {{ $labels.job }} is down"
+              description: "The {{ $labels.job }} service has been unreachable for more than 1 minute."

@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: postgres-notification-exporter
+  labels:
+    app: postgres-notification-exporter
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: postgres-notification-exporter
+  template:
+    metadata:
+      labels:
+        app: postgres-notification-exporter
+    spec:
+      containers:
+        - name: postgres-notification-exporter
+          image: prometheuscommunity/postgres-exporter:latest
+          env:
+            - name: DATA_SOURCE_NAME
+              value: ${POSTGRES_EXPORTER_URL}
+            - name: BASIC_AUTH_USER
+              value: sa
+            - name: BASIC_AUTH_PASS
+              value: admin
+          ports:
+            - containerPort: 9187
+          volumeMounts:
+            - name: config-volume
+              mountPath: /etc/postgres_exporter
+              subPath: postgres_exporter.yml
+      volumes:
+        - name: config-volume
+          configMap:
+            name: postgres-notification-exporter-config
+      restartPolicy: Always

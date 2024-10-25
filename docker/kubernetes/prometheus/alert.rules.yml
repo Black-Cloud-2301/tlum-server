@@ -1,0 +1,11 @@
+groups:
+  - name: microservice_alerts
+    rules:
+      - alert: MicroserviceDown
+        expr: up == 0
+        for: 1m
+        labels:
+          severity: critical
+        annotations:
+          summary: "Instance {{ $labels.job }} is down"
+          description: "The {{ $labels.job }} service has been unreachable for more than 1 minute."
